@@ -1,0 +1,325 @@
+:root {
+    --nav-height: 80px;
+    --font-color-categorie-0: #3060ff;
+}
+
+h1, h3, a, p {
+    margin: 0;
+    color: #fff;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+img {
+    pointer-events: none;
+}
+
+button:hover {
+    cursor: pointer;
+    filter: brightness(0.9);
+}
+
+/* Página de portfolio*/
+.portfolio-page {
+    margin: 0;
+    padding: 0;
+}
+
+/* Header do portfólio */
+.portfolio-header {
+    background-color: #202020;
+    background-image: radial-gradient(ellipse to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 255, 1) 100%);
+    height: 100vh;
+}
+
+/* Barra de navegação do portfolio */
+.portfolio-nav {
+    position: fixed;
+    width: 100%;
+    height: var(--nav-height);
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    background-image: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 10, 1) 100%);
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 10px 15px;
+}
+
+/* Alinhar itens na barra de navegação */
+.portfolio-nav-flex {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Lista da barra de navegação */
+.portfolio-abas-list {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem
+}
+
+/* Introdução do portfolio */
+@media screen and (min-width: 800px) {
+    .portfolio-intro {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .portfolio-intro {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column-reverse;
+        align-self: center;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+    }
+}
+
+/* Título do portfolio */
+.portfolio-intro-title {
+    font-size: 12pt;
+    text-align: center;
+}
+
+/* Nome do portfolio */
+.portfolio-intro-name {
+    font-size: 20pt;
+    text-align: cennter;
+    background-image: linear-gradient(135deg, var(--font-color-categorie-0) 0%, #d04040 50%, var(--font-color-categorie-0) 100%);
+    background-size: 400%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: introName 5s ease-in-out 0.1s infinite;
+}
+
+@keyframes introName {
+    to {
+        background-position: 400%;
+    }
+}
+
+/* Descrição do portfolio */
+.portfolio-intro-description {
+    text-align: center;
+    font-size: 10pt;
+    margin: 5px 0;
+}
+
+/* Linguagens de programação do portfolio */
+.portfolio-intro-code {
+    text-align: center;
+    color: #a0a0a0;
+    margin: 5px 0;
+}
+
+/* Sessão dos botões do portfolio */
+.portfolio-intro-buttons-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* Links dos botões */
+.button-links {
+    text-decoration: none;
+}
+
+/* Botões do portfolio */
+.portfolio-intro-buttons {
+    background-color: transparent;
+    color: #fff;
+    width: 8rem;
+    height: 2.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 12pt;
+    font-weight: 600;
+    border: 0px solid;
+    border-radius: 20px;
+    transition: all 0.3s;
+}
+/* Botão do LinkedIn */
+.portfolio-intro-buttons#button-linkedin {
+    border: 2px solid rgba(15, 120, 170, 1);
+}
+
+/* Botão do Github */
+.portfolio-intro-buttons#button-github {
+    background-color: rgba(17, 15, 15, 1);
+}
+
+/* Imagens dentro dos botões */
+.button-images {
+    width: 30px;
+    border-radius: 50%;
+}
+
+/* Imagem do portfólio */
+.portfolio-intro-image {
+    width: 350px;
+    border: 2px solid var(--font-color-categorie-0);
+    border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 15px;
+}
+
+/* Aba sobre mim */
+.portfolio-aboutme {
+    width: 100%;
+    background-color: #404040;
+}
+
+/* Principal da aba sobre mim */
+.portfolio-aboutme-main {
+    height: 100%;
+}
+
+/* Div sobre mim */
+.portfolio-aboutme-div {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Título da aba sobre mim */
+.portfolio-aboutme-title {
+    margin: 50px 0;
+}
+
+/* Div da descrição do sobre mim */
+.portfolio-aboutme-description-div {
+    width: 50%;
+}
+
+/* Parágrafos da div da descrição do sobre mim */
+.portfolio-aboutme-description-div p {
+    text-align: justify;
+}
+
+/* Div das skills da aba sobre mim */
+.portfolio-aboutme-skills-div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin: 50px 0;
+}
+
+/* Imagens das skills da aba sobre mim */
+.portfolio-skills-images, .portfolio-aboutme-skills-div img {
+    width: 40px;
+}
+
+/* Aba de projetos */
+.portfolio-projects {
+    width: 100%;
+    background-color: #303030;
+}
+
+/* Principal da aba de projetos */
+.portfolio-projects-main {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Título dos projetos do portfolio */
+.portfolio-projects-title {
+    margin: 50px 0 10px 0;
+}
+
+/* Div da principal aba de projetos */
+.portfolio-projects-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* Div com todas as divs de imagens de projetos */
+.portfolio-projects-images-div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
+    margin: 40px 0;
+}
+
+/* Div das imagens de projetos */
+.project-image-div {
+    width: 40%;
+}
+
+/* Links dos projetos */
+.project-links {
+    width: 100%;
+    height: 100%;
+    border: 2px solid #606060;
+    border-radius: 15px;
+    display: flex;
+    transition: all 0.2s;
+}
+
+.project-links:hover {
+    transform: scale(1.01);
+}
+
+/* Botões dos projetos */
+.project-buttons {
+    background-color: transparent;
+    border: 0px solid #000;
+    padding: 0;
+}
+
+/* Imagens dos projetos */
+.projects-images {
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    animation-name: projectAnimate;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+@keyframes projectAnimate {
+    0% {
+        transform: translateX(-1px);
+    }
+    50% {
+        transform: translateX(1px);
+    }
+    100% {
+        transform: translateX(-1px);
+    }
+}
