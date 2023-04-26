@@ -91,6 +91,7 @@ button:hover {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: 600;
+    padding: 0 15px;
     animation: abasLinksAnimation 4s cubic-bezier(0, 0, 1, 1) infinite;
 }
 
@@ -223,7 +224,7 @@ button:hover {
 @media screen and (max-width: 800px) {
     /* Imagem do portfólio */
     .portfolio-intro-image {
-        width: 200px;
+        width: 250px;
         border: 2px solid var(--font-color-categorie-0);
         border-radius: 50%;
         box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 15px;
@@ -252,7 +253,22 @@ button:hover {
 
 /* Título da aba sobre mim */
 .portfolio-aboutme-title {
-    margin: 50px 0;
+    color: #6080e0;
+    text-align: center;
+    font-size: 24pt;
+    font-weight: 100;
+    text-shadow: rgba(0, 0, 0, 0.5) 0px 0px 10px;
+    margin: 50px 0 10px 0;
+}
+
+/* Descrição da aba sobre mim */
+.portfolio-aboutme-description {
+    color: #a0a0a0;
+    text-align: center;
+    font-size: 12pt;
+    font-weight: 100;
+    text-shadow: rgba(0, 0, 0, 0.5) 0px 0px 10px;
+    margin: 5px 0 50px 0;
 }
 
 @media screen and (min-width: 800px) {
@@ -354,7 +370,7 @@ button:hover {
 .portfolio-projects-description {
     color: #a0a0a0;
     text-align: center;
-    font-size: 12;
+    font-size: 12pt;
     font-weight: 100;
     margin: 5px 0;
 }
@@ -491,7 +507,14 @@ button:hover {
     border-top-right-radius: 13px;
     text-align: center;
     font-size: 14pt;
-    font-weight: 600;
+    font-weight: 100;
+    gap: 5px;
+}
+
+/* Imagens dos spans */
+.project-spans-images {
+    width: 20px;
+    border-radius: 3px;
 }
 
 /* Div das linguagens de programação usadas */
@@ -568,6 +591,11 @@ button:hover {
     justify-content: center;
     align-items: center;
     gap: 10px;
+    transition: all 0.2s;
+}
+
+.contatos-links:hover {
+    transform: scale(1.01);
 }
 
 /* Imagens dos contatos */
