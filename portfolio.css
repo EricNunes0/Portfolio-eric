@@ -1,12 +1,13 @@
 :root {
-    --nav-height: 80px;
+    --nav-height: 50px;
     --font-color-categorie-0: #3060ff;
 }
 
 h1, h3, a, p {
-    margin: 0;
     color: #fff;
+    margin: 0;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-decoration: none;
 }
 
 img {
@@ -27,7 +28,7 @@ button:hover {
 /* Header do portfólio */
 .portfolio-header {
     background-color: #202020;
-    background-image: radial-gradient(ellipse to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 255, 1) 100%);
+    background-image: linear-gradient(45deg, rgb(40, 80, 120) 10%, rgb(158, 24, 80) 100%);
     height: 100vh;
 }
 
@@ -41,8 +42,7 @@ button:hover {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    background-color: black;
-    background-image: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 10, 1) 100%);
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 10, 0.9) 100%);
     box-shadow: rgba(0, 0, 0, 0.12) 0px 10px 15px;
 }
 
@@ -52,18 +52,52 @@ button:hover {
     height: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+}
+
+/* Div das abas da barra de navegação */
+.portfolio-abas-div {
+    height: 100%;
+}
+
+/* Abas da barra de navegação */
+.portfolio-abas {
+    height: 100%;
 }
 
 /* Lista da barra de navegação */
 .portfolio-abas-list {
+    height: 100%;
     list-style: none;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 2rem
+    gap: 2rem;
+    padding: 0;
+    margin: 0;
+}
+
+/* Links da barra de navegação */
+.abas-links {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(135deg, rgba(255, 255, 255, 1) 0%, rgb(226, 226, 230) 50%, rgba(255, 255, 255, 1) 100%);
+    background-size: 400%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 600;
+    animation: abasLinksAnimation 4s cubic-bezier(0, 0, 1, 1) infinite;
+}
+
+@keyframes abasLinksAnimation {
+    to {
+        background-position: 400%;
+    }
 }
 
 /* Introdução do portfolio */
@@ -176,12 +210,24 @@ button:hover {
     border-radius: 50%;
 }
 
-/* Imagem do portfólio */
-.portfolio-intro-image {
-    width: 350px;
-    border: 2px solid var(--font-color-categorie-0);
-    border-radius: 50%;
-    box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 15px;
+@media screen and (min-width: 800px) {
+    /* Imagem do portfólio */
+    .portfolio-intro-image {
+        width: 350px;
+        border: 2px solid var(--font-color-categorie-0);
+        border-radius: 50%;
+        box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 15px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    /* Imagem do portfólio */
+    .portfolio-intro-image {
+        width: 200px;
+        border: 2px solid var(--font-color-categorie-0);
+        border-radius: 50%;
+        box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 15px;
+    }
 }
 
 /* Aba sobre mim */
@@ -209,9 +255,21 @@ button:hover {
     margin: 50px 0;
 }
 
-/* Div da descrição do sobre mim */
-.portfolio-aboutme-description-div {
-    width: 50%;
+@media screen and (min-width: 800px) {
+    /* Div da descrição do sobre mim */
+    .portfolio-aboutme-description-div {
+        width: 50%;
+        font-size: 14pt;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    /* Div da descrição do sobre mim */
+    .portfolio-aboutme-description-div {
+        width: 80%;
+        font-size: 15pt;
+        line-height: 1.5rem;
+    }
 }
 
 /* Parágrafos da div da descrição do sobre mim */
@@ -235,6 +293,38 @@ button:hover {
     width: 40px;
 }
 
+/* Div do botão de currículo */
+.portfolio-curriculo-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Link do currículo */
+.curriculo-link {
+    width: 200px;
+    height: 50px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+}
+
+/* Botão do currículo */
+.curriculo-button {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    background-image: linear-gradient(90deg, rgb(150, 150, 150) 0%, rgb(190, 190, 190) 50%, rgb(150, 150, 150) 100%);
+    color: #fff;
+    font-size: 12pt;
+    font-weight: 600;
+    text-shadow: rgba(0, 0, 0, 0.2) 0px 0px 5px;
+    border: 0px solid;
+    border-radius: 15px;
+    box-shadow: rgba(255, 255, 255, 0.3) 0px 0px 15px;
+    transition: all 0.2s;
+}
+
 /* Aba de projetos */
 .portfolio-projects {
     width: 100%;
@@ -243,6 +333,7 @@ button:hover {
 
 /* Principal da aba de projetos */
 .portfolio-projects-main {
+    width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -252,11 +343,25 @@ button:hover {
 
 /* Título dos projetos do portfolio */
 .portfolio-projects-title {
+    color: #d0d0d0;
+    text-align: center;
+    font-size: 18pt;
+    font-weight: 100;
     margin: 50px 0 10px 0;
+}
+
+/* Descrição dos projetos do portfolio */
+.portfolio-projects-description {
+    color: #a0a0a0;
+    text-align: center;
+    font-size: 12;
+    font-weight: 100;
+    margin: 5px 0;
 }
 
 /* Div da principal aba de projetos */
 .portfolio-projects-div {
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -266,18 +371,22 @@ button:hover {
 
 /* Div com todas as divs de imagens de projetos */
 .portfolio-projects-images-div {
+    width: 100%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 5%;
+    gap: 2rem;
     margin: 40px 0;
 }
 
 /* Div das imagens de projetos */
 .project-image-div {
-    width: 40%;
+    width: 20rem;
+    height: 10rem;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 1) 0px 0px 15px;
 }
 
 /* Links dos projetos */
@@ -287,15 +396,125 @@ button:hover {
     border: 2px solid #606060;
     border-radius: 15px;
     display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-size: 105%;
+    background-position: center;
+    text-decoration: none;
     transition: all 0.2s;
+}
+
+.project-links#project-link-0 {
+    animation: backgroundChange0 20s ease-in-out infinite;
+}
+
+@keyframes backgroundChange0 {
+    0% {
+        background-image: url("https://i.imgur.com/k9qMdZG.png");
+        background-position: 0px;
+    }
+    25% {
+        background-image: url("https://i.imgur.com/YlGGa9B.png");
+    }
+    50% {
+        background-image: url("https://i.imgur.com/gTufGuR.png");
+        background-position: -20px;
+    }
+    75% {
+        background-image: url("https://i.imgur.com/aPbhfqz.png");
+    }
+    100% {
+        background-image: url("https://i.imgur.com/k9qMdZG.png");
+        background-position: 0px;
+    }
+}
+
+.project-links#project-link-1 {
+    animation: backgroundChange1 20s ease-in-out infinite;
+}
+
+@keyframes backgroundChange1 {
+    0% {
+        background-image: url("https://i.imgur.com/RAl4kqN.png");
+        background-position: 0px;
+    }
+    25% {
+        background-image: url("https://i.imgur.com/xsbuLvH.png");
+    }
+    50% {
+        background-image: url("https://i.imgur.com/9QoMVmO.png");
+        background-position: -20px;
+    }
+    75% {
+        background-image: url("https://i.imgur.com/0qUzmtN.png");
+    }
+    100% {
+        background-image: url("https://i.imgur.com/RAl4kqN.png");
+        background-position: 0px;
+    }
+}
+
+.project-links#project-link-2 {
+    background-image: url("https://i.imgur.com/WciaBU1.png");
+    animation: backgroundChange2 20s ease-in-out infinite;
+}
+
+@keyframes backgroundChange2 {
+    0% {
+        background-position: 0px;
+    }
+    50% {
+        background-position: -20px;
+    }
+    100% {
+        background-position: 0px;
+    }
 }
 
 .project-links:hover {
     transform: scale(1.01);
 }
 
+/* Spans dos projetos */
+.project-spans {
+    width: 100%;
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #f0f0f0;
+    border-top-left-radius: 13px;
+    border-top-right-radius: 13px;
+    text-align: center;
+    font-size: 14pt;
+    font-weight: 600;
+}
+
+/* Div das linguagens de programação usadas */
+.project-langs-div {
+    width: 100%;
+    height: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-bottom-left-radius: 13px;
+    border-bottom-right-radius: 13px;
+}
+
+/* Imagens das linguagens de programação */
+.lang-images {
+    width: 25px;
+}
+
 /* Botões dos projetos */
 .project-buttons {
+    width: 100%;
+    height: 5rem;
     background-color: transparent;
     border: 0px solid #000;
     padding: 0;
@@ -306,20 +525,75 @@ button:hover {
     width: 100%;
     height: 100%;
     border-radius: 12px;
-    animation-name: projectAnimate;
-    animation-duration: 2s;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: infinite;
 }
 
-@keyframes projectAnimate {
-    0% {
-        transform: translateX(-1px);
-    }
-    50% {
-        transform: translateX(1px);
-    }
-    100% {
-        transform: translateX(-1px);
-    }
+/* Header/cabeçalho dos projetos */
+.project-header {
+    position: absolute;
+    height: 2rem;
+    background-color: rgba(200, 0, 200, 1);
+}
+
+/* Footer do portfólio */
+.portfolio-contacts {
+    padding: 5% 0;
+    background-color: #404040;
+}
+
+/* Div dos contatos */
+.footer-contatos-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Div dos contatos */
+.contatos-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+/* Links dos contatos */
+.contatos-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Imagens dos contatos */
+.contato-images {
+    width: 30px;
+    height: 30px;
+    border: 2px solid rgba(100, 100, 100, 1);
+    border-radius: 30px;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 10px;
+}
+
+/* Divs dos textos de contato */
+.contato-texts-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+/* Títulos dos textos de contato */
+.contato-titles {
+    color: #b0b0b0;
+    font-size: 8pt;
+    margin: 0;
+}
+
+.contato-links-texts {
+    color: #f0f0f0;
+    font-size: 10pt;
+    margin: 0;
 }

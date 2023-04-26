@@ -1,0 +1,136 @@
+* {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+body {
+    background-color: rgb(240, 240, 240);
+    background-image: url("https://i.imgur.com/2ORqkN4.png");
+    background-position: center;
+    background-size: 600px;
+}
+
+.bonk-nav {
+    width: 100%;
+    background-image: linear-gradient(90deg, rgba(70, 30, 10, 1) 0%, rgba(20, 10, 0, 1) 100%);
+    box-shadow: rgba(0, 0, 0, 1) 0px 0px 10px;
+
+}
+
+.bonk-nav nav {
+    height: 10vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-title {
+    font-size: 24pt;
+    font-weight: 100;
+}
+
+.fc-white {
+    color: #fff;
+}
+
+.fm-segoi {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.bonk-page-flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+/* Sessão do formulário do bonk */
+.form-section {
+    width: 80%;
+}
+
+/* Formulário do bonk */
+.bonk-form {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.image-section {
+    width: 80%;
+}
+
+#bonk-canvas {
+    border: 2px dashed rgb(80, 80, 80);
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 10px 15px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.inputs {
+    width: 10rem;
+    height: 2.5rem;
+    color: transparent;
+    border-radius: 25px;
+    box-shadow: rgba(255, 255, 255, 0.5) 0px 0px 15px;
+}
+
+.inputs::-webkit-file-upload-button {
+    visibility: hidden;
+}
+
+.inputs::before {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-size: 100%;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 900;
+    border-radius: 3px;
+    outline: none;
+    white-space: nowrap;
+    user-select: none;
+    -webkit-user-select: none;
+    cursor: pointer;
+}
+
+.inputs#bonk-file-input-cenary::before {
+    content: 'Cenário';
+    background: -webkit-linear-gradient(0deg, rgb(230, 109, 195) 0%, rgb(227, 227, 227) 50%, rgba(230, 195, 110) 90%);
+}
+
+.inputs#bonk-file-input-0::before {
+    content: 'Bonk 1';
+    background: -webkit-linear-gradient(0deg, rgb(230, 109, 195) 0%, rgb(227, 227, 227) 50%, rgba(230, 195, 110) 90%);
+}
+
+.inputs#bonk-file-input-1::before {
+    content: 'Bonk 2';
+    background: -webkit-linear-gradient(0deg, rgb(230, 109, 195) 0%, rgb(227, 227, 227) 50%, rgba(230, 195, 110) 90%);
+}
+
+.inputs#bonk-file-input-download::before {
+    content: 'Baixar';
+}
+
+.inputs:hover::before {
+    border-color: black;
+}
+
+.inputs:active {
+    outline: 0;
+}
+
+.inputs:active::before {
+    background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9); 
+}
