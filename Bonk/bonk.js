@@ -121,3 +121,10 @@ function BonkDogEditor(img, type, pos) {
     image.crossOrigin = "anonymous";
     return image;
 };
+
+function clearBonkImage() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    imagesSaved.cenary = null;
+    imagesSaved.bonk0 = null;
+    imagesSaved.bonk1 = null;
+};

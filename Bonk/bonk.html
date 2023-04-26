@@ -2,6 +2,7 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
+    <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel = "stylesheet" type = "text/css" href = "bonk.css"/>
@@ -12,7 +13,7 @@
     <div class = "bonk-page">
         <div class = "bonk-nav">
             <nav>
-                <h1 class = "nav-title fc-white fm-segoi">Bonk Generator</h1>
+                <h1 class = "nav-title fc-white fm-courier">Bonk Generator</h1>
             </nav>
         </div>
         <div class = "bonk-page-flex">
@@ -29,8 +30,10 @@
                     <output></output>
 
                     <a href = "#" id = "download" download = "bonk.png">
-                        <button type = "button" name = "bonk-download" class = "inputs fc-white" id =   "bonk-file-input-download"></button>
+                        <button type = "button" name = "bonk-download" class = "bonk-buttons fc-white" id =   "bonk-file-input-download">Baixar</button>
                     </a>
+
+                    <button type = "button" name = "bonk-clear" class = "bonk-buttons fc-white" id =   "bonk-file-input-clear" onclick = "clearBonkImage()">Limpar</button>
                 </form>
             </section>
         </div>
