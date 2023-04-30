@@ -19,6 +19,17 @@ button:hover {
     filter: brightness(0.9);
 }
 
+/* Textos do modo claro */
+.light-texts {
+    color: #000;
+    transition: all 0.5s;
+}
+
+.dark-texts {
+    color: #fff;
+    transition: all 0.5s;
+}
+
 /* Página de portfolio*/
 .portfolio-page {
     margin: 0;
@@ -28,7 +39,8 @@ button:hover {
 /* Header do portfólio */
 .portfolio-header {
     background-color: #202020;
-    background-image: linear-gradient(45deg, rgb(40, 80, 120) 10%, rgb(158, 24, 80) 100%);
+    background-image: linear-gradient(90deg, rgb(40, 80, 120) 10%, rgb(158, 24, 80) 100%);
+    background-size: cover;
     height: 100vh;
 }
 
@@ -99,6 +111,14 @@ button:hover {
     to {
         background-position: 400%;
     }
+}
+
+/* Botão de mudar tema da página */
+.theme-buttons {
+    width: 50px;
+    height: 100%;
+    background-color: transparent;
+    border: 0px;
 }
 
 /* Introdução do portfolio */
@@ -224,7 +244,7 @@ button:hover {
 @media screen and (max-width: 800px) {
     /* Imagem do portfólio */
     .portfolio-intro-image {
-        width: 250px;
+        width: 50%;
         border: 2px solid var(--font-color-categorie-0);
         border-radius: 50%;
         box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 15px;
@@ -233,6 +253,12 @@ button:hover {
 
 /* Aba sobre mim */
 .portfolio-aboutme {
+    width: 100%;
+    background-color: #f0f0f0;
+    transition: all 0.5s;
+}
+
+.portfolio-aboutme.dark {
     width: 100%;
     background-color: #404040;
 }
@@ -293,6 +319,19 @@ button:hover {
     text-align: justify;
 }
 
+@media screen and (min-width: 800px) {
+    .portfolio-aboutme-description-div p {
+        font-size: 14pt;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .portfolio-aboutme-description-div p {
+        font-size: 10pt;
+    }
+}
+
+
 /* Div das skills da aba sobre mim */
 .portfolio-aboutme-skills-div {
     display: flex;
@@ -344,6 +383,12 @@ button:hover {
 /* Aba de projetos */
 .portfolio-projects {
     width: 100%;
+    background-color: #e0e0e0;
+    transition: all 0.5s;
+}
+
+.portfolio-projects.dark {
+    width: 100%;
     background-color: #303030;
 }
 
@@ -364,6 +409,10 @@ button:hover {
     font-size: 18pt;
     font-weight: 100;
     margin: 50px 0 10px 0;
+}
+
+.portfolio-projects-title.light-texts {
+    color: #606060;
 }
 
 /* Descrição dos projetos do portfolio */
@@ -562,7 +611,13 @@ button:hover {
 /* Footer do portfólio */
 .portfolio-contacts {
     padding: 5% 0;
-    background-color: #404040;
+    background-color: #a0a0a0;
+    transition: all 0.5s;
+}
+
+.portfolio-contacts.dark {
+    padding: 5% 0;
+    background-color: #606060;
 }
 
 /* Div dos contatos */
@@ -582,6 +637,12 @@ button:hover {
     padding: 0;
     margin: 0;
     list-style: none;
+}
+
+@media screen and (max-width: 800px) {
+    .contatos-list {
+        width: 80%;
+    }
 }
 
 /* Links dos contatos */
@@ -616,6 +677,17 @@ button:hover {
 }
 
 /* Títulos dos textos de contato */
+.contato-titles {
+    color: #f0f0f0;
+    font-size: 8pt;
+    margin: 0;
+}
+
+.contato-titles.light-texts {
+    color: #606060;
+    margin: 0;
+}
+
 .contato-titles {
     color: #b0b0b0;
     font-size: 8pt;
