@@ -521,7 +521,7 @@ button:hover {
 }
 
 .project-links#project-link-2 {
-    background-image: url("https://i.imgur.com/WciaBU1.png");
+    background-image: url("https://i.imgur.com/Iv7EmOJ.png");
     animation: backgroundChange2 20s ease-in-out infinite;
 }
 
@@ -530,9 +530,14 @@ button:hover {
 
         background-position: 0px;
     }
+    33% {
+        background-image: url("https://i.imgur.com/WciaBU1.png");
+    }
     50% {
-        background-image: url("https://i.imgur.com/1EB2NLW.png");
         background-position: -20px;
+    }
+    67% {
+        background-image: url("https://i.imgur.com/1EB2NLW.png");
     }
     100% {
         background-position: 0px;
