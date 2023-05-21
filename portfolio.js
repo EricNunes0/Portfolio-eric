@@ -4,6 +4,7 @@ const aboutmeSession = document.querySelector('#portfolio-aboutme-header');
 const projectsSession = document.querySelector('#portfolio-projects-header');
 const contactsSession = document.querySelector('#portfolio-contacts-header');
 
+/* Evento para alterar tema da página */
 themeButton.addEventListener("click", function() {
     if(themeButton.className.includes("light")) {
         themeButton.className = "theme-buttons dark";

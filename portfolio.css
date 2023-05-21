@@ -38,15 +38,32 @@ button:hover {
 
 /* Header do portfólio */
 .portfolio-header {
-    background-color: #202020;
-    background-image: linear-gradient(90deg, rgb(40, 80, 120) 10%, rgb(158, 24, 80) 100%);
-    background-size: cover;
     height: 100vh;
+    background-color: rgb(50, 120, 255);
+    background-image: linear-gradient(45deg, rgb(0, 0, 0, 0) 0%, rgba(255, 255, 255, 0.5) 50%, rgb(0, 0, 0, 0) 100%);
+    background-size: 300% 300%;
+    animation-name: HeaderAnimation;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes HeaderAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 /* Barra de navegação do portfolio */
 .portfolio-nav {
     position: fixed;
+    z-index: 1;
     width: 100%;
     height: var(--nav-height);
     top: 0;
@@ -102,6 +119,8 @@ button:hover {
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    font-size: 14pt;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-weight: 600;
     padding: 0 15px;
     animation: abasLinksAnimation 4s cubic-bezier(0, 0, 1, 1) infinite;
@@ -149,20 +168,20 @@ button:hover {
 
 /* Título do portfolio */
 .portfolio-intro-title {
-    font-size: 12pt;
+    font-size: 16pt;
     text-align: center;
 }
 
 /* Nome do portfolio */
 .portfolio-intro-name {
-    font-size: 20pt;
-    text-align: cennter;
-    background-image: linear-gradient(135deg, var(--font-color-categorie-0) 0%, #d04040 50%, var(--font-color-categorie-0) 100%);
+    font-size: 24pt;
+    text-align: center;
+    background-image: linear-gradient(135deg, rgba(0, 0, 0, 1) 0%, #4a40d0 50%, rgba(0, 0, 0, 1) 100%);
     background-size: 400%;
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    animation: introName 5s ease-in-out 0.1s infinite;
+    animation: introName 8s ease-in-out 0.1s infinite;
 }
 
 @keyframes introName {
@@ -181,7 +200,9 @@ button:hover {
 /* Linguagens de programação do portfolio */
 .portfolio-intro-code {
     text-align: center;
-    color: #a0a0a0;
+    color: #404040;
+    font-size: 12pt;
+    font-weight: bold;
     margin: 5px 0;
 }
 
@@ -212,12 +233,17 @@ button:hover {
     font-size: 12pt;
     font-weight: 600;
     border: 0px solid;
-    border-radius: 20px;
+    border-radius: 10px;
     transition: all 0.3s;
 }
+
+.portfolio-intro-buttons:hover {
+    transform: scale(1.02);
+}
+
 /* Botão do LinkedIn */
 .portfolio-intro-buttons#button-linkedin {
-    border: 2px solid rgba(15, 120, 170, 1);
+    background-color: rgba(15, 120, 170, 1);
 }
 
 /* Botão do Github */
@@ -228,7 +254,7 @@ button:hover {
 /* Imagens dentro dos botões */
 .button-images {
     width: 30px;
-    border-radius: 50%;
+    border-radius: 25%;
 }
 
 @media screen and (min-width: 800px) {
@@ -282,7 +308,7 @@ button:hover {
     color: #6080e0;
     text-align: center;
     font-size: 24pt;
-    font-weight: 100;
+    font-weight: bold;
     text-shadow: rgba(0, 0, 0, 0.5) 0px 0px 10px;
     margin: 50px 0 10px 0;
 }
@@ -562,6 +588,30 @@ button:hover {
     }
     67% {
         background-image: url("https://i.imgur.com/T3Oa4VI.png");
+    }
+    100% {
+        background-position: 0px;
+    }
+}
+
+.project-links#project-link-4 {
+    background-image: url("https://i.imgur.com/dbocrH3.png");
+    animation: backgroundChange4 20s ease-in-out infinite;
+}
+
+@keyframes backgroundChange4 {
+    0% {
+
+        background-position: 0px;
+    }
+    33% {
+        background-image: url("https://i.imgur.com/F4rzCXE.png");
+    }
+    50% {
+        background-position: -20px;
+    }
+    67% {
+        background-image: url("https://i.imgur.com/dbocrH3.png");
     }
     100% {
         background-position: 0px;
