@@ -11,21 +11,45 @@
 <body class = "portfolio-page">
     <div class = "portfolio-main">
         <div class = "portfolio-header light" id = "portfolio-header-header"><a name = "header"></a>
-            <nav class = "portfolio-nav">
-                <div class = "portfolio-nav-flex">
-                    <div class = "portfolio-abas-div">
-                        <div class = "portfolio-abas">
-                            <ul class = "portfolio-abas-list">
-                                <a href = "#header" class = "abas-links"><li>Início</li></a>
-                                <a href = "#aboutme" class = "abas-links"><li>Sobre</li></a>
-                                <a href = "#projects" class = "abas-links"><li>Projetos</li></a>
-                                <a href = "#contacts" class = "abas-links"><li>Contato</li></a>
-                                <button type = "button" class = "theme-buttons light" id = "theme-button">🌞</button>
-                            </ul>
+            <div class = "nav-div">
+                <nav class = "portfolio-nav">
+                    <div class = "portfolio-nav-flex">
+                        <div class = "portfolio-abas-div">
+                            <div class = "portfolio-abas">
+                                <ul class = "portfolio-abas-list">
+                                    <a href = "#header" class = "abas-links"><li>Início</li></a>
+                                    <a href = "#aboutme" class = "abas-links"><li>Sobre</li></a>
+                                    <a href = "#projects" class = "abas-links"><li>Projetos</li></a>
+                                    <a href = "#contacts" class = "abas-links"><li>Contato</li></a>
+                                    <button type = "button" class = "theme-buttons light" id = "theme-button" onclick = "changePageTheme()">
+                                        <img class = "theme-buttons-icons" src = "https://i.imgur.com/EFjsg8D.png">
+                                    </button>
+                                </ul>
+                            </div>
+                            <div class = "portfolio-768px">
+                                <div class = "open-nav-button-div">
+                                    <button class = "open-nav-button closed" id = "nav-button" onclick = "openNavMenu()">
+                                        <img class = "open-nav-button-image closed" id = "nav-button-image" src = "https://i.imgur.com/PduipVM.png">
+                                    </button>
+                                </div>
+                            </div>
                         </div>
                     </div>
+                </nav>
+                <div class = "nav-menu closed" id = "menu">
+                    <div class = "menu-div">
+                        <ul class = "menu-abas-list">
+                            <a href = "#header" class = "menu-abas-links"><button class = "menu-abas-buttons" onclick = "openNavMenu()">Início</button></a>
+                            <a href = "#aboutme" class = "menu-abas-links"><button class = "menu-abas-buttons" onclick = "openNavMenu()">Sobre</button></a>
+                            <a href = "#projects" class = "menu-abas-links"><button class = "menu-abas-buttons" onclick = "openNavMenu()">Projetos</button></a>
+                            <a href = "#contacts" class = "menu-abas-links"><button class = "menu-abas-buttons" onclick = "openNavMenu()">Contato</button></a>
+                            <button type = "button" class = "theme-buttons light" id = "menu-theme-button" onclick = "changePageTheme()">
+                                <img class = "theme-buttons-icons" src = "https://i.imgur.com/EFjsg8D.png">
+                            </button>
+                        </ul>
+                    </div>
                 </div>
-            </nav>
+            </div>
             <div class = "portfolio-intro">
                 <div class = "portfolio-intro-flex">
                     <section class = "portfolio-intro-title-section">
@@ -55,14 +79,19 @@
                         </a>
                     </section>
                 </div>
-                <img class = "portfolio-intro-image" src = "https://i.imgur.com/DQcCJ2T.png"/>
+                <div class = "intro-image-div">
+                    <img class = "portfolio-intro-image" src = "https://i.imgur.com/DQcCJ2T.png"/>
+                </div>
+            </div>
+            <div class = "arrow-div">
+                <img class = "arrow-image" src = "https://i.imgur.com/cb7E2P8.png">
             </div>
         </div>
         <div class = "portfolio-aboutme light" id = "portfolio-aboutme-header"><a name = "aboutme"></a>
             <div class = "portfolio-aboutme-main">
                 <div class = "portfolio-aboutme-div">
                     <div class = "portfolio-aboutme-title-div">
-                        <h1 class = "portfolio-aboutme-title">Sobre mim</h1>
+                        <h1 class = "portfolio-aboutme-title light" id = "about-me">Sobre mim</h1>
                         <p class = "portfolio-aboutme-description">Conheça um pouco sobre mim</p>
                     </div>
                     <div class = "portfolio-aboutme-description-div">

@@ -40,12 +40,16 @@ button:hover {
 .portfolio-header {
     height: 100vh;
     background-color: rgb(50, 120, 255);
-    background-image: linear-gradient(45deg, rgb(0, 0, 0, 0) 0%, rgba(255, 255, 255, 0.5) 50%, rgb(0, 0, 0, 0) 100%);
+    background-image: linear-gradient(45deg, rgb(0, 0, 0, 0) 0%, rgba(255, 255, 255, 0.3) 50%, rgb(0, 0, 0, 0) 100%);
     background-size: 300% 300%;
     animation-name: HeaderAnimation;
     animation-duration: 8s;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
+}
+
+.portfolio-header.dark {
+    background-color: rgb(0, 40, 100);
 }
 
 @keyframes HeaderAnimation {
@@ -60,10 +64,15 @@ button:hover {
     }
 }
 
-/* Barra de navegação do portfolio */
-.portfolio-nav {
+/* Div da barra de navegação */
+.nav-div {
     position: fixed;
     z-index: 1;
+    width: 100%;
+}
+
+/* Barra de navegação do portfolio */
+.portfolio-nav {
     width: 100%;
     height: var(--nav-height);
     top: 0;
@@ -71,7 +80,7 @@ button:hover {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    background-image: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 10, 0.9) 100%);
+    background-image: linear-gradient(180deg, rgba(0, 20, 80, 1) 0%, rgba(0, 20, 80, 1) 100%);
     box-shadow: rgba(0, 0, 0, 0.12) 0px 10px 15px;
 }
 
@@ -140,11 +149,17 @@ button:hover {
     border: 0px;
 }
 
+/* Ícones dos botões de trocar tema */
+.theme-buttons-icons {
+    width: 20px;
+    height: 20px;
+}
+
 /* Introdução do portfolio */
 @media screen and (min-width: 800px) {
     .portfolio-intro {
         width: 100%;
-        height: 100%;
+        height: 90%;
         display: flex;
         flex-direction: row;
         justify-content: center;
@@ -176,7 +191,7 @@ button:hover {
 .portfolio-intro-name {
     font-size: 24pt;
     text-align: center;
-    background-image: linear-gradient(135deg, rgba(0, 0, 0, 1) 0%, #4a40d0 50%, rgba(0, 0, 0, 1) 100%);
+    background-image: linear-gradient(135deg, rgba(0, 0, 0, 1) 0%, #4040d0 50%, rgba(0, 0, 0, 1) 100%);
     background-size: 400%;
     background-clip: text;
     -webkit-background-clip: text;
@@ -257,6 +272,12 @@ button:hover {
     border-radius: 25%;
 }
 
+/* Div da imagem do portfólio */
+.intro-image-div {
+    width: 100%;
+    display: contents;
+}
+
 @media screen and (min-width: 800px) {
     /* Imagem do portfólio */
     .portfolio-intro-image {
@@ -270,10 +291,43 @@ button:hover {
 @media screen and (max-width: 800px) {
     /* Imagem do portfólio */
     .portfolio-intro-image {
-        width: 50%;
+        width: 250px;
         border: 2px solid var(--font-color-categorie-0);
         border-radius: 50%;
         box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 15px;
+    }
+}
+
+/* Div da seta do header */
+.arrow-div {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Seta do header */
+.arrow-image {
+    width: 70px;
+    height: 45px;
+    transform: rotate(180deg);
+    animation-name: arrowAnimation;
+    animation-duration: 1.5s;
+    animation-timing-function: cubic-bezier(0, 0, 1, 1);
+    animation-iteration-count: infinite;
+}
+
+@keyframes arrowAnimation {
+    0% {
+        transform: rotate(180deg) translateY(20px);
+    }
+    30% {
+        transform: rotate(180deg) translateY(-10px);
+    }
+    100% {
+        transform: rotate(180deg) translateY(20px);
     }
 }
 
@@ -305,12 +359,19 @@ button:hover {
 
 /* Título da aba sobre mim */
 .portfolio-aboutme-title {
-    color: #6080e0;
     text-align: center;
     font-size: 24pt;
     font-weight: bold;
     text-shadow: rgba(0, 0, 0, 0.5) 0px 0px 10px;
     margin: 50px 0 10px 0;
+}
+
+.portfolio-aboutme-title.light {
+    color: #404080;
+}
+
+.portfolio-aboutme-title.dark {
+    color: #8aa0ff;
 }
 
 /* Descrição da aba sobre mim */
@@ -394,15 +455,15 @@ button:hover {
 .curriculo-button {
     width: 100%;
     height: 100%;
-    background-color: transparent;
-    background-image: linear-gradient(90deg, rgb(150, 150, 150) 0%, rgb(190, 190, 190) 50%, rgb(150, 150, 150) 100%);
+    background-color: #0030a0;
+    /*background-image: linear-gradient(90deg, rgb(150, 150, 150) 0%, rgb(190, 190, 190) 50%, rgb(150, 150, 150) 100%);*/
     color: #fff;
     font-size: 12pt;
     font-weight: 600;
     text-shadow: rgba(0, 0, 0, 0.2) 0px 0px 5px;
     border: 0px solid;
     border-radius: 15px;
-    box-shadow: rgba(255, 255, 255, 0.3) 0px 0px 15px;
+    box-shadow: rgba(0, 0, 255, 0.3) 0px 0px 15px;
     transition: all 0.2s;
 }
 
@@ -777,4 +838,115 @@ button:hover {
     color: #f0f0f0;
     font-size: 10pt;
     margin: 0;
+}
+
+@media screen and (min-width: 769px) {
+    .portfolio-abas {
+        display: block;
+    }
+
+    .portfolio-768px {
+        display: none;
+    }
+
+    .nav-menu {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .arrow-div {
+        display: none;
+    }
+
+    .portfolio-abas {
+        display: none;
+    }
+
+    .portfolio-768px {
+        display: block;
+        height: 100%;
+    }
+
+    .open-nav-button-div {
+        height: 100%;
+    }
+
+    .open-nav-button {
+        width: 75px;
+        height: 100%;
+        border-width: 0px;
+        transition: all 0.3s;
+    }
+
+    .open-nav-button.closed {
+        background-color: transparent;
+    }
+
+    .open-nav-button.opened {
+        background-color: #fff;
+    }
+
+    .open-nav-button-image {
+        width: 30px;
+        height: 30px;
+        transition: all 0.3s;
+    }
+
+    .open-nav-button-image.closed {
+        filter: invert(0);
+    }
+
+    .open-nav-button-image.opened {
+        filter: invert(1);
+    }
+
+    .nav-menu {
+        width: 100%;
+    }
+
+    .nav-menu.closed {
+        display: none;
+    }
+
+    .menu-div {
+        /*background-color: #3060ff;*/
+        background-image: linear-gradient(180deg, rgba(0, 40, 100, 1) 0%, rgba(0, 40, 100, 0.8) 100%);
+        width: 100%;
+    }
+
+    .menu-abas-list {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        margin: auto;
+    }
+
+    .menu-abas-links {
+        width: 150px;
+        height: 75px;
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .menu-abas-buttons {
+        width: 100%;
+        height: 100%;
+        background-color: transparent;
+        color: #fff;
+        font-size: 14pt;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-weight: 600;
+        text-decoration: underline;
+        border-width: 0px;
+    }
+
+    #menu-theme-button {
+        width: 100px;
+        text-align: center;
+        padding: 25px;
+    }
 }
