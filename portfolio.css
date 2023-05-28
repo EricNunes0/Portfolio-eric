@@ -6,7 +6,7 @@
 h1, h3, a, p {
     color: #fff;
     margin: 0;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     text-decoration: none;
 }
 
@@ -39,17 +39,16 @@ button:hover {
 /* Header do portfólio */
 .portfolio-header {
     height: 100vh;
-    background-color: rgb(50, 120, 255);
-    background-image: linear-gradient(45deg, rgb(0, 0, 0, 0) 0%, rgba(255, 255, 255, 0.3) 50%, rgb(0, 0, 0, 0) 100%);
-    background-size: 300% 300%;
-    animation-name: HeaderAnimation;
-    animation-duration: 8s;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out;
+    transition: all 0.3s;
+}
+
+.portfolio-header.light {
+    background-color: rgb(220, 220, 220);
 }
 
 .portfolio-header.dark {
-    background-color: rgb(0, 40, 100);
+    background-color: rgb(20, 20, 20);
+    background-image: radial-gradient(ellipse at bottom, rgba(0, 40, 200, 0.3) 0%, rgba(0, 0, 0, 0) 100%);
 }
 
 @keyframes HeaderAnimation {
@@ -80,8 +79,15 @@ button:hover {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    background-image: linear-gradient(180deg, rgba(0, 20, 80, 1) 0%, rgba(0, 20, 80, 1) 100%);
-    box-shadow: rgba(0, 0, 0, 0.12) 0px 10px 15px;
+    transition: all 0.3s;
+}
+
+.portfolio-nav.light {
+    background-color: rgb(220, 220, 220);
+}
+
+.portfolio-nav.dark {
+    background-color: rgb(20, 20, 40);
 }
 
 /* Alinhar itens na barra de navegação */
@@ -90,7 +96,7 @@ button:hover {
     height: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
 }
 
@@ -123,21 +129,30 @@ button:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: linear-gradient(135deg, rgba(255, 255, 255, 1) 0%, rgb(226, 226, 230) 50%, rgba(255, 255, 255, 1) 100%);
-    background-size: 400%;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-size: 14pt;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 12pt;
     font-weight: 600;
     padding: 0 15px;
-    animation: abasLinksAnimation 4s cubic-bezier(0, 0, 1, 1) infinite;
 }
 
-@keyframes abasLinksAnimation {
-    to {
-        background-position: 400%;
+.abas-links.light {
+    color: #000;
+}
+
+.abas-links.dark {
+    color: #fff;
+}
+
+.theme-button-div {
+    width: 20%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+    .theme-button-div {
+        display: none;
     }
 }
 
@@ -153,6 +168,14 @@ button:hover {
 .theme-buttons-icons {
     width: 20px;
     height: 20px;
+}
+
+.theme-buttons-icons.light {
+    filter: invert(0.8);
+}
+
+.theme-buttons-icons.dark {
+    filter: invert(0.2);
 }
 
 /* Introdução do portfolio */
@@ -182,21 +205,37 @@ button:hover {
 }
 
 /* Título do portfolio */
-.portfolio-intro-title {
+.header-titles {
     font-size: 16pt;
     text-align: center;
 }
 
+.header-titles.light {
+    color: #000;
+}
+
+/* Título do portfolio */
+.header-titles.dark {
+    color: #fff;
+}
+
 /* Nome do portfolio */
-.portfolio-intro-name {
-    font-size: 24pt;
+.header-names {
+    font-size: 30pt;
     text-align: center;
-    background-image: linear-gradient(135deg, rgba(0, 0, 0, 1) 0%, #4040d0 50%, rgba(0, 0, 0, 1) 100%);
     background-size: 400%;
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    animation: introName 8s ease-in-out 0.1s infinite;
+    animation: introName 8s cubic-bezier(0, 0, 1, 1) 0.1s infinite;
+}
+
+.header-names.light {
+    background-image: linear-gradient(135deg, rgba(20, 20, 100, 1) 0%, rgb(80, 80, 160, 1) 50%, rgba(20, 20, 100, 1) 100%);
+}
+
+.header-names.dark {
+    background-image: linear-gradient(135deg, rgba(200, 200, 255, 1) 0%, rgb(80, 80, 160, 1) 50%, rgba(200, 200, 255, 1) 100%);
 }
 
 @keyframes introName {
@@ -206,19 +245,72 @@ button:hover {
 }
 
 /* Descrição do portfolio */
-.portfolio-intro-description {
+.header-descriptions {
     text-align: center;
-    font-size: 10pt;
+    font-size: 16pt;
     margin: 5px 0;
 }
 
+.header-descriptions.light {
+    color: #000;
+}
+
+.header-descriptions.dark {
+    color: #fff;
+}
+
 /* Linguagens de programação do portfolio */
-.portfolio-intro-code {
+.header-codes {
     text-align: center;
-    color: #404040;
-    font-size: 12pt;
+    font-size: 14pt;
     font-weight: bold;
-    margin: 5px 0;
+    margin: 15px 0;
+}
+
+.header-codes.light {
+    color: #404040;
+}
+
+.header-codes.dark {
+    color: #a0a0a0;
+}
+
+/* Área de contatos da barra de navegação */
+.header-contacts {
+    width: 20%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+@media screen and (max-width: 768px) {
+    .header-contacts {
+        display: none;
+    }
+}
+
+.contact-area {
+    filter: grayscale(1);
+    transition: all 0.2s;
+}
+
+.contact-area:hover {
+    filter: grayscale(0);
+    transform: translateY(-2px);
+}
+
+.contact-links {
+    display: block;
+    height: fit-content;
+}
+
+.header-contacts-images {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
 }
 
 /* Sessão dos botões do portfolio */
@@ -278,13 +370,32 @@ button:hover {
     display: contents;
 }
 
+/* Imagem do portfólio */
+.portfolio-intro-image {
+    border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 15px;
+    animation-name: portfolioImage;
+    animation-duration: 2s;
+    animation-timing-function: cubic-bezier(0, 0, 1, 1);
+    animation-iteration-count: infinite;
+}
+
+@keyframes portfolioImage {
+    0% {
+        border: 2px solid rgba(200, 200, 255);
+    }
+    50% {
+        border: 2px solid rgba(150, 150, 255);
+    }
+    100% {
+        border: 2px solid rgba(200, 200, 255);
+    }
+}
+
 @media screen and (min-width: 800px) {
     /* Imagem do portfólio */
     .portfolio-intro-image {
         width: 350px;
-        border: 2px solid var(--font-color-categorie-0);
-        border-radius: 50%;
-        box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 15px;
     }
 }
 
@@ -292,9 +403,6 @@ button:hover {
     /* Imagem do portfólio */
     .portfolio-intro-image {
         width: 250px;
-        border: 2px solid var(--font-color-categorie-0);
-        border-radius: 50%;
-        box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 15px;
     }
 }
 
@@ -312,6 +420,7 @@ button:hover {
 .arrow-image {
     width: 70px;
     height: 45px;
+    filter: invert(0.5);
     transform: rotate(180deg);
     animation-name: arrowAnimation;
     animation-duration: 1.5s;
@@ -340,12 +449,34 @@ button:hover {
 
 .portfolio-aboutme.dark {
     width: 100%;
-    background-color: #404040;
+    background-color: #202a30;
 }
 
 /* Principal da aba sobre mim */
 .portfolio-aboutme-main {
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Bloco da aba sobre mim */
+.aboutme-container {
+    width: 80%;
+    height: 100%;
+    border-radius: 15px;
+    margin: 20px auto;
+    transition: all 0.3s;
+}
+
+.aboutme-container.light {
+    background-color: #e0e0e0;
+}
+
+.aboutme-container.dark {
+    background-color: #3b404a;
+    ;
 }
 
 /* Div sobre mim */
@@ -360,9 +491,9 @@ button:hover {
 /* Título da aba sobre mim */
 .portfolio-aboutme-title {
     text-align: center;
-    font-size: 24pt;
+    font-size: 30pt;
     font-weight: bold;
-    text-shadow: rgba(0, 0, 0, 0.5) 0px 0px 10px;
+    text-shadow: rgba(0, 0, 0, 0.5) 0px 0px 4px;
     margin: 50px 0 10px 0;
 }
 
@@ -378,16 +509,15 @@ button:hover {
 .portfolio-aboutme-description {
     color: #a0a0a0;
     text-align: center;
-    font-size: 12pt;
+    font-size: 14pt;
     font-weight: 100;
-    text-shadow: rgba(0, 0, 0, 0.5) 0px 0px 10px;
     margin: 5px 0 50px 0;
 }
 
 @media screen and (min-width: 800px) {
     /* Div da descrição do sobre mim */
     .portfolio-aboutme-description-div {
-        width: 50%;
+        width: 70%;
         font-size: 14pt;
     }
 }
@@ -427,12 +557,78 @@ button:hover {
     justify-content: center;
     align-items: center;
     gap: 1rem;
-    margin: 50px 0;
+    margin: 30px 0;
+}
+
+/* Divs das skills */
+.skills-divs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 60px;
+    margin: 5px;
+    filter: grayscale(1);
+    transition: all 0.2s;
+}
+
+.skills-divs:hover {
+    cursor: pointer;
+    transform: translateY(-2px);
+    filter: grayscale(0) saturate(1.5);
+}
+
+.skills-divs div {
+    opacity: 0;
+    width: 70px;
+    height: 20px;
+    transition: all 0.2s;
+}
+
+.skills-divs:hover div {
+    display: block;
+    opacity: 1;
+    background-color: rgb(40, 40, 40);
+    padding: 5px;
+    border-radius: 5px;
+    transform: translateY(-5px);
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 3px 2px;
+}
+
+.skills-divs:hover img {
+    transform: scaleY(10px);
+}
+
+/* Nomes das skills */
+.skills-names {
+    display: flex;
+    justify-content: center;
+    color: #fff;
+    font-size: 12pt;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 600;
 }
 
 /* Imagens das skills da aba sobre mim */
-.portfolio-skills-images, .portfolio-aboutme-skills-div img {
-    width: 40px;
+.skills-images {
+    width: 100%;
+    animation-name: skillsAnimation;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+@keyframes skillsAnimation {
+    0% {
+        transform: rotate(2deg);
+    }
+    50% {
+        transform: rotate(-2deg);
+    }
+    100% {
+        transform: rotate(2deg);
+    }
 }
 
 /* Div do botão de currículo */
@@ -493,8 +689,8 @@ button:hover {
 .portfolio-projects-title {
     color: #d0d0d0;
     text-align: center;
-    font-size: 18pt;
-    font-weight: 100;
+    font-size: 30pt;
+    font-weight: bold;
     margin: 50px 0 10px 0;
 }
 
@@ -503,12 +699,19 @@ button:hover {
 }
 
 /* Descrição dos projetos do portfolio */
-.portfolio-projects-description {
-    color: #a0a0a0;
+.projects-main-descriptions {
     text-align: center;
-    font-size: 12pt;
+    font-size: 14pt;
     font-weight: 100;
     margin: 5px 0;
+}
+
+.projects-main-descriptions.light {
+    color: #808080;
+}
+
+.projects-main-descriptions.dark {
+    color: #a0a0a0;
 }
 
 /* Div da principal aba de projetos */
@@ -910,8 +1113,7 @@ button:hover {
     }
 
     .menu-div {
-        /*background-color: #3060ff;*/
-        background-image: linear-gradient(180deg, rgba(0, 40, 100, 1) 0%, rgba(0, 40, 100, 0.8) 100%);
+        background-image: linear-gradient(180deg, rgba(0, 40, 60, 1) 0%, rgba(0, 40, 100, 0.8) 100%);
         width: 100%;
     }
 
@@ -930,6 +1132,14 @@ button:hover {
         height: 75px;
         margin: 10px 0;
         text-align: center;
+    }
+
+    .menu-abas-links.light {
+        color: #000;
+    }
+
+    .menu-abas-links.dark {
+        color: #fff;
     }
 
     .menu-abas-buttons {
