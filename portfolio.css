@@ -22,12 +22,12 @@ button:hover {
 /* Textos do modo claro */
 .light-texts {
     color: #000;
-    transition: all 0.5s;
+    transition: all 0.3s;
 }
 
 .dark-texts {
     color: #fff;
-    transition: all 0.5s;
+    transition: all 0.3s;
 }
 
 /* Página de portfolio*/
@@ -444,12 +444,12 @@ button:hover {
 .portfolio-aboutme {
     width: 100%;
     background-color: #f0f0f0;
-    transition: all 0.5s;
+    transition: all 0.3s;
 }
 
 .portfolio-aboutme.dark {
     width: 100%;
-    background-color: #202a30;
+    background-color: #303030;
 }
 
 /* Principal da aba sobre mim */
@@ -475,7 +475,7 @@ button:hover {
 }
 
 .aboutme-container.dark {
-    background-color: #3b404a;
+    background-color: #404040;
     ;
 }
 
@@ -667,12 +667,12 @@ button:hover {
 .portfolio-projects {
     width: 100%;
     background-color: #e0e0e0;
-    transition: all 0.5s;
+    transition: all 0.3s;
 }
 
 .portfolio-projects.dark {
     width: 100%;
-    background-color: #303030;
+    background-color: #202020;
 }
 
 /* Principal da aba de projetos */
@@ -882,6 +882,30 @@ button:hover {
     }
 }
 
+.project-links#project-link-5 {
+    background-image: url("https://i.imgur.com/C7zTRsC.png");
+    animation: backgroundChange5 20s ease-in-out infinite;
+}
+
+@keyframes backgroundChange5 {
+    0% {
+
+        background-position: 0px;
+    }
+    33% {
+        background-image: url("https://i.imgur.com/da3khU0.png");
+    }
+    50% {
+        background-position: -20px;
+    }
+    67% {
+        background-image: url("https://i.imgur.com/S40OAXM.png");
+    }
+    100% {
+        background-position: 0px;
+    }
+}
+
 .project-links:hover {
     transform: scale(1.01);
 }
@@ -955,12 +979,12 @@ button:hover {
 .portfolio-contacts {
     padding: 5% 0;
     background-color: #a0a0a0;
-    transition: all 0.5s;
+    transition: all 0.3s;
 }
 
 .portfolio-contacts.dark {
     padding: 5% 0;
-    background-color: #606060;
+    background-color: #303030;
 }
 
 /* Div dos contatos */
