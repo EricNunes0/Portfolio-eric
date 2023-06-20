@@ -294,7 +294,7 @@ button:hover {
 
 .contact-area {
     filter: grayscale(1);
-    transition: all 0.2s;
+    transition: all 0.3s;
 }
 
 .contact-area:hover {
@@ -569,8 +569,8 @@ button:hover {
     width: 40px;
     height: 60px;
     margin: 5px;
-    filter: grayscale(1);
-    transition: all 0.2s;
+    filter: grayscale(0.5);
+    transition: all 0.3s;
 }
 
 .skills-divs:hover {
@@ -583,7 +583,7 @@ button:hover {
     opacity: 0;
     width: 70px;
     height: 20px;
-    transition: all 0.2s;
+    transition: all 0.3s;
 }
 
 .skills-divs:hover div {
@@ -660,7 +660,7 @@ button:hover {
     border: 0px solid;
     border-radius: 15px;
     box-shadow: rgba(0, 0, 255, 0.3) 0px 0px 15px;
-    transition: all 0.2s;
+    transition: all 0.3s;
 }
 
 /* Aba de projetos */
@@ -757,7 +757,7 @@ button:hover {
     background-size: 105%;
     background-position: center;
     text-decoration: none;
-    transition: all 0.2s;
+    transition: all 0.3s;
 }
 
 .project-links#project-link-0 {
@@ -883,13 +883,36 @@ button:hover {
 }
 
 .project-links#project-link-5 {
-    background-image: url("https://i.imgur.com/C7zTRsC.png");
+    background-image: url("https://i.imgur.com/AsTlPhd.png");
     animation: backgroundChange5 20s ease-in-out infinite;
 }
 
 @keyframes backgroundChange5 {
     0% {
 
+        background-position: 0px;
+    }
+    33% {
+        background-image: url("https://i.imgur.com/hvKTv99.png");
+    }
+    50% {
+        background-position: -20px;
+    }
+    67% {
+        background-image: url("https://i.imgur.com/a7c6xlq.png");
+    }
+    100% {
+        background-position: 0px;
+    }
+}
+
+.project-links#project-link-6 {
+    background-image: url("https://i.imgur.com/C7zTRsC.png");
+    animation: backgroundChange6 20s ease-in-out infinite;
+}
+
+@keyframes backgroundChange6 {
+    0% {
         background-position: 0px;
     }
     33% {
@@ -900,6 +923,29 @@ button:hover {
     }
     67% {
         background-image: url("https://i.imgur.com/S40OAXM.png");
+    }
+    100% {
+        background-position: 0px;
+    }
+}
+
+.project-links#project-link-7 {
+    background-image: url("https://i.imgur.com/18nSHgM.png");
+    animation: backgroundChange7 20s ease-in-out infinite;
+}
+
+@keyframes backgroundChange7 {
+    0% {
+        background-position: 0px;
+    }
+    33% {
+        background-image: url("https://i.imgur.com/29kQWCw.png");
+    }
+    50% {
+        background-position: -20px;
+    }
+    67% {
+        background-image: url("https://i.imgur.com/8TQb8ck.png");
     }
     100% {
         background-position: 0px;
@@ -1019,7 +1065,7 @@ button:hover {
     justify-content: center;
     align-items: center;
     gap: 10px;
-    transition: all 0.2s;
+    transition: all 0.3s;
 }
 
 .contatos-links:hover {
