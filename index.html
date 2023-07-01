@@ -6,10 +6,17 @@
     <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
     <title>Portfólio de Eric Nunes</title>
     <link rel = "stylesheet" type = "text/css" href = "portfolio.css"/>
+    <link rel = "stylesheet" type = "text/css" href = "scrollUp.css"/>
     <link rel = "icon" href = "https://i.imgur.com/Yxx6lF4.png"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
 </head>
 <body class = "portfolio-page">
     <div class = "portfolio-main">
+        <div id = "portfolio-scroll-up-container">
+            <button type = "button" class = "hidden" id = "portfolio-scroll-up-button" onclick = "scrollUp()">
+                <object id = "arrow-scroll-up-svg" data = "svgs/arrowScrollUp.svg" width = "20" height = "20"></object>
+            </button>
+        </div>
         <div class = "portfolio-header light" id = "portfolio-header-header"><a name = "header"></a>
             <div class = "nav-div">
                 <nav class = "portfolio-nav light" id = "header-nav">
@@ -61,12 +68,12 @@
                     </div>
                 </nav>
                 <div class = "nav-menu closed" id = "menu">
-                    <div class = "menu-div">
+                    <div class = "menu-div light">
                         <ul class = "menu-abas-list">
-                            <a href = "#header" class = "menu-abas-links"><button class = "menu-abas-buttons" onclick = "openNavMenu()">Início</button></a>
-                            <a href = "#aboutme" class = "menu-abas-links"><button class = "menu-abas-buttons" onclick = "openNavMenu()">Sobre</button></a>
-                            <a href = "#projects" class = "menu-abas-links"><button class = "menu-abas-buttons" onclick = "openNavMenu()">Projetos</button></a>
-                            <a href = "#contacts" class = "menu-abas-links"><button class = "menu-abas-buttons" onclick = "openNavMenu()">Contato</button></a>
+                            <a href = "#header" class = "menu-abas-links"><button class = "menu-abas-buttons light" onclick = "openNavMenu()">Início</button></a>
+                            <a href = "#aboutme" class = "menu-abas-links"><button class = "menu-abas-buttons light" onclick = "openNavMenu()">Sobre</button></a>
+                            <a href = "#projects" class = "menu-abas-links"><button class = "menu-abas-buttons light" onclick = "openNavMenu()">Projetos</button></a>
+                            <a href = "#contacts" class = "menu-abas-links"><button class = "menu-abas-buttons light" onclick = "openNavMenu()">Contato</button></a>
                             <button type = "button" class = "theme-buttons light" id = "menu-theme-button" onclick = "changePageTheme()">
                                 <img class = "theme-buttons-icons" src = "https://i.imgur.com/EFjsg8D.png">
                             </button>
@@ -120,11 +127,11 @@
                             <p class = "portfolio-aboutme-description">Conheça um pouco sobre mim</p>
                         </div>
                         <div class = "portfolio-aboutme-description-div">
-                            <p class = "light-texts">Olá, meu nome é Eric Nunes Ramalho. Sou um jovem de 19 anos, natural do Rio de Janeiro, Brasil, estudante do curso de Análise e Desenvolvimento de Sistemas na Universidade Estácio de Sá.</p>
-                            <p class = "light-texts">Sou uma pessoa simples que ama aprender coisas novas, em especial sobre a área de desenvolvimento web e aplicações, a qual tenho um forte desejo de seguir carreira.</p>
-                            <p class = "light-texts">Com conhecimento em: HTML, CSS, JavaScript, PHP, Modelagem de Banco de dados relacional em MySQL e PostgreSQL,  React, Node.js, Git e GitHub, Python, Algoritmo, C, C++, Sistema Windows, Pacote Office (Word, Excel, PowerPoint).</p>
-                            <p class = "light-texts">Estou em busca de um estágio/emprego a fim de contribuir na área que me for designada, utilizando meus conhecimentos adquiridos em projetos pessoais e buscando sempre aprender coisas novas.
-                            <p class = "light-texts">Gosto de me exercitar ao ar livre, jogar, ver animes, séries e aprender coisas novas.</p>
+                            <p class = "aboutme-texts light">Olá, meu nome é Eric Nunes Ramalho. Sou um jovem de 19 anos, natural do Rio de Janeiro, Brasil, estudante do curso de Análise e Desenvolvimento de Sistemas na Universidade Estácio de Sá.</p>
+                            <p class = "aboutme-texts light">Sou uma pessoa simples que ama aprender coisas novas, em especial sobre a área de desenvolvimento web e aplicações, a qual tenho um forte desejo de seguir carreira.</p>
+                            <p class = "aboutme-texts light">Com conhecimento em: HTML, CSS, JavaScript, PHP, Modelagem de Banco de dados relacional em MySQL e PostgreSQL,  React, Node.js, Git e GitHub, Python, Algoritmo, C, C++, Sistema Windows, Pacote Office (Word, Excel, PowerPoint).</p>
+                            <p class = "aboutme-texts light">Estou em busca de um estágio/emprego a fim de contribuir na área que me for designada, utilizando meus conhecimentos adquiridos em projetos pessoais e buscando sempre aprender coisas novas.
+                            <p class = "aboutme-texts light">Gosto de me exercitar ao ar livre, jogar, ver animes, séries e aprender coisas novas.</p>
                         </div>
                         <div class = "portfolio-aboutme-skills-div">
                             <div class = "skills-divs">
@@ -150,6 +157,12 @@
                                     <span class = "skills-names">React</span>
                                 </div>
                                 <img class = "skills-images" src = "https://i.imgur.com/xPXXlmN.png" alt = "React"/>
+                            </div>
+                            <div class = "skills-divs">
+                                <div class = "skills-names-divs">
+                                    <span class = "skills-names">Bootstrap</span>
+                                </div>
+                                <img class = "skills-images" src = "https://i.imgur.com/tLZH5Hh.png" alt = "Bootstrap"/>
                             </div>
                             <div class = "skills-divs">
                                 <div class = "skills-names-divs">
@@ -209,7 +222,7 @@
             <div class = "portfolio-projects-main">
                 <div class = "portfolio-projects-div">
                     <div class = "portfolio-projects-title-div">
-                        <h1 class = "portfolio-projects-title light-texts">Projetos</h1>
+                        <h1 class = "portfolio-projects-title light">Projetos</h1>
                         <p class = "projects-main-descriptions light" id = "projects-main-description">Veja todos os meus projetos e quais linguagens usei neles:</p>
                     </div>
                     <div class = "portfolio-projects-images-div">
@@ -424,7 +437,7 @@
                                 <a class = "contatos-links" href = "https://www.linkedin.com/in/eric-nunes-ramalho-58a146208/" alt = "LinkedIn" target = "_blank">
                                     <img class = "contato-images" src = "https://i.imgur.com/HeX1qAV.png"/>
                                     <div class = "contato-texts-div">
-                                        <p class = "contato-titles light-texts">LinkedIn</p>
+                                        <p class = "contato-titles light">LinkedIn</p>
                                         <p class = "contato-links-texts">linkedin.com/in/eric-nunes-ramalho-58a146208/</p>
                                     </div>
                                 </a>
@@ -433,7 +446,7 @@
                                 <a class = "contatos-links" href = "https://github.com/EricNunes0" alt = "LinkedIn" target = "_blank">
                                     <img class = "contato-images" src = "https://i.imgur.com/zhSCAKX.png"/>
                                     <div class = "contato-texts-div">
-                                        <p class = "contato-titles light-texts">Github</p>
+                                        <p class = "contato-titles light">Github</p>
                                         <p class = "contato-links-texts">github.com/EricNunes0</p>
                                     </div>
                                 </a>
@@ -442,7 +455,7 @@
                                 <a class = "contatos-links" href = "https://web.whatsapp.com/" alt = "LinkedIn" target = "_blank">
                                     <img class = "contato-images" src = "https://i.imgur.com/MQjNoIt.png"/>
                                     <div class = "contato-texts-div">
-                                        <p class = "contato-titles light-texts">Whatsapp</p>
+                                        <p class = "contato-titles light">Whatsapp</p>
                                         <p class = "contato-links-texts">(21) 98728-3053</p>
                                     </div>
                                 </a>
@@ -451,7 +464,7 @@
                                 <a class = "contatos-links" href = "mailto:eric26052004@gmail.com" alt = "LinkedIn" target = "_blank">
                                     <img class = "contato-images" src = "https://i.imgur.com/W4ZnfIP.png"/>
                                     <div class = "contato-texts-div">
-                                        <p class = "contato-titles light-texts">E-mail</p>
+                                        <p class = "contato-titles light">E-mail</p>
                                         <p class = "contato-links-texts">eric26052004@gmail.com</p>
                                     </div>
                                 </a>
@@ -463,5 +476,7 @@
         </div>
     </div>
     <script type = "text/javascript" src = "script.js"></script>
+    <script type = "text/javascript" src = "scrollUp.js"></script>
+    <script src = "https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
 </body>
 </html>

@@ -1,0 +1,33 @@
+#portfolio-scroll-up-container {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+#portfolio-scroll-up-button {
+    pointer-events: all;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 1rem;
+    bottom: 1rem;
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 3.5rem;
+    height: 3.5rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    opacity: 1;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 1rem;
+    transition: all 0.3s;
+}
+#portfolio-scroll-up-button[class~="hidden"] {
+    opacity: 0;
+}
+
+#arrow-scroll-up-svg {
+    pointer-events: none;
+    filter: invert(0);
+}

@@ -7,59 +7,22 @@ const contactsSession = document.querySelector('#portfolio-contacts-header');
 
 /* Função para alterar tema da página */
 function changePageTheme() {
+    let themeIcons = document.getElementsByClassName("theme-buttons-icons");
     if(themeButton.className.includes("light")) {
-        document.getElementById("header-nav").className = "portfolio-nav dark";
-        themeButton.className = "theme-buttons dark";
-        headerSession.className = "portfolio-header dark";
-        aboutmeSession.className = "portfolio-aboutme dark";
-        projectsSession.className = "portfolio-projects dark";
-        contactsSession.className = "portfolio-contacts dark";
-
-        let navLinks = document.getElementsByClassName("abas-links");
-        for(let navLink of navLinks) {
-            navLink.className = "abas-links dark";
-        };
-
-        let themeIcons = document.getElementsByClassName("theme-buttons-icons");
+        for(let item of document.querySelectorAll(".light")) {
+            item.className = item.className.replace("light", "dark");
+        }
         for(let i = 0; i <= themeIcons.length - 1; i++) {
-            themeIcons[i].className = "theme-buttons-icons dark";
             themeIcons[i].src = "https://i.imgur.com/n68qj9b.png";
         }
-        document.getElementById("header-title").className = "header-titles dark";
-        document.getElementById("header-name").className = "header-names dark";
-        document.getElementById("header-description").className = "header-descriptions dark";
-        document.getElementById("header-code").className = "header-codes dark";
-        document.getElementById("aboutme-container").className = "aboutme-container dark";
-        document.getElementById("about-me").className = "portfolio-aboutme-title dark";
-        document.getElementById("projects-main-description").className = "projects-main-descriptions dark";
-        changeTextsColor(1);
     } else if(themeButton.className.includes("dark")) {
-        document.getElementById("header-nav").className = "portfolio-nav light";
-        themeButton.className = "theme-buttons light";
-        headerSession.className = "portfolio-header light";
-        aboutmeSession.className = "portfolio-aboutme light";
-        projectsSession.className = "portfolio-projects light";
-        contactsSession.className = "portfolio-contacts light";
-
-        let navLinks = document.getElementsByClassName("abas-links");
-        for(let navLink of navLinks) {
-            navLink.className = "abas-links light";
-        };
-
-        let themeIcons = document.getElementsByClassName("theme-buttons-icons");
+        for(let item of document.querySelectorAll(".dark")) {
+            item.className = item.className.replace("dark", "light");
+        }
         for(let i = 0; i <= themeIcons.length - 1; i++) {
-            themeIcons[i].className = "theme-buttons-icons light";
             themeIcons[i].src = "https://i.imgur.com/EFjsg8D.png";
         }
-        document.getElementById("header-title").className = "header-titles light";
-        document.getElementById("header-name").className = "header-names light";
-        document.getElementById("header-description").className = "header-descriptions light";
-        document.getElementById("header-code").className = "header-codes light";
-        document.getElementById("aboutme-container").className = "aboutme-container light";
-        document.getElementById("about-me").className = "portfolio-aboutme-title light";
-        document.getElementById("projects-main-description").className = "projects-main-descriptions light";
-        changeTextsColor(0);
-    };
+    }
 };
 
 /* Alterar a cor de todos os textos */
