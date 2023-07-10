@@ -853,6 +853,14 @@ button:hover {
     animation-iteration-count: infinite;
 }
 
+.project-links#project-link-9 {
+    background-image: url("https://i.imgur.com/7Ku7iFz.png");
+    animation-name: projectLinksAnimation, backgroundChange9;
+    animation-duration: 20s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
 @keyframes backgroundChange0 {
     0% {
         background-image: url("https://i.imgur.com/k9qMdZG.png");
@@ -946,6 +954,18 @@ button:hover {
 @keyframes backgroundChange8 {
     50% {
         background-image: url("https://i.imgur.com/Y687Uip.png");
+    }
+}
+
+@keyframes backgroundChange9 {
+    25% {
+        background-image: url("https://i.imgur.com/eXDFjNS.png");
+    }
+    50% {
+        background-image: url("https://i.imgur.com/zOEUAGa.png");
+    }
+    75% {
+        background-image: url("https://i.imgur.com/YJ0fMo8.png");
     }
 }
 
