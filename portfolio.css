@@ -330,6 +330,7 @@ button:hover {
 .portfolio-intro-buttons-section {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     gap: 1rem;
@@ -481,16 +482,17 @@ button:hover {
     border-radius: 15px;
     margin: 20px auto;
     transition: all 0.3s;
-    background-image: linear-gradient(130deg, #e0e0e0, #c0c0c0);
     background-size: 100% 100%;
 }
 
 .aboutme-container.light {
     background-color: #e0e0e0;
+    background-image: linear-gradient(130deg, #e0e0e0, #c0c0c0);
 }
 
 .aboutme-container.dark {
     background-color: #404040;
+    background-image: linear-gradient(130deg, #404040, #202020);
     ;
 }
 
@@ -1268,5 +1270,26 @@ button:hover {
         width: 100px;
         text-align: center;
         padding: 25px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .intro-image-div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 3rem;
+    }
+
+    .header-descriptions {
+        font-size: 5vw;
+    }
+
+    .aboutme-container {
+        width: 100%;
+    }
+
+    .portfolio-intro-image {
+        width: 80vw;
     }
 }
