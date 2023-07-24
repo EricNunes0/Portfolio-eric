@@ -574,7 +574,7 @@ button:hover {
     justify-content: center;
     align-items: center;
     gap: 1rem;
-    margin: 30px 0;
+    margin: 25px 0;
 }
 
 /* Divs das skills */
@@ -637,13 +637,13 @@ button:hover {
 
 @keyframes skillsAnimation {
     0% {
-        transform: rotate(2deg);
+        transform: rotate(5deg);
     }
     50% {
-        transform: rotate(-2deg);
+        transform: rotate(-5deg);
     }
     100% {
-        transform: rotate(2deg);
+        transform: rotate(5deg);
     }
 }
 
@@ -891,6 +891,14 @@ button:hover {
     animation-iteration-count: infinite;
 }
 
+.project-links#project-link-10 {
+    background-image: url("https://i.imgur.com/xV8djkP.png");
+    animation-name: projectLinksAnimation;
+    animation-duration: 20s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
 @keyframes backgroundChange0 {
     0% {
         background-image: url("https://i.imgur.com/k9qMdZG.png");
@@ -1050,6 +1058,9 @@ button:hover {
 .lang-images {
     width: 25px;
 }
+/*.lang-images[alt~="jQuery"] {
+    background-color: #0030a0;
+}*/
 
 /* Botões dos projetos */
 .project-buttons {
