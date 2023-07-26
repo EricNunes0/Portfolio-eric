@@ -1,6 +1,12 @@
+@font-face {
+    font-family: "Poppins";
+    src: url("./fonts/font_Poppins.ttf");
+}
+
 :root {
     --nav-height: 50px;
     --font-color-categorie-0: #3060ff;
+    --project-links-border-radius: 5px;
 }
 
 h1, h3, a, p {
@@ -82,14 +88,14 @@ button:hover {
     justify-content: center;
     align-items: center;
     transition: all 0.3s;
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.4);
 }
-
 .portfolio-nav.light {
     background-color: rgb(220, 220, 220);
 }
-
 .portfolio-nav.dark {
     background-color: rgb(20, 20, 40);
+    box-shadow: 0px 0px 3px rgba(255, 255, 255, 0.4);
 }
 
 /* Alinhar itens na barra de navegação */
@@ -132,9 +138,9 @@ button:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 12pt;
-    font-weight: 600;
+    font-size: 14pt;
     padding: 0 15px;
+    transition: all 0.3s;
 }
 
 .abas-links.light {
@@ -161,24 +167,39 @@ button:hover {
 
 /* Botão de mudar tema da página */
 .theme-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 50px;
     height: 100%;
     background-color: transparent;
-    border: 0px;
+    border: none;
 }
 
 /* Ícones dos botões de trocar tema */
 .theme-buttons-icons {
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 30px;
 }
-
 .theme-buttons-icons.light {
+    filter: invert(0.2);
+}
+.theme-buttons-icons.dark {
     filter: invert(0.8);
 }
 
-.theme-buttons-icons.dark {
-    filter: invert(0.2);
+.theme-icons {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 30px;
+    height: 30px;
+    transition: all 0.2s;
+}
+/* Ícones dos temas */
+.theme-icons[class~="hide"] {
+    pointer-events: none;
+    opacity: 0;
 }
 
 @keyframes buttonIconLightToDark {
@@ -198,7 +219,7 @@ button:hover {
         height: 90%;
         display: flex;
         flex-direction: row;
-        justify-content: center;
+        justify-content: space-evenly;
         align-items: center;
         gap: 2rem;
     }
@@ -217,9 +238,17 @@ button:hover {
     }
 }
 
+/* Sessão do título do portfolio */
+#header-title-section {
+    display: block;
+    min-height: 25px;
+}
+
 /* Título do portfolio */
 .header-titles {
+    font-family: "Poppins";
     font-size: 16pt;
+    font-weight: bold;
     text-align: center;
 }
 
@@ -232,9 +261,17 @@ button:hover {
     color: #fff;
 }
 
+/* Sessão do nome do portfolio */
+#header-name-section {
+    display: block;
+    min-height: 48px;
+}
+
 /* Nome do portfolio */
 .header-names {
+    font-family: "Poppins", monospace;
     font-size: 30pt;
+    font-weight: bold;
     text-align: center;
     background-size: 400%;
     background-clip: text;
@@ -257,10 +294,17 @@ button:hover {
     }
 }
 
+/* Sessão da descrição do portfolio */
+#header-description-section {
+    display: block;
+    min-height: 64px;
+}
+
 /* Descrição do portfolio */
 .header-descriptions {
     text-align: center;
-    font-size: 16pt;
+    font-family: "Poppins";
+    font-size: 12pt;
     margin: 5px 0;
 }
 
@@ -272,20 +316,27 @@ button:hover {
     color: #fff;
 }
 
+/* Sessão do code do portfolio */
+#header-code-section {
+    display: block;
+    min-height: 28px;
+}
+
 /* Linguagens de programação do portfolio */
 .header-codes {
     text-align: center;
+    font-family: "Poppins";
     font-size: 14pt;
     font-weight: bold;
     margin: 15px 0;
 }
 
 .header-codes.light {
-    color: #404040;
+    color: #202020;
 }
 
 .header-codes.dark {
-    color: #a0a0a0;
+    color: #c0c0c0;
 }
 
 /* Área de contatos da barra de navegação */
@@ -776,7 +827,7 @@ button:hover {
 .project-image-div {
     width: 20rem;
     height: 10rem;
-    border-radius: 15px;
+    border-radius: var(--project-links-border-radius);
     box-shadow: rgba(0, 0, 0, 1) 0px 0px 15px;
 }
 
@@ -784,8 +835,8 @@ button:hover {
 .project-links {
     width: 100%;
     height: 100%;
-    border: 2px solid #606060;
-    border-radius: 15px;
+    border: 1px solid #606060;
+    border-radius: var(--project-links-border-radius);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -1026,8 +1077,8 @@ button:hover {
     align-items: center;
     background-color: rgba(0, 0, 0, 0.8);
     color: #f0f0f0;
-    border-top-left-radius: 13px;
-    border-top-right-radius: 13px;
+    border-top-left-radius: var(--project-links-border-radius);
+    border-top-right-radius: var(--project-links-border-radius);
     text-align: center;
     font-size: 14pt;
     font-weight: 100;
@@ -1050,8 +1101,8 @@ button:hover {
     align-items: center;
     gap: 10px;
     background-color: rgba(0, 0, 0, 0.8);
-    border-bottom-left-radius: 13px;
-    border-bottom-right-radius: 13px;
+    border-bottom-left-radius: var(--project-links-border-radius);
+    border-bottom-right-radius: var(--project-links-border-radius);
 }
 
 /* Imagens das linguagens de programação */
@@ -1251,6 +1302,8 @@ button:hover {
 
     .nav-menu {
         width: 100%;
+        height: 80vh;
+        box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
     }
 
     .nav-menu.closed {
@@ -1259,9 +1312,13 @@ button:hover {
 
     .menu-div {
         width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     .menu-div.light {
-        background-image: linear-gradient(180deg, rgba(220, 220, 220, 1) 0%, rgba(100, 100, 100, 0.8) 100%);
+        background-image: linear-gradient(180deg, rgba(220, 220, 220, 1) 0%, rgba(200, 200, 200, 1) 100%);
     }
     .menu-div.dark {
         background-image: linear-gradient(180deg, rgba(20, 20, 40, 1) 0%, rgba(20, 20, 100, 0.8) 100%);
@@ -1296,7 +1353,7 @@ button:hover {
         width: 100%;
         height: 100%;
         background-color: transparent;
-        font-size: 14pt;
+        font-size: 20pt;
         font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
         font-weight: 600;
         text-decoration: underline;

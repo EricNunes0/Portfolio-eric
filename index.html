@@ -8,6 +8,7 @@
     <link rel = "stylesheet" type = "text/css" href = "backgroundTriangles.css"/>
     <link rel = "stylesheet" type = "text/css" href = "portfolio.css"/>
     <link rel = "stylesheet" type = "text/css" href = "scrollUp.css"/>
+    <link rel = "stylesheet" type = "text/css" href = "styles/themeAnimations.css"/>
     <link rel = "icon" href = "https://i.imgur.com/Yxx6lF4.png"/>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
 </head>
@@ -26,7 +27,26 @@
                     <div class = "portfolio-nav-flex">
                         <div class = "theme-button-div">
                             <button type = "button" class = "theme-buttons light" id = "theme-button" onclick = "changePageTheme()">
-                                <img class = "theme-buttons-icons light" src = "https://i.imgur.com/EFjsg8D.png">
+                                <div class = "theme-buttons-icons light">
+                                    <svg class = "theme-icons" id = "sun-icon" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" xmlns:bx="https://boxy-svg.com">
+                                        <defs></defs>
+                                        <circle id = "sun-circle" style="stroke: rgb(0, 0, 0); stroke-width: 0px;" cx="250" cy="250" r="100"></circle>
+                                        <path class = "sun-triangles" id = "sun-triangle-1" d="M 248.067 16.713 Q 249.227 13.233 250.387 16.713 L 288.067 129.753 Q 289.227 133.233 286.907 133.233 L 211.547 133.233 Q 209.227 133.233 210.387 129.753 Z" style="stroke: rgb(0, 0, 0); stroke-width: 0px;" bx:shape="triangle 209.227 13.233 80 120 0.5 0.029 1@f9c41abc"></path>
+                                        <path class = "sun-triangles" id = "sun-triangle-2" d="M 142.98 43.744 Q 144.14 40.264 145.3 43.744 L 182.98 156.784 Q 184.14 160.264 181.82 160.264 L 106.46 160.264 Q 104.14 160.264 105.3 156.784 Z" style="stroke: rgb(0, 0, 0); transform-box: fill-box; transform-origin: 50% 50%; stroke-width: 0px;" transform="matrix(0.707103, -0.707111, 0.707111, 0.707103, -20.794289, 26.414613)" bx:shape="triangle 104.14 40.264 80 120 0.5 0.029 1@62c4535f"></path>
+                                        <path class = "sun-triangles" id = "sun-triangle-3" d="M 142.98 43.744 Q 144.14 40.264 145.3 43.744 L 182.98 156.784 Q 184.14 160.264 181.82 160.264 L 106.46 160.264 Q 104.14 160.264 105.3 156.784 Z" style="stroke: rgb(0, 0, 0); transform-origin: 144.14px 101.134px; stroke-width: 0px;" transform="matrix(-0.000076, -1, 1, -0.000076, -70.888177, 153.097155)" bx:shape="triangle 104.14 40.264 80 120 0.5 0.029 1@62c4535f"></path>
+                                        <path class = "sun-triangles" id = "sun-triangle-4" d="M 142.98 43.744 Q 144.14 40.264 145.3 43.744 L 182.98 156.784 Q 184.14 160.264 181.82 160.264 L 106.46 160.264 Q 104.14 160.264 105.3 156.784 Z" style="stroke: rgb(0, 0, 0); transform-origin: 45.1794% 50.7951%; transform-box: fill-box; stroke-width: 0px;" transform="matrix(-0.707107, -0.707106, 0.707106, -0.707107, -9.449911, 275.997021)" bx:shape="triangle 104.14 40.264 80 120 0.5 0.029 1@62c4535f"></path>
+                                        <path class = "sun-triangles" id = "sun-triangle-5" d="M 142.98 43.744 Q 144.14 40.264 145.3 43.744 L 182.98 156.784 Q 184.14 160.264 181.82 160.264 L 106.46 160.264 Q 104.14 160.264 105.3 156.784 Z" style="stroke: rgb(0, 0, 0); transform-origin: 140.358px 102.074px; stroke-width: 0px;" transform="matrix(-1, 0.000072, -0.000072, -1, 112.654871, 323.618566)" bx:shape="triangle 104.14 40.264 80 120 0.5 0.029 1@62c4535f"></path>
+                                        <path class = "sun-triangles" id = "sun-triangle-6" d="M 142.98 43.744 Q 144.14 40.264 145.3 43.744 L 182.98 156.784 Q 184.14 160.264 181.82 160.264 L 106.46 160.264 Q 104.14 160.264 105.3 156.784 Z" style="stroke: rgb(0, 0, 0); transform-origin: 140.358px 102.074px; stroke-width: 0px;" transform="matrix(-0.707146, 0.707067, -0.707067, -0.707146, 233.460903, 271.271192)" bx:shape="triangle 104.14 40.264 80 120 0.5 0.029 1@62c4535f"></path>
+                                        <path class = "sun-triangles" id = "sun-triangle-7" d="M 142.98 43.744 Q 144.14 40.264 145.3 43.744 L 182.98 156.784 Q 184.14 160.264 181.82 160.264 L 106.46 160.264 Q 104.14 160.264 105.3 156.784 Z" style="stroke: rgb(0, 0, 0); transform-origin: 140.358px 102.074px; stroke-width: 0px;" transform="matrix(-0.000039, 1, -1, -0.000039, 284.500676, 148.372927)" bx:shape="triangle 104.14 40.264 80 120 0.5 0.029 1@62c4535f"></path>
+                                        <path class = "sun-triangles" id = "sun-triangle-8" d="M 142.98 43.744 Q 144.14 40.264 145.3 43.744 L 182.98 156.784 Q 184.14 160.264 181.82 160.264 L 106.46 160.264 Q 104.14 160.264 105.3 156.784 Z" style="stroke: rgb(0, 0, 0); transform-origin: 140.358px 102.074px; stroke-width: 0px;" transform="matrix(0.707139, 0.707075, -0.707075, 0.707139, 231.570551, 23.465821)" bx:shape="triangle 104.14 40.264 80 120 0.5 0.029 1@62c4535f"></path>
+                                      </svg>
+
+                                      <svg class = "theme-icons hide" id = "moon-icon" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" xmlns:bx="https://boxy-svg.com">
+                                        <defs></defs>
+                                        <path id = "moon" style="fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0); stroke-width: 9.62772px; transform-box: fill-box; transform-origin: 50% 50%; fill-opacity: 0;" transform="matrix(-1.122091, 0.975419, -0.98672, -1.135092, -259.409214, 15.02019)" d="M 361.393 147.055 A 149.6 149.6 0 1 1 361.393 392.145 A 128.368 128.368 0 1 0 361.393 147.055 Z" bx:shape="crescent 447.2 269.6 149.6 250 0.77 1@59a610c2"></path>
+                                      </svg>
+
+                                </div>
                             </button>
                         </div>
                         <div class = "portfolio-abas-div">
@@ -86,17 +106,17 @@
             </div>
             <div class = "portfolio-intro">
                 <div class = "portfolio-intro-flex">
-                    <section class = "header-titles-section">
-                        <h3 class = "header-titles light" id = "header-title">Olá, eu sou o</h3>
+                    <section id = "header-title-section">
+                        <h3 class = "header-titles light" id = "header-title"></h3>
                     </section>
-                    <section class = "header-name-section">
-                        <h1 class = "header-names light" id = "header-name">Eric Nunes</h1>
+                    <section id = "header-name-section">
+                        <h1 class = "header-names light" id = "header-name"></h1>
                     </section>
-                    <section class = "header-descriptions-section">
-                        <p class = "header-descriptions light" id = "header-description">e estou procurando a minha primeira<br> vaga de estágio/emprego como programador!</p>
+                    <section id = "header-description-section">
+                        <p class = "header-descriptions light" id = "header-description"></p>
                     </section>
-                    <section class = "header-codes-section">
-                        <p class = "header-codes light" id = "header-code">Desenvolvedor web</p>
+                    <section id = "header-code-section">
+                        <p class = "header-codes light" id = "header-code"></p>
                     </section>
                     <section class = "portfolio-intro-buttons-section">
                         <a class = "button-links" href = "https://www.linkedin.com/in/eric-nunes-ramalho-58a146208/" target = "_blank">
@@ -550,6 +570,10 @@
     <script type = "text/javascript" src = "projectLinks.js"></script>
     <script type = "text/javascript" src = "script.js"></script>
     <script type = "text/javascript" src = "scrollUp.js"></script>
+    <script type = "text/javascript" src = "animations/abasLinksHover.js"></script>
+    <script type = "text/javascript" src = "animations/sunTrianglesAnimation.js"></script>
+    <script type = "text/javascript" src = "animations/moonAnimation.js"></script>
+    <script type = "text/javascript" src = "animations/typingAnimations.js"></script>
     <script src = "https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
 </body>
 </html>
