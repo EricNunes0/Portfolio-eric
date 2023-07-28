@@ -1,5 +1,3 @@
-const aboutMe = document.querySelector("#about-me");
-
 const scrolls = [
     {
         "query": "#about-me",
@@ -7,6 +5,14 @@ const scrolls = [
     },
     {
         "query": "#aboutme-description",
+        "animation": "RevealTextLeft var(--reveal-text-duration) var(--reveal-text-timing)"
+    },
+    {
+        "query": "#knowledges-header-title",
+        "animation": "RevealTextLeft var(--reveal-text-duration) var(--reveal-text-timing)"
+    },
+    {
+        "query": "#knowledges-header-description",
         "animation": "RevealTextLeft var(--reveal-text-duration) var(--reveal-text-timing)"
     },
     {
@@ -24,6 +30,14 @@ const scrolls = [
     {
         "query": "#knowledges-div-tools",
         "animation": "KnowledgesIcons 0.5s linear"
+    },
+    {
+        "query": "#projects-title",
+        "animation": "RevealTextLeft var(--reveal-text-duration) var(--reveal-text-timing)"
+    },
+    {
+        "query": "#projects-main-description",
+        "animation": "RevealTextLeft var(--reveal-text-duration) var(--reveal-text-timing)"
     }
 ];
 
@@ -34,7 +48,7 @@ window.addEventListener("scroll", () => {
         const query = document.querySelector(scroll.query);
         const queryOffsets = query.getBoundingClientRect();
         const queryTop = queryOffsets.top;
-        if(queryTop < (screenHeight - (screenHeight / 3.75))) {
+        if(queryTop < (screenHeight - (screenHeight / 3.8))) {
             query.style.opacity = 1;
             query.style.animation = scroll.animation;
         } else {

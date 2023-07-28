@@ -134,23 +134,23 @@ button:hover {
     margin: 0;
 }
 
-/* Links da barra de navegação */
-.abas-links {
+/* Botões da barra de navegação */
+.nav-buttons {
     text-decoration: none;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 14pt;
+    background: none;
+    border: none;
     padding: 0 15px;
     transition: all 0.3s;
 }
-
-.abas-links.light {
+.nav-buttons.light {
     color: #000;
 }
-
-.abas-links.dark {
+.nav-buttons.dark {
     color: #fff;
 }
 
@@ -511,13 +511,13 @@ button:hover {
 /* Aba sobre mim */
 .portfolio-aboutme {
     width: 100%;
-    background-color: #f0f0f0;
     transition: all 0.3s;
 }
-
+.portfolio-aboutme.light {
+    background-color: #f0f0f0;
+}
 .portfolio-aboutme.dark {
-    width: 100%;
-    background-color: #303030;
+    background-color: #101020;
 }
 
 /* Principal da aba sobre mim */
@@ -538,15 +538,11 @@ button:hover {
     transition: all 0.3s;
     background-size: 100% 100%;
 }
-
 .aboutme-container.light {
     background-color: #e0e0e0;
-    /*background-image: linear-gradient(130deg, #e0e0e0, #c0c0c0);*/
 }
-
 .aboutme-container.dark {
-    background-color: #404040;
-    /*background-image: linear-gradient(130deg, #404040, #202020);*/
+    background-color: #202030;
 }
 
 /* Div sobre mim */
@@ -593,7 +589,7 @@ button:hover {
     font-family: "Poppins";
     font-size: 14pt;
     font-weight: 100;
-    margin: 5px 0 50px 0;
+    margin: 5px 0 20px 0;
     transition: all 0.3s;
 }
 #aboutme-description[class~="light"] {
@@ -760,11 +756,61 @@ button:hover {
     background-color: #e0e0e0;
 }
 #portfolio-knowledges[class~="dark"] {
-    background-color: #404040;
+    background-color: #202030;
 }
 
 /* Area dos conhecimentos */
 #knowledges-area {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 20px 0;
+}
+
+/* Cabeçalho dos conhecimentos */
+#knowledges-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Título do cabeçalho dos conhecimentos */
+#knowledges-header-title {
+    text-align: center;
+    font-family: "Poppins";
+    font-size: 30pt;
+    font-weight: bold;
+    text-shadow: rgba(0, 0, 0, 0.5) 0px 0px 4px;
+    margin: 40px 0 10px 0;
+    transition: all 0.3s;
+}
+#knowledges-header-title.light {
+    color: #404080;
+}
+#knowledges-header-title.dark {
+    color: #a0b0ff;
+}
+
+/* Descrição do cabeçalho dos conhecimentos */
+#knowledges-header-description {
+    text-align: center;
+    font-family: "Poppins";
+    font-size: 14pt;
+    font-weight: 100;
+    transition: all 0.3s;
+}
+#knowledges-header-description.light {
+    color: #606060;
+}
+#knowledges-header-description.dark {
+    color: #b0b0b0;
+}
+
+/* Principal div dos conhecimentos */
+#knowledges-main-div {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -962,13 +1008,13 @@ button:hover {
 /* Aba de projetos */
 .portfolio-projects {
     width: 100%;
-    background-color: #e0e0e0;
     transition: all 0.3s;
 }
-
+.portfolio-projects.light {
+    background-color: #e0e0e0;
+}
 .portfolio-projects.dark {
-    width: 100%;
-    background-color: #202020;
+    background-color: #202030;
 }
 #portfolio-projects-header {
     /*background-size: 50px 50px;
@@ -1018,11 +1064,12 @@ button:hover {
 
 /* Descrição dos projetos do portfolio */
 .projects-main-descriptions {
+    width: 80%;
     text-align: center;
     font-family: "Poppins";
     font-size: 14pt;
     font-weight: 100;
-    margin: 5px 0 20px 0;
+    margin: 5px 10% 20px 10%;
     transition: all 0.3s;
 }
 .projects-main-descriptions.light {
@@ -1370,13 +1417,13 @@ button:hover {
 /* Footer do portfólio */
 .portfolio-contacts {
     padding: 5% 0;
-    background-color: #a0a0a0;
     transition: all 0.3s;
 }
-
+.portfolio-contacts.light {
+    background-color: #c0c0c0;
+}
 .portfolio-contacts.dark {
-    padding: 5% 0;
-    background-color: #303030;
+    background-color: #101020;
 }
 
 /* Div dos contatos */
@@ -1465,10 +1512,16 @@ button:hover {
 }
 
 .contato-links-texts {
-    color: #f0f0f0;
     font-family: "Poppins";
     font-size: 10pt;
     margin: 0;
+    transition: all 0.3s;
+}
+.contato-links-texts[class~="light"] {
+    color: #000;
+}
+.contato-links-texts[class~="dark"] {
+    color: #f0f0f0;
 }
 
 @media screen and (min-width: 769px) {
@@ -1539,9 +1592,10 @@ button:hover {
 
     .nav-menu {
         width: 100%;
+        height: 100vh;
         box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
+        border-radius: 10px;
     }
-
     .nav-menu.closed {
         display: none;
     }
@@ -1553,12 +1607,13 @@ button:hover {
         justify-content: center;
         align-items: center;
         transition: all 0.3s;
+        border-radius: 10px;
     }
     .menu-div.light {
-        background-color: rgba(220, 220, 220, 1);
+        background-color: rgba(220, 220, 220, 0.3);
     }
     .menu-div.dark {
-        background-color: rgba(20, 20, 40, 1);
+        background-color: rgba(20, 20, 40, 0.3);
     }
 
     .menu-abas-list {
@@ -1571,42 +1626,22 @@ button:hover {
         margin: auto;
     }
 
-    .menu-abas-links {
-        width: 150px;
-        height: 75px;
-        margin: 10px 0;
-        text-align: center;
-    }
-
-    .menu-abas-links.light {
-        color: #000;
-    }
-
-    .menu-abas-links.dark {
-        color: #fff;
-    }
-
-    .menu-abas-buttons {
+    .mobile-nav-buttons {
         width: 100%;
-        height: 100%;
+        height: 75px;
         background-color: transparent;
         font-size: 18pt;
         font-family: "Poppins";
         font-weight: bold;
         text-decoration: none;
-        border-width: 0px;
+        border: none;
+        border-top: 2px solid rgba(0, 0, 0, 0.6);
     }
-    .menu-abas-buttons.light {
+    .mobile-nav-buttons.light {
         color: #000;
     }
-    .menu-abas-buttons.dark {
+    .mobile-nav-buttons.dark {
         color: #fff;
-    }
-
-    #menu-theme-button {
-        width: 100px;
-        text-align: center;
-        padding: 25px;
     }
 }
 
