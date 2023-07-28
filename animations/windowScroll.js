@@ -8,6 +8,22 @@ const scrolls = [
     {
         "query": "#aboutme-description",
         "animation": "RevealTextLeft var(--reveal-text-duration) var(--reveal-text-timing)"
+    },
+    {
+        "query": "#knowledges-div-front",
+        "animation": "KnowledgesIcons 0.5s linear"
+    },
+    {
+        "query": "#knowledges-div-back",
+        "animation": "KnowledgesIcons 0.5s linear"
+    },
+    {
+        "query": "#knowledges-div-db",
+        "animation": "KnowledgesIcons 0.5s linear"
+    },
+    {
+        "query": "#knowledges-div-tools",
+        "animation": "KnowledgesIcons 0.5s linear"
     }
 ];
 

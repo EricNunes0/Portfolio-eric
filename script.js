@@ -55,14 +55,22 @@ function changeTextsColor(theme) {
 }
 
 function openNavMenu() {
-    let menu = document.getElementById("menu").className
-    if(menu == "nav-menu closed") {
-        document.getElementById("menu").className = "nav-menu opened";
-        document.getElementById("nav-button").className = "open-nav-button opened";
-        document.getElementById("nav-button-image").className = "open-nav-button-image opened";
+    let menu = document.getElementById("menu").classList;
+    let openNavButton = document.getElementById("nav-button").classList;
+    let openNavButtonImage = document.getElementById("nav-button-image").classList;
+    if(menu.contains(`closed`)) {
+        menu.add(`opened`);
+        menu.remove(`closed`);
+        openNavButton.add(`opened`);
+        openNavButton.remove(`closed`);
+        openNavButtonImage.add(`opened`);
+        openNavButtonImage.remove(`closed`);
     } else {
-        document.getElementById("menu").className = "nav-menu closed";
-        document.getElementById("nav-button").className = "open-nav-button closed";
-        document.getElementById("nav-button-image").className = "open-nav-button-image closed";
+        menu.remove(`opened`);
+        menu.add(`closed`);
+        openNavButton.remove(`opened`);
+        openNavButton.add(`closed`);
+        openNavButtonImage.remove(`opened`);
+        openNavButtonImage.add(`closed`);
     }
 }

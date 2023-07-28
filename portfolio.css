@@ -711,8 +711,8 @@ button:hover {
 
 /* Link do currículo */
 .curriculo-link {
-    width: 200px;
-    height: 50px;
+    width: 160px;
+    height: 40px;
     border-radius: 15px;
     margin-bottom: 30px;
 }
@@ -721,16 +721,31 @@ button:hover {
 .curriculo-button {
     width: 100%;
     height: 100%;
-    background-color: #0030a0;
-    /*background-image: linear-gradient(90deg, rgb(150, 150, 150) 0%, rgb(190, 190, 190) 50%, rgb(150, 150, 150) 100%);*/
-    color: #fff;
+    background-color: transparent;
+    font-family: "Poppins";
     font-size: 12pt;
-    font-weight: 600;
+    font-weight: bold;
     text-shadow: rgba(0, 0, 0, 0.2) 0px 0px 5px;
-    border: 0px solid;
-    border-radius: 15px;
-    box-shadow: rgba(0, 0, 255, 0.3) 0px 0px 15px;
+    border-radius: 25px;
+    box-shadow: rgba(40, 40, 255, 0.3) 0px 0px 15px;
     transition: all 0.3s;
+}
+.curriculo-button[class~="light"] {
+    color: #3050a0;
+    border: 2px solid #3050a0;
+}
+.curriculo-button[class~="dark"] {
+    color: #a0b0ff;
+    border: 2px solid #a0b0ff;
+}
+.curriculo-button:hover {
+    color: #fff;
+}
+.curriculo-button[class~="light"]:hover {
+    background-color: #3050a0;
+}
+.curriculo-button[class~="dark"]:hover {
+    background-color: #a0b0ff;
 }
 
 /* Conhecimentos */
@@ -776,6 +791,7 @@ button:hover {
     justify-content: center;
     align-items: center;
     border-radius: 50%;
+    opacity: 1;
     transition: all 0.3s;
 }
 .knowledges-icon-divs[class~="light"] {
@@ -784,7 +800,12 @@ button:hover {
 .knowledges-icon-divs[class~="dark"] {
     background-color: #4050a0;
 }
-
+@keyframes KnowledgesIcons {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+}
 /* Ícones dos conhecimentos */
 .knowledges-icons {
     width: 60%;
@@ -850,7 +871,8 @@ button:hover {
 .knowledges-code-titles {
     text-align: center;
     font-family: "Poppins";
-    font-size: 14pt;
+    font-size: 12pt;
+    font-weight: bold;
     transition: all 0.3s;
 }
 .knowledges-code-titles[class~="light"] {
@@ -902,6 +924,8 @@ button:hover {
     background-color: #3060ff;
     background-image: linear-gradient(90deg, #3060ff, #0040b0, #3060ff);
     background-size: 200% 200%;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
     animation: LanguageDivs 3s linear infinite;
 }
 .knowledges-language-divs:hover {
@@ -977,31 +1001,33 @@ button:hover {
 
 /* Título dos projetos do portfolio */
 .portfolio-projects-title {
-    color: #d0d0d0;
     text-align: center;
+    font-family: "Poppins";
     font-size: 30pt;
     font-weight: bold;
+    text-shadow: rgba(0, 0, 0, 0.5) 0px 0px 4px;
     margin: 50px 0 10px 0;
+    transition: all 0.3s;
 }
 .portfolio-projects-title.light {
-    color: #606060;
+    color: #404080;
 }
 .portfolio-projects-title.dark {
-    color: #a0a0a0;
+    color: #a0b0ff;
 }
 
 /* Descrição dos projetos do portfolio */
 .projects-main-descriptions {
     text-align: center;
+    font-family: "Poppins";
     font-size: 14pt;
     font-weight: 100;
-    margin: 5px 0;
+    margin: 5px 0 20px 0;
+    transition: all 0.3s;
 }
-
 .projects-main-descriptions.light {
     color: #808080;
 }
-
 .projects-main-descriptions.dark {
     color: #a0a0a0;
 }
@@ -1025,7 +1051,7 @@ button:hover {
     justify-content: center;
     align-items: center;
     gap: 2rem;
-    margin: 40px 0;
+    margin-bottom: 20px;
 }
 
 /* Div das imagens de projetos */
@@ -1285,8 +1311,8 @@ button:hover {
     border-top-left-radius: var(--project-links-border-radius);
     border-top-right-radius: var(--project-links-border-radius);
     text-align: center;
-    font-size: 14pt;
-    font-weight: 100;
+    font-family: "Poppins";
+    font-size: 12pt;
     gap: 5px;
 }
 
@@ -1315,7 +1341,7 @@ button:hover {
     width: 25px;
 }
 /*.lang-images[alt~="jQuery"] {
-    background-color: #0030a0;
+    background-color: #3050a0;
 }*/
 
 /* Botões dos projetos */
@@ -1373,6 +1399,7 @@ button:hover {
 }
 
 .contato-titles {
+    font-family: "Poppins";
     transition: all 0.3s;
 }
 .contato-titles.light {
@@ -1407,7 +1434,6 @@ button:hover {
 .contato-images {
     width: 30px;
     height: 30px;
-    border: 2px solid rgba(100, 100, 100, 1);
     border-radius: 5px;
     box-shadow: rgba(255, 255, 255, 0.2) 0px 0px 10px;
 }
@@ -1440,6 +1466,7 @@ button:hover {
 
 .contato-links-texts {
     color: #f0f0f0;
+    font-family: "Poppins";
     font-size: 10pt;
     margin: 0;
 }
@@ -1496,7 +1523,12 @@ button:hover {
         height: 30px;
         transition: all 0.3s;
     }
-
+    .open-nav-button-image[class~="light"] {
+        filter: invert(1);
+    }
+    .open-nav-button-image[class~="dark"] {
+        filter: invert(0);
+    }
     .open-nav-button-image.closed {
         filter: invert(0);
     }
@@ -1507,7 +1539,6 @@ button:hover {
 
     .nav-menu {
         width: 100%;
-        height: 80vh;
         box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
     }
 
@@ -1521,12 +1552,13 @@ button:hover {
         display: flex;
         justify-content: center;
         align-items: center;
+        transition: all 0.3s;
     }
     .menu-div.light {
-        background-image: linear-gradient(180deg, rgba(220, 220, 220, 1) 0%, rgba(200, 200, 200, 1) 100%);
+        background-color: rgba(220, 220, 220, 1);
     }
     .menu-div.dark {
-        background-image: linear-gradient(180deg, rgba(20, 20, 40, 1) 0%, rgba(20, 20, 100, 0.8) 100%);
+        background-color: rgba(20, 20, 40, 1);
     }
 
     .menu-abas-list {
@@ -1558,10 +1590,10 @@ button:hover {
         width: 100%;
         height: 100%;
         background-color: transparent;
-        font-size: 20pt;
-        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-        font-weight: 600;
-        text-decoration: underline;
+        font-size: 18pt;
+        font-family: "Poppins";
+        font-weight: bold;
+        text-decoration: none;
         border-width: 0px;
     }
     .menu-abas-buttons.light {
