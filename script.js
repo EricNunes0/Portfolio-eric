@@ -15,7 +15,6 @@ function changePageTheme() {
         for(let i = 0; i <= themeIcons.length - 1; i++) {
             themeIcons[i].src = "https://i.imgur.com/n68qj9b.png";
         }
-        console.log(`Dark on`)
         sunTrianglesAnimation({reverse: true});
         moonAnimation({reverse: true});
         document.querySelector("#sun-icon").classList.add("hide");
@@ -27,7 +26,6 @@ function changePageTheme() {
         for(let i = 0; i <= themeIcons.length - 1; i++) {
             themeIcons[i].src = "https://i.imgur.com/EFjsg8D.png";
         }
-        console.log(`Light on`)
         sunTrianglesAnimation({reverse: false});
         moonAnimation({reverse: false});
         document.querySelector("#sun-icon").classList.remove("hide");

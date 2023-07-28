@@ -7,6 +7,8 @@
     --nav-height: 50px;
     --font-color-categorie-0: #3060ff;
     --project-links-border-radius: 5px;
+    --reveal-text-duration: 0.3s;
+    --reveal-text-timing: ease-out;
 }
 
 h1, h3, a, p {
@@ -27,9 +29,10 @@ button:hover {
 
 /* Textos do modo claro */
 .aboutme-texts {
+    font-family: "Poppins";
+    text-align: center;
     transition: all 0.3s;
 }
-
 /* Textos do modo claro */
 .aboutme-texts.light {
     color: #000;
@@ -538,13 +541,12 @@ button:hover {
 
 .aboutme-container.light {
     background-color: #e0e0e0;
-    background-image: linear-gradient(130deg, #e0e0e0, #c0c0c0);
+    /*background-image: linear-gradient(130deg, #e0e0e0, #c0c0c0);*/
 }
 
 .aboutme-container.dark {
     background-color: #404040;
-    background-image: linear-gradient(130deg, #404040, #202020);
-    ;
+    /*background-image: linear-gradient(130deg, #404040, #202020);*/
 }
 
 /* Div sobre mim */
@@ -559,27 +561,46 @@ button:hover {
 /* Título da aba sobre mim */
 .portfolio-aboutme-title {
     text-align: center;
+    font-family: "Poppins";
     font-size: 30pt;
     font-weight: bold;
     text-shadow: rgba(0, 0, 0, 0.5) 0px 0px 4px;
     margin: 50px 0 10px 0;
+    transition: all 0.3s;
 }
-
 .portfolio-aboutme-title.light {
     color: #404080;
 }
-
 .portfolio-aboutme-title.dark {
-    color: #8aa0ff;
+    color: #a0b0ff;
+}
+@keyframes RevealTextLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+}
+@keyframes RevealTextRight {
+    0% {
+        opacity: 0;
+        transform: translateX(50px);
+    }
 }
 
 /* Descrição da aba sobre mim */
-.portfolio-aboutme-description {
-    color: #a0a0a0;
+#aboutme-description {
     text-align: center;
+    font-family: "Poppins";
     font-size: 14pt;
     font-weight: 100;
     margin: 5px 0 50px 0;
+    transition: all 0.3s;
+}
+#aboutme-description[class~="light"] {
+    color: #606060;
+}
+#aboutme-description[class~="dark"] {
+    color: #b0b0b0;
 }
 
 @media screen and (min-width: 800px) {
@@ -598,24 +619,6 @@ button:hover {
         line-height: 1.5rem;
     }
 }
-
-/* Parágrafos da div da descrição do sobre mim */
-.portfolio-aboutme-description-div p {
-    text-align: justify;
-}
-
-@media screen and (min-width: 800px) {
-    .portfolio-aboutme-description-div p {
-        font-size: 14pt;
-    }
-}
-
-@media screen and (max-width: 800px) {
-    .portfolio-aboutme-description-div p {
-        font-size: 10pt;
-    }
-}
-
 
 /* Div das skills da aba sobre mim */
 .portfolio-aboutme-skills-div {
@@ -728,6 +731,208 @@ button:hover {
     border-radius: 15px;
     box-shadow: rgba(0, 0, 255, 0.3) 0px 0px 15px;
     transition: all 0.3s;
+}
+
+/* Conhecimentos */
+#portfolio-knowledges {
+    width: 80%;
+    height: 100%;
+    border-radius: 10px;
+    transition: all 0.3s;
+    margin: 20px auto;
+}
+#portfolio-knowledges[class~="light"] {
+    background-color: #e0e0e0;
+}
+#portfolio-knowledges[class~="dark"] {
+    background-color: #404040;
+}
+
+/* Area dos conhecimentos */
+#knowledges-area {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    margin: 20px 0;
+}
+
+/* Divs dos conhecimentos */
+.knowledges-divs {
+    max-width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+}
+
+/* Divs dos ícones dos conhecimentos */
+.knowledges-icon-divs {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: all 0.3s;
+}
+.knowledges-icon-divs[class~="light"] {
+    background-color: #7090ff;
+}
+.knowledges-icon-divs[class~="dark"] {
+    background-color: #4050a0;
+}
+
+/* Ícones dos conhecimentos */
+.knowledges-icons {
+    width: 60%;
+    height: 60%;
+    transition: all 0.3s;
+}
+.knowledges-icons[class~="light"] {
+    filter: invert(1);
+}
+.knowledges-icons[class~="dark"] {
+    filter: invert(0);
+}
+
+/* Divs dos títulos dos conhecimentos */
+.knowledges-title-divs {
+    width: 100%;
+    min-height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Títulos dos conhecimentos */
+.knowledges-titles {
+    text-align: center;
+    font-family: "Poppins";
+    font-size: 16pt;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+.knowledges-titles[class~="light"] {
+    color: #000;
+}
+.knowledges-titles[class~="dark"] {
+    color: #fff;
+}
+
+/* Divs das descrições dos conhecimentos */
+.knowledges-description-divs {
+    height: 100px;
+    margin: 5px 0;
+}
+
+/* Descrições dos conhecimentos */
+.knowledges-descriptions {
+    text-align: center;
+    font-family: "Poppins";
+    transition: all 0.3s;
+}
+.knowledges-descriptions[class~="light"] {
+    color: #000;
+}
+.knowledges-descriptions[class~="dark"] {
+    color: #fff;
+}
+
+/* Divs das descrições dos conhecimentos */
+.knowledges-code-divs {
+    margin: 5px 0;
+}
+
+/* Descrições dos conhecimentos */
+.knowledges-code-titles {
+    text-align: center;
+    font-family: "Poppins";
+    font-size: 14pt;
+    transition: all 0.3s;
+}
+.knowledges-code-titles[class~="light"] {
+    color: #000;
+}
+.knowledges-code-titles[class~="dark"] {
+    color: #fff;
+}
+
+/* Divs das linguagens dos conhecimentos */
+.knowledges-code-languages-divs {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Divs das linguagens dos conhecimentos */
+.knowledges-language-divs {
+    cursor: pointer;
+    position: relative;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    margin: 10px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s;
+}
+.knowledges-language-divs[class~="light"] {
+    background-color: #c0c0c0;
+}
+.knowledges-language-divs[class~="dark"] {
+    background-color: #505050;
+}
+.knowledges-language-divs::after {
+    content: "";
+    width: 100%;
+    height: 0.3rem;
+    position: absolute;
+    display: block;
+    bottom: -0.1rem;
+    left: 0;
+    background-color: #3060ff;
+    background-image: linear-gradient(90deg, #3060ff, #0040b0, #3060ff);
+    background-size: 200% 200%;
+    animation: LanguageDivs 3s linear infinite;
+}
+.knowledges-language-divs:hover {
+    transform: scale(1.1);
+}
+@keyframes LanguageDivs {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 400% 400%;
+    }
+}
+
+.knowledges-languages-icons {
+    min-width: 40px;
+    height: 40px;
+}
+
+/* Nomes das linguagens dos conhecimentos */
+.knowledges-languages-names {
+    font-family: "Poppins";
+    font-size: 10pt;
+    margin: 0;
+    transition: all 0.3s;
+}
+.knowledges-languages-names[class~="light"] {
+    color: #000;
+}
+.knowledges-languages-names[class~="dark"] {
+    color: #fff;
 }
 
 /* Aba de projetos */

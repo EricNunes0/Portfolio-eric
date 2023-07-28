@@ -17,8 +17,8 @@ for(let i = 0; i <= triangleAmount - 1; i++) {
         setTimeout(function() {
             triangle.style.opacity = 0;
             setTimeout(function() {
-                triangle.style.top = `${Math.floor(Math.random() * 100)}%`;
-                triangle.style.left = `${Math.floor(Math.random() * 100)}%`;
+                triangle.style.top = `${Math.floor(Math.random() * 96)}%`;
+                triangle.style.left = `${Math.floor(Math.random() * 96)}%`;
             }, 400);
         }, triangleAnimationDuration * 1000);
     }, triangleAnimationDuration * 1000);
