@@ -11,6 +11,7 @@
     <link rel = "stylesheet" type = "text/css" href = "styles/themeAnimations.css"/>
     <link rel = "icon" href = "https://i.imgur.com/Yxx6lF4.png"/>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script type = "text/javascript" src = "scripts/createProjects.js"></script>
 </head>
 <body class = "portfolio-page">
     <div class = "portfolio-main">
@@ -52,11 +53,11 @@
                         <div class = "portfolio-abas-div">
                             <div class = "portfolio-abas">
                                 <ul class = "portfolio-abas-list">
-                                    <button type = "button" onclick = "scrollScreenTo(`header`)" class = "nav-buttons light"><li>Início</li></button>
-                                    <button type = "button" onclick = "scrollScreenTo(`aboutme`)" class = "nav-buttons light"><li>Sobre</li></button>
-                                    <button type = "button" onclick = "scrollScreenTo(`knowledges`)" class = "nav-buttons light"><li>Conhecimentos</li></button>
-                                    <button type = "button" onclick = "scrollScreenTo(`projects`)" class = "nav-buttons light"><li>Projetos</li></button>
-                                    <button type = "button" onclick = "scrollScreenTo(`contacts`)" class = "nav-buttons light"><li>Contato</li></button>
+                                    <button type = "button" onclick = "scrollScreenTo(`header`)" class = "nav-buttons light"><li class = "nav-buttons-li">Início</li></button>
+                                    <button type = "button" onclick = "scrollScreenTo(`aboutme`)" class = "nav-buttons light"><li class = "nav-buttons-li">Sobre</li></button>
+                                    <button type = "button" onclick = "scrollScreenTo(`knowledges`)" class = "nav-buttons light"><li class = "nav-buttons-li">Conhecimentos</li></button>
+                                    <button type = "button" onclick = "scrollScreenTo(`projects`)" class = "nav-buttons light"><li class = "nav-buttons-li">Projetos</li></button>
+                                    <button type = "button" onclick = "scrollScreenTo(`contacts`)" class = "nav-buttons light"><li class = "nav-buttons-li">Contato</li></button>
                                 </ul>
                             </div>
                             <div class = "portfolio-768px">
@@ -491,62 +492,11 @@
                         <h1 class = "portfolio-projects-title light" id = "projects-title">Projetos</h1>
                         <p class = "projects-main-descriptions light" id = "projects-main-description">Veja todos os meus projetos e quais linguagens usei neles:</p>
                     </div>
-                    <div class = "portfolio-projects-images-div">
-                        <div class = "project-image-div">
-                            <a class = "project-links" id = "project-link-0" href = "https://janny.vercel.app/" target = "_blank">
-                                <input type = "color" class = "project-colors" value = "#f00000"/>
-                                <span class = "project-spans">
-                                    <img class = "project-spans-images" src = "https://i.imgur.com/rihZYP2.png" alt = "Icon">
-                                    Janny Site
-                                </span>
-                                <button class = "project-buttons"></button>
-                                <div class = "project-langs-div">
-                                    <div class = "project-lang">
-                                        <img class = "lang-images" src = "https://i.imgur.com/xa4sDsi.png" alt = "HTML"/>
-                                    </div>
-                                    <div class = "project-lang">
-                                        <img class = "lang-images" src = "https://i.imgur.com/Qf2JKsE.png" alt = "CSS"/>
-                                    </div>
-                                    <div class = "project-lang">
-                                        <img class = "lang-images" src = "https://i.imgur.com/2xi8y2c.png" alt = "JS"/>
-                                    </div>
-                                    <div class = "project-lang">
-                                        <img class = "lang-images" src = "https://i.imgur.com/xPXXlmN.png" alt = "React"/>
-                                    </div>
-                                    <div class = "project-lang">
-                                        <img class = "lang-images" src = "https://i.imgur.com/tLZH5Hh.png" alt = "Bootstrap"/>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class = "project-image-div">
-                            <a class = "project-links" id = "project-link-1" href = "https://ceon.vercel.app/" target = "_blank">
-                                <input type = "color" class = "project-colors" value = "#4060d0"/>
-                                <span class = "project-spans">
-                                    <img class = "project-spans-images" src = "https://i.imgur.com/s7q3rcU.png" alt = "Icon">
-                                    CEON - Loja virtual
-                                </span>
-                                <button class = "project-buttons"></button>
-                                <div class = "project-langs-div">
-                                    <div class = "project-lang">
-                                        <img class = "lang-images" src = "https://i.imgur.com/xa4sDsi.png" alt = "HTML"/>
-                                    </div>
-                                    <div class = "project-lang">
-                                        <img class = "lang-images" src = "https://i.imgur.com/Qf2JKsE.png" alt = "CSS"/>
-                                    </div>
-                                    <div class = "project-lang">
-                                        <img class = "lang-images" src = "https://i.imgur.com/2xi8y2c.png" alt = "JS"/>
-                                    </div>
-                                    <div class = "project-lang">
-                                        <img class = "lang-images" src = "https://i.imgur.com/KD8NzbX.png" alt = "PHP"/>
-                                    </div>
-                                    <div class = "project-lang">
-                                        <img class = "lang-images" src = "https://i.imgur.com/YDbaGwX.png" alt = "MySQL"/>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <!--<div class = "project-image-div">
+                    <div id = "projects-main-div">
+                        <script>
+                            createProjects()
+                        </script>
+                        <!--<div class = "project-divs">
                             <a class = "project-links" id = "project-link-2" href = "https://bonk-generator.herokuapp.com/" target = "_blank">
                                 <span class = "project-spans">
                                     <img class = "project-spans-images" src = "https://i.imgur.com/u5xv4R2.png" alt = "Icon">
@@ -569,189 +519,6 @@
                                 </div>
                             </a>
                         </div>-->
-                        <div class = "project-image-div">
-                            <a class = "project-links" id = "project-link-3" href = "https://calculadora-padrao.vercel.app/" target = "_blank">
-                                <input type = "color" class = "project-colors" value = "#f060ff"/>
-                                <span class = "project-spans">
-                                    <img class = "project-spans-images" src = "https://i.imgur.com/1MI0yjp.png" alt = "Icon">
-                                    Calculadora
-                                </span>
-                                <button class = "project-buttons"></button>
-                                <div class = "project-langs-div">
-                                    <div class = "project-lang">
-                                        <img class = "lang-images" src = "https://i.imgur.com/xa4sDsi.png" alt = "HTML"/>
-                                    </div>
-                                    <div class = "project-lang">
-                                        <img class = "lang-images" src = "https://i.imgur.com/Qf2JKsE.png" alt = "CSS"/>
-                                    </div>
-                                    <div class = "project-lang">
-                                        <img class = "lang-images" src = "https://i.imgur.com/2xi8y2c.png" alt = "JS"/>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class = "project-image-div">
-                            <a class = "project-links" id = "project-link-4" href = "CalculaPy.exe" target = "_blank">
-                                <input type = "color" class = "project-colors" value = "#fff060"/>
-                                <span class = "project-spans">
-                                    <img class = "project-spans-images" src = "https://i.imgur.com/m1cC5w1.png" alt = "Icon">
-                                    CalculaPy
-                                </span>
-                                <button class = "project-buttons"></button>
-                                <div class = "project-langs-div">
-                                    <div class = "project-lang">
-                                        <img class = "lang-images" src = "https://i.imgur.com/cM2XWrt.png" alt = "Python"/>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class = "project-image-div">
-                            <a class = "project-links" id = "project-link-5" href = "https://central-de-jogos.vercel.app/" target = "_blank">
-                                <input type = "color" class = "project-colors" value = "#d020f0"/>
-                                <span class = "project-spans">
-                                    <img class = "project-spans-images" src = "https://i.imgur.com/RRNsfDt.png" alt = "Icon">
-                                    Game Center
-                                </span>
-                                <button class = "project-buttons"></button>
-                                <div class = "project-langs-div">
-                                    <div class = "project-lang">
-                                        <img class = "lang-images" src = "https://i.imgur.com/xa4sDsi.png" alt = "HTML"/>
-                                    </div>
-                                    <div class = "project-lang">
-                                        <img class = "lang-images" src = "https://i.imgur.com/Qf2JKsE.png" alt = "CSS"/>
-                                    </div>
-                                    <div class = "project-lang">
-                                        <img class = "lang-images" src = "https://i.imgur.com/2xi8y2c.png" alt = "JS"/>
-                                    </div>
-                                    <div class = "project-lang">
-                                        <img class = "lang-images" src = "https://i.imgur.com/xPXXlmN.png" alt = "React"/>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class = "project-image-div">
-                            <a class = "project-links" id = "project-link-6" href = "https://central-de-jogos.vercel.app/tictactoe" target = "_blank">
-                                <input type = "color" class = "project-colors" value = "#50ff70"/>
-                                <span class = "project-spans">
-                                    <img class = "project-spans-images" src = "https://i.imgur.com/4TmQWfu.png" alt = "Icon">
-                                    Tic Tac Toe (Jogo da velha)
-                                </span>
-                                <button class = "project-buttons"></button>
-                                <div class = "project-langs-div">
-                                    <div class = "project-lang">
-                                        <img class = "lang-images" src = "https://i.imgur.com/xa4sDsi.png" alt = "HTML"/>
-                                    </div>
-                                    <div class = "project-lang">
-                                        <img class = "lang-images" src = "https://i.imgur.com/Qf2JKsE.png" alt = "CSS"/>
-                                    </div>
-                                    <div class = "project-lang">
-                                        <img class = "lang-images" src = "https://i.imgur.com/2xi8y2c.png" alt = "JS"/>
-                                    </div>
-                                    <div class = "project-lang">
-                                        <img class = "lang-images" src = "https://i.imgur.com/xPXXlmN.png" alt = "React"/>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class = "project-image-div">
-                            <a class = "project-links" id = "project-link-7" href = "https://central-de-jogos.vercel.app/minesweeper" target = "_blank">
-                                <input type = "color" class = "project-colors" value = "#c0c050"/>
-                                <span class = "project-spans">
-                                    <img class = "project-spans-images" src = "https://i.imgur.com/P2G3vuf.png" alt = "Icon">
-                                    Minesweeper (Campo Minado)
-                                </span>
-                                <button class = "project-buttons"></button>
-                                <div class = "project-langs-div">
-                                    <div class = "project-lang">
-                                        <img class = "lang-images" src = "https://i.imgur.com/xa4sDsi.png" alt = "HTML"/>
-                                    </div>
-                                    <div class = "project-lang">
-                                        <img class = "lang-images" src = "https://i.imgur.com/Qf2JKsE.png" alt = "CSS"/>
-                                    </div>
-                                    <div class = "project-lang">
-                                        <img class = "lang-images" src = "https://i.imgur.com/2xi8y2c.png" alt = "JS"/>
-                                    </div>
-                                    <div class = "project-lang">
-                                        <img class = "lang-images" src = "https://i.imgur.com/xPXXlmN.png" alt = "React"/>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class = "project-image-div">
-                            <a class = "project-links" id = "project-link-8" href = "https://central-de-jogos.vercel.app/forca" target = "_blank">
-                                <input type = "color" class = "project-colors" value = "#70c0ff"/>
-                                <span class = "project-spans">
-                                    <img class = "project-spans-images" src = "https://i.imgur.com/dPfgOJD.png" alt = "Icon">
-                                    Forca
-                                </span>
-                                <button class = "project-buttons"></button>
-                                <div class = "project-langs-div">
-                                    <div class = "project-lang">
-                                        <img class = "lang-images" src = "https://i.imgur.com/xa4sDsi.png" alt = "HTML"/>
-                                    </div>
-                                    <div class = "project-lang">
-                                        <img class = "lang-images" src = "https://i.imgur.com/Qf2JKsE.png" alt = "CSS"/>
-                                    </div>
-                                    <div class = "project-lang">
-                                        <img class = "lang-images" src = "https://i.imgur.com/2xi8y2c.png" alt = "JS"/>
-                                    </div>
-                                    <div class = "project-lang">
-                                        <img class = "lang-images" src = "https://i.imgur.com/xPXXlmN.png" alt = "React"/>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class = "project-image-div">
-                            <a class = "project-links" id = "project-link-9" href = "https://central-de-jogos.vercel.app/spaceshooter" target = "_blank">
-                                <input type = "color" class = "project-colors" value = "#f02050"/>
-                                <span class = "project-spans">
-                                    <img class = "project-spans-images" src = "https://i.imgur.com/LiQE5Qe.png" alt = "Icon">
-                                    Space Shooter
-                                </span>
-                                <button class = "project-buttons"></button>
-                                <div class = "project-langs-div">
-                                    <div class = "project-lang">
-                                        <img class = "lang-images" src = "https://i.imgur.com/xa4sDsi.png" alt = "HTML"/>
-                                    </div>
-                                    <div class = "project-lang">
-                                        <img class = "lang-images" src = "https://i.imgur.com/Qf2JKsE.png" alt = "CSS"/>
-                                    </div>
-                                    <div class = "project-lang">
-                                        <img class = "lang-images" src = "https://i.imgur.com/2xi8y2c.png" alt = "JS"/>
-                                    </div>
-                                    <div class = "project-lang">
-                                        <img class = "lang-images" src = "https://i.imgur.com/xPXXlmN.png" alt = "React"/>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class = "project-image-div">
-                            <a class = "project-links" id = "project-link-10" href = "https://jogo-da-senha.netlify.app/" target = "_blank">
-                                <input type = "color" class = "project-colors" value = "#ff8040"/>
-                                <span class = "project-spans">
-                                    <img class = "project-spans-images" src = "svgs/passwordGame.svg" alt = "Icon">
-                                    Jogo da Senha
-                                </span>
-                                <button class = "project-buttons"></button>
-                                <div class = "project-langs-div">
-                                    <div class = "project-lang">
-                                        <img class = "lang-images" src = "https://i.imgur.com/xa4sDsi.png" alt = "HTML"/>
-                                    </div>
-                                    <div class = "project-lang">
-                                        <img class = "lang-images" src = "https://i.imgur.com/Qf2JKsE.png" alt = "CSS"/>
-                                    </div>
-                                    <div class = "project-lang">
-                                        <img class = "lang-images" src = "https://i.imgur.com/2xi8y2c.png" alt = "JS"/>
-                                    </div>
-                                    <div class = "project-lang">
-                                        <img class = "lang-images" src = "https://i.imgur.com/goYVKjm.png" alt = "jQuery"/>
-                                    </div>
-                                    <div class = "project-lang">
-                                        <img class = "lang-images" src = "https://i.imgur.com/7jfIPn5.png" alt = "Node.js"/>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -807,6 +574,7 @@
     <script type = "text/javascript" src = "animations/backgroundTriangles.js"></script>
     <script type = "text/javascript" src = "animations/buttonImagesHover.js"></script>
     <script type = "text/javascript" src = "animations/moonAnimation.js"></script>
+    <script type = "text/javascript" src = "animations/navButtonsHover.js"></script>
     <script type = "text/javascript" src = "animations/scrollScreenTo.js"></script>
     <script type = "text/javascript" src = "animations/sunTrianglesAnimation.js"></script>
     <script type = "text/javascript" src = "animations/typingAnimations.js"></script>
