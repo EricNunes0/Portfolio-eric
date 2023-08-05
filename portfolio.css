@@ -141,6 +141,7 @@ button:hover {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: "Poppins";
     font-size: 14pt;
     background: none;
     border: none;
@@ -398,7 +399,6 @@ button:hover {
 /* Botões do portfolio */
 .portfolio-intro-buttons {
     background-color: transparent;
-    color: #fff;
     width: 8rem;
     height: 2.5rem;
     display: flex;
@@ -408,28 +408,46 @@ button:hover {
     font-size: 12pt;
     font-weight: 600;
     border: 0px solid;
-    border-radius: 10px;
+    border-radius: 20px;
     transition: all 0.3s;
 }
-
-.portfolio-intro-buttons:hover {
-    transform: scale(1.02);
-}
+/*.portfolio-intro-buttons:hover {
+    transform: scale(1.00);
+}*/
 
 /* Botão do LinkedIn */
 .portfolio-intro-buttons#button-linkedin {
+    background-color: none;
+    color: rgba(15, 120, 170, 1);
+    border: 2px solid rgba(15, 120, 170, 1);
+}
+.portfolio-intro-buttons#button-linkedin:hover {
+    color: #fff;
     background-color: rgba(15, 120, 170, 1);
 }
 
 /* Botão do Github */
 .portfolio-intro-buttons#button-github {
-    background-color: rgba(17, 15, 15, 1);
+    background-color: none;
+    color: rgba(12, 44, 60, 1);
+    border: 2px solid rgba(12, 44, 60, 1);
+}
+.portfolio-intro-buttons#button-github:hover {
+    color: #fff;
+    background-color: rgba(12, 44, 60, 1);
 }
 
 /* Imagens dentro dos botões */
 .button-images {
     width: 30px;
-    border-radius: 25%;
+    border-radius: 50%;
+    transition: all 0.3s;
+}
+.button-images#linkedin[class~="active"] {
+    filter: grayscale(1) brightness(5);
+}
+.button-images#github[class~="active"] {
+    filter: grayscale(1) brightness(7);
 }
 
 /* Div da imagem do portfólio */

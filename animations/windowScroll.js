@@ -50,7 +50,9 @@ window.addEventListener("scroll", () => {
         const queryTop = queryOffsets.top;
         if(queryTop < (screenHeight - (screenHeight / 3.8))) {
             query.style.opacity = 1;
-            query.style.animation = scroll.animation;
+            if(query.style.animation.length === 0) {
+                query.style.animation = scroll.animation;
+            };
         } else {
             query.style.animtion = `none`;
             query.style.opacity = 0;
