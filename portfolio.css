@@ -47,6 +47,17 @@ button:hover {
     padding: 0;
 }
 
+/* Principal do portfólio */
+#portfolio-main {
+    filter: blur(0px);
+    transition: all 0.3s;
+}
+#portfolio-main[class~="blur"] {
+    filter: blur(2px);
+    pointer-events: none;
+}
+
+
 /* Header do portfólio */
 .portfolio-header {
     height: 100vh;
@@ -1045,7 +1056,7 @@ button:hover {
     background-color: #e0e0e0;
 }
 .portfolio-projects.dark {
-    background-color: #202030;
+    background-color: #1a1a2a;
 }
 #portfolio-projects-header {
     /*background-size: 50px 50px;
@@ -1061,7 +1072,7 @@ button:hover {
     position: absolute;
     z-index: 0;
     width: 100%;
-    height: 100%;
+    height: 200px;
     opacity: 0;
     transition: all 0.3s;
 }
@@ -1135,16 +1146,19 @@ button:hover {
 /* Div dos projetos */
 .project-divs {
     width: 20rem;
-    height: 10rem;
+    height: 11rem;
     border-radius: var(--project-links-border-radius);
-    box-shadow: rgba(0, 0, 0, 1) 0px 0px 15px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 5px;
+    transition: all 0.3s;
+}
+.project-divs:hover {
+    transform: scale(1.1);
 }
 
 /* Links dos projetos */
 .project-links {
     width: 100%;
     height: 100%;
-    border: 1px solid #606060;
     border-radius: var(--project-links-border-radius);
     display: flex;
     flex-direction: column;
@@ -1367,10 +1381,6 @@ button:hover {
     }
 }
 
-.project-links:hover {
-    transform: scale(1.01);
-}
-
 /* Cores dos projetos */
 .project-colors {
     position: absolute;
@@ -1422,6 +1432,18 @@ button:hover {
     background-color: #3050a0;
 }*/
 
+
+/* Botões principais dos projetos */
+.project-main-buttons {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    border: none;
+    border-radius: 3px;
+    transition: all 0.3s;
+}
+
 /* Botões dos projetos */
 .project-buttons {
     width: 100%;
@@ -1435,7 +1457,7 @@ button:hover {
 .projects-images {
     width: 100%;
     height: 100%;
-    border-radius: 12px;
+    border-radius: 3px;
 }
 
 /* Header/cabeçalho dos projetos */
