@@ -17,6 +17,9 @@ const languages = {
     "jQuery": {
         "icon": "https://i.imgur.com/goYVKjm.png"
     },
+    "Sass": {
+        "icon": "https://i.imgur.com/IysxKOn.png"
+    },
     "Node.js": {
         "icon": "https://i.imgur.com/7jfIPn5.png"
     },
@@ -39,7 +42,7 @@ const projects = [
         "color": "#f00000",
         "icon": "https://i.imgur.com/rihZYP2.png",
         "image": "https://i.imgur.com/k9qMdZG.png",
-        "languages": ["HTML", "CSS", "JavaScript", "React", "Bootstrap"],
+        "languages": ["HTML", "CSS", "JavaScript", "React", "Bootstrap", "Sass"],
         "repositorie": "https://github.com/EricNunes0/React-site",
         "description": `
             Esse foi o meu primeiro projeto desenvolvido utilizando React, há mais de 1 ano atrás. "Janny" é o nome da minha aplicação desenvolvida para o aplicativo <a>Discord</a>, com o intuito de entreter os usuários da plataforma, com mais de 150 funcionalidades exclusivas. O projeto foi criado com Node.js usando a biblioteca Discord.js, e foi o meu primeiro projeto à me dar experiência com a linguagem JavaScript.

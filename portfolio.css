@@ -983,8 +983,8 @@ button:hover {
 .knowledges-language-divs {
     cursor: pointer;
     position: relative;
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     display: flex;
     flex-direction: column;
     justify-content: center;

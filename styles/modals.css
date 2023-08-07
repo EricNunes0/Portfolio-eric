@@ -7,9 +7,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    opacity: 1;
+    transition: all 0.3s;
 }
 #modal-container[class~="hide"] {
-    display: none;
+    transform: scale(0);
+    opacity: 0;
 }
 
 #modal-area {
@@ -93,10 +96,16 @@
     width: 100%;
     height: 70%;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     gap: 20px;
+}
+
+@media screen and (max-width: 768px) {
+    #modal-main {
+        flex-direction: column;
+    }
 }
 
 #modal-image-div {
@@ -106,7 +115,7 @@
 }
 
 #modal-image {
-    width: 60%;
+    width: 90%;
     margin: auto;
 }
 
@@ -115,9 +124,11 @@
     width: 80%;
     height: 80%;
     overflow: auto;
+    border-radius: 10px;
 }
 
 #modal-description {
+    width: 90%;
     font-size: 10pt;
     transition: all 0.3s;
 }
@@ -134,6 +145,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 20px 0;
 }
 
 #modal-main-link-div {
@@ -147,8 +159,8 @@
 
 .modal-links {
     text-decoration: none;
-    font-size: 10pt;
-    padding: 3px;
+    font-size: 12pt;
+    padding: 8px;
     border-radius: 25px;
     transition: all 0.3s;
 }
