@@ -41,7 +41,7 @@ const projects = [
         "link": "https://janny.vercel.app/",
         "color": "#f00000",
         "icon": "https://i.imgur.com/rihZYP2.png",
-        "image": "https://i.imgur.com/k9qMdZG.png",
+        "image": "images/gif_project0.gif",
         "languages": ["HTML", "CSS", "JavaScript", "React", "Bootstrap", "Sass"],
         "repositorie": "https://github.com/EricNunes0/React-site",
         "description": `
