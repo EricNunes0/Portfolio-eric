@@ -71,7 +71,7 @@ const projects = [
     },
     {
         "id": 3,
-        "name": "Calculadora Online",
+        "name": "Calculadora Web",
         "link": "https://calculadora-padrao.vercel.app/",
         "color": "#f060ff",
         "icon": "https://i.imgur.com/1MI0yjp.png",

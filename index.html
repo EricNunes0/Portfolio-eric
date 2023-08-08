@@ -40,9 +40,16 @@
                 <div id = "modal-main">
                     <div id = "modal-image-div">
                         <img id = "modal-image" src = ""></img>
+                        <div id = "modal-langs-div">
+                        </div>
                     </div>
-                    <div id = "modal-description-div">
-                        <p class = "light" id = "modal-description">Descrição</p>
+                    <div id = "modal-texts-div">
+                        <div id = "modal-description-title-div">
+                            <p class = "light" id = "modal-description-title">Descrição:</p>
+                        </div>
+                        <div id = "modal-description-div">
+                            <p class = "light" id = "modal-description">Descrição</p>
+                        </div>
                     </div>
                 </div>
                 <div id = "modal-footer">
@@ -135,7 +142,7 @@
                         <button type = "button" class = "mobile-nav-buttons light" onclick = "scrollScreenTo(`projects`)">Projetos</button>
                         <button type = "button" class = "mobile-nav-buttons light" onclick = "scrollScreenTo(`contacts`)">Contato</button>
                         <button type = "button" class = "mobile-nav-buttons light" id = "menu-theme-button" onclick = "changePageTheme()">
-                            <img class = "theme-buttons-icons light" src = "https://i.imgur.com/EFjsg8D.png">
+                            <img class = "light" id = "mobile-theme-icon" src = "https://i.imgur.com/EFjsg8D.png">
                         </button>
                     </ul>
                 </div>
@@ -161,13 +168,13 @@
                         </section>
                         <section class = "portfolio-intro-buttons-section">
                             <a class = "button-links" href = "https://www.linkedin.com/in/eric-nunes-ramalho-58a146208/" target = "_blank">
-                                <button class = "portfolio-intro-buttons" id = "button-linkedin" type = "button">
+                                <button class = "portfolio-intro-buttons light" id = "button-linkedin" type = "button">
                                     <img class = "button-images" id = "linkedin" src = "images/img_LinkedInIcon.png"/>
                                     LinkedIn
                                 </button>
                             </a>
                             <a class = "button-links" href = "https://github.com/EricNunes0" target = "_blank">
-                                <button class = "portfolio-intro-buttons" id = "button-github" type = "button">
+                                <button class = "portfolio-intro-buttons light" id = "button-github" type = "button">
                                     <img class = "button-images" id = "github" src = "images/img_GithubIcon.png"/>
                                     Github
                                 </button>
@@ -605,6 +612,8 @@
     <script type = "text/javascript" src = "animations/windowScroll.js"></script>
     <script type = "text/javascript" src = "scripts/changePageTheme.js"></script>
     <script type = "text/javascript" src = "scripts/closeModal.js"></script>
+    <script type = "text/javascript" src = "scripts/CreateModalLangs.js"></script>
+    <script type = "text/javascript" src = "scripts/modalLangsHover.js"></script>
     <script type = "text/javascript" src = "scripts/navMenu.js"></script>
     <script type = "text/javascript" src = "scripts/navMenuClose.js"></script>
     <script type = "text/javascript" src = "scripts/navMenuOpen.js"></script>

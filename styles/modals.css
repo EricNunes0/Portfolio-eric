@@ -3,10 +3,11 @@
     position: fixed;
     z-index: 2;
     width: 100vw;
-    height: 100vh;
+    height: 80vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 10vh 0;
     opacity: 1;
     transition: all 0.3s;
 }
@@ -18,7 +19,7 @@
 #modal-area {
     pointer-events: all;
     width: 80%;
-    height: 80%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -42,8 +43,8 @@
 #modal-close-button {
     background: none;
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 20px;
+    right: 20px;
     width: 40px;
     height: 40px;
     margin: unset;
@@ -55,12 +56,12 @@
 #modal-close-button:hover {
     transform: scale(1.1);
     filter: brightness(1.5);
+    background-color: rgba(0, 0, 0, 0.1);
 }
 
 #modal-close-button-image {
-    width: 25px;
-    height: 25px;
-    
+    width: 70%;
+    height: 70%;
 }
 
 #modal-header {
@@ -68,19 +69,20 @@
     height: 20%;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 25px;
+    gap: 10px;
 }
 
 #modal-icon {
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
 }
 
 #modal-title {
     font-family: "Poppins";
-    font-size: 26pt;
+    font-size: 20pt;
     font-weight: bold;
     margin: unset;
     transition: all 0.3s;
@@ -102,29 +104,45 @@
     gap: 20px;
 }
 
-@media screen and (max-width: 768px) {
-    #modal-main {
-        flex-direction: column;
-    }
-}
-
 #modal-image-div {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 20px;
 }
 
 #modal-image {
     width: 90%;
     margin: auto;
+    border-radius: 10px;
+    outline: 2px solid rgba(0, 0, 0, 0.5);
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 10px;
 }
 
-#modal-description-div {
+#modal-texts-div {
     min-width: 150px;
     width: 80%;
     height: 80%;
-    overflow: auto;
     border-radius: 10px;
+}
+
+#modal-description-div {
+    overflow: auto;
+    height: 85%;
+}
+
+#modal-description-title {
+    font-family: "Poppins";
+    font-size: 14pt;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+#modal-description-title[class~="light"] {
+    color: #404040;
+}
+#modal-description-title[class~="dark"] {
+    color: #e0e0e0;
 }
 
 #modal-description {
@@ -133,19 +151,124 @@
     transition: all 0.3s;
 }
 #modal-description[class~="light"] {
-    color: #000;
+    color: #404040;
 }
 #modal-description[class~="dark"] {
+    color: #b0b0b0;
+}
+
+/* Linguagens */
+#modal-langs-div {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/* Linguagens */
+.modal-langs-divs {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Div dos ícones das linguagens */
+.modal-langs-icons-divs {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s;
+}
+.modal-langs-icons-divs[class~="running"]::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 6px;
+    height: 50px;
+    top: 90%;
+    left: calc(50% - calc(6px / 2));
+    background-image: linear-gradient(180deg, #f0f0f0a0, transparent);
+    border-radius: 50%;
+    box-shadow: rgba(255, 255, 255, 0.3) 0px 0px 3px;
+}
+
+/* Ícones das linguagens */
+.modal-langs {
+    pointer-events: all;
+    position: relative;
+    top: 0px;
+    width: 40px;
+    height: 40px;
+    animation: ModalLangsHover 1s ease-in-out infinite;
+    transition: all 0.3s;
+}
+.modal-langs:hover {
+    transform: scale(1.2);
+    filter: drop-shadow(0px 0px 3px rgba(255, 255, 255, 0.3));
+}
+@keyframes ModalLangsHover {
+    50% {
+        transform: scale(1.075);
+    }
+}
+
+/* Divs dos nomes das linguagens */
+.modal-langs-names-divs {
+    pointer-events: none;
+    position: absolute;
+    top: 40px;
+    background-color: rgba(0, 0, 0, 0.75);
+    border-radius: 10px;
+    padding: 5px;
+    margin-top: 5px;
+    opacity: 1;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 3px;
+    transition: all 0.3s;
+}
+.modal-langs-names-divs[class~="hide"] {
+    transform: translateY(-20px) scale(0);
+    opacity: 0;
+}
+
+/* Nomes das linguagens */
+.modal-lang-names {
+    font-family: "Poppins";
+    font-family: 10pt;
+    transition: all 0.3s;
+}
+.modal-lang-names[class~="light"] {
     color: #fff;
+}
+.modal-lang-names[class~="dark"] {
+    color: #fff;
+}
+
+@keyframes ModalLangFly {
+    40% {
+        transform: translate(0px, -100vh);
+    }
+    41%, 90% {
+        transform: translate(0px, -100vh) rotate(180deg);
+    }
+    90% {
+        transform: translate(0px, 50px) rotate(180deg);
+    }
+    95% {
+        transform: translate(0px, 50px) rotate(0deg);
+    }
 }
 
 #modal-footer {
     width: 100%;
-    height: 10%;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 20px 0;
+    padding: 20px 0;
 }
 
 #modal-main-link-div {
@@ -179,4 +302,37 @@
 .modal-links[class~="dark"]:hover {
     background-color: #a0b0ff;
     color: #fff;
+}
+
+@media screen and (max-width: 768px) {
+    #modal-header {
+        height: 15%;
+    }
+
+    #modal-main {
+        flex-direction: column;
+        height: 70%;
+    }
+
+    #modal-image {
+        height: 50%;
+    }
+
+    #modal-texts-div {
+        width: 90%;
+        height: 50%;
+    }
+
+    #modal-description-div {
+        height: 50%;
+    }
+
+    .modal-links {
+        font-size: 8pt;
+        padding: 3px;
+    }
+
+    #modal-footer {
+        height: 15%;
+    }
 }

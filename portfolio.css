@@ -172,6 +172,7 @@ button:hover {
     background-position: 0 25px;
     background-repeat: no-repeat;
     transition: all 0.3s;
+    border-radius: 5px;
 }
 @keyframes NavButtonLi {
     0% {
@@ -455,6 +456,9 @@ button:hover {
     background-color: none;
     color: rgba(12, 44, 60, 1);
     border: 2px solid rgba(12, 44, 60, 1);
+}
+.portfolio-intro-buttons#button-github[class~="dark"] {
+    color: #fff;
 }
 .portfolio-intro-buttons#button-github:hover {
     color: #fff;
@@ -1147,6 +1151,7 @@ button:hover {
 .project-divs {
     width: 20rem;
     height: 11rem;
+    outline: 2px solid rgba(0, 0, 0, 0.5);
     border-radius: var(--project-links-border-radius);
     box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 5px;
     transition: all 0.3s;
@@ -1440,7 +1445,7 @@ button:hover {
     padding: 0;
     margin: 0;
     border: none;
-    border-radius: 3px;
+    border-radius: var(--project-links-border-radius);
     transition: all 0.3s;
 }
 
@@ -1577,6 +1582,17 @@ button:hover {
     color: #f0f0f0;
 }
 
+#mobile-theme-icon {
+    width: 30px;
+    height: 30px;
+}
+#mobile-theme-icon[class~="light"] {
+    filter: invert(1);
+}
+#mobile-theme-icon[class~="dark"] {
+    filter: invert(0);
+}
+
 @media screen and (min-width: 769px) {
     .portfolio-abas {
         display: block;
@@ -1648,8 +1664,9 @@ button:hover {
     }
 
     .nav-menu {
+        position: absolute;
         width: 100%;
-        height: 100vh;
+        height: calc(100vh - 80px);
         box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
         border-radius: 10px;
     }
@@ -1667,10 +1684,10 @@ button:hover {
         border-radius: 10px;
     }
     .menu-div.light {
-        background-color: rgba(220, 220, 220, 0.8);
+        background-color: rgba(220, 220, 220, 0.95);
     }
     .menu-div.dark {
-        background-color: rgba(20, 20, 40, 0.8);
+        background-color: rgba(20, 20, 40, 0.95);
     }
 
     .menu-abas-list {
@@ -1686,13 +1703,14 @@ button:hover {
 
     .mobile-nav-buttons {
         width: 100%;
-        height: 75px;
+        height: 50px;
         background-color: transparent;
         font-size: 24pt;
         font-family: "Poppins";
         font-weight: bold;
         text-decoration: none;
         border: none;
+        transition: all 0.3s;
     }
     .mobile-nav-buttons.light {
         color: #000;

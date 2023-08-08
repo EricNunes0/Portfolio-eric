@@ -12,8 +12,8 @@
     justify-content: center;
     align-items: center;
     position: absolute;
-    right: 1rem;
-    bottom: 1rem;
+    right: 2rem;
+    bottom: 2rem;
     background-color: rgba(0, 0, 0, 0.8);
     width: 4.5rem;
     height: 4.5rem;
@@ -30,5 +30,14 @@
 
 #arrow-scroll-up-svg {
     pointer-events: none;
+    width: 30px;
+    height: 30px;
     filter: invert(0);
+    animation: ArrowScrollUpSVG 1s ease-in-out infinite;
+}
+
+@keyframes ArrowScrollUpSVG {
+    50% {
+        transform: translateY(-3px);
+    }
 }
