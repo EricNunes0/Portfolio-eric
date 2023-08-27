@@ -480,8 +480,7 @@ button:hover {
 
 /* Div da imagem do portfólio */
 .intro-image-div {
-    width: 100%;
-    display: contents;
+    padding: 5vw;
 }
 
 /* Imagem do portfólio */
@@ -886,11 +885,18 @@ button:hover {
     opacity: 1;
     transition: all 0.3s;
 }
+.knowledges-icon-divs:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
 .knowledges-icon-divs[class~="light"] {
     background-color: #7090ff;
 }
 .knowledges-icon-divs[class~="dark"] {
     background-color: #4050a0;
+}
+.knowledges-icon-divs[class~="click"] {
+    box-shadow: #7090ff 0px 0px 3px;
 }
 @keyframes KnowledgesIcons {
     0% {
@@ -995,6 +1001,8 @@ button:hover {
     align-items: center;
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
     margin: 10px;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
     transition: all 0.3s;
@@ -1060,7 +1068,7 @@ button:hover {
     background-color: #e0e0e0;
 }
 .portfolio-projects.dark {
-    background-color: #1a1a2a;
+    background-color: #101020;
 }
 #portfolio-projects-header {
     /*background-size: 50px 50px;
@@ -1278,6 +1286,14 @@ button:hover {
     animation-iteration-count: infinite;
 }
 
+.project-links#project-link-11 {
+    background-image: url("https://media.discordapp.net/attachments/1145459828005814333/1145459874327707688/image.png?width=928&height=473");
+    animation-name: projectLinksAnimation, backgroundChange11;
+    animation-duration: 20s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
 @keyframes backgroundChange0 {
     0% {
         background-image: url("https://i.imgur.com/k9qMdZG.png");
@@ -1386,6 +1402,12 @@ button:hover {
     }
 }
 
+@keyframes backgroundChange11 {
+    50% {
+        background-image: url("https://media.discordapp.net/attachments/1145459828005814333/1145459874558398474/image.png?width=1025&height=463");
+    }
+}
+
 /* Cores dos projetos */
 .project-colors {
     position: absolute;
@@ -1481,7 +1503,7 @@ button:hover {
     background-color: #c0c0c0;
 }
 .portfolio-contacts.dark {
-    background-color: #101020;
+    background-color: #0a0a1a;
 }
 
 /* Div dos contatos */

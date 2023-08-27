@@ -258,6 +258,27 @@ const projects = [
             <br></br>
             Foi o primeiro projeto que tive contato com o jQuery, e pude aprender bastante sobre como o mesmo funciona.
         `
+    },
+    {
+        "id": 11,
+        "name": "Word Scrapper",
+        "link": "https://ericnunes0.pythonanywhere.com/wordscrapper/",
+        "color": "#ff8030",
+        "icon": "svgs/wordscrapper.svg",
+        "image": "https://cdn.discordapp.com/attachments/1145459828005814333/1145459874327707688/image.png",
+        "languages": ["HTML", "CSS", "JavaScript", "Bootstrap", "jQuery", "Python"],
+        "repositorie": "https://github.com/EricNunes0/Word-Scrapper.git",
+        "description": `
+            Desenvolvido com Django (Python), este projeto foi desenvolvido como uma atividade prática das aulas de Big Data em Python, onde estou aprendendo sobre os conceitos de MapReduce. O Word Scrapper extrai todas as palavras de um texto, e as exibe em uma lista, mostrando quantas vezes a mesma se repete.
+            <br></br>
+            Destaques:
+            <br>
+            • Conexão com back-end via Django (Python);
+            <br>
+            • Utilização dos conceitos básicos do MapReduce para extração de dados;
+            <br>
+            • Extração de textos de outros sites via URL;
+        `
     }
 ];
 
