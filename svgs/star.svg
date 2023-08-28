@@ -1,0 +1,9 @@
+<svg viewBox="0 0 60 60" width="0px" height="0px" xmlns="http://www.w3.org/2000/svg" xmlns:bx="https://boxy-svg.com">
+  <defs>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="30" y1="5" x2="30" y2="54.999" id="gradient-0">
+      <stop offset="0" style="stop-color: #bada55"></stop>
+      <stop offset="1" style=""></stop>
+    </linearGradient>
+  </defs>
+  <path d="M 30 5 L 37.417 21.906 L 55 24.098 L 42 36.739 L 45.451 54.999 L 30 45.906 L 14.549 54.999 L 18 36.739 L 5 24.098 L 22.583 21.906 Z" style="stroke: rgb(0, 0, 0); paint-order: stroke;" bx:shape="star 30 32.639 26.287 27.639 0.48 5 1@e8d18dd0"></path>
+</svg>

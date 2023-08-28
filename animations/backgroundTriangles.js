@@ -4,7 +4,7 @@ for(let i = 0; i <= triangleAmount - 1; i++) {
     let triangleAnimationDuration = 2 + Math.floor(Math.random() * 5);
     const triangle = document.createElement("object");
     triangle.className = `background-triangles light`;
-    triangle.data = `svgs/triangle.svg`;
+    triangle.data = `svgs/star.svg`;
     triangle.style.top = `${Math.floor(Math.random() * 100)}%`;
     triangle.style.left = `${Math.floor(Math.random() * 100)}%`;
     triangle.style.opacity = 1;

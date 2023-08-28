@@ -25,9 +25,13 @@
     -khtml-user-select: none;
     -webkit-user-select: none;
     -o-user-select: none;
+    transition: all 0.3s;
 }
 .background-triangles[class~="light"] {
-    filter: invert(1) drop-shadow(0 0 5px rgba(0, 0, 0, 0.8));
+    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.8));
+}
+.background-triangles[class~="dark"] {
+    filter: invert(1);
 }
 @keyframes BackgroundTriangles {
     0% {
