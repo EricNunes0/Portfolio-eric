@@ -9,6 +9,8 @@
     --project-links-border-radius: 5px;
     --reveal-text-duration: 0.3s;
     --reveal-text-timing: ease-out;
+    --separator-color: #909090;
+    --curriculum-color-light: #3050a0;
 }
 
 h1, h3, a, p {
@@ -25,20 +27,6 @@ img {
 button:hover {
     cursor: pointer;
     filter: brightness(0.9);
-}
-
-/* Textos do modo claro */
-.aboutme-texts {
-    font-family: "Poppins";
-    text-align: center;
-    transition: all 0.3s;
-}
-/* Textos do modo claro */
-.aboutme-texts.light {
-    color: #000;
-}
-.dark-texts.dark {
-    color: #fff;
 }
 
 /* Página de portfolio*/
@@ -169,8 +157,9 @@ button:hover {
 /* Textos dos botões da barra de navegação */
 .nav-buttons-li {
     background-size: 100% 2px;
-    background-position: 0 25px;
+    background-position: 0 18px;
     background-repeat: no-repeat;
+    font-size: 14px;
     transition: all 0.3s;
     border-radius: 5px;
 }
@@ -276,7 +265,7 @@ button:hover {
 /* Título do portfolio */
 .header-titles {
     font-family: "Poppins";
-    font-size: 16pt;
+    font-size: 20pt;
     font-weight: bold;
     text-align: center;
 }
@@ -284,7 +273,6 @@ button:hover {
 .header-titles.light {
     color: #000;
 }
-
 /* Título do portfolio */
 .header-titles.dark {
     color: #fff;
@@ -298,8 +286,8 @@ button:hover {
 
 /* Nome do portfolio */
 .header-names {
-    font-family: "Poppins", monospace;
-    font-size: 30pt;
+    font-family: "Poppins";
+    font-size: 50pt;
     font-weight: bold;
     text-align: center;
     background-size: 400%;
@@ -333,14 +321,13 @@ button:hover {
 .header-descriptions {
     text-align: center;
     font-family: "Poppins";
-    font-size: 12pt;
+    font-size: 14pt;
     margin: 5px 0;
+    transition: all 0.3s;
 }
-
 .header-descriptions.light {
-    color: #000;
+    color: #222;
 }
-
 .header-descriptions.dark {
     color: #fff;
 }
@@ -480,7 +467,11 @@ button:hover {
 
 /* Div da imagem do portfólio */
 .intro-image-div {
-    padding: 5vw;
+    width: 49%;
+    max-width: 49%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
 }
 
 /* Imagem do portfólio */
@@ -576,18 +567,12 @@ button:hover {
 
 /* Bloco da aba sobre mim */
 .aboutme-container {
-    width: 80%;
+    width: 90%;
     height: 100%;
     border-radius: 15px;
     margin: 20px auto;
     transition: all 0.3s;
     background-size: 100% 100%;
-}
-.aboutme-container.light {
-    background-color: #e0e0e0;
-}
-.aboutme-container.dark {
-    background-color: #202030;
 }
 
 /* Div sobre mim */
@@ -628,6 +613,19 @@ button:hover {
     }
 }
 
+/* Main principal da aba sobre mim */
+#aboutme-main {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+@media screen and (max-width: 768px) {
+    #aboutme-main {
+        flex-direction: column;
+    }
+}
+
 /* Descrição da aba sobre mim */
 #aboutme-description {
     text-align: center;
@@ -644,21 +642,154 @@ button:hover {
     color: #b0b0b0;
 }
 
-@media screen and (min-width: 800px) {
-    /* Div da descrição do sobre mim */
-    .portfolio-aboutme-description-div {
-        width: 80%;
-        font-size: 14pt;
-    }
+/* Div do separador */
+#separator-div {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+/* Divs com todos os separadores */
+#separators-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Círculos do separador */
+.separator-circles {
+    position: relative;
+    display: block;
+    width: 10px;
+    height: 10px;
+    border: 1px solid var(--separator-color);
+    border-radius: 50%;
+}
+
+/* Linhas do separador */
+.separator-lines {
+    position: relative;
+    display: block;
+    width: 1px;
+    height: 150px;
+    background-image: linear-gradient(0deg, var(--separator-color), transparent);
+}
+
+/* Linha do separador ligado com o currículo */
+#separator-to-curriculum {
+    background-image: linear-gradient(0deg, var(--curriculum-color-light), var(--separator-color));
+}
+
+/* Div da descrição do sobre mim */
+.aboutme-description-div {
+    width: 49%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 14pt;
+    gap: 1rem;
 }
 
 @media screen and (max-width: 800px) {
     /* Div da descrição do sobre mim */
-    .portfolio-aboutme-description-div {
+    .aboutme-description-div {
         width: 80%;
         font-size: 15pt;
         line-height: 1.5rem;
+        padding-left: unset;
     }
+}
+
+/* Divs das descrições sobre mim */
+.aboutme-divs {
+    margin-left: 10%;
+}
+
+/* Cabeçalho das divs de descrições sobre mim */
+.aboutme-header-divs {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+/* Divs dos ícones das descrições sobre mim */
+.aboutme-icon-divs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    border-radius: 10px;
+    transition: all 0.3s;
+}
+.aboutme-icon-divs[class~="light"] {
+    background-color: #f0f0f0;
+    border: 1px solid #b0b0b0;
+}
+.aboutme-icon-divs[class~="dark"] {
+    background-color: #404060;
+    border: 1px solid #202040;
+}
+
+/* Ícones das descrições sobre mim */
+.aboutme-icons {
+    width: 25px;
+    height: 25px;
+    transition: all 0.3s;
+}
+.aboutme-icons[class~="dark"] {
+    filter: invert(1);
+}
+
+/* Títulos das descrições sobre mim */
+.aboutme-title-divs {
+    font-size: 16pt;
+    font-weight: bold;
+}
+
+/* Títulos das descrições sobre mim */
+.aboutme-titles {
+    font-size: 20px;
+    font-family: "Poppins";
+    text-align: center;
+    margin: 0;
+    transition: all 0.3s;
+}
+.aboutme-titles.light {
+    color: #000;
+}
+.aboutme-titles.dark {
+    color: #fff;
+}
+
+/* Divs dos textos das descrições sobre mim */
+.aboutme-text-divs {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+/* Textos das descrições sobre mim */
+.aboutme-texts {
+    width: 80%;
+    font-size: 15px;
+    font-family: "Poppins";
+    text-align: justify;
+    margin: 0;
+    transition: all 0.3s;
+}
+.aboutme-texts.light {
+    color: #666;
+}
+.aboutme-texts.dark {
+    color: #aaa;
 }
 
 /* Div das skills da aba sobre mim */
@@ -743,11 +874,36 @@ button:hover {
 }
 
 /* Div do botão de currículo */
-.portfolio-curriculo-div {
+#curriculo-div {
+    position: absolute;
+    top: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+    #separator-div {
+        display: none;
+    }
+
+    .aboutme-header-divs {
+        justify-content: center;
+    }
+
+    .aboutme-text-divs {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .aboutme-texts {
+        width: 100%;
+    }
+
+    #curriculo-div {
+        position: unset;
+    }
 }
 
 /* Link do currículo */
@@ -755,7 +911,6 @@ button:hover {
     width: 160px;
     height: 40px;
     border-radius: 15px;
-    margin-bottom: 30px;
 }
 
 /* Botão do currículo */
@@ -829,7 +984,7 @@ button:hover {
     font-size: 30pt;
     font-weight: bold;
     text-shadow: rgba(0, 0, 0, 0.5) 0px 0px 4px;
-    margin: 40px 0 10px 0;
+    margin: 30px 0 10px 0;
     transition: all 0.3s;
 }
 #knowledges-header-title.light {
@@ -954,10 +1109,10 @@ button:hover {
     transition: all 0.3s;
 }
 .knowledges-descriptions[class~="light"] {
-    color: #000;
+    color: #666;
 }
 .knowledges-descriptions[class~="dark"] {
-    color: #fff;
+    color: #aaa;
 }
 
 /* Divs das descrições dos conhecimentos */
