@@ -1,6 +1,6 @@
 const languages = {
     "HTML": {
-        "icon": "https://i.imgur.com/xa4sDsi.png"
+        "icon": "svgs/code/html.svg"
     },
     "CSS": {
         "icon": "https://i.imgur.com/Qf2JKsE.png"

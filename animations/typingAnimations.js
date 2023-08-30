@@ -24,7 +24,7 @@ const types = [
         "interval": 0.04
     },
     {
-        "texts": ["Desenvolvedor Front-End"],
+        "texts": ["Desenvolvedor Full-Stack"],
         "query": "#header-code",
         "delay": 6.3,
         "interval": 0.06

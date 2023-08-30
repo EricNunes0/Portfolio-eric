@@ -11,6 +11,8 @@
     --reveal-text-timing: ease-out;
     --separator-color: #909090;
     --curriculum-color-light: #3050a0;
+    --moon-width: 100px;
+    --moon-height: 100px;
 }
 
 h1, h3, a, p {
@@ -22,6 +24,11 @@ h1, h3, a, p {
 
 img {
     pointer-events: none;
+    -webkit-user-drag: none;
+    user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
 }
 
 button:hover {
@@ -56,7 +63,7 @@ button:hover {
 }
 .portfolio-header.dark {
     background-color: rgb(20, 20, 20);
-    background-image: radial-gradient(ellipse at bottom, rgba(0, 40, 200, 0.3) 0%, rgba(0, 0, 0, 0) 100%);
+    background-image: radial-gradient(ellipse at top, rgba(0, 20, 150, 0.3) 0%, rgba(0, 0, 20, 1) 90%);
 }
 
 
@@ -74,16 +81,58 @@ button:hover {
 /* Terra do cenário */
 #scenary-earth {
     position: absolute;
-    bottom: 70%;
-    width: 60vw;
+    bottom: 75%;
+    width: 70vw;
     transform: rotate(180deg);
-    filter: brightness(0.9) drop-shadow(0px 0px 2rem #2090ff);
-    animation: ScenaryEarth 30s linear infinite;
+    border: 2px solid rgb(32, 144, 255, 0.5);
+    border-radius: 50%;
+    filter: brightness(1.2) saturate(1.2) drop-shadow(0px 0px 2rem #2090ff);
+    animation: ScenaryEarth 60s linear infinite;
+    transition: all 0.3s;
+}
+
+@media screen and (max-width: 780px) {
+    #scenary-earth {
+        bottom: 80%;
+    }
 }
 
 @keyframes ScenaryEarth {
     100% {
         transform: rotate(360deg);
+    }
+}
+
+/* Lua do cenário */
+#scenary-moon {
+    position: absolute;
+    top: 75vh;
+    left: 15%;
+    width: var(--moon-width);
+    height: var(--moon-height);
+    animation: ScenaryMoon 40s linear infinite;
+    filter: brightness(0.9) drop-shadow(0px 0px 1rem #a0a0a0);
+}
+
+@keyframes ScenaryMoon {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Satélite do cenário */
+#scenary-satelite {
+    position: absolute;
+    top: 25%;
+    left: 70%;
+    width: 20px;
+    height: 20px;
+    animation: ScenarySatelite 1.5s ease-in-out infinite;
+}
+
+@keyframes ScenarySatelite {
+    50% {
+        transform: translateY(-5px);
     }
 }
 
@@ -183,9 +232,9 @@ button:hover {
 /* Textos dos botões da barra de navegação */
 .nav-buttons-li {
     background-size: 100% 2px;
-    background-position: 0 18px;
+    background-position: 0 19px;
     background-repeat: no-repeat;
-    font-size: 14px;
+    font-size: 16px;
     transition: all 0.3s;
     border-radius: 5px;
 }
@@ -294,14 +343,17 @@ button:hover {
     font-size: 20pt;
     font-weight: bold;
     text-align: center;
+    transition: all 0.3s;
 }
 
 .header-titles.light {
     color: #000;
+    text-shadow: 1px 1px #fff;
 }
 /* Título do portfolio */
 .header-titles.dark {
     color: #fff;
+    text-shadow: 1px 1px #000;
 }
 
 /* Sessão do nome do portfolio */
@@ -321,6 +373,8 @@ button:hover {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: introName 8s cubic-bezier(0, 0, 1, 1) 0.1s infinite;
+    transition: all 0.3s;
+
 }
 
 .header-names.light {
@@ -371,6 +425,7 @@ button:hover {
     font-size: 14pt;
     font-weight: bold;
     margin: 15px 0;
+    transition: all 0.3s;
 }
 
 .header-codes.light {
@@ -500,14 +555,25 @@ button:hover {
     align-content: center;
 }
 
+/* Link da imagem do portfólio */
+#intro-image-link {
+    border-radius: 50%;
+}
+
 /* Imagem do portfólio */
 .portfolio-intro-image {
+    pointer-events: all;
     border-radius: 50%;
+    outline: 2px solid rgba(200, 200, 255);
     box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 15px;
     animation-name: portfolioImage;
     animation-duration: 2s;
     animation-timing-function: cubic-bezier(0, 0, 1, 1);
     animation-iteration-count: infinite;
+    transition: all 0.3s;
+}
+.portfolio-intro-image:hover {
+    transform: scale(1.05);
 }
 
 @keyframes portfolioImage {
@@ -978,12 +1044,6 @@ button:hover {
     transition: all 0.3s;
     margin: 20px auto;
 }
-#portfolio-knowledges[class~="light"] {
-    background-color: #e0e0e0;
-}
-#portfolio-knowledges[class~="dark"] {
-    background-color: #202030;
-}
 
 /* Area dos conhecimentos */
 #knowledges-area {
@@ -1038,7 +1098,7 @@ button:hover {
 /* Principal div dos conhecimentos */
 #knowledges-main-div {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: flex-start;
@@ -1047,12 +1107,19 @@ button:hover {
 
 /* Divs dos conhecimentos */
 .knowledges-divs {
-    max-width: 250px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+}
+
+/* Divs à esquerda dos conhecimentos (textos) */
+.knowledges-left {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 20px 0;
 }
 
 /* Divs dos ícones dos conhecimentos */
@@ -1063,6 +1130,7 @@ button:hover {
     justify-content: center;
     align-items: center;
     border-radius: 50%;
+    margin: auto;
     opacity: 1;
     transition: all 0.3s;
 }
@@ -1143,6 +1211,7 @@ button:hover {
 
 /* Divs das descrições dos conhecimentos */
 .knowledges-code-divs {
+    width: 40%;
     margin: 5px 0;
 }
 
@@ -1245,7 +1314,7 @@ button:hover {
     transition: all 0.3s;
 }
 .portfolio-projects.light {
-    background-color: #e0e0e0;
+    background-color: #f0f0f0;
 }
 .portfolio-projects.dark {
     background-color: #101020;
@@ -1301,7 +1370,7 @@ button:hover {
     width: 80%;
     text-align: center;
     font-family: "Poppins";
-    font-size: 14pt;
+    font-size: 12pt;
     font-weight: 100;
     margin: 5px 10% 20px 10%;
     transition: all 0.3s;

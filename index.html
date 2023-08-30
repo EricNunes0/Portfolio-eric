@@ -7,6 +7,7 @@
     <title>Portfólio de Eric Nunes</title>
     <link rel = "stylesheet" type = "text/css" href = "portfolio.css"/>
     <link rel = "stylesheet" type = "text/css" href = "styles/backgroundTriangles.css"/>
+    <link rel = "stylesheet" type = "text/css" href = "styles/codeBars.css"/>
     <link rel = "stylesheet" type = "text/css" href = "styles/modals.css"/>
     <link rel = "stylesheet" type = "text/css" href = "styles/scrollBar.css"/>
     <link rel = "stylesheet" type = "text/css" href = "styles/scrollUp.css"/>
@@ -153,7 +154,12 @@
                 <a name = "header"></a>
                 <div id = "background"></div>
                 <div id = "portfolio-scenary">
-                    <img id = "scenary-earth" src = "images/img_planet.png"></img>
+                    <img id = "scenary-earth" src = "images/img_planet.png" alt = "Earth"></img>
+                    <img id = "scenary-moon" src = "https://freesvg.org/img/full-moon-dan-gerhards-01.png" alt = "Moon"></img>
+                    <img id = "scenary-satelite" src = "https://cdn-icons-png.flaticon.com/512/1042/1042820.png" alt = "Satelite"></img>
+                    <div class = "arrow-div">
+                        <img class = "arrow-image" src = "https://i.imgur.com/cb7E2P8.png">
+                    </div>
                 </div>
                 <div class = "portfolio-intro">
                     <div class = "portfolio-intro-flex">
@@ -185,9 +191,6 @@
                         </section>
                     </div>
                 </div>
-                <div class = "arrow-div">
-                    <img class = "arrow-image" src = "https://i.imgur.com/cb7E2P8.png">
-                </div>
             </div>
             <div class = "portfolio-aboutme light" id = "portfolio-aboutme-header">
                 <a name = "aboutme"></a>
@@ -200,7 +203,9 @@
                             </div>
                             <div id = "aboutme-main">
                                 <div class = "intro-image-div">
-                                    <img class = "portfolio-intro-image" src = "https://i.imgur.com/JR0lf84.jpg"/>
+                                    <a id = "intro-image-link" href = "https://www.linkedin.com/in/eric-nunes-ramalho-58a146208/" target="_blank">
+                                        <img class = "portfolio-intro-image" src = "https://i.imgur.com/JR0lf84.jpg"/>
+                                    </a>
                                 </div>
                                 <div id = "separator-div">
                                     <div id = "separators-div">
@@ -342,7 +347,7 @@
                             </div>-->
                         </div>
                     </div>
-                    <div class = "light" id = "portfolio-knowledges">
+                    <div id = "portfolio-knowledges">
                         <a name = "knowledges"></a>
                         <div id = "knowledges-area">
                             <header id = "knowledges-header">
@@ -355,14 +360,94 @@
                             </header>
                             <div id = "knowledges-main-div">
                                 <div class = "knowledges-divs">
-                                    <div class = "knowledges-icon-divs light" id = "knowledges-div-front">
-                                        <img class = "knowledges-icons light" src = "https://i.imgur.com/KrkmtDF.png"></img>
-                                    </div>
-                                    <div class = "knowledges-title-divs">
-                                        <h1 class = "knowledges-titles light">Front-End</h1>
-                                    </div>
-                                    <div class = "knowledges-description-divs">
-                                        <p class = "knowledges-descriptions light">Sou apaixonado por desenvolvimento web. Gosto de tirar minhas ideias do papel e colocá-las no navegador.</p>
+                                    <div class = "knowledges-left">
+                                        <div class = "code-boards light" id = "front-end">
+                                            <div class = "code-board-headers">
+                                                <div class = "board-header-flex">
+                                                    <div class = "board-header-circle-divs">
+                                                        <div class = "board-circle-divs">
+                                                            <span class = "board-circles red"></span>
+                                                        </div>
+                                                        <div class = "board-circle-divs">
+                                                            <span class = "board-circles yellow"></span>
+                                                        </div>
+                                                        <div class = "board-circle-divs">
+                                                            <span class = "board-circles green"></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class = "board-header-filename-divs">
+                                                        <button class = "board-filename-buttons light selected" id = "filename-button-0" onclick = "boardFileClick({id: 0})">
+                                                            <span class = "board-filenames light">index.html</span>
+                                                        </button>
+                                                        <button class = "board-filename-buttons light" id = "filename-button-1" onclick = "boardFileClick({id: 1})">
+                                                            <span class = "board-filenames light">style.css</span>
+                                                        </button>
+                                                        <button class = "board-filename-buttons light" id = "filename-button-2" onclick = "boardFileClick({id: 2})">
+                                                            <span class = "board-filenames light">script.js</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class = "board-empty-divs"></div>
+                                                </div>
+                                            </div>
+                                            <div class = "code-board-bodies">
+                                                <div class = "board-body-flex">
+                                                    <div class = "board-number-lines">
+                                                        <div class = "board-number-divs">
+                                                            <p class = "board-numbers">1</p>
+                                                        </div>
+                                                        <div class = "board-number-divs">
+                                                            <p class = "board-numbers">2</p>
+                                                        </div>
+                                                        <div class = "board-number-divs">
+                                                            <p class = "board-numbers">3</p>
+                                                        </div>
+                                                        <div class = "board-number-divs">
+                                                            <p class = "board-numbers">4</p>
+                                                        </div>
+                                                        <div class = "board-number-divs">
+                                                            <p class = "board-numbers">5</p>
+                                                        </div>
+                                                        <div class = "board-number-divs">
+                                                            <p class = "board-numbers">6</p>
+                                                        </div>
+                                                        <div class = "board-number-divs">
+                                                            <p class = "board-numbers">7</p>
+                                                        </div>
+                                                        <div class = "board-number-divs">
+                                                            <p class = "board-numbers">8</p>
+                                                        </div>
+                                                        <div class = "board-number-divs">
+                                                            <p class = "board-numbers">9</p>
+                                                        </div>
+                                                        <div class = "board-number-divs">
+                                                            <p class = "board-numbers">10</p>
+                                                        </div>
+                                                        <div class = "board-number-divs">
+                                                            <p class = "board-numbers">11</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class = "board-code-div">
+                                                        <code class = "board-codes show" id = "code-0">
+                                                        </code>
+                                                        <code class = "board-codes" id = "code-1">
+                                                        </code>
+                                                        <code class = "board-codes" id = "code-2">
+                                                        </code>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                        <!--<div class = "knowledges-icon-divs light" id = "knowledges-div-front">
+                                            <img class = "knowledges-icons light" src = "https://i.imgur.com/KrkmtDF.png"></img>
+                                        </div>
+                                        <div class = "knowledges-title-divs">
+                                            <h1 class = "knowledges-titles light">Front-End</h1>
+                                        </div>
+                                        <div class = "knowledges-description-divs">
+                                            <p class = "knowledges-descriptions light">Sou apaixonado por desenvolvimento web. Gosto de tirar minhas ideias do papel e colocá-las no navegador.</p>
+                                        </div>-->
                                     </div>
                                     <div class = "knowledges-code-divs">
                                         <div class = "knowledges-code-title-divs">
@@ -429,14 +514,16 @@
                                     </div>
                                 </div>
                                 <div class = "knowledges-divs">
-                                    <div class = "knowledges-icon-divs light" id = "knowledges-div-back">
-                                        <img class = "knowledges-icons light" src = "https://i.imgur.com/EMTY2SK.png"></img>
-                                    </div>
-                                    <div class = "knowledges-title-divs">
-                                        <h1 class = "knowledges-titles light">Back-End</h1>
-                                    </div>
-                                    <div class = "knowledges-description-divs">
-                                        <p class = "knowledges-descriptions light">Estou buscando aprender mais sobre o "lado do servidor".</p>
+                                    <div>
+                                        <div class = "knowledges-icon-divs light" id = "knowledges-div-back">
+                                            <img class = "knowledges-icons light" src = "https://i.imgur.com/EMTY2SK.png"></img>
+                                        </div>
+                                        <div class = "knowledges-title-divs">
+                                            <h1 class = "knowledges-titles light">Back-End</h1>
+                                        </div>
+                                        <div class = "knowledges-description-divs">
+                                            <p class = "knowledges-descriptions light">Estou buscando aprender mais sobre o "lado do servidor".</p>
+                                        </div>
                                     </div>
                                     <div class = "knowledges-code-divs">
                                         <div class = "knowledges-code-title-divs">
@@ -471,14 +558,16 @@
                                     </div>
                                 </div>
                                 <div class = "knowledges-divs">
-                                    <div class = "knowledges-icon-divs light" id = "knowledges-div-db">
-                                        <img class = "knowledges-icons light" src = "https://i.imgur.com/bVQ1ueU.png"></img>
-                                    </div>
-                                    <div class = "knowledges-title-divs">
-                                        <h1 class = "knowledges-titles light">Banco de dados</h1>
-                                    </div>
-                                    <div class = "knowledges-description-divs">
-                                        <p class = "knowledges-descriptions light">Entendo sobre criação e modelagem de banco de dados SQL.</p>
+                                    <div>
+                                        <div class = "knowledges-icon-divs light" id = "knowledges-div-db">
+                                            <img class = "knowledges-icons light" src = "https://i.imgur.com/bVQ1ueU.png"></img>
+                                        </div>
+                                        <div class = "knowledges-title-divs">
+                                            <h1 class = "knowledges-titles light">Banco de dados</h1>
+                                        </div>
+                                        <div class = "knowledges-description-divs">
+                                            <p class = "knowledges-descriptions light">Entendo sobre criação e modelagem de banco de dados SQL.</p>
+                                        </div>
                                     </div>
                                     <div class = "knowledges-code-divs">
                                         <div class = "knowledges-code-title-divs">
@@ -505,14 +594,16 @@
                                     </div>
                                 </div>
                                 <div class = "knowledges-divs">
-                                    <div class = "knowledges-icon-divs light" id = "knowledges-div-tools">
-                                        <img class = "knowledges-icons light" src = "https://i.imgur.com/KeIZju2.png"></img>
-                                    </div>
-                                    <div class = "knowledges-title-divs">
-                                        <h1 class = "knowledges-titles light">Ferramentas</h1>
-                                    </div>
-                                    <div class = "knowledges-description-divs">
-                                        <p class = "knowledges-descriptions light">Veja algumas ferramentas que utilizo para a criação dos meus projetos.</p>
+                                    <div>
+                                        <div class = "knowledges-icon-divs light" id = "knowledges-div-tools">
+                                            <img class = "knowledges-icons light" src = "https://i.imgur.com/KeIZju2.png"></img>
+                                        </div>
+                                        <div class = "knowledges-title-divs">
+                                            <h1 class = "knowledges-titles light">Ferramentas</h1>
+                                        </div>
+                                        <div class = "knowledges-description-divs">
+                                            <p class = "knowledges-descriptions light">Veja algumas ferramentas que utilizo para a criação dos meus projetos.</p>
+                                        </div>
                                     </div>
                                     <div class = "knowledges-code-divs">
                                         <div class = "knowledges-code-title-divs">
@@ -660,6 +751,8 @@
     <script type = "text/javascript" src = "animations/sunTrianglesAnimation.js"></script>
     <script type = "text/javascript" src = "animations/typingAnimations.js"></script>
     <script type = "text/javascript" src = "animations/windowScroll.js"></script>
+    <script type = "text/javascript" src = "scripts/boardCodes.js"></script>
+    <script type = "text/javascript" src = "scripts/boardFileClick.js"></script>
     <script type = "text/javascript" src = "scripts/changePageTheme.js"></script>
     <script type = "text/javascript" src = "scripts/closeModal.js"></script>
     <script type = "text/javascript" src = "scripts/CreateModalLangs.js"></script>

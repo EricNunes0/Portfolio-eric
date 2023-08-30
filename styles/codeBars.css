@@ -1,0 +1,337 @@
+:root {
+    --board-color-light: #fff;
+    --board-color-dark: #282a36;
+    --board-width: 480px;
+    --board-height: 310px;
+    --board-header-height: 30px;
+    --board-header-border-color: #aaa;
+    --board-file-width: 80px;
+    --board-circles-width: 12px;
+    --board-circles-height: 12px;
+    --board-numbers-line-width: 25px;
+    --board-line-height: 25px;
+    --board-tab-width: 25px;
+}
+
+/* Boards de programação */
+.code-boards {
+    width: var(--board-width);
+    height: var(--board-height);
+    border-radius: 3px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 2rem;
+    transition: all 0.3s;
+}
+.code-boards[class~="light"] {
+    background-color: var(--board-color-light);
+}
+.code-boards[class~="dark"] {
+    background-color: var(--board-color-dark);
+}
+
+/* Alinhar círculos e nome de arquivo */
+.board-header-flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+/* Alinhar divs dos círculos */
+.board-header-circle-divs {
+    width: var(--board-file-width);
+    height: var(--board-header-height);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    border-right: 1px solid var(--board-header-border-color);
+    border-bottom: 1px solid var(--board-header-border-color);
+    border-bottom-right-radius: 3px;
+}
+
+/* Círculos das boards */
+.board-circles {
+    display: block;
+    width: var(--board-circles-width);
+    height: var(--board-circles-height);
+    border-radius: 50%;
+}
+.board-circles[class~="red"] {
+    background-color: #f04040;
+}
+.board-circles[class~="yellow"] {
+    background-color: #f0f040;
+}
+.board-circles[class~="green"] {
+    background-color: #40f040;
+}
+
+/* Div da div dos nomes dos arquivos */
+.board-header-filename-divs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: var(--board-header-height);
+}
+
+/* Divs de cada nome dos arquivos */
+.board-filename-buttons {
+    width: var(--board-file-width);
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: unset;
+    border-bottom: 1px solid var(--board-header-border-color);
+    transition: all 0.3s;
+    filter: brightness(0.9);
+}
+.board-filename-buttons[class~="light"] {
+    background-color: var(--board-color-light);
+}
+.board-filename-buttons[class~="dark"] {
+    background-color: var(--board-color-dark);
+}
+.board-filename-buttons[class~="selected"] {
+    border-bottom: unset;
+    filter: unset;
+}
+
+/* Nome dos arquivos */
+.board-filenames {
+    font-size: 12px;
+    font-family: "Poppins";
+    transition: all 0.3s;
+}
+.board-filenames[class~="light"] {
+    color: #222;
+}
+.board-filenames[class~="dark"] {
+    color: #eee;
+}
+
+/* Div vazia */
+.board-empty-divs {
+    display: block;
+    width: calc(var(--board-width) - calc(var(--board-file-width) * 4));
+    height: var(--board-header-height);
+    border-left: 1px solid var(--board-header-border-color);
+    border-bottom: 1px solid var(--board-header-border-color);
+    border-bottom-left-radius: 3px;
+}
+
+/*
+*
+* Principal
+*
+*/
+/* Corpo dos boards */
+.code-board-bodies {
+    width: 100%;
+    height: calc(var(--board-height) - var(--board-header-height));
+}
+
+/* Alinhar números e código */
+.board-body-flex {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+/* Barra com as linhas de números dos boards */
+.board-number-lines {
+    width: var(--board-numbers-line-width);
+    height: 100%;
+    transition: all 0.3s;
+}
+.board-number-lines[class~="light"] {
+    background-color: #f0f0f0;
+}
+.board-number-lines[class~="dark"] {
+    background-color: #282a36;
+}
+
+/* Div de cada número */
+.board-number-divs {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Números das linhas de código */
+.board-numbers {
+    color: #888;
+    font-size: 12pt;
+    font-family: "Poppins";
+    line-height: var(--board-line-height);
+    text-align: center;
+    margin: unset;
+}
+
+/*
+* Código
+*/
+
+/* Div da área de código */
+.board-code-div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+/* Os Códigos */
+.board-codes {
+    display: none;
+    width: 100%;
+    color: #000;
+    font-size: 12pt;
+    font-family: "Poppins";
+    line-height: var(--board-line-height);
+    margin-left: 5px;;
+}
+.board-codes[class~="show"] {
+    display: block;
+}
+
+/* Principais spans dos Códigos */
+/*.board-code-main-spans {
+    background-color: #f0f040;
+}
+
+/* Span dos Códigos */
+.board-code-spans {
+    transition: all 0.3s;
+}
+.board-code-spans[class~="dark"] {
+    color: #fff;
+}
+
+/*
+Claro: Azul escuro
+Escuro: Rosa
+*/
+.board-code-span {
+    transition: all 0.3s;
+}
+.board-code-span[class~="italic"] {
+    font-style: italic;
+}
+.board-code-span[class~="blue"] {
+    color: #3d71c4;
+}
+.board-code-span[class~="blue"][class~="dark"] {
+    color: #f764c6;
+}
+
+.board-code-span[class~="cyan"] {
+    color: #73cfe6;
+}
+.board-code-span[class~="cyan"][class~="dark"] {
+    color: #64f041;
+}
+
+.board-code-span[class~="brown"] {
+    color: #ab6443;
+}
+.board-code-span[class~="brown"][class~="dark"] {
+    color: #f7f564;
+}
+
+.board-code-span[class~="white"] {
+    color: #000;/*#f0f0f0;*/
+}
+.board-code-span[class~="white"][class~="dark"] {
+    color: #f764c6;
+}
+
+/* CSS */
+.board-code-span[class~="yellow0"] {
+    color: #ffbc11;
+}
+.board-code-span[class~="yellow0"][class~="dark"] {
+    color: #fff;
+}
+
+.board-code-span[class~="yellow1"] {
+    color: #bda568;
+}
+.board-code-span[class~="yellow1"][class~="dark"] {
+    color: #f764c6;
+}
+
+.board-code-span[class~="yellow2"] {
+    color: #bda568;
+}
+.board-code-span[class~="yellow2"][class~="dark"] {
+    color: #64f041;
+}
+
+.board-code-span[class~="css-cyan"] {
+    color: #73cfe6;
+}
+.board-code-span[class~="css-cyan"][class~="dark"] {
+    color: #73cfe6;
+}
+
+.board-code-span[class~="css-value"] {
+    color: #000;
+}
+.board-code-span[class~="css-value"][class~="dark"] {
+    color: #b583d4;
+}
+
+.board-code-span[class~="css-twodots"] {
+    color: #000;
+}
+.board-code-span[class~="css-twodots"][class~="dark"] {
+    color: #f764c6;
+}
+
+.board-code-span[class~="js-white0"] {
+    color: #000;
+}
+.board-code-span[class~="js-white0"][class~="dark"] {
+    color: #b583d4;
+}
+
+.board-code-span[class~="js-white1"] {
+    color: #000;
+}
+.board-code-span[class~="js-white1"][class~="dark"] {
+    color: #64f041;
+}
+
+.board-code-span[class~="js-blue0"] {
+    color: #3d71c4;
+}
+.board-code-span[class~="js-blue0"][class~="dark"] {
+    color: #f764c6;
+}
+.board-code-span[class~="js-blue1"] {
+    color: #3d71c4;
+}
+.board-code-span[class~="js-blue1"][class~="dark"] {
+    color: #b583d4;
+}
+
+.board-code-span[class~="js-cyan0"] {
+    color: #73cfe6;
+}
+.board-code-span[class~="js-cyan0"][class~="dark"] {
+    color: #b583d4;
+}
+
+.board-code-span[class~="js-cyan1"] {
+    color: #73cfe6;
+}
+.board-code-span[class~="js-cyan1"][class~="dark"] {
+    color: #64f041;
+}

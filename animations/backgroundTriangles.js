@@ -6,7 +6,7 @@ for(let i = 0; i <= triangleAmount - 1; i++) {
     triangle.className = `background-triangles light`;
     triangle.data = `svgs/star.svg`;
     triangle.style.top = `${Math.floor(Math.random() * 100)}%`;
-    triangle.style.left = `${Math.floor(Math.random() * 100)}%`;
+    triangle.style.left = `${Math.floor(Math.random() * 96) + 2}%`;
     triangle.style.opacity = 1;
     triangle.style.animationDuration = `${triangleAnimationDuration}s`;
     background.appendChild(triangle);
