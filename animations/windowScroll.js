@@ -17,19 +17,19 @@ const scrolls = [
     },
     {
         "query": "#knowledges-div-front",
-        "animation": "KnowledgesIcons 0.5s linear"
+        "animation": "KnowledgesIcons 0.5s ease-out"
     },
     {
         "query": "#knowledges-div-back",
-        "animation": "KnowledgesIcons 0.5s linear"
+        "animation": "KnowledgesIcons 0.5s ease-out"
     },
     {
         "query": "#knowledges-div-db",
-        "animation": "KnowledgesIcons 0.5s linear"
+        "animation": "KnowledgesIcons 0.5s ease-out"
     },
     {
         "query": "#knowledges-div-tools",
-        "animation": "KnowledgesIcons 0.5s linear"
+        "animation": "KnowledgesIcons 0.5s ease-out"
     },
     {
         "query": "#projects-title",

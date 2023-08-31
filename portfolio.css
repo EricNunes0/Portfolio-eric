@@ -13,6 +13,13 @@
     --curriculum-color-light: #3050a0;
     --moon-width: 100px;
     --moon-height: 100px;
+    --knowledges-icon-divs-width: 80px; /* Largura das divs dos ícones de conhecimentos */
+    --knowledges-icon-divs-height: 80px; /* Altura das divs dos ícones de conhecimentos */
+    --knowledges-icon-divs-after-height: 80px; /* Altura do after das divs dos ícones de conhecimentos */
+    --front-start-gradient: #007cf0; /* Cor 1: front-end */
+    --front-end-gradient: #00dfd8; /* Cor 2: front-end */
+    --back-start-gradient: #7928ca; /* Cor 1: back-end */
+    --back-end-gradient: #ff0080; /* Cor 2: back-end */
 }
 
 h1, h3, a, p {
@@ -84,7 +91,7 @@ button:hover {
     bottom: 75%;
     width: 70vw;
     transform: rotate(180deg);
-    border: 2px solid rgb(32, 144, 255, 0.5);
+    border: 3px solid rgba(32, 84, 255, 0.8);
     border-radius: 50%;
     filter: brightness(1.2) saturate(1.2) drop-shadow(0px 0px 2rem #2090ff);
     animation: ScenaryEarth 60s linear infinite;
@@ -131,8 +138,11 @@ button:hover {
 }
 
 @keyframes ScenarySatelite {
+    0%, 100% {
+        transform: rotate(180deg);
+    }
     50% {
-        transform: translateY(-5px);
+        transform: rotate(180deg) translateY(-5px);
     }
 }
 
@@ -645,7 +655,7 @@ button:hover {
     background-color: #f0f0f0;
 }
 .portfolio-aboutme.dark {
-    background-color: #101020;
+    background-color: #0a0a1a;
 }
 
 /* Principal da aba sobre mim */
@@ -1045,6 +1055,13 @@ button:hover {
     margin: 20px auto;
 }
 
+@media screen and (max-width: 480px) {
+    #portfolio-knowledges {
+        width: 100%;
+        margin: unset;
+    }
+}
+
 /* Area dos conhecimentos */
 #knowledges-area {
     display: flex;
@@ -1107,8 +1124,10 @@ button:hover {
 
 /* Divs dos conhecimentos */
 .knowledges-divs {
+    width: 100%;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     padding: 20px 0;
@@ -1121,16 +1140,40 @@ button:hover {
     justify-content: center;
     align-items: center;
 }
+@media screen and (max-width: 480px) {
+    .knowledges-left {
+        width: 100%;
+    }
+}
+
+/* Textos de cada área de conhecimento */
+.knowledges-articles {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Áreas das divs dos ícones dos conhecimentos */
+.knowledges-icon-areas {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 /* Divs dos ícones dos conhecimentos */
 .knowledges-icon-divs {
-    width: 80px;
-    height: 80px;
+    position: relative;
+    width: var(--knowledges-icon-divs-width);
+    height: var(--knowledges-icon-divs-height);
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 50%;
     margin: auto;
+    margin-top: var(--knowledges-icon-divs-after-height);
     opacity: 1;
     transition: all 0.3s;
 }
@@ -1138,9 +1181,47 @@ button:hover {
     cursor: pointer;
     transform: scale(1.05);
 }
+.knowledges-icon-divs::after {
+    content: "";
+    position: absolute;
+    top: calc(0% - var(--knowledges-icon-divs-after-height));
+    left: calc(50% - 0.75px);
+    display: block;
+    width: 1.5px;
+    height: var(--knowledges-icon-divs-after-height);
+}
 .knowledges-icon-divs[class~="light"] {
     background-color: #7090ff;
 }
+
+/* Front-end */
+.knowledges-icon-divs#knowledges-div-front[class~="light"] {
+    background-image: linear-gradient(90deg, var(--front-start-gradient), var(--front-end-gradient));
+}
+.knowledges-icon-divs#knowledges-div-front[class~="light"]::after {
+    background-image: linear-gradient(0deg, var(--front-start-gradient), transparent);
+}
+.knowledges-icon-divs#knowledges-div-front[class~="dark"] {
+    background-image: linear-gradient(90deg, var(--front-end-gradient), var(--front-start-gradient));
+}
+.knowledges-icon-divs#knowledges-div-front[class~="dark"]::after {
+    background-image: linear-gradient(0deg, var(--front-end-gradient), transparent);
+}
+
+/* Back-end */
+.knowledges-icon-divs#knowledges-div-back[class~="light"] {
+    background-image: linear-gradient(90deg, var(--back-start-gradient), var(--back-end-gradient));
+}
+.knowledges-icon-divs#knowledges-div-back[class~="light"]::after {
+    background-image: linear-gradient(0deg, var(--back-start-gradient), transparent);
+}
+.knowledges-icon-divs#knowledges-div-back[class~="dark"] {
+    background-image: linear-gradient(90deg, var(--back-end-gradient), var(--back-start-gradient));
+}
+.knowledges-icon-divs#knowledges-div-back[class~="dark"]::after {
+    background-image: linear-gradient(0deg, var(--back-end-gradient), transparent);
+}
+
 .knowledges-icon-divs[class~="dark"] {
     background-color: #4050a0;
 }
@@ -1150,7 +1231,8 @@ button:hover {
 @keyframes KnowledgesIcons {
     0% {
         opacity: 0;
-        transform: scale(0);
+        /*transform: scale(0);*/
+        transform: translateY(calc(var(--knowledges-icon-divs-after-height) * -1));
     }
 }
 /* Ícones dos conhecimentos */
@@ -1260,7 +1342,7 @@ button:hover {
     background-color: #c0c0c0;
 }
 .knowledges-language-divs[class~="dark"] {
-    background-color: #505050;
+    background-color: #202030;
 }
 .knowledges-language-divs::after {
     content: "";
@@ -1279,6 +1361,7 @@ button:hover {
 }
 .knowledges-language-divs:hover {
     transform: scale(1.1);
+    box-shadow: #3060ff80 0px 0px 1rem;
 }
 @keyframes LanguageDivs {
     0% {
@@ -1317,7 +1400,7 @@ button:hover {
     background-color: #f0f0f0;
 }
 .portfolio-projects.dark {
-    background-color: #101020;
+    background-color: #0a0a1a;
 }
 #portfolio-projects-header {
     /*background-size: 50px 50px;
@@ -1749,10 +1832,10 @@ button:hover {
     transition: all 0.3s;
 }
 .portfolio-contacts.light {
-    background-color: #c0c0c0;
+    background-color: #e0e0e0;
 }
 .portfolio-contacts.dark {
-    background-color: #0a0a1a;
+    background-color: #050515;
 }
 
 /* Div dos contatos */
@@ -1989,6 +2072,18 @@ button:hover {
     .mobile-nav-buttons.dark {
         color: #fff;
     }
+
+    .aboutme-divs {
+        margin-left: unset;
+    }
+
+    .knowledges-divs {
+        flex-direction: column;
+    }
+
+    .knowledges-code-divs {
+        width: 95%;
+    }
 }
 
 @media screen and (max-width: 480px) {
@@ -2009,5 +2104,9 @@ button:hover {
 
     .portfolio-intro-image {
         width: 80vw;
+    }
+
+    .knowledges-divs {
+        flex-direction: column;
     }
 }

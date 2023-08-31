@@ -20,12 +20,20 @@
     border-radius: 3px;
     box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 2rem;
     transition: all 0.3s;
+    animation: CodeBoardsHover 3s ease-in-out infinite;
 }
 .code-boards[class~="light"] {
     background-color: var(--board-color-light);
 }
 .code-boards[class~="dark"] {
     background-color: var(--board-color-dark);
+}
+
+/* Animação das boards de programação */
+@keyframes CodeBoardsHover {
+    50% {
+        transform: translateY(-3px);
+    }
 }
 
 /* Alinhar círculos e nome de arquivo */
@@ -334,4 +342,19 @@ Escuro: Rosa
 }
 .board-code-span[class~="js-cyan1"][class~="dark"] {
     color: #64f041;
+}
+
+@media screen and (max-width: 480px) {
+    :root {    
+        --board-file-width: 42%;
+    }
+
+    .code-boards {
+        width: 95%;
+    }
+
+    .board-code-spans {
+        line-height: 21px;
+        font-size: 13px;
+    }
 }

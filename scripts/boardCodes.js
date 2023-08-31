@@ -12,7 +12,7 @@ function spanWord({word, color, italic}) {
 
 const codesToWrite = [
     {
-        "query": "#code-0",
+        "query": "#code-front-0",
         "texts": [
             {
                 "text": `${arrowL}!${spanWord({word: `DOCTYPE`, color: `blue`})} ${spanWord({word: `html`, color: `cyan`})}${arrowR}`,
@@ -61,7 +61,7 @@ const codesToWrite = [
         ]
     },
     {
-        "query": "#code-1",
+        "query": "#code-front-1",
         "texts": [
             {
                 "text": `${spanWord({word: `body`, color: `yellow1`})} ${spanWord({word: `{`, color: `yellow0`})}`,
@@ -110,7 +110,7 @@ const codesToWrite = [
         ]
     },
     {
-        "query": "#code-2",
+        "query": "#code-front-2",
         "texts": [
             {
                 "text": `${spanWord({word: `window`, color: `js-cyan0`})}.${spanWord({word: `onload`, color: `js-white1`})} ${spanWord({word: `=`, color: `white`})} ${spanWord({word: `function`, color: `js-blue0`})} ${spanWord({word: `welcomeMessage`, color: `js-cyan1`})}${spanWord({word: `()`, color: `yellow0`})} ${spanWord({word: `{`, color: `yellow0`})}`,
@@ -121,15 +121,64 @@ const codesToWrite = [
                 "tabs": 1
             },
             {
-                "text": `name.innerHTML ${spanWord({word: `=`, color: `white`})} \"Hello World!\";`,
+                "text": `name.innerHTML ${spanWord({word: `=`, color: `white`})} ${spanWord({word: `\"Hello World!\"`, color: `brown`})};`,
                 "tabs": 1
             },
             {
-                "text": `alert(\"Seja bem-vindo!\");`,
+                "text": `${spanWord({word: `alert`, color: `css-cyan`})}${spanWord({word: `(`, color: `yellow0`})}${spanWord({word: `\"Seja bem-vindo!\"`, color: `brown`})}${spanWord({word: `)`, color: `yellow0`})};`,
                 "tabs": 1
             },
             {
                 "text": `${spanWord({word: `}`, color: `yellow0`})}`,
+                "tabs": 0
+            }
+        ]
+    },
+    {
+        "query": "#code-back-0",
+        "texts": [
+            {
+                "text": `const express = require('express');`,
+                "tabs": 0
+            },
+            {
+                "text": `const app = express();`,
+                "tabs": 0
+            },
+            {
+                "text": `const port = 3000;`,
+                "tabs": 0
+            },
+            {
+                "text": ``,
+                "tabs": 0
+            },
+            {
+                "text": `app.get(\"\\\", (req, res) => {`,
+                "tabs": 0
+            },
+            {
+                "text": `res.send(\"Olá, mundo!\")`,
+                "tabs": 1
+            },
+            {
+                "text": `});`,
+                "tabs": 0
+            },
+            {
+                "text": ``,
+                "tabs": 0
+            },
+            {
+                "text": `app.listen(process.env.PORT || port, () => {`,
+                "tabs": 0
+            },
+            {
+                "text": `console.log(\`Servidor ligado na porta \${port}!\`);`,
+                "tabs": 1
+            },
+            {
+                "text": `});`,
                 "tabs": 0
             }
         ]
