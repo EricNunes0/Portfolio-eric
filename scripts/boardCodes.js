@@ -138,15 +138,15 @@ const codesToWrite = [
         "query": "#code-back-0",
         "texts": [
             {
-                "text": `const express = require('express');`,
+                "text": `${spanWord({word: `const`, color: `js-blue0`})} ${spanWord({word: `express`, color: `js-cyan0`})} ${spanWord({word: `=`, color: `white`})} ${spanWord({word: `require`, color: `js-cyan1`})}${spanWord({word: `(`, color: `yellow0`})}${spanWord({word: `\"express\"`, color: `brown`})}${spanWord({word: `)`, color: `yellow0`})};`,
                 "tabs": 0
             },
             {
-                "text": `const app = express();`,
+                "text": `${spanWord({word: `const`, color: `js-blue0`})} ${spanWord({word: `app`, color: `js-cyan0`})} ${spanWord({word: `=`, color: `white`})} ${spanWord({word: `express`, color: `js-cyan1`})}${spanWord({word: `()`, color: `yellow0`})};`,
                 "tabs": 0
             },
             {
-                "text": `const port = 3000;`,
+                "text": `${spanWord({word: `const`, color: `js-blue0`})} ${spanWord({word: `port`, color: `js-cyan0`})} ${spanWord({word: `=`, color: `white`})} ${spanWord({word: `3000`, color: `green-purple`})};`,
                 "tabs": 0
             },
             {
@@ -154,15 +154,15 @@ const codesToWrite = [
                 "tabs": 0
             },
             {
-                "text": `app.get(\"\\\", (req, res) => {`,
+                "text": `${spanWord({word: `app`, color: `js-cyan0`})}.get${spanWord({word: `(`, color: `yellow0`})}\"\\\", ${spanWord({word: `(`, color: `yellow0`})}req, res${spanWord({word: `)`, color: `yellow0`})} => ${spanWord({word: `{`, color: `yellow0`})}`,
                 "tabs": 0
             },
             {
-                "text": `res.send(\"Olá, mundo!\")`,
+                "text": `res.send${spanWord({word: `(`, color: `yellow0`})}\"Olá, mundo!\"${spanWord({word: `)`, color: `yellow0`})}`,
                 "tabs": 1
             },
             {
-                "text": `});`,
+                "text": `${spanWord({word: `})`, color: `yellow0`})};`,
                 "tabs": 0
             },
             {
@@ -170,7 +170,7 @@ const codesToWrite = [
                 "tabs": 0
             },
             {
-                "text": `app.listen(process.env.PORT || port, () => {`,
+                "text": `${spanWord({word: `app`, color: `js-cyan0`})}.listen(process.env.PORT || port, () => {`,
                 "tabs": 0
             },
             {

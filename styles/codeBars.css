@@ -46,7 +46,7 @@
 
 /* Alinhar divs dos círculos */
 .board-header-circle-divs {
-    width: var(--board-file-width);
+    width: 80px;
     height: var(--board-header-height);
     display: flex;
     flex-direction: row;
@@ -336,12 +336,19 @@ Escuro: Rosa
 .board-code-span[class~="js-cyan0"][class~="dark"] {
     color: #b583d4;
 }
-
 .board-code-span[class~="js-cyan1"] {
     color: #73cfe6;
 }
 .board-code-span[class~="js-cyan1"][class~="dark"] {
     color: #64f041;
+}
+
+/* Verde - Roxo */
+.board-code-span[class~="green-purple"] {
+    color: #64f041;
+}
+.board-code-span[class~="green-purple"][class~="dark"] {
+    color: #b583d4;
 }
 
 @media screen and (max-width: 480px) {

@@ -13,13 +13,15 @@
     --curriculum-color-light: #3050a0;
     --moon-width: 100px;
     --moon-height: 100px;
-    --knowledges-icon-divs-width: 80px; /* Largura das divs dos ícones de conhecimentos */
-    --knowledges-icon-divs-height: 80px; /* Altura das divs dos ícones de conhecimentos */
+    --knowledges-icon-divs-width: 60px; /* Largura das divs dos ícones de conhecimentos */
+    --knowledges-icon-divs-height: 60px; /* Altura das divs dos ícones de conhecimentos */
     --knowledges-icon-divs-after-height: 80px; /* Altura do after das divs dos ícones de conhecimentos */
     --front-start-gradient: #007cf0; /* Cor 1: front-end */
     --front-end-gradient: #00dfd8; /* Cor 2: front-end */
     --back-start-gradient: #7928ca; /* Cor 1: back-end */
     --back-end-gradient: #ff0080; /* Cor 2: back-end */
+    --db-start-gradient: #ff4d4d; /* Cor 1: data-base */
+    --db-end-gradient: #f9cb28; /* Cor 2: data-base */
 }
 
 h1, h3, a, p {
@@ -1220,6 +1222,20 @@ button:hover {
 }
 .knowledges-icon-divs#knowledges-div-back[class~="dark"]::after {
     background-image: linear-gradient(0deg, var(--back-end-gradient), transparent);
+}
+
+/* Database */
+.knowledges-icon-divs#knowledges-div-db[class~="light"] {
+    background-image: linear-gradient(90deg, var(--db-start-gradient), var(--db-end-gradient));
+}
+.knowledges-icon-divs#knowledges-div-db[class~="light"]::after {
+    background-image: linear-gradient(0deg, var(--db-start-gradient), transparent);
+}
+.knowledges-icon-divs#knowledges-div-db[class~="dark"] {
+    background-image: linear-gradient(90deg, var(--db-end-gradient), var(--db-start-gradient));
+}
+.knowledges-icon-divs#knowledges-div-db[class~="dark"]::after {
+    background-image: linear-gradient(0deg, var(--db-end-gradient), transparent);
 }
 
 .knowledges-icon-divs[class~="dark"] {
