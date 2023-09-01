@@ -1364,7 +1364,7 @@ button:hover {
     width: 80px;
     height: 80px;
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     justify-content: center;
     align-items: center;
     border-top-right-radius: 10px;
@@ -1412,12 +1412,14 @@ button:hover {
 .knowledges-languages-icons {
     min-width: 40px;
     height: 40px;
+    border-radius: 5px;
 }
 
 /* Nomes das linguagens dos conhecimentos */
 .knowledges-languages-names {
     font-family: "Poppins";
     font-size: 10pt;
+    font-weight: bold;
     margin: 0;
     transition: all 0.3s;
 }
@@ -1426,6 +1428,7 @@ button:hover {
 }
 .knowledges-languages-names[class~="dark"] {
     color: #fff;
+    color: #3060ff;
 }
 
 /* Aba de projetos */
