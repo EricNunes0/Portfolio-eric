@@ -22,6 +22,8 @@
     --back-end-gradient: #ff0080; /* Cor 2: back-end */
     --db-start-gradient: #ff4d4d; /* Cor 1: data-base */
     --db-end-gradient: #f9cb28; /* Cor 2: data-base */
+    --tools-start-gradient: #19b60b; /* Cor 1: data-base */
+    --tools-end-gradient: #c1f928; /* Cor 2: data-base */
 }
 
 h1, h3, a, p {
@@ -628,12 +630,18 @@ button:hover {
 .arrow-image {
     width: 70px;
     height: 45px;
-    filter: invert(0.5) drop-shadow(0 0 8px rgba(0, 0, 0, 0.3));
     transform: rotate(180deg);
     animation-name: arrowAnimation;
     animation-duration: 1.5s;
     animation-timing-function: cubic-bezier(0, 0, 1, 1);
     animation-iteration-count: infinite;
+    transition: all 0.3s;
+}
+.arrow-image[class~="light"] {
+    filter: invert(0.8) drop-shadow(0 0 8px rgba(0, 0, 0, 0.3));
+}
+.arrow-image[class~="dark"] {
+    filter: invert(0.2) drop-shadow(0 0 8px rgba(0, 0, 0, 0.3));
 }
 
 @keyframes arrowAnimation {
@@ -1238,6 +1246,20 @@ button:hover {
     background-image: linear-gradient(0deg, var(--db-end-gradient), transparent);
 }
 
+/* Tools */
+.knowledges-icon-divs#knowledges-div-tools[class~="light"] {
+    background-image: linear-gradient(90deg, var(--tools-start-gradient), var(--tools-end-gradient));
+}
+.knowledges-icon-divs#knowledges-div-tools[class~="light"]::after {
+    background-image: linear-gradient(0deg, var(--tools-start-gradient), transparent);
+}
+.knowledges-icon-divs#knowledges-div-tools[class~="dark"] {
+    background-image: linear-gradient(90deg, var(--tools-end-gradient), var(--tools-start-gradient));
+}
+.knowledges-icon-divs#knowledges-div-tools[class~="dark"]::after {
+    background-image: linear-gradient(0deg, var(--tools-end-gradient), transparent);
+}
+
 .knowledges-icon-divs[class~="dark"] {
     background-color: #4050a0;
 }
@@ -1290,7 +1312,6 @@ button:hover {
 
 /* Divs das descrições dos conhecimentos */
 .knowledges-description-divs {
-    height: 100px;
     margin: 5px 0;
 }
 

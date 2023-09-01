@@ -1,36 +1,36 @@
 const languages = {
     "HTML": {
-        "icon": "svgs/code/html.svg"
+        "icon": "images/codes/img_html.png"
     },
     "CSS": {
-        "icon": "https://i.imgur.com/Qf2JKsE.png"
+        "icon": "images/codes/img_css.png"
     },
     "JavaScript": {
-        "icon": "https://i.imgur.com/2xi8y2c.png"
+        "icon": "images/codes/img_js.png"
     },
     "React": {
-        "icon": "https://i.imgur.com/xPXXlmN.png"
+        "icon": "images/codes/img_react.png"
     },
     "Bootstrap": {
-        "icon": "https://i.imgur.com/tLZH5Hh.png"
+        "icon": "images/codes/img_bootstrap.png"
     },
     "jQuery": {
-        "icon": "https://i.imgur.com/goYVKjm.png"
+        "icon": "images/codes/img_jquery.png"
     },
     "Sass": {
-        "icon": "https://i.imgur.com/IysxKOn.png"
+        "icon": "images/codes/img_sass.png"
     },
     "Node.js": {
-        "icon": "https://i.imgur.com/7jfIPn5.png"
+        "icon": "images/codes/img_nodejs.png"
     },
     "PHP": {
-        "icon": "https://i.imgur.com/KD8NzbX.png"
+        "icon": "images/codes/img_php.png"
     },
     "MySQL": {
-        "icon": "https://i.imgur.com/YDbaGwX.png"
+        "icon": "images/codes/img_mysql.png"
     },
     "Python": {
-        "icon": "https://i.imgur.com/cM2XWrt.png"
+        "icon": "images/codes/img_python.png"
     }
 };
 

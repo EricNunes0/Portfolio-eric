@@ -154,11 +154,11 @@ const codesToWrite = [
                 "tabs": 0
             },
             {
-                "text": `${spanWord({word: `app`, color: `js-cyan0`})}.get${spanWord({word: `(`, color: `yellow0`})}\"\\\", ${spanWord({word: `(`, color: `yellow0`})}req, res${spanWord({word: `)`, color: `yellow0`})} => ${spanWord({word: `{`, color: `yellow0`})}`,
+                "text": `${spanWord({word: `app`, color: `js-cyan0`})}.${spanWord({word: `get`, color: `lightyellow-green`})}${spanWord({word: `(`, color: `yellow0`})}${spanWord({word: `\"\\\"`, color: `brown`})}, ${spanWord({word: `(`, color: `yellow0`})}${spanWord({word: `req`, color: `black-orange`})}, ${spanWord({word: `res`, color: `black-orange`})}${spanWord({word: `)`, color: `yellow0`})} ${spanWord({word: `=>`, color: `white`})} ${spanWord({word: `{`, color: `yellow0`})}`,
                 "tabs": 0
             },
             {
-                "text": `res.send${spanWord({word: `(`, color: `yellow0`})}\"Olá, mundo!\"${spanWord({word: `)`, color: `yellow0`})}`,
+                "text": `res.send${spanWord({word: `(`, color: `yellow0`})}${spanWord({word: `\"Olá, mundo!\"`, color: `brown`})}${spanWord({word: `)`, color: `yellow0`})};`,
                 "tabs": 1
             },
             {
@@ -170,15 +170,32 @@ const codesToWrite = [
                 "tabs": 0
             },
             {
-                "text": `${spanWord({word: `app`, color: `js-cyan0`})}.listen(process.env.PORT || port, () => {`,
+                "text": `${spanWord({word: `app`, color: `js-cyan0`})}.${spanWord({word: `listen`, color: `lightyellow-green`})}${spanWord({word: `(`, color: `yellow0`})}process.env.${spanWord({word: `PORT`, color: `js-cyan0`})} ${spanWord({word: `||`, color: `white`})} ${spanWord({word: `port`, color: `js-cyan0`})}, ${spanWord({word: `()`, color: `yellow0`})} ${spanWord({word: `=>`, color: `white`})} ${spanWord({word: `{`, color: `yellow0`})}`,
                 "tabs": 0
             },
             {
-                "text": `console.log(\`Servidor ligado na porta \${port}!\`);`,
+                "text": `${spanWord({word: `console`, color: `js-blue1`})}.${spanWord({word: `log`, color: `lightyellow-green`})}${spanWord({word: `(`, color: `yellow0`})}${spanWord({word: `\`Servidor ligado na porta`, color: `brown`})} ${spanWord({word: `\${`, color: `yellow-green`})}${spanWord({word: `port`, color: `js-cyan0`})}${spanWord({word: `}`, color: `yellow-green`})}${spanWord({word: `!\``, color: `brown`})}${spanWord({word: `)`, color: `yellow0`})};`,
                 "tabs": 1
             },
             {
-                "text": `});`,
+                "text": `${spanWord({word: `})`, color: `yellow0`})};`,
+                "tabs": 0
+            }
+        ]
+    },
+    {
+        "query": "#code-back-1",
+        "texts": [
+            {
+                "text": `${arrowL}?php`,
+                "tabs": 0
+            },
+            {
+                "text": `echo \"Olá, mundo!\";`,
+                "tabs": 1
+            },
+            {
+                "text": `?${arrowR}`,
                 "tabs": 0
             }
         ]

@@ -343,6 +343,38 @@ Escuro: Rosa
     color: #64f041;
 }
 
+/* Preto - Laranja */
+.board-code-span[class~="black-orange"] {
+    color: #000;
+}
+.board-code-span[class~="black-orange"][class~="dark"] {
+    color: #f79f2e;
+}
+
+/* Amarelo Claro - Verde */
+.board-code-span[class~="lightyellow-green"] {
+    color: #f7f564;
+}
+.board-code-span[class~="lightyellow-green"][class~="dark"] {
+    color: #64f041;
+}
+
+
+.board-code-span[class~="yellow-green"] {
+    color: #ffbc11;
+}
+.board-code-span[class~="yellow-green"][class~="dark"] {
+    color: #64f041;
+}
+
+/* Verde - Laranja */
+.board-code-span[class~="green-orange"] {
+    color: #64f041;
+}
+.board-code-span[class~="green-orange"][class~="dark"] {
+    color: #f79f2e;
+}
+
 /* Verde - Roxo */
 .board-code-span[class~="green-purple"] {
     color: #64f041;
