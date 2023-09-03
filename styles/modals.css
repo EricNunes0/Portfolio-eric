@@ -237,6 +237,7 @@
 
 /* Nomes das linguagens */
 .modal-lang-names {
+    text-wrap: nowrap;
     font-family: "Poppins";
     font-family: 10pt;
     transition: all 0.3s;

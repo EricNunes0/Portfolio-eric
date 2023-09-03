@@ -158,7 +158,7 @@ const codesToWrite = [
                 "tabs": 0
             },
             {
-                "text": `res.send${spanWord({word: `(`, color: `yellow0`})}${spanWord({word: `\"Olá, mundo!\"`, color: `brown`})}${spanWord({word: `)`, color: `yellow0`})};`,
+                "text": `${spanWord({word: `res`, color: `black-orange`})}.send${spanWord({word: `(`, color: `yellow0`})}${spanWord({word: `\"Olá, mundo!\"`, color: `brown`})}${spanWord({word: `)`, color: `yellow0`})};`,
                 "tabs": 1
             },
             {

@@ -20,6 +20,9 @@ const languages = {
     "Sass": {
         "icon": "images/codes/img_sass.png"
     },
+    "CSS-in-JS": {
+        "icon": "images/codes/img_CssInJs.png"
+    },
     "Node.js": {
         "icon": "images/codes/img_nodejs.png"
     },
@@ -134,7 +137,7 @@ const projects = [
         "color": "#d020f0",
         "icon": "https://i.imgur.com/RRNsfDt.png",
         "image": "https://i.imgur.com/hvKTv99.png",
-        "languages": ["HTML", "CSS", "JavaScript", "React"],
+        "languages": ["HTML", "CSS", "JavaScript", "React", "Bootstrap", "CSS-in-JS"],
         "repositorie": "https://github.com/EricNunes0/Game-Center",
         "description": `
             Após desenvolver 3 jogos para a web (jogo da velha, campo minado e forca), decidi uní-los em um único site de jogos, onde poderia disponibilizá-los mais facilmente.
@@ -149,7 +152,7 @@ const projects = [
         "color": "#50ff70",
         "icon": "https://i.imgur.com/4TmQWfu.png",
         "image": "https://i.imgur.com/C7zTRsC.png",
-        "languages": ["HTML", "CSS", "JavaScript", "React"],
+        "languages": ["HTML", "CSS", "JavaScript", "React", "Bootstrap", "CSS-in-JS"],
         "repositorie": "https://github.com/EricNunes0/Game-Center",
         "description": `
             Este foi o meu primeiro jogo desenvolvido para a web: o jogo da velha. A proposta era recriar o clássico jogo para que o usuário possa jogar contra a CPU, ou contra outro usuário.
@@ -174,7 +177,7 @@ const projects = [
         "color": "#c0c050",
         "icon": "https://i.imgur.com/P2G3vuf.png",
         "image": "https://i.imgur.com/18nSHgM.png",
-        "languages": ["HTML", "CSS", "JavaScript", "React"],
+        "languages": ["HTML", "CSS", "JavaScript", "React", "Bootstrap", "CSS-in-JS"],
         "repositorie": "https://github.com/EricNunes0/Game-Center",
         "description": `
             Meu segundo jogo desenvolvido para a web: o campo minado. A ideia é recriar o clássico jogo, onde você precisar marcar todos os quadrados vazios da grande, tomando cuidado para não atingir nenhuma bomba.
@@ -195,7 +198,7 @@ const projects = [
         "color": "#70c0ff",
         "icon": "https://i.imgur.com/dPfgOJD.png",
         "image": "https://i.imgur.com/c6xdwZ7.png",
-        "languages": ["HTML", "CSS", "JavaScript", "React"],
+        "languages": ["HTML", "CSS", "JavaScript", "React", "Bootstrap", "CSS-in-JS"],
         "repositorie": "https://github.com/EricNunes0/Game-Center",
         "description": `
             Terceiro jogo desenvolvido para a web: a forca. A ideia é recriar o clássico jogo, onde você precisa adivinhar qual é a palavra proposta, tendo como dica o número de letras e o tema ligado à palavra.

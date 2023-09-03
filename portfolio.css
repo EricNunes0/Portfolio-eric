@@ -1825,7 +1825,7 @@ button:hover {
 
 /* Imagens das linguagens de programação */
 .lang-images {
-    width: 25px;
+    width: 20px;
 }
 /*.lang-images[alt~="jQuery"] {
     background-color: #3050a0;
