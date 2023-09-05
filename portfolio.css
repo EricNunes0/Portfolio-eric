@@ -26,6 +26,10 @@
     --tools-end-gradient: #c1f928; /* Cor 2: data-base */
 }
 
+html {
+    overflow-x: hidden;
+}
+
 h1, h3, a, p {
     color: #fff;
     margin: 0;
