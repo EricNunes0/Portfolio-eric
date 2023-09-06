@@ -4,6 +4,7 @@
 }
 
 :root {
+    --theme-dark-color: #050510;
     --nav-height: 50px;
     --font-color-categorie-0: #3060ff;
     --project-links-border-radius: 5px;
@@ -189,7 +190,7 @@ button:hover {
     background-color: rgb(220, 220, 220);
 }
 .portfolio-nav.dark {
-    background-color: rgb(20, 20, 40);
+    background-color: var(--theme-dark-color);
     box-shadow: 0px 0px 3px rgba(255, 255, 255, 0.4);
 }
 
@@ -669,7 +670,7 @@ button:hover {
     background-color: #f0f0f0;
 }
 .portfolio-aboutme.dark {
-    background-color: #0a0a1a;
+    background-color: var(--theme-dark-color);
 }
 
 /* Principal da aba sobre mim */
@@ -1444,7 +1445,7 @@ button:hover {
     background-color: #f0f0f0;
 }
 .portfolio-projects.dark {
-    background-color: #0a0a1a;
+    background-color: var(--theme-dark-color);
 }
 #portfolio-projects-header {
     /*background-size: 50px 50px;
@@ -1553,7 +1554,7 @@ button:hover {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    background-size: 105%;
+    background-size: 105% 100%;
     background-position: center;
     text-decoration: none;
     transition: all 0.3s;
@@ -1671,20 +1672,17 @@ button:hover {
 }
 
 @keyframes backgroundChange0 {
-    0% {
-        background-image: url("https://i.imgur.com/k9qMdZG.png");
+    0%, 100% {
+        background-image: url("images/projects/janny/img_janny\(0\).png");
     }
     25% {
-        background-image: url("https://i.imgur.com/YlGGa9B.png");
+        background-image: url("images/projects/janny/img_janny\(1\).png");
     }
     50% {
-        background-image: url("https://i.imgur.com/gTufGuR.png");
+        background-image: url("images/projects/janny/img_janny\(2\).png");
     }
     75% {
-        background-image: url("https://i.imgur.com/aPbhfqz.png");
-    }
-    100% {
-        background-image: url("https://i.imgur.com/k9qMdZG.png");
+        background-image: url("images/projects/janny/img_janny\(3\).png");
     }
 }
 
@@ -1803,7 +1801,7 @@ button:hover {
     border-top-right-radius: var(--project-links-border-radius);
     text-align: center;
     font-family: "Poppins";
-    font-size: 12pt;
+    font-size: 16px;
     gap: 5px;
 }
 
@@ -1879,7 +1877,7 @@ button:hover {
     background-color: #e0e0e0;
 }
 .portfolio-contacts.dark {
-    background-color: #050515;
+    background-color: #05050a;
 }
 
 /* Div dos contatos */

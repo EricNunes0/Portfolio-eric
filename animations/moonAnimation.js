@@ -1,6 +1,6 @@
 function moonAnimation({reverse}) {
     const animationDuration = 0.3;
-    const moon = document.querySelector(`#moon`);
+    const moon = document.querySelector(`#moon-svg-path`);
     let animationText;
     if((!reverse) || reverse !== true) {
         animationText = `MoonIcon var(--moon-duration) var(--moon-timing) var(--moon-iteration)`
