@@ -158,7 +158,7 @@ const codesToWrite = [
                 "tabs": 0
             },
             {
-                "text": `${spanWord({word: `res`, color: `black-orange`})}.send${spanWord({word: `(`, color: `yellow0`})}${spanWord({word: `\"Olá, mundo!\"`, color: `brown`})}${spanWord({word: `)`, color: `yellow0`})};`,
+                "text": `${spanWord({word: `res`, color: `black-orange`})}.${spanWord({word: `send`, color: `black-green`})}${spanWord({word: `(`, color: `yellow0`})}${spanWord({word: `\"Olá, mundo!\"`, color: `brown`})}${spanWord({word: `)`, color: `yellow0`})};`,
                 "tabs": 1
             },
             {
@@ -187,7 +187,7 @@ const codesToWrite = [
         "query": "#code-back-1",
         "texts": [
             {
-                "text": `${arrowL}?php`,
+                "text": `${spanWord({word: `${arrowL}?php`, color: `blue-pink`})}`,
                 "tabs": 0
             },
             {
@@ -195,7 +195,7 @@ const codesToWrite = [
                 "tabs": 1
             },
             {
-                "text": `?${arrowR}`,
+                "text": `${spanWord({word: `?${arrowR}`, color: `blue-pink`})}`,
                 "tabs": 0
             }
         ]

@@ -1430,6 +1430,7 @@ button:hover {
 }
 .knowledges-languages-names[class~="light"] {
     color: #000;
+    color: #3060ff;
 }
 .knowledges-languages-names[class~="dark"] {
     color: #fff;

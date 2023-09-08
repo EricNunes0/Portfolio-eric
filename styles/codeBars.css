@@ -351,6 +351,22 @@ Escuro: Rosa
     color: #f79f2e;
 }
 
+/* Preto - Rosa */
+.board-code-span[class~="black-pink"] {
+    color: #000;
+}
+.board-code-span[class~="black-pink"][class~="dark"] {
+    color: #f764c6;
+}
+
+/* Preto - Verde */
+.board-code-span[class~="black-green"] {
+    color: #000;
+}
+.board-code-span[class~="black-green"][class~="dark"] {
+    color: #64f041;
+}
+
 /* Amarelo Claro - Verde */
 .board-code-span[class~="lightyellow-green"] {
     color: #f7f564;
@@ -381,6 +397,14 @@ Escuro: Rosa
 }
 .board-code-span[class~="green-purple"][class~="dark"] {
     color: #b583d4;
+}
+
+/* Azul - Rosa */
+.board-code-span[class~="blue-pink"] {
+    color: #3d71c4;
+}
+.board-code-span[class~="blue-pink"][class~="dark"] {
+    color: #f764c6;
 }
 
 @media screen and (max-width: 480px) {
