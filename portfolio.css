@@ -384,7 +384,7 @@ button:hover {
 /* Nome do portfolio */
 .header-names {
     font-family: "Poppins";
-    font-size: 50pt;
+    font-size: 70px;
     font-weight: bold;
     text-align: center;
     background-size: 400%;
@@ -1535,15 +1535,15 @@ button:hover {
 
 /* Div dos projetos */
 .project-divs {
-    width: 20rem;
-    height: 11rem;
+    width: 24rem;
+    height: 12rem;
     outline: 2px solid rgba(0, 0, 0, 0.5);
     border-radius: var(--project-links-border-radius);
     box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 5px;
     transition: all 0.3s;
 }
 .project-divs:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 /* Links dos projetos */
@@ -1559,6 +1559,9 @@ button:hover {
     background-position: center;
     text-decoration: none;
     transition: all 0.3s;
+    animation-duration: 20s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
 }
 @keyframes ProjectColors {
     0% {
@@ -1580,96 +1583,65 @@ button:hover {
 
 .project-links#project-link-0 {
     animation-name: projectLinksAnimation, backgroundChange0;
-    animation-duration: 20s;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: infinite;
 }
 
 .project-links#project-link-1 {
     animation-name: projectLinksAnimation, backgroundChange1;
-    animation-duration: 20s;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: infinite;
 }
 
 .project-links#project-link-2 {
     background-image: url("https://i.imgur.com/Iv7EmOJ.png");
     animation-name: projectLinksAnimation, backgroundChange2;
-    animation-duration: 20s;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: infinite;
 }
 
 .project-links#project-link-3 {
-    background-image: url("https://i.imgur.com/lozWWOK.png");
+    background-image: url("images/projects/calculadora/image\(0\).png");
     animation-name: projectLinksAnimation, backgroundChange3;
-    animation-duration: 20s;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: infinite;
 }
 
 .project-links#project-link-4 {
-    background-image: url("https://i.imgur.com/dbocrH3.png");
+    background-image: url("images/projects/calculapy/image\(0\).png");
     animation-name: projectLinksAnimation, backgroundChange4;
-    animation-duration: 20s;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: infinite;
 }
 
 .project-links#project-link-5 {
     background-image: url("https://i.imgur.com/AsTlPhd.png");
     animation-name: projectLinksAnimation, backgroundChange5;
-    animation-duration: 20s;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: infinite;
 }
 
 .project-links#project-link-6 {
     background-image: url("https://i.imgur.com/C7zTRsC.png");
     animation-name: projectLinksAnimation, backgroundChange6;
-    animation-duration: 20s;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: infinite;
 }
 
 .project-links#project-link-7 {
     background-image: url("https://i.imgur.com/18nSHgM.png");
     animation-name: projectLinksAnimation, backgroundChange7;
-    animation-duration: 20s;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: infinite;
 }
 
 .project-links#project-link-8 {
     background-image: url("https://i.imgur.com/c6xdwZ7.png");
     animation-name: projectLinksAnimation, backgroundChange8;
-    animation-duration: 20s;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: infinite;
 }
 
 .project-links#project-link-9 {
     background-image: url("https://i.imgur.com/7Ku7iFz.png");
     animation-name: projectLinksAnimation, backgroundChange9;
-    animation-duration: 20s;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: infinite;
 }
 
 .project-links#project-link-10 {
     background-image: url("https://i.imgur.com/xV8djkP.png");
     animation-name: projectLinksAnimation;
-    animation-duration: 20s;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: infinite;
 }
 
 .project-links#project-link-11 {
     background-image: url("https://media.discordapp.net/attachments/1145459828005814333/1145459874327707688/image.png?width=928&height=473");
     animation-name: projectLinksAnimation, backgroundChange11;
-    animation-duration: 20s;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: infinite;
+}
+
+.project-links#project-link-12 {
+    background-image: url("images/projects/login/img_login\(0\).png");
+    animation-name: projectLinksAnimation, backgroundChange12;
 }
 
 @keyframes backgroundChange0 {
@@ -1688,20 +1660,17 @@ button:hover {
 }
 
 @keyframes backgroundChange1 {
-    0% {
-        background-image: url("https://i.imgur.com/RAl4kqN.png");
+    0%, 100% {
+        background-image: url("images/projects/ceon/image\(0\).png");
     }
     25% {
-        background-image: url("https://i.imgur.com/xsbuLvH.png");
+        background-image: url("images/projects/ceon/image\(1\).png");
     }
     50% {
-        background-image: url("https://i.imgur.com/9QoMVmO.png");
+        background-image: url("images/projects/ceon/image\(2\).png");
     }
     75% {
-        background-image: url("https://i.imgur.com/0qUzmtN.png");
-    }
-    100% {
-        background-image: url("https://i.imgur.com/RAl4kqN.png");
+        background-image: url("images/projects/ceon/image\(3\).png");
     }
 }
 
@@ -1716,19 +1685,16 @@ button:hover {
 
 @keyframes backgroundChange3 {
     33% {
-        background-image: url("https://i.imgur.com/GAnQf0Q.png");
+        background-image: url("images/projects/calculadora/image\(1\).png");
     }
     67% {
-        background-image: url("https://i.imgur.com/T3Oa4VI.png");
+        background-image: url("images/projects/calculadora/image\(2\).png");
     }
 }
 
 @keyframes backgroundChange4 {
-    33% {
-        background-image: url("https://i.imgur.com/F4rzCXE.png");
-    }
-    67% {
-        background-image: url("https://i.imgur.com/dbocrH3.png");
+    50% {
+        background-image: url("images/projects/calculapy/image\(1\).png");
     }
 }
 
@@ -1780,6 +1746,18 @@ button:hover {
 @keyframes backgroundChange11 {
     50% {
         background-image: url("https://media.discordapp.net/attachments/1145459828005814333/1145459874558398474/image.png?width=1025&height=463");
+    }
+}
+
+@keyframes backgroundChange12 {
+    25% {
+        background-image: url("images/projects/login/img_login\(1\).png");
+    }
+    50% {
+        background-image: url("images/projects/login/img_login\(2\).png");
+    }
+    76% {
+        background-image: url("images/projects/login/img_login\(3\).png");
     }
 }
 
@@ -1889,9 +1867,10 @@ button:hover {
 }
 
 /* Div dos contatos */
-.contatos-list {
+#contatos-list {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: flex-start;
     gap: 20px;
@@ -1900,14 +1879,35 @@ button:hover {
     list-style: none;
 }
 
+/* Itens da lista de contatos */
+.contatos-items {
+    width: 150px;
+}
+
 .contato-titles {
+    width: 100%;
+    text-align: center;
     font-family: "Poppins";
     transition: all 0.3s;
+    margin-bottom: 0;
 }
 .contato-titles.light {
-    color: #404040;
+    color: #202020;
 }
 .contato-titles.dark {
+    color: #f0f0f0;
+}
+
+.contato-subtitles {
+    font-family: "Poppins";
+    font-size: 12px;
+    transition: all 0.3s;
+    margin-bottom: 0;
+}
+.contato-subtitles.light {
+    color: #000;
+}
+.contato-subtitles.dark {
     color: #a0a0a0;
 }
 
@@ -1921,7 +1921,7 @@ button:hover {
 .contatos-links {
     text-decoration: none;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 10px;
@@ -1929,15 +1929,22 @@ button:hover {
 }
 
 .contatos-links:hover {
-    transform: scale(1.01);
+    transform: scale(1.1);
 }
 
 /* Imagens dos contatos */
 .contato-images {
-    width: 30px;
-    height: 30px;
-    border-radius: 5px;
-    box-shadow: rgba(255, 255, 255, 0.2) 0px 0px 10px;
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    border-radius: 10px;
+    transition: all 0.3s;
+}
+.contato-images[class~="light"] {
+    background-color: #c0c0c0;
+}
+.contato-images[class~="dark"] {
+    background-color: #101020;
 }
 
 /* Divs dos textos de contato */
@@ -1948,34 +1955,16 @@ button:hover {
     align-items: flex-start;
 }
 
-/* Títulos dos textos de contato */
-.contato-titles {
-    color: #f0f0f0;
-    font-size: 8pt;
-    margin: 0;
-}
-
-.contato-titles.light-texts {
-    color: #606060;
-    margin: 0;
-}
-
-.contato-titles {
-    color: #b0b0b0;
-    font-size: 8pt;
-    margin: 0;
-}
-
-.contato-links-texts {
+.contatos-titles {
     font-family: "Poppins";
-    font-size: 10pt;
+    font-size: 16px;
     margin: 0;
     transition: all 0.3s;
 }
-.contato-links-texts[class~="light"] {
+.contatos-titles[class~="light"] {
     color: #000;
 }
-.contato-links-texts[class~="dark"] {
+.contatos-titles[class~="dark"] {
     color: #f0f0f0;
 }
 
@@ -2081,10 +2070,10 @@ button:hover {
         border-radius: 10px;
     }
     .menu-div.light {
-        background-color: rgba(220, 220, 220, 0.95);
+        background-color: rgba(220, 220, 220, 1);
     }
     .menu-div.dark {
-        background-color: rgba(20, 20, 40, 0.95);
+        background-color: var(--theme-dark-color);
     }
 
     .menu-abas-list {

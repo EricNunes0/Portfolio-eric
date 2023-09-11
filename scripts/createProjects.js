@@ -23,11 +23,20 @@ const languages = {
     "CSS-in-JS": {
         "icon": "images/codes/img_CssInJs.png"
     },
+    "Tailwind": {
+        "icon": "images/codes/img_tailwind.png"
+    },
     "Node.js": {
         "icon": "images/codes/img_nodejs.png"
     },
+    "EJS": {
+        "icon": "images/codes/img_ejs.png"
+    },
     "PHP": {
         "icon": "images/codes/img_php.png"
+    },
+    "SQLite": {
+        "icon": "images/codes/img_sqlite.png"
     },
     "MySQL": {
         "icon": "images/codes/img_mysql.png"
@@ -43,7 +52,7 @@ const projects = [
         "name": "Janny Site",
         "link": "https://janny.vercel.app/",
         "color": "#f00000",
-        "icon": "https://i.imgur.com/rihZYP2.png",
+        "icon": "images/projects/janny/icon.png",
         "image": "images/gif_project0.gif",
         "languages": ["HTML", "CSS", "JavaScript", "React", "Bootstrap", "Sass"],
         "repositorie": "https://github.com/EricNunes0/React-site",
@@ -60,8 +69,8 @@ const projects = [
         "name": "CEON - Loja virtual",
         "link": "https://ceon.vercel.app/",
         "color": "#4060d0",
-        "icon": "https://i.imgur.com/s7q3rcU.png",
-        "image": "https://i.imgur.com/RAl4kqN.png",
+        "icon": "images/projects/ceon/icon.png",
+        "image": "images/projects/ceon/image(3).png",
         "languages": ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
         "repositorie": "https://github.com/EricNunes0/Ceon",
         "description": `
@@ -77,8 +86,8 @@ const projects = [
         "name": "Calculadora Web",
         "link": "https://calculadora-padrao.vercel.app/",
         "color": "#f060ff",
-        "icon": "https://i.imgur.com/1MI0yjp.png",
-        "image": "https://i.imgur.com/GAnQf0Q.png",
+        "icon": "images/projects/calculadora/icon.png",
+        "image": "images/projects/calculadora/image(2).png",
         "languages": ["HTML", "CSS", "JavaScript", "Bootstrap"],
         "repositorie": "https://github.com/EricNunes0/Calculadora",
         "description": `
@@ -108,8 +117,8 @@ const projects = [
         "name": "CalculaPy",
         "link": "CalculaPy.exe",
         "color": "#fff060",
-        "icon": "https://i.imgur.com/m1cC5w1.png",
-        "image": "https://i.imgur.com/F4rzCXE.png",
+        "icon": "images/projects/calculapy/icon.png",
+        "image": "images/projects/calculapy/image(0).png",
         "languages": ["Python"],
         "repositorie": "https://github.com/EricNunes0/CalculaPy",
         "description": `
@@ -281,6 +290,31 @@ const projects = [
             • Utilização dos conceitos básicos do MapReduce para extração de dados;
             <br>
             • Extração de textos de outros sites via URL;
+        `
+    },
+    {
+        "id": 12,
+        "name": "Login Node",
+        "link": "https://login-node.cyclic.cloud/",
+        "color": "#ff8030",
+        "icon": "images/projects/login/icon.png",
+        "image": "images/projects/login/img_login(0).png",
+        "languages": ["HTML", "CSS", "JavaScript", "Tailwind", "Node.js", "EJS", "SQLite"],
+        "repositorie": "https://github.com/EricNunes0/Login",
+        "description": `
+            O Login Node é um projeto criado para ampliar meus conhecimentos em back-end com Node.js. Trata-se de uma aplicação com o sistema de cadastro e login, onde o usuário pode fazer seu cadastro e suas informações são enviadas para o banco de dados SQLite, permitindo que o mesmo possa fazer seu login em seguida.
+            <br></br>
+            Destaques:
+            <br>
+            • Back-end com Node.js;
+            <br>
+            • Aplicação do EJS (Embedded JavaScript templating), uma linguagem que permite gerar marcação HTML com JavaScript simples;
+            <br>
+            • Conexão com banco de dados SQLite;
+            <br>
+            • Criação e gerenciamentos de cookies no navegador do usuário, o que permite que o usuário possa acessar a tela final diretamente caso tenha feito o login anteriormente;
+            <br>
+            • Este foi o primeiro projeto que tive contato com Tailwind CSS;
         `
     }
 ];

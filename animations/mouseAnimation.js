@@ -8,8 +8,8 @@ pageBody.appendChild(mouseArea);
 
 const mouseSpan = document.createElement("span");
 mouseSpan.id = "mouse-circle";
-const mouseSpanWidth = 30;
-const mouseSpanHeight = 30;
+const mouseSpanWidth = 40;
+const mouseSpanHeight = 40;
 mouseSpan.style.width = `${mouseSpanWidth}px`;
 mouseSpan.style.height = `${mouseSpanHeight}px`;
 

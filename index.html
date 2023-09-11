@@ -15,6 +15,8 @@
     <link rel = "stylesheet" type = "text/css" href = "styles/themeAnimations.css"/>
     <link rel = "icon" href = "images/favicon.png"/>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script type = "text/javascript" src = "scripts/CreateContact.js"></script>
+    <script type = "text/javascript" src = "scripts/CreateLanguageDiv.js"></script>
     <script type = "text/javascript" src = "scripts/createProjects.js"></script>
     <script type = "text/javascript" src = "animations/mouseAnimation.js" defer></script>
 </head>
@@ -158,7 +160,7 @@
                 <div id = "portfolio-scenary">
                     <img id = "scenary-earth" src = "images/img_planet.png" alt = "Earth"></img>
                     <img id = "scenary-moon" src = "images/img_moon.png" alt = "Moon"></img>
-                    <img id = "scenary-satelite" src = "https://cdn-icons-png.flaticon.com/512/1042/1042820.png" alt = "Satelite"></img>
+                    <img id = "scenary-satelite" src = "images/img_satelite.png" alt = "Satelite"></img>
                     <div class = "arrow-div">
                         <img class = "arrow-image light" src = "images/img_arrow.png">
                     </div>
@@ -377,71 +379,18 @@
                                         <div class = "knowledges-code-title-divs">
                                             <h1 class = "knowledges-code-titles light">Tecnologias:</h1>
                                         </div>
-                                        <div class = "knowledges-code-languages-divs">
-                                            <div class = "knowledges-language-divs light">
-                                                <div class = "knowledges-language-icon-divs">
-                                                    <img class = "knowledges-languages-icons" src = "svgs/code/html.svg" alt = "HTML"></img>
-                                                </div>
-                                                <div class = "knowledges-language-name-divs">
-                                                    <p class = "knowledges-languages-names light">HTML</p>
-                                                </div>
-                                            </div>
-                                            <div class = "knowledges-language-divs light">
-                                                <div class = "knowledges-language-icon-divs">
-                                                    <img class = "knowledges-languages-icons" src = "svgs/code/css.svg" alt = "CSS"></img>
-                                                </div>
-                                                <div class = "knowledges-language-name-divs">
-                                                    <p class = "knowledges-languages-names light">CSS</p>
-                                                </div>
-                                            </div>
-                                            <div class = "knowledges-language-divs light">
-                                                <div class = "knowledges-language-icon-divs">
-                                                    <img class = "knowledges-languages-icons" src = "svgs/code/js.svg" alt = "JavaScript"></img>
-                                                </div>
-                                                <div class = "knowledges-language-name-divs">
-                                                    <p class = "knowledges-languages-names light">JavaScript</p>
-                                                </div>
-                                            </div>
-                                            <div class = "knowledges-language-divs light">
-                                                <div class = "knowledges-language-icon-divs">
-                                                    <img class = "knowledges-languages-icons" src = "svgs/code/react.svg" alt = "React"></img>
-                                                </div>
-                                                <div class = "knowledges-language-name-divs">
-                                                    <p class = "knowledges-languages-names light">React</p>
-                                                </div>
-                                            </div>
-                                            <div class = "knowledges-language-divs light">
-                                                <div class = "knowledges-language-icon-divs">
-                                                    <img class = "knowledges-languages-icons" src = "svgs/code/bootstrap.svg" alt = "Bootstrap"></img>
-                                                </div>
-                                                <div class = "knowledges-language-name-divs">
-                                                    <p class = "knowledges-languages-names light">Bootstrap</p>
-                                                </div>
-                                            </div>
-                                            <div class = "knowledges-language-divs light">
-                                                <div class = "knowledges-language-icon-divs">
-                                                    <img class = "knowledges-languages-icons" src = "svgs/code/jquery.svg" alt = "jQuery"></img>
-                                                </div>
-                                                <div class = "knowledges-language-name-divs">
-                                                    <p class = "knowledges-languages-names light">jQuery</p>
-                                                </div>
-                                            </div>
-                                            <div class = "knowledges-language-divs light">
-                                                <div class = "knowledges-language-icon-divs">
-                                                    <img class = "knowledges-languages-icons" src = "svgs/code/sass.svg" alt = "Sass"></img>
-                                                </div>
-                                                <div class = "knowledges-language-name-divs">
-                                                    <p class = "knowledges-languages-names light">Sass</p>
-                                                </div>
-                                            </div>
-                                            <div class = "knowledges-language-divs light">
-                                                <div class = "knowledges-language-icon-divs">
-                                                    <img class = "knowledges-languages-icons" src = "svgs/code/cssinjs.svg" alt = "CSS-in-JS"></img>
-                                                </div>
-                                                <div class = "knowledges-language-name-divs">
-                                                    <p class = "knowledges-languages-names light">CSS-in-JS</p>
-                                                </div>
-                                            </div>
+                                        <div class = "knowledges-code-languages-divs" id = "knowledges-front-end">
+                                            <script type = "text/javascript">
+                                                CreateLanguageDiv({id: "knowledges-front-end", name: "HTML", image: "svgs/code/html.svg"});
+                                                CreateLanguageDiv({id: "knowledges-front-end", name: "CSS", image: "svgs/code/css.svg"});
+                                                CreateLanguageDiv({id: "knowledges-front-end", name: "JavaScript", image: "svgs/code/js.svg"});
+                                                CreateLanguageDiv({id: "knowledges-front-end", name: "React", image: "svgs/code/react.svg"});
+                                                CreateLanguageDiv({id: "knowledges-front-end", name: "Bootstrap", image: "svgs/code/bootstrap.svg"});
+                                                CreateLanguageDiv({id: "knowledges-front-end", name: "jQuery", image: "svgs/code/jquery.svg"});
+                                                CreateLanguageDiv({id: "knowledges-front-end", name: "Sass", image: "svgs/code/sass.svg"});
+                                                CreateLanguageDiv({id: "knowledges-front-end", name: "CSS-in-JS", image: "svgs/code/cssinjs.svg"});
+                                                CreateLanguageDiv({id: "knowledges-front-end", name: "Tailwind", image: "svgs/code/tailwind.svg"});
+                                            </script>
                                         </div>
                                     </div>
                                 </div>
@@ -550,6 +499,15 @@
                                                     <p class = "knowledges-languages-names light">Node.js</p>
                                                 </div>
                                             </div>
+                                            
+                                            <div class = "knowledges-language-divs light">
+                                                <div class = "knowledges-language-icon-divs">
+                                                    <img class = "knowledges-languages-icons" src = "svgs/code/ejs.svg" alt = "EJS"></img>
+                                                </div>
+                                                <div class = "knowledges-language-name-divs">
+                                                    <p class = "knowledges-languages-names light">EJS</p>
+                                                </div>
+                                            </div>
                                             <div class = "knowledges-language-divs light">
                                                 <div class = "knowledges-language-icon-divs">
                                                     <img class = "knowledges-languages-icons" src = "svgs/code/php.svg" alt = "PHP"></img>
@@ -590,6 +548,14 @@
                                         <div class = "knowledges-code-languages-divs">
                                             <div class = "knowledges-language-divs light">
                                                 <div class = "knowledges-language-icon-divs">
+                                                    <img class = "knowledges-languages-icons" src = "svgs/code/sqlite.svg" alt = "SQLite"></img>
+                                                </div>
+                                                <div class = "knowledges-language-name-divs">
+                                                    <p class = "knowledges-languages-names light">SQLite</p>
+                                                </div>
+                                            </div>
+                                            <div class = "knowledges-language-divs light">
+                                                <div class = "knowledges-language-icon-divs">
                                                     <img class = "knowledges-languages-icons" src = "svgs/code/mysql.svg" alt = "MySQL"></img>
                                                 </div>
                                                 <div class = "knowledges-language-name-divs">
@@ -626,7 +592,7 @@
                                         <div class = "knowledges-code-languages-divs">
                                             <div class = "knowledges-language-divs light">
                                                 <div class = "knowledges-language-icon-divs">
-                                                    <img class = "knowledges-languages-icons" src = "images/codes/img_vscode.png" alt = "Visual Studio Code"></img>
+                                                    <img class = "knowledges-languages-icons" src = "svgs/code/vscode.svg" alt = "Visual Studio Code"></img>
                                                 </div>
                                                 <div class = "knowledges-language-name-divs">
                                                     <p class = "knowledges-languages-names light">VS Code</p>
@@ -646,6 +612,14 @@
                                                 </div>
                                                 <div class = "knowledges-language-name-divs">
                                                     <p class = "knowledges-languages-names light">GitHub</p>
+                                                </div>
+                                            </div>
+                                            <div class = "knowledges-language-divs light">
+                                                <div class = "knowledges-language-icon-divs">
+                                                    <img class = "knowledges-languages-icons" src = "svgs/code/figma.svg" alt = "Figma"></img>
+                                                </div>
+                                                <div class = "knowledges-language-name-divs">
+                                                    <p class = "knowledges-languages-names light">Figma</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -719,43 +693,13 @@
                 <footer class = "portfolio-footer" id = "footer">
                     <div class = "portfolio-footer-divs">
                         <div class = "footer-contatos-div">
-                            <ul class = "contatos-list">
-                                <li class = "contatos-items">
-                                    <a class = "contatos-links" href = "https://www.linkedin.com/in/eric-nunes-ramalho-58a146208/" alt = "LinkedIn" target = "_blank">
-                                        <img class = "contato-images" src = "https://i.imgur.com/HeX1qAV.png"/>
-                                        <div class = "contato-texts-div">
-                                            <p class = "contato-titles light">LinkedIn</p>
-                                            <p class = "contato-links-texts light">linkedin.com/in/eric-nunes-ramalho-58a146208/</p>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class = "contatos-items">
-                                    <a class = "contatos-links" href = "https://github.com/EricNunes0" alt = "LinkedIn" target = "_blank">
-                                        <img class = "contato-images" src = "https://i.imgur.com/zhSCAKX.png"/>
-                                        <div class = "contato-texts-div">
-                                            <p class = "contato-titles light">Github</p>
-                                            <p class = "contato-links-texts light">github.com/EricNunes0</p>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class = "contatos-items">
-                                    <a class = "contatos-links" href = "https://web.whatsapp.com/" alt = "LinkedIn" target = "_blank">
-                                        <img class = "contato-images" src = "https://i.imgur.com/MQjNoIt.png"/>
-                                        <div class = "contato-texts-div">
-                                            <p class = "contato-titles light">Whatsapp</p>
-                                            <p class = "contato-links-texts light">(21) 98728-3053</p>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class = "contatos-items">
-                                    <a class = "contatos-links" href = "mailto:eric26052004@gmail.com" alt = "LinkedIn" target = "_blank">
-                                        <img class = "contato-images" src = "https://i.imgur.com/W4ZnfIP.png"/>
-                                        <div class = "contato-texts-div">
-                                            <p class = "contato-titles light">E-mail</p>
-                                            <p class = "contato-links-texts light">eric26052004@gmail.com</p>
-                                        </div>
-                                    </a>
-                                </li>
+                            <ul id = "contatos-list">
+                                <script type = "text/javascript">
+                                    CreateContact({query: `#contatos-list`, name: "LinkedIn", image: `svgs/contacts/linkedin.svg`, url: `https://www.linkedin.com/in/eric-nunes-ramalho-58a146208/`, username: "@EricNunes0"});
+                                    CreateContact({query: `#contatos-list`, name: "Github", image: `svgs/contacts/github.svg`, url: `https://github.com/EricNunes0`, username: "@EricNunes0"});
+                                    CreateContact({query: `#contatos-list`, name: "Whatsapp", image: `svgs/contacts/whatsapp.svg`, url: `https://web.whatsapp.com/`, username: "(21) 98728-3053"});
+                                    CreateContact({query: `#contatos-list`, name: "E-mail", image: `svgs/contacts/email.svg`, url: `mailto:eric26052004@gmail.com`, username: "eric26052004@gmail.com"});
+                                </script>
                             </ul>
                         </div>
                     </div>
