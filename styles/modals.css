@@ -29,7 +29,7 @@
     transition: all 0.3s;
 }
 #modal-area[class~="light"] {
-    background-color: #d0d0d0;
+    background-color: #f0f0f0;
 }
 #modal-area[class~="dark"] {
     background-color: #10101a;

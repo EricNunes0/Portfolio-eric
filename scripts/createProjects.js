@@ -1,48 +1,63 @@
 const languages = {
     "HTML": {
-        "icon": "images/codes/img_html.png"
+        "image": "images/codes/img_html.png",
+        "icon": "svgs/code/html.svg"
     },
     "CSS": {
-        "icon": "images/codes/img_css.png"
+        "image": "images/codes/img_css.png",
+        "icon": "svgs/code/css.svg"
     },
     "JavaScript": {
-        "icon": "images/codes/img_js.png"
+        "image": "images/codes/img_js.png",
+        "icon": "svgs/code/js.svg"
     },
     "React": {
-        "icon": "images/codes/img_react.png"
+        "image": "images/codes/img_react.png",
+        "icon": "svgs/code/react.svg"
     },
     "Bootstrap": {
-        "icon": "images/codes/img_bootstrap.png"
+        "image": "images/codes/img_bootstrap.png",
+        "icon": "svgs/code/bootstrap.svg"
     },
     "jQuery": {
-        "icon": "images/codes/img_jquery.png"
+        "image": "images/codes/img_jquery.png",
+        "icon": "svgs/code/jquery.svg"
     },
     "Sass": {
-        "icon": "images/codes/img_sass.png"
+        "image": "images/codes/img_sass.png",
+        "icon": "svgs/code/sass.svg"
     },
     "CSS-in-JS": {
-        "icon": "images/codes/img_CssInJs.png"
+        "image": "images/codes/img_CssInJs.png",
+        "icon": "svgs/code/cssinjs.svg"
     },
     "Tailwind": {
-        "icon": "images/codes/img_tailwind.png"
+        "image": "images/codes/img_tailwind.png",
+        "icon": "svgs/code/tailwind.svg"
     },
     "Node.js": {
-        "icon": "images/codes/img_nodejs.png"
+        "image": "images/codes/img_nodejs.png",
+        "icon": "svgs/code/nodejs.svg"
     },
     "EJS": {
-        "icon": "images/codes/img_ejs.png"
+        "image": "images/codes/img_ejs.png",
+        "icon": "svgs/code/ejs.svg"
     },
     "PHP": {
-        "icon": "images/codes/img_php.png"
+        "image": "images/codes/img_php.png",
+        "icon": "svgs/code/php.svg"
     },
     "SQLite": {
-        "icon": "images/codes/img_sqlite.png"
+        "image": "images/codes/img_sqlite.png",
+        "icon": "svgs/code/sqlite.svg"
     },
     "MySQL": {
-        "icon": "images/codes/img_mysql.png"
+        "image": "images/codes/img_mysql.png",
+        "icon": "svgs/code/mysql.svg"
     },
     "Python": {
-        "icon": "images/codes/img_python.png"
+        "image": "images/codes/img_python.png",
+        "icon": "svgs/code/python.svg"
     }
 };
 
@@ -144,8 +159,8 @@ const projects = [
         "name": "Game Center",
         "link": "https://central-de-jogos.vercel.app/",
         "color": "#d020f0",
-        "icon": "https://i.imgur.com/RRNsfDt.png",
-        "image": "https://i.imgur.com/hvKTv99.png",
+        "icon": "images/projects/gamecenter/icon.png",
+        "image": "images/projects/gamecenter/image(0).png",
         "languages": ["HTML", "CSS", "JavaScript", "React", "Bootstrap", "CSS-in-JS"],
         "repositorie": "https://github.com/EricNunes0/Game-Center",
         "description": `
@@ -159,8 +174,8 @@ const projects = [
         "name": "Tic Tac Toe (Jogo da velha)",
         "link": "https://central-de-jogos.vercel.app/tictactoe",
         "color": "#50ff70",
-        "icon": "https://i.imgur.com/4TmQWfu.png",
-        "image": "https://i.imgur.com/C7zTRsC.png",
+        "icon": "images/projects/tictactoe/icon.png",
+        "image": "images/projects/tictactoe/image(0).png",
         "languages": ["HTML", "CSS", "JavaScript", "React", "Bootstrap", "CSS-in-JS"],
         "repositorie": "https://github.com/EricNunes0/Game-Center",
         "description": `

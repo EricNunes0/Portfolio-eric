@@ -1605,12 +1605,12 @@ button:hover {
 }
 
 .project-links#project-link-5 {
-    background-image: url("https://i.imgur.com/AsTlPhd.png");
+    background-image: url("images/projects/gamecenter/image(0).png");
     animation-name: projectLinksAnimation, backgroundChange5;
 }
 
 .project-links#project-link-6 {
-    background-image: url("https://i.imgur.com/C7zTRsC.png");
+    background-image: url("images/projects/tictactoe/image(0).png");
     animation-name: projectLinksAnimation, backgroundChange6;
 }
 
@@ -1700,19 +1700,22 @@ button:hover {
 
 @keyframes backgroundChange5 {
     33% {
-        background-image: url("https://i.imgur.com/hvKTv99.png");
+        background-image: url("images/projects/gamecenter/image(1).png");
     }
     67% {
-        background-image: url("https://i.imgur.com/a7c6xlq.png");
+        background-image: url("images/projects/gamecenter/image(2).png");
     }
 }
 
 @keyframes backgroundChange6 {
-    33% {
-        background-image: url("https://i.imgur.com/da3khU0.png");
+    25% {
+        background-image: url("images/projects/tictactoe/image(1).png");
     }
-    67% {
-        background-image: url("https://i.imgur.com/S40OAXM.png");
+    50% {
+        background-image: url("images/projects/tictactoe/image(2).png");
+    }
+    75% {
+        background-image: url("images/projects/tictactoe/image(3).png");
     }
 }
 
