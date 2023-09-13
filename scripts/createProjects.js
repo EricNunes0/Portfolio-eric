@@ -199,8 +199,8 @@ const projects = [
         "name": "Minesweeper (Campo Minado)",
         "link": "https://central-de-jogos.vercel.app/minesweeper",
         "color": "#c0c050",
-        "icon": "https://i.imgur.com/P2G3vuf.png",
-        "image": "https://i.imgur.com/18nSHgM.png",
+        "icon": "images/projects/minesweeper/icon.png",
+        "image": "images/projects/minesweeper/image(0).png",
         "languages": ["HTML", "CSS", "JavaScript", "React", "Bootstrap", "CSS-in-JS"],
         "repositorie": "https://github.com/EricNunes0/Game-Center",
         "description": `

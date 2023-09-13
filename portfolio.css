@@ -1615,7 +1615,7 @@ button:hover {
 }
 
 .project-links#project-link-7 {
-    background-image: url("https://i.imgur.com/18nSHgM.png");
+    background-image: url("images/projects/minesweeper/image(0).png");
     animation-name: projectLinksAnimation, backgroundChange7;
 }
 
@@ -1720,11 +1720,14 @@ button:hover {
 }
 
 @keyframes backgroundChange7 {
-    33% {
-        background-image: url("https://i.imgur.com/29kQWCw.png");
+    25% {
+        background-image: url("images/projects/minesweeper/image(1).png");
     }
-    67% {
-        background-image: url("https://i.imgur.com/8TQb8ck.png");
+    50% {
+        background-image: url("images/projects/minesweeper/image(2).png");
+    }
+    75% {
+        background-image: url("images/projects/minesweeper/image(3).png");
     }
 }
 
