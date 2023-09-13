@@ -130,6 +130,15 @@
 #modal-description-div {
     overflow: auto;
     height: 85%;
+    padding: 10px;
+    border-radius: 10px;
+    transition: all 0.3s;
+}
+#modal-description-div[class~="light"] {
+    background-color: #d0d0d0;
+}
+#modal-description-div[class~="dark"] {
+    background-color: #00000a;
 }
 
 #modal-description-title {
@@ -286,7 +295,7 @@
     width: 175px;
     text-align: center;
     text-decoration: none;
-    font-size: 12pt;
+    font-size: 16px;
     padding: 8px;
     border-radius: 25px;
     transition: all 0.3s;
@@ -356,11 +365,36 @@
         height: 100%;
     }
 
+    #modal-title {
+        text-align: center;
+        font-size: 20px;
+    }
+
     #modal-image-div {
         width: 100%;
     }
 
     #modal-image {
         height: unset;
+    }
+
+    #modal-description-div {
+        height: 90%;
+    }
+
+    #modal-description {
+        font-size: 18px;
+        width: 95%;
+        text-align: justify;
+        margin: auto;
+    }
+
+    #modal-footer {
+        height: 150px;
+        padding: unset;
+    }
+    
+    .modal-links {
+        font-size: 16px;
     }
 }

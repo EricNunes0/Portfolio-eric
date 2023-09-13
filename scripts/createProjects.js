@@ -220,8 +220,8 @@ const projects = [
         "name": "Forca",
         "link": "https://central-de-jogos.vercel.app/forca",
         "color": "#70c0ff",
-        "icon": "https://i.imgur.com/dPfgOJD.png",
-        "image": "https://i.imgur.com/c6xdwZ7.png",
+        "icon": "images/projects/forca/icon.png",
+        "image": "images/projects/forca/image(0).png",
         "languages": ["HTML", "CSS", "JavaScript", "React", "Bootstrap", "CSS-in-JS"],
         "repositorie": "https://github.com/EricNunes0/Game-Center",
         "description": `
