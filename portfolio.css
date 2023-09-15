@@ -1625,7 +1625,7 @@ button:hover {
 }
 
 .project-links#project-link-9 {
-    background-image: url("https://i.imgur.com/7Ku7iFz.png");
+    background-image: url("images/projects/spaceshooter/image(0).png");
     animation-name: projectLinksAnimation, backgroundChange9;
 }
 
@@ -1742,13 +1742,13 @@ button:hover {
 
 @keyframes backgroundChange9 {
     25% {
-        background-image: url("https://i.imgur.com/eXDFjNS.png");
+        background-image: url("images/projects/spaceshooter/image(1).png");
     }
     50% {
-        background-image: url("https://i.imgur.com/zOEUAGa.png");
+        background-image: url("images/projects/spaceshooter/image(2).png");
     }
     75% {
-        background-image: url("https://i.imgur.com/YJ0fMo8.png");
+        background-image: url("images/projects/spaceshooter/image(3).png");
     }
 }
 

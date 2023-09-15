@@ -239,9 +239,9 @@ const projects = [
         "name": "Space Shooter",
         "link": "https://central-de-jogos.vercel.app/spaceshooter",
         "color": "#f02050",
-        "icon": "https://i.imgur.com/LiQE5Qe.png",
-        "image": "https://i.imgur.com/7Ku7iFz.png",
-        "languages": ["HTML", "CSS", "JavaScript", "React"],
+        "icon": "images/projects/spaceshooter/icon.png",
+        "image": "images/projects/spaceshooter/image(0).png",
+        "languages": ["HTML", "CSS", "JavaScript", "React", "Bootstrap", "CSS-in-JS"],
         "repositorie": "https://github.com/EricNunes0/Game-Center",
         "description": `
             Este foi o meu maior e mais ambicioso jogo desenvolvido para a web: o Space Shooter. Desenvolvido com React, meu objetivo foi testar minhas habilidades de desenvolvimento de jogos e aplicá-los no desenvolvimento web. Foi o jogo mais trabalhoso que já fiz, e que sem dúvidas é um dos destaques dos meus projetos.
