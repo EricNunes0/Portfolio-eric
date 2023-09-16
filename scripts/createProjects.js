@@ -277,7 +277,7 @@ const projects = [
         "link": "https://jogo-da-senha.netlify.app/",
         "color": "#ff8040",
         "icon": "svgs/passwordGame.svg",
-        "image": "https://i.imgur.com/xV8djkP.png",
+        "image": "images/projects/password/image(0).png",
         "languages": ["HTML", "CSS", "JavaScript", "jQuery", "Node.js"],
         "repositorie": "https://github.com/EricNunes0/Password-game",
         "description": `
