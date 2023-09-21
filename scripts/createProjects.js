@@ -291,8 +291,8 @@ const projects = [
         "name": "Word Scrapper",
         "link": "https://ericnunes0.pythonanywhere.com/wordscrapper/",
         "color": "#ff8030",
-        "icon": "svgs/wordscrapper.svg",
-        "image": "https://cdn.discordapp.com/attachments/1145459828005814333/1145459874327707688/image.png",
+        "icon": "images/projects/wordscrapper/icon.png",
+        "image": "images/projects/wordscrapper/image(0).png",
         "languages": ["HTML", "CSS", "JavaScript", "Bootstrap", "jQuery", "Python"],
         "repositorie": "https://github.com/EricNunes0/Word-Scrapper.git",
         "description": `

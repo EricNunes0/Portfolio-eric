@@ -1635,7 +1635,7 @@ button:hover {
 }
 
 .project-links#project-link-11 {
-    background-image: url("https://media.discordapp.net/attachments/1145459828005814333/1145459874327707688/image.png?width=928&height=473");
+    background-image: url("images/projects/wordscrapper/image(0).png");
     animation-name: projectLinksAnimation, backgroundChange11;
 }
 
@@ -1753,8 +1753,14 @@ button:hover {
 }
 
 @keyframes backgroundChange11 {
+    25% {
+        background-image: url("images/projects/wordscrapper/image(1).png");
+    }
     50% {
-        background-image: url("https://media.discordapp.net/attachments/1145459828005814333/1145459874558398474/image.png?width=1025&height=463");
+        background-image: url("images/projects/wordscrapper/image(2).png");
+    }
+    75% {
+        background-image: url("images/projects/wordscrapper/image(3).png");
     }
 }
 
