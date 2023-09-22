@@ -289,7 +289,7 @@ const projects = [
     {
         "id": 11,
         "name": "Word Scrapper",
-        "link": "https://ericnunes0.pythonanywhere.com/wordscrapper/",
+        "link": "https://ericnunes0.pythonanywhere.com/",
         "color": "#ff8030",
         "icon": "images/projects/wordscrapper/icon.png",
         "image": "images/projects/wordscrapper/image(0).png",
