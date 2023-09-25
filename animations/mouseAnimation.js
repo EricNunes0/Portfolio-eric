@@ -1,4 +1,4 @@
-console.log("mouseAnimation.js carregado!");
+/*console.log("mouseAnimation.js carregado!");
 
 const pageBody = document.querySelector("body");
 const pageBodyHeight = pageBody.offsetHeight;
@@ -21,4 +21,4 @@ document.onmousemove = function OnMouseMove(e) {
     if((e.clientX + mouseSpanWidth) < window.screen.width) {
         mouseSpan.style.left = `${e.clientX - (mouseSpanWidth / 2)}px`;
     };
-};
+};*/
