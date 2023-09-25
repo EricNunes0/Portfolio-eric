@@ -250,16 +250,26 @@ button:hover {
 
 /* Textos dos botões da barra de navegação */
 .nav-buttons-li {
-    background-size: 100% 2px;
+    background-size: 100% 1px;
     background-position: 0 19px;
     background-repeat: no-repeat;
     font-size: 16px;
     transition: all 0.3s;
     border-radius: 5px;
 }
+.nav-buttons-li[class~="light"]:hover {
+    background-image: linear-gradient(90deg, #404040, #3060ff);
+}
+.nav-buttons-li[class~="dark"]:hover {
+    background-image: linear-gradient(90deg, #d0d0d0, #3060ff);
+}
+
+.nav-buttons-li:hover {
+    animation: NavButtonLi 0.25s ease-in;
+}
 @keyframes NavButtonLi {
     0% {
-        background-size: 0% 2px;
+        background-size: 0% 1px;
     }
 }
 
@@ -359,7 +369,7 @@ button:hover {
 /* Título do portfolio */
 .header-titles {
     font-family: "Poppins";
-    font-size: 20pt;
+    font-size: 40px;
     font-weight: bold;
     text-align: center;
     transition: all 0.3s;
