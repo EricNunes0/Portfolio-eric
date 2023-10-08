@@ -12,6 +12,11 @@
     --reveal-text-timing: ease-out;
     --separator-color: #909090;
     --curriculum-color-light: #3050a0;
+    --image-asteroide-width: 40px;
+    --image-asteroide-height: 40px;
+    --image-asteroide-margin: 10px;
+    --github-button-color: rgba(12, 44, 60, 1);
+    --linkedin-button-color: rgba(15, 120, 170, 1);
     --moon-width: 100px;
     --moon-height: 100px;
     --knowledges-icon-divs-width: 60px; /* Largura das divs dos ícones de conhecimentos */
@@ -533,33 +538,35 @@ button:hover {
     border-radius: 20px;
     transition: all 0.3s;
 }
-/*.portfolio-intro-buttons:hover {
-    transform: scale(1.00);
-}*/
+.portfolio-intro-buttons:hover {
+    transform: scale(1.1);
+}
 
 /* Botão do LinkedIn */
 .portfolio-intro-buttons#button-linkedin {
     background-color: none;
-    color: rgba(15, 120, 170, 1);
-    border: 2px solid rgba(15, 120, 170, 1);
+    color: var(--linkedin-button-color);
+    border: 2px solid var(--linkedin-button-color);
 }
 .portfolio-intro-buttons#button-linkedin:hover {
     color: #fff;
-    background-color: rgba(15, 120, 170, 1);
+    background-color: var(--linkedin-button-color);
+    filter: drop-shadow(0px 0px 10px var(--linkedin-button-color));
 }
 
 /* Botão do Github */
 .portfolio-intro-buttons#button-github {
     background-color: none;
-    color: rgba(12, 44, 60, 1);
-    border: 2px solid rgba(12, 44, 60, 1);
+    color: var(--github-button-color);
+    border: 2px solid var(--github-button-color);
 }
 .portfolio-intro-buttons#button-github[class~="dark"] {
     color: #fff;
 }
 .portfolio-intro-buttons#button-github:hover {
     color: #fff;
-    background-color: rgba(12, 44, 60, 1);
+    background-color: var(--github-button-color);
+    filter: drop-shadow(0px 0px 10px var(--github-button-color));
 }
 
 /* Imagens dentro dos botões */
@@ -586,11 +593,47 @@ button:hover {
 
 /* Link da imagem do portfólio */
 #intro-image-link {
+    position: relative;
     border-radius: 50%;
 }
 
+/* Asteroide */
+.intro-image-asteroides {
+    pointer-events: none;
+    position: absolute;
+    top: calc(0% - var(--image-asteroide-height) - var(--image-asteroide-margin));
+    left: calc(50% - calc(var(--image-asteroide-width) / 2));
+    display: block;
+    width: calc(var(--image-asteroide-width));
+    height: calc(100% + calc(var(--image-asteroide-height) * 2) + calc(var(--image-asteroide-margin) * 2));
+    background-image: url("https://images.vexels.com/media/users/3/203033/isolated/preview/bad8b13b449cf80e9cdbf1c355d63f4f-ilustracao-de-grande-asteroide.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation: Asteroide 20s linear infinite;
+}
+.intro-image-asteroides::after {
+    pointer-events: all;
+    content: "";
+    display: block;
+    position: absolute;
+    width: var(--image-asteroide-width);
+    height: var(--image-asteroide-height);
+}
+.intro-image-asteroides::after:hover {
+    background-color: red;
+    transform: scale(1.1);
+}
+@keyframes Asteroide {
+    0% {
+        rotate: 0deg;
+    }
+    100% {
+        rotate: 360deg;
+    }
+}
+
 /* Imagem do portfólio */
-.portfolio-intro-image {
+.intro-image {
     pointer-events: all;
     border-radius: 50%;
     outline: 2px solid rgba(200, 200, 255);
@@ -601,7 +644,7 @@ button:hover {
     animation-iteration-count: infinite;
     transition: all 0.3s;
 }
-.portfolio-intro-image:hover {
+.intro-image:hover {
     transform: scale(1.05);
 }
 
@@ -619,14 +662,14 @@ button:hover {
 
 @media screen and (min-width: 800px) {
     /* Imagem do portfólio */
-    .portfolio-intro-image {
+    .intro-image {
         width: 350px;
     }
 }
 
 @media screen and (max-width: 800px) {
     /* Imagem do portfólio */
-    .portfolio-intro-image {
+    .intro-image {
         width: 250px;
     }
 }
@@ -739,6 +782,18 @@ button:hover {
         transform: translateX(50px);
     }
 }
+@keyframes RevealTextTop {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+}
+@keyframes RevealTextBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+}
 
 /* Main principal da aba sobre mim */
 #aboutme-main {
@@ -804,6 +859,13 @@ button:hover {
     width: 1px;
     height: 150px;
     background-image: linear-gradient(0deg, var(--separator-color), transparent);
+}
+.separator-lines[class~="dotted"] {
+    position: relative;
+    display: block;
+    width: 0.5px;
+    height: 150px;
+    border: 1px dashed var(--separator-color);
 }
 
 /* Linha do separador ligado com o currículo */
@@ -2159,7 +2221,7 @@ button:hover {
         width: 100%;
     }
 
-    .portfolio-intro-image {
+    .intro-image {
         width: 80vw;
     }
 
