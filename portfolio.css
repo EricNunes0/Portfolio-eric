@@ -1887,8 +1887,8 @@ button:hover {
     align-items: center;
     gap: 10px;
     background-color: rgba(0, 0, 0, 0.8);
-    border-bottom-left-radius: var(--project-links-border-radius);
-    border-bottom-right-radius: var(--project-links-border-radius);
+    border-bottom-left-radius: calc(var(--project-links-border-radius) - 1px);
+    border-bottom-right-radius: calc(var(--project-links-border-radius) - 1px);
 }
 
 /* Imagens das linguagens de programação */
