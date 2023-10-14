@@ -310,7 +310,7 @@ const projects = [
     {
         "id": 12,
         "name": "Login Node",
-        "link": "https://login-node.cyclic.cloud/",
+        "link": "https://login-node.cyclic.app/",
         "color": "#ff8030",
         "icon": "images/projects/login/icon.png",
         "image": "images/projects/login/img_login(0).png",
