@@ -313,7 +313,7 @@ const projects = [
         "link": "https://login-node.cyclic.app/",
         "color": "#ff8030",
         "icon": "images/projects/login/icon.png",
-        "image": "images/projects/login/img_login(0).png",
+        "image": "images/projects/login/image(0).png",
         "languages": ["HTML", "CSS", "JavaScript", "Tailwind", "Node.js", "EJS", "SQLite"],
         "repositorie": "https://github.com/EricNunes0/Login",
         "description": `

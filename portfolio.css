@@ -1712,7 +1712,7 @@ button:hover {
 }
 
 .project-links#project-link-12 {
-    background-image: url("images/projects/login/img_login\(0\).png");
+    background-image: url("images/projects/login/image(0).png");
     animation-name: projectLinksAnimation, backgroundChange12;
 }
 
@@ -1838,13 +1838,13 @@ button:hover {
 
 @keyframes backgroundChange12 {
     25% {
-        background-image: url("images/projects/login/img_login\(1\).png");
+        background-image: url("images/projects/login/image(1).png");
     }
     50% {
-        background-image: url("images/projects/login/img_login\(2\).png");
+        background-image: url("images/projects/login/image(2).png");
     }
     76% {
-        background-image: url("images/projects/login/img_login\(3\).png");
+        background-image: url("images/projects/login/image(3).png");
     }
 }
 
