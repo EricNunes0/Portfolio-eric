@@ -1712,8 +1712,18 @@ button:hover {
 }
 
 .project-links#project-link-12 {
-    background-image: url("images/projects/login/image(0).png");
+    background-image: url("images/projects/worksheet/image(0).png");
     animation-name: projectLinksAnimation, backgroundChange12;
+}
+
+.project-links#project-link-13 {
+    background-image: url("images/projects/login/image(0).png");
+    animation-name: projectLinksAnimation, backgroundChange13;
+}
+
+.project-links#project-link-14 {
+    background-image: url("images/projects/turtle/image(0).png");
+    animation-name: projectLinksAnimation, backgroundChange14;
 }
 
 @keyframes backgroundChange0 {
@@ -1837,6 +1847,12 @@ button:hover {
 }
 
 @keyframes backgroundChange12 {
+    50% {
+        background-image: url("images/projects/worksheet/image(1).png");
+    }
+}
+
+@keyframes backgroundChange13 {
     25% {
         background-image: url("images/projects/login/image(1).png");
     }
@@ -1845,6 +1861,15 @@ button:hover {
     }
     76% {
         background-image: url("images/projects/login/image(3).png");
+    }
+}
+
+@keyframes backgroundChange14 {
+    33% {
+        background-image: url("images/projects/turtle/image(1).png");
+    }
+    67% {
+        background-image: url("images/projects/turtle/image(2).png");
     }
 }
 
@@ -2180,7 +2205,7 @@ button:hover {
         background-color: transparent;
         font-size: 24pt;
         font-family: "Poppins";
-        font-weight: bold;
+        font-weight: lighter;
         text-decoration: none;
         border: none;
         transition: all 0.3s;

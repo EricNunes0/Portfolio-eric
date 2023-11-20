@@ -58,6 +58,14 @@ const languages = {
     "Python": {
         "image": "images/codes/img_python.png",
         "icon": "svgs/code/python.svg"
+    },
+    "Tkinter": {
+        "image": "images/codes/img_python.png",
+        "icon": "svgs/code/tkinter.svg"
+    },
+    "Turtle Graphics": {
+        "image": "images/codes/img_python.png",
+        "icon": "svgs/code/turtle.svg"
     }
 };
 
@@ -134,7 +142,7 @@ const projects = [
         "color": "#fff060",
         "icon": "images/projects/calculapy/icon.png",
         "image": "images/projects/calculapy/image(0).png",
-        "languages": ["Python"],
+        "languages": ["Python", "Tkinter"],
         "repositorie": "https://github.com/EricNunes0/CalculaPy",
         "description": `
             Desenvolvido para uma atividade da faculdade, referente a matéria de Modelagem RAD (Desenvolvimento rápido de aplicações) em Python. A ideia era apenas desenvolver uma calculadora com as 4 operações básicas usando a biblioteca Tkinter, mas senti que poderia evoluir o projeto.
@@ -290,7 +298,7 @@ const projects = [
         "id": 11,
         "name": "Word Scrapper",
         "link": "https://ericnunes0.pythonanywhere.com/",
-        "color": "#ff8030",
+        "color": "#2568db",
         "icon": "images/projects/wordscrapper/icon.png",
         "image": "images/projects/wordscrapper/image(0).png",
         "languages": ["HTML", "CSS", "JavaScript", "Bootstrap", "jQuery", "Python"],
@@ -309,13 +317,43 @@ const projects = [
     },
     {
         "id": 12,
+        "name": "Worksheet Reader",
+        "link": "https://ericnunes0.pythonanywhere.com/worksheet-reader/",
+        "color": "#25db68",
+        "icon": "images/projects/worksheet/icon.png",
+        "image": "images/projects/worksheet/image(0).png",
+        "languages": ["HTML", "CSS", "JavaScript", "Bootstrap", "jQuery", "Python"],
+        "repositorie": "https://github.com/EricNunes0/Word-Scrapper.git",
+        "post": "https://www.linkedin.com/posts/eric-nunes-ramalho-58a146208_html-css-js-activity-7117675387270160384-V0yZ?utm_source=share&utm_medium=member_desktop",
+        "description": `
+            Este projeto é o "Worksheet Reader". Seu objetivo é bem simples: ser capaz de ler planilhas de Excel e exibí-las em formato de tabela.
+            <br></br>
+            Minha inspiração para este projeto veio das aulas de Big Data em Python na faculdade, onde tive a oportunidade de conhecer o "pandas", uma biblioteca de software criada para Python para manipulação e análise de dados. Me interessei tanto pela praticidade da biblioteca que fiquei animado para experimentá-la em um site web, e foi daí que surgiu a ideia do Worksheet Reader.
+            <br></br>
+            Sobre o projeto em si, o usuário pode selecionar arquivos de planilhas de 5 extensões:<br>
+            • .xls: planilhas do Excel 97 ao 2003;<br>
+            • .xlsx: planilhas do Excel atual;<br>
+            • .xlsm: planilhas para macros;<br>
+            • .xlsb: planilhas binárias;<br>
+            • .csv: arquivos de textos separador por vírgulas ( , ) ou ponto e vírgula ( ; );
+            <br></br>
+            Como adicional, decidi implementar dois tipos de customizações para as planilhas: limite de linhas e delimitador (separador apenas para os arquivos .csv); O usuário pode determinar quantas linhas da planilha serão retornados para a tabela (entre 1 e 999 linhas). Quanto ao delimitador, este apenas é válido para os arquivos .csv. Visto que estes arquivos podem ser separados tanto por vírgulas quanto por ponto e vírgula, o usuário pode selecionar qual separador foi utilizado naquele arquivo, evitando que estes arquivos sejam interpretados de modo incorreto pelo pandas.            
+            <br>
+            Além da ideia principal, decidi implementar um cenário animado que muda de cor de acordo com a posição do mouse na tela, e fiquei bastante satisfeito com o resultado final, arrisco dizer que foi o background mais bonito que desenvolvi até hoje :).
+            <br>
+            Com este projeto pude aprender bastante sobre manipulação de dados em planilhas, back-end, e Excel.
+        `
+    },
+    {
+        "id": 13,
         "name": "Login Node",
         "link": "https://login-node.cyclic.app/",
         "color": "#ff8030",
         "icon": "images/projects/login/icon.png",
         "image": "images/projects/login/image(0).png",
-        "languages": ["HTML", "CSS", "JavaScript", "Tailwind", "Node.js", "EJS", "SQLite"],
+        "languages": ["HTML", "CSS", "JavaScript", "Tailwind", "Node.js", "EJS", "MySQL"],
         "repositorie": "https://github.com/EricNunes0/Login",
+        "post": "https://www.linkedin.com/posts/eric-nunes-ramalho-58a146208_html-css-javascript-activity-7126711300843352064-gsmT?utm_source=share&utm_medium=member_desktop",
         "description": `
             O Login Node é um projeto criado para ampliar meus conhecimentos em back-end com Node.js. Trata-se de uma aplicação com o sistema de cadastro e login, onde o usuário pode fazer seu cadastro e suas informações são enviadas para o banco de dados SQLite, permitindo que o mesmo possa fazer seu login em seguida.
             <br></br>
@@ -325,11 +363,42 @@ const projects = [
             <br>
             • Aplicação do EJS (Embedded JavaScript templating), uma linguagem que permite gerar marcação HTML com JavaScript simples;
             <br>
-            • Conexão com banco de dados SQLite;
+            • Criação e gerenciamentos de cookies no navegador do usuário, o que permite que o usuário possa acessar a tela final diretamente caso tenha feito o login anteriormente;
+            <br>
+            • Conexão com banco de dados MySQL;
             <br>
             • Criação e gerenciamentos de cookies no navegador do usuário, o que permite que o usuário possa acessar a tela final diretamente caso tenha feito o login anteriormente;
             <br>
-            • Este foi o primeiro projeto que tive contato com Tailwind CSS;
+            • Conexão com API do Google usando Password.js e passport-google-oauth2. Com isto, o usuário pode realizar o login usando sua conta do Google;
+            <br>
+            • Uso de Tailwind CSS;
+            <br>
+            • Na página home, você pode conferir as informações da sua conta (exceto senha) e sua foto de perfil;
+            <br>
+            • Você pode alterar sua foto de perfil e deixar seu perfil com a sua cara :D. O projeto permite que o usuário selecione um arquivo de imagem de seu dispositivo, recorte-o da maneira de preferir e salve como foto de perfil. Ademais, também é possível remover a foto de perfil caso desejado;
+        `
+    },
+    {
+        "id": 14,
+        "name": "Turtle Quest",
+        "link": "https://turtle-game.vercel.app/",
+        "color": "#ff8030",
+        "icon": "images/projects/turtle/icon.png",
+        "image": "images/projects/turtle/image(0).png",
+        "languages": ["HTML", "CSS", "JavaScript", "Python", "Tkinter", "Turtle Graphics"],
+        "repositorie": "https://github.com/EricNunes0/Login",
+        "description": `
+            O Turtle Quest é um mini-game desenvolvido em Python utilizando a biblioteca Turtle Graphics, usada para fazer desenhos vetoriais através de programação. Este projeto inclui não apenas o jogo em si, como também seu site desenvolvido para instalá-lo. Seu objetivo é coletar 20 maçãs e obter a senha.
+            <br></br>
+            Destaques:
+            <br>
+            • Feito em Python (Turtle Graphics);
+            <br>
+            • Site feito puramente com HTML, CSS e JavaScript;
+            <br>
+            • Animações de VHS e anos 80 feitas apenas com CSS e JavaScript;
+            <br>
+            • Música de fundo;
         `
     }
 ];

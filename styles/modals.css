@@ -292,13 +292,14 @@
 
 .modal-links {
     display: block;
-    width: 175px;
+    width: 150px;
     text-align: center;
     text-decoration: none;
-    font-size: 16px;
-    padding: 8px;
+    font-size: 12px;
+    padding: 5px;
     border-radius: 25px;
     transition: all 0.3s;
+    text-wrap: nowrap;
 }
 .modal-links:hover {
     transform: scale(1.03);
@@ -319,6 +320,10 @@
 .modal-links[class~="dark"]:hover {
     background-color: #a0b0ff;
     color: #fff;
+}
+
+.modal-links[class~="hide"] {
+    display: none;
 }
 
 @media screen and (max-width: 768px) {
@@ -383,7 +388,7 @@
     }
 
     #modal-description {
-        font-size: 18px;
+        font-size: 12px;
         width: 95%;
         text-align: justify;
         margin: auto;
@@ -395,6 +400,6 @@
     }
     
     .modal-links {
-        font-size: 16px;
+        font-size: 10px;
     }
 }
