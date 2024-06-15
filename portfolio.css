@@ -12,8 +12,8 @@
     --reveal-text-timing: ease-out;
     --separator-color: #909090;
     --curriculum-color-light: #3050a0;
-    --image-asteroide-width: 40px;
-    --image-asteroide-height: 40px;
+    --image-asteroide-width: 30px;
+    --image-asteroide-height: 30px;
     --image-asteroide-margin: 10px;
     --github-button-color: rgba(12, 44, 60, 1);
     --linkedin-button-color: rgba(15, 120, 170, 1);
@@ -55,6 +55,12 @@ img {
 button:hover {
     cursor: pointer;
     filter: brightness(0.9);
+}
+
+.display-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Página de portfolio*/
@@ -124,11 +130,22 @@ button:hover {
     }
 }
 
-/* Lua do cenário */
-#scenary-moon {
+/* Botão da lua do cenário */
+#scenary-moon-button {
     position: absolute;
     top: 75vh;
     left: 15%;
+    width: var(--moon-width);
+    height: var(--moon-height);
+    animation: ScenaryMoon 40s linear infinite;
+    background-color: transparent;
+    border: unset;
+    border-radius: 50%;
+    filter: brightness(0.9) drop-shadow(0px 0px 1rem #a0a0a0);
+}
+
+/* Lua do cenário */
+#scenary-moon {
     width: var(--moon-width);
     height: var(--moon-height);
     animation: ScenaryMoon 40s linear infinite;
@@ -255,27 +272,23 @@ button:hover {
 
 /* Textos dos botões da barra de navegação */
 .nav-buttons-li {
-    background-size: 100% 1px;
-    background-position: 0 19px;
+    background-size: 0% 2px;
+    background-position: 0 21px;
     background-repeat: no-repeat;
     font-size: 16px;
     transition: all 0.3s;
     border-radius: 5px;
 }
-.nav-buttons-li[class~="light"]:hover {
-    background-image: linear-gradient(90deg, #404040, #3060ff);
+.nav-buttons:hover > .nav-buttons-li[class~="light"] {
+    background-image: linear-gradient(90deg, #404040, #404040);
 }
-.nav-buttons-li[class~="dark"]:hover {
-    background-image: linear-gradient(90deg, #d0d0d0, #3060ff);
+.nav-buttons:hover > .nav-buttons-li[class~="dark"] {
+    background-image: linear-gradient(90deg, #d0d0d0, #d0d0d0);
 }
 
 .nav-buttons-li:hover {
-    animation: NavButtonLi 0.25s ease-in;
-}
-@keyframes NavButtonLi {
-    0% {
-        background-size: 0% 1px;
-    }
+    background-size: 100% 2px;
+    transition: all 0.3s;
 }
 
 .theme-button-div {
@@ -301,6 +314,11 @@ button:hover {
     height: 100%;
     background-color: transparent;
     border: none;
+    transition: all 0.3s;
+}
+.theme-buttons:hover {
+    filter: brightness(1.1) drop-shadow(0px 0px 1px rgba(255, 255, 255, 0.5));
+    transform: scale(1.1);
 }
 
 /* Ícones dos botões de trocar tema */
@@ -374,8 +392,9 @@ button:hover {
 /* Título do portfolio */
 .header-titles {
     font-family: "Poppins";
-    font-size: 40px;
+    font-size: 32px;
     font-weight: bold;
+    margin: 0;
     text-align: center;
     transition: all 0.3s;
 }
@@ -399,11 +418,12 @@ button:hover {
 /* Nome do portfolio */
 .header-names {
     font-family: "Poppins";
-    font-size: 70px;
+    font-size: 60px;
     font-weight: bold;
     text-align: center;
     background-size: 400%;
     background-clip: text;
+    margin: 0;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: introName 8s cubic-bezier(0, 0, 1, 1) 0.1s infinite;
@@ -425,27 +445,6 @@ button:hover {
     }
 }
 
-/* Sessão da descrição do portfolio */
-#header-description-section {
-    display: block;
-    min-height: 64px;
-}
-
-/* Descrição do portfolio */
-.header-descriptions {
-    text-align: center;
-    font-family: "Poppins";
-    font-size: 14pt;
-    margin: 5px 0;
-    transition: all 0.3s;
-}
-.header-descriptions.light {
-    color: #222;
-}
-.header-descriptions.dark {
-    color: #fff;
-}
-
 /* Sessão do code do portfolio */
 #header-code-section {
     display: block;
@@ -458,16 +457,14 @@ button:hover {
     font-family: "Poppins";
     font-size: 14pt;
     font-weight: bold;
-    margin: 15px 0;
+    margin: 10px 0;
     transition: all 0.3s;
 }
-
 .header-codes.light {
     color: #202020;
 }
-
 .header-codes.dark {
-    color: #c0c0c0;
+    color: #d0d0d0;
 }
 
 /* Área de contatos da barra de navegação */
@@ -535,7 +532,7 @@ button:hover {
     font-size: 12pt;
     font-weight: 600;
     border: 0px solid;
-    border-radius: 20px;
+    border-radius: 7.5px;
     transition: all 0.3s;
 }
 .portfolio-intro-buttons:hover {
@@ -1726,6 +1723,11 @@ button:hover {
     animation-name: projectLinksAnimation, backgroundChange14;
 }
 
+.project-links#project-link-15 {
+    background-image: url("images/projects/w4schools/image(0).png");
+    animation-name: projectLinksAnimation, backgroundChange15;
+}
+
 @keyframes backgroundChange0 {
     0%, 100% {
         background-image: url("images/projects/janny/img_janny\(0\).png");
@@ -1870,6 +1872,15 @@ button:hover {
     }
     67% {
         background-image: url("images/projects/turtle/image(2).png");
+    }
+}
+
+@keyframes backgroundChange15 {
+    33% {
+        background-image: url("images/projects/w4schools/image(1).png");
+    }
+    67% {
+        background-image: url("images/projects/w4schools/image(2).png");
     }
 }
 
@@ -2203,7 +2214,7 @@ button:hover {
         width: 100%;
         height: 50px;
         background-color: transparent;
-        font-size: 24pt;
+        font-size: 24px;
         font-family: "Poppins";
         font-weight: lighter;
         text-decoration: none;
@@ -2236,6 +2247,7 @@ button:hover {
         justify-content: center;
         align-items: center;
         margin-top: 3rem;
+        margin-bottom: 3rem;
     }
 
     .header-descriptions {
@@ -2247,7 +2259,7 @@ button:hover {
     }
 
     .intro-image {
-        width: 80vw;
+        width: 50vw;
     }
 
     .knowledges-divs {

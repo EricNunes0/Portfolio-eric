@@ -2,7 +2,7 @@ const headerName = document.querySelector("#header-name");
 
 const types = [
     {
-        "texts": ["Olá, eu sou o"],
+        "texts": ["Olá, meu nome é"],
         "query": "#header-title",
         "delay": 0,
         "interval": 0.05
@@ -14,19 +14,9 @@ const types = [
         "interval": 0.15
     },
     {
-        "texts": [
-            "e estou procurando a minha",
-            "primeira vaga de estágio/emprego",
-            "como programador!"
-        ],
-        "query": "#header-description",
-        "delay": 3,
-        "interval": 0.04
-    },
-    {
         "texts": ["Desenvolvedor Web"],
         "query": "#header-code",
-        "delay": 6.3,
+        "delay": 3,
         "interval": 0.06
     }
 ];

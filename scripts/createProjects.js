@@ -400,6 +400,33 @@ const projects = [
             <br>
             • Música de fundo;
         `
+    },
+    {
+        "id": 15,
+        "name": "W4Schools",
+        "link": "https://w4schools.vercel.app/",
+        "color": "#2090c0",
+        "icon": "images/projects/w4schools/icon.png",
+        "image": "images/projects/w4schools/image(0).png",
+        "languages": ["HTML", "CSS", "JavaScript", "React", "CSS-in-JS"],
+        "repositorie": "https://github.com/EricNunes0/W4Schools",
+        "description": `
+            O W4Schools é um projeto criado como uma forma de aprendizado e treino, replicando o site W3School que visa ensinar sobre desenvolvimento web para desenvolvedores do mundo inteiro. Este projeto não possui nenhum fim lucrativo, é usado apenas como uma forma de consolidar meu próprio conhecimento, revisitando conceitos simples e complexos do HTML para replicar as páginas do W3Schools. Ao replicar estas páginas, estarei revisando e reforçando minhas habilidades, aprendendo conceitos novos e técnicas de desenvolvimento web, desde a criação de um layout responsivo até a implementação de funcionalidades interativas.
+            <br></br>
+            Destaques:
+            <br>
+            • Tutorial completo de HTML traduzido para português;
+            <br>
+            • Explicações de tags e atributos do HTML;
+            <br>
+            • Exemplos de códigos HTML;
+            <br>
+            • Exercícios para revisar o conteúdo;
+            <br>
+            • Referências de tags/atributos;
+            <br>
+            • Suporte dos navegadores para tags/atributos.
+        `
     }
 ];
 

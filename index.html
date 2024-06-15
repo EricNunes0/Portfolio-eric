@@ -87,7 +87,7 @@
             <nav class = "portfolio-nav light" id = "header-nav">
                 <div class = "portfolio-nav-flex">
                     <div class = "theme-button-div">
-                        <button type = "button" class = "theme-buttons light" id = "theme-button" onclick = "changePageTheme()">
+                        <button type = "button" class = "theme-buttons light" id = "theme-button" title="Altere o tema da página" onclick = "changePageTheme()">
                             <div class = "theme-buttons-icons light">
                                 <svg class = "theme-icons" id = "sun-icon" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" xmlns:bx="https://boxy-svg.com">
                                     <defs></defs>
@@ -113,11 +113,21 @@
                     <div class = "portfolio-abas-div">
                         <div class = "portfolio-abas">
                             <ul class = "portfolio-abas-list">
-                                <button type = "button" onclick = "scrollScreenTo(`header`)" class = "nav-buttons light"><li class = "nav-buttons-li light">Início</li></button>
-                                <button type = "button" onclick = "scrollScreenTo(`aboutme`)" class = "nav-buttons light"><li class = "nav-buttons-li light">Sobre</li></button>
-                                <button type = "button" onclick = "scrollScreenTo(`knowledges`)" class = "nav-buttons light"><li class = "nav-buttons-li light">Conhecimentos</li></button>
-                                <button type = "button" onclick = "scrollScreenTo(`projects`)" class = "nav-buttons light"><li class = "nav-buttons-li light">Projetos</li></button>
-                                <button type = "button" onclick = "scrollScreenTo(`contacts`)" class = "nav-buttons light"><li class = "nav-buttons-li light">Contato</li></button>
+                                <button type = "button" onclick = "scrollScreenTo(`header`)" class = "nav-buttons light">
+                                    <li class = "nav-buttons-li light">Início</li>
+                                </button>
+                                <button type = "button" onclick = "scrollScreenTo(`aboutme`)" class = "nav-buttons light">
+                                    <li class = "nav-buttons-li light">Sobre</li>
+                                </button>
+                                <button type = "button" onclick = "scrollScreenTo(`knowledges`)" class = "nav-buttons light">
+                                    <li class = "nav-buttons-li light">Conhecimentos</li>
+                                </button>
+                                <button type = "button" onclick = "scrollScreenTo(`projects`)" class = "nav-buttons light">
+                                    <li class = "nav-buttons-li light">Projetos</li>
+                                </button>
+                                <button type = "button" onclick = "scrollScreenTo(`contacts`)" class = "nav-buttons light">
+                                    <li class = "nav-buttons-li light">Contato</li>
+                                </button>
                             </ul>
                         </div>
                         <div class = "portfolio-768px">
@@ -173,7 +183,6 @@
                 <div id = "background"></div>
                 <div id = "portfolio-scenary">
                     <img id = "scenary-earth" src = "images/img_planet.png" alt = "Earth"></img>
-                    <img id = "scenary-moon" src = "images/img_moon.png" alt = "Moon"></img>
                     <img id = "scenary-satelite" src = "images/img_satelite.png" alt = "Satelite"></img>
                     <div class = "arrow-div">
                         <img class = "arrow-image light" src = "images/img_arrow.png">
@@ -186,9 +195,6 @@
                         </section>
                         <section id = "header-name-section">
                             <h1 class = "header-names light" id = "header-name"></h1>
-                        </section>
-                        <section id = "header-description-section">
-                            <p class = "header-descriptions light" id = "header-description"></p>
                         </section>
                         <section id = "header-code-section">
                             <p class = "header-codes light" id = "header-code"></p>
@@ -208,6 +214,9 @@
                             </a>
                         </section>
                     </div>
+                    <button class="display-flex" id = "scenary-moon-button">
+                        <img id = "scenary-moon" src = "images/img_moon.png" alt = "Moon"></img>
+                    </button>
                 </div>
             </div>
             <div class = "portfolio-aboutme light" id = "portfolio-aboutme-header">
@@ -253,7 +262,10 @@
                                             </div>
                                         </div>
                                         <div class = "aboutme-text-divs">
-                                            <p class = "aboutme-texts light">Olá, meu nome é Eric Nunes Ramalho. Sou um jovem de 19 anos, natural do Rio de Janeiro, Brasil, estudante do curso de Análise e Desenvolvimento de Sistemas na Universidade Estácio de Sá.</p>
+                                            <p class = "aboutme-texts light" id="aboutme-who"></p>
+                                            <script>
+                                                document.querySelector("#aboutme-who").innerHTML = `Olá, meu nome é Eric Nunes Ramalho. Sou um jovem de ${new Date().getFullYear() - new Date("2004-05-26").getFullYear()} anos, natural do Rio de Janeiro, Brasil, estudante do curso de Análise e Desenvolvimento de Sistemas na Universidade Estácio de Sá.`;
+                                            </script>
                                         </div>
                                     </div>
                                     <div class = "aboutme-divs">

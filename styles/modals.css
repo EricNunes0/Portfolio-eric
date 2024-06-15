@@ -211,8 +211,8 @@
     pointer-events: all;
     position: relative;
     top: 0px;
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
     animation: ModalLangsHover 1s ease-in-out infinite;
     transition: all 0.3s;
 }
@@ -400,6 +400,6 @@
     }
     
     .modal-links {
-        font-size: 10px;
+        font-size: 12px;
     }
 }
