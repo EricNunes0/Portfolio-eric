@@ -122,6 +122,9 @@
                                 <button type = "button" onclick = "scrollScreenTo(`knowledges`)" class = "nav-buttons light">
                                     <li class = "nav-buttons-li light">Conhecimentos</li>
                                 </button>
+                                <button type = "button" onclick = "scrollScreenTo(`experience`)" class = "nav-buttons light">
+                                    <li class = "nav-buttons-li light">Experiência</li>
+                                </button>
                                 <button type = "button" onclick = "scrollScreenTo(`projects`)" class = "nav-buttons light">
                                     <li class = "nav-buttons-li light">Projetos</li>
                                 </button>
@@ -150,7 +153,7 @@
                             </a>
                         </div>
                         <div class = "contact-area">
-                            <a class = "contact-links" href = "https://wa.me/5521987283053" target="_blank">
+                            <a class = "contact-links" href = "https://wa.me/5521982990522" target="_blank">
                                 <img class = "header-contacts-images" src = "images/contacts/img_whatsapp.png"/>
                             </a>
                         </div>
@@ -168,6 +171,7 @@
                         <button type = "button" class = "mobile-nav-buttons light" onclick = "scrollScreenTo(`header`)">Início</button>
                         <button type = "button" class = "mobile-nav-buttons light" onclick = "scrollScreenTo(`aboutme`)">Sobre</button>
                         <button type = "button" class = "mobile-nav-buttons light" onclick = "scrollScreenTo(`knowledges`)">Conhecimentos</button>
+                        <button type = "button" class = "mobile-nav-buttons light" onclick = "scrollScreenTo(`experience`)">Experiência</button>
                         <button type = "button" class = "mobile-nav-buttons light" onclick = "scrollScreenTo(`projects`)">Projetos</button>
                         <button type = "button" class = "mobile-nav-buttons light" onclick = "scrollScreenTo(`contacts`)">Contato</button>
                         <button type = "button" class = "mobile-nav-buttons light" id = "menu-theme-button" onclick = "changePageTheme()">
@@ -699,6 +703,91 @@
                     </div>
                 </div>
             </div>
+            <div class = "portfolio-experiences light" id = "portfolio-experiences-header">
+                <a name = "experience"></a>
+                <h1 class = "portfolio-projects-title light" id = "projects-title">Experiência</h1>
+                <p class = "projects-main-descriptions light" id = "projects-main-description">Veja toda a minha experiência profissional</p>
+                <main id="experiences-main">
+                    <div id="experiences-left"></div>
+                    <div id="experiences-center">
+                    </div>
+                    <div id="experiences-right"></div>
+                </main>
+                <script>
+                    const experiencesLeft = document.querySelector("#experiences-left");
+                    const experiencesCenter = document.querySelector("#experiences-center");
+                    const experiencesRight = document.querySelector("#experiences-right");
+
+                    const experiences = [
+                        {
+                            title: "Aprendiz de Auxiliar de Logística",
+                            date: "02/2024 - Presente",
+                            icon: "images/experiences/transriver.png",
+                            company: "Transriver",
+                            description: "Obtive experiência como analista de licitação, onde pude entender desde os conceitos fundamentais de licitações, até a participação ativa nas mesmas. Minhas atividades incluiam a pesquisa por editais, controle de certidões e separação de documentos editalicios, lances e pesquisa de preços. Ademais, trabalhei com Corel Draw para edição de adesivos e uma máquina de recorte eletrônico Mimaki."
+                        }
+                    ]
+                    
+                    for(const experience of experiences) {
+                        /* Left */
+                        let newLeftSeparator = document.createElement("div");
+                        newLeftSeparator.className = "experiences-left-separators";
+                        
+                        let newLeftTitle = document.createElement("h3");
+                        newLeftTitle.textContent = experience.title;
+                        newLeftTitle.className = "experiences-titles light";
+                        
+                        let newLeftDate = document.createElement("h6");
+                        newLeftDate.textContent = experience.date;
+                        newLeftDate.className = "experiences-dates light";
+
+                        newLeftSeparator.appendChild(newLeftTitle);
+                        newLeftSeparator.appendChild(newLeftDate);
+
+                        /* Center */
+                        let newCenterIconDiv = document.createElement("div");
+                        newCenterIconDiv.className = "experiences-icon-divs light";
+
+                        let newCenterIcon = document.createElement("img");
+                        newCenterIcon.className = "experiences-icons";
+                        newCenterIcon.src = experience.icon;
+                        newCenterIconDiv.appendChild(newCenterIcon);
+
+                        /* Right */
+                        let newRightSeparator = document.createElement("div");
+                        newRightSeparator.className = "experiences-right-separators";
+                        
+                        let newRightTitleMobile = document.createElement("h3");
+                        newRightTitleMobile.textContent = experience.title;
+                        newRightTitleMobile.className = "experiences-titles mobile light";
+                        
+                        let newRightCompany = document.createElement("h3");
+                        newRightCompany.textContent = experience.company;
+                        newRightCompany.className = "experiences-companies light";
+                        
+                        let newRightDescription = document.createElement("h6");
+                        newRightDescription.textContent = experience.description;
+                        newRightDescription.className = "experiences-descriptions light";
+
+                        newRightSeparator.appendChild(newRightTitleMobile);
+                        newRightSeparator.appendChild(newRightCompany);
+                        newRightSeparator.appendChild(newRightDescription);
+
+                        experiencesLeft.appendChild(newLeftSeparator);
+                        experiencesCenter.appendChild(newCenterIconDiv);
+                        
+                        if(experiences.indexOf(experience) < experiences.length - 1) {
+                            let newCenterProgress = document.createElement("div");
+                            newCenterProgress.className = "experiences-progress light";
+                            experiencesCenter.appendChild(newCenterProgress);
+                        }
+                        experiencesRight.appendChild(newRightSeparator);
+                    }
+                </script>
+                <div id = "portfolio-experiences-background">
+                    <div id="portfolio-experiences-background-light" style="position: absolute;bottom: 0;left: 2.5%;height: 2px;width: 95%;background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.5), rgba(187, 187, 187, 0.5));border-radius:10px;"></div>
+                </div>
+            </div>
             <div class = "portfolio-projects light" id = "portfolio-projects-header">
                 <a name = "projects"></a>
                 <div id = "portfolio-projects-background"></div>
@@ -725,7 +814,7 @@
                                 <script type = "text/javascript">
                                     CreateContact({query: `#contatos-list`, name: "LinkedIn", image: `svgs/contacts/linkedin.svg`, url: `https://www.linkedin.com/in/eric-nunes-ramalho-58a146208/`, username: "@EricNunes0"});
                                     CreateContact({query: `#contatos-list`, name: "Github", image: `svgs/contacts/github.svg`, url: `https://github.com/EricNunes0`, username: "@EricNunes0"});
-                                    CreateContact({query: `#contatos-list`, name: "Whatsapp", image: `svgs/contacts/whatsapp.svg`, url: `https://web.whatsapp.com/`, username: "(21) 98728-3053"});
+                                    CreateContact({query: `#contatos-list`, name: "Whatsapp", image: `svgs/contacts/whatsapp.svg`, url: `https://web.whatsapp.com/`, username: "(21) 98299-0522"});
                                     CreateContact({query: `#contatos-list`, name: "E-mail", image: `svgs/contacts/email.svg`, url: `mailto:eric26052004@gmail.com`, username: "eric26052004@gmail.com"});
                                 </script>
                             </ul>

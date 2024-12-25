@@ -4,6 +4,7 @@
 }
 
 :root {
+    --theme-light-color: #f0f0f0;
     --theme-dark-color: #050510;
     --nav-height: 50px;
     --font-color-categorie-0: #3060ff;
@@ -30,6 +31,7 @@
     --db-end-gradient: #f9cb28; /* Cor 2: data-base */
     --tools-start-gradient: #19b60b; /* Cor 1: data-base */
     --tools-end-gradient: #c1f928; /* Cor 2: data-base */
+    --experiences-separators-height: 200px; /* Altura para cada experiência */
 }
 
 html {
@@ -273,14 +275,15 @@ button:hover {
 /* Textos dos botões da barra de navegação */
 .nav-buttons-li {
     background-size: 0% 2px;
-    background-position: 0 21px;
+    background-position: 0 18px;
     background-repeat: no-repeat;
-    font-size: 16px;
+    font-size: 14px;
+    font-weight: bold;
     transition: all 0.3s;
     border-radius: 5px;
 }
 .nav-buttons:hover > .nav-buttons-li[class~="light"] {
-    background-image: linear-gradient(90deg, #404040, #404040);
+    background-image: linear-gradient(90deg, #000, #000);
 }
 .nav-buttons:hover > .nav-buttons-li[class~="dark"] {
     background-image: linear-gradient(90deg, #d0d0d0, #d0d0d0);
@@ -386,7 +389,7 @@ button:hover {
 /* Sessão do título do portfolio */
 #header-title-section {
     display: block;
-    min-height: 25px;
+    min-height: 40px;
 }
 
 /* Título do portfolio */
@@ -439,6 +442,10 @@ button:hover {
     background-image: linear-gradient(135deg, rgba(200, 200, 255, 1) 0%, rgb(80, 80, 160, 1) 50%, rgba(200, 200, 255, 1) 100%);
 }
 
+#header-name {
+    min-height: 75px;
+}
+
 @keyframes introName {
     to {
         background-position: 400%;
@@ -465,6 +472,10 @@ button:hover {
 }
 .header-codes.dark {
     color: #d0d0d0;
+}
+
+#header-code {
+    min-height: 35px;
 }
 
 /* Área de contatos da barra de navegação */
@@ -1506,6 +1517,168 @@ button:hover {
     color: #3060ff;
 }
 
+/* Aba de experiências */
+.portfolio-experiences {
+    position: relative;
+    padding: 8px;
+    transition: 0.3s all;
+}
+.portfolio-experiences.light {
+    background-color: var(--theme-light-color);
+}
+.portfolio-experiences.dark {
+    background-color: var(--theme-dark-color);
+}
+
+#portfolio-experiences-background {
+    pointer-events: none;
+    position: absolute;
+    z-index: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 200px;
+    opacity: 0;
+    transition: all 0.3s;
+}
+
+#experiences-main {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin: auto;
+}
+
+/* Experiências (lado esquerdo) */
+#experiences-left {
+    width: 35%;
+}
+
+.experiences-left-separators {
+    height: var(--experiences-separators-height);
+}
+
+.experiences-titles {
+    font-size: 20px;
+    font-family: "Poppins";
+    font-weight: bold;
+    text-align: right;
+    margin: 0;
+    transition: all 0.3s;
+}
+.experiences-titles.light {
+    color: #000;
+}
+.experiences-titles.dark {
+    color: #fff;
+}
+
+.experiences-titles[class~="mobile"] {
+    display: none;
+}
+
+.experiences-dates {
+    font-size: 16px;
+    font-family: "Poppins";
+    font-weight: bold;
+    text-align: right;
+    margin: 0;
+    margin-top: 10px;
+    transition: all 0.3s;
+}
+.experiences-dates.light {
+    color: #000;
+}
+.experiences-dates.dark {
+    color: #fff;
+}
+
+#experiences-center {
+    width: 5%;
+    min-width: 80px;
+}
+
+.experiences-progress {
+    position: relative;
+    width: 1px;
+    height: calc(var(--experiences-separators-height) - 50px);
+    margin: auto;
+    transition: all 0.3s ease;
+}
+.experiences-progress[class~="light"] {
+    background-color: #b0b0b0;
+}
+.experiences-progress[class~="dark"] {
+    background-color: #fff;
+}
+
+/* Ícones das logos das empresas */
+.experiences-icon-divs {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    padding: 5px;
+    border-radius: 10px;
+    transition: all 0.3s;
+}
+.experiences-icon-divs[class~="light"] {
+    background-color: #f0f0f0;
+    border: 1px solid #b0b0b0;
+}
+.experiences-icon-divs[class~="dark"] {
+    background-color: #404060;
+    border: 1px solid #202040;
+}
+
+.experiences-icons {
+    width: 25px;
+    height: 25px;
+    transition: all 0.3s;
+}
+
+#experiences-right {
+    width: 60%;
+}
+
+.experiences-right-separators {
+    height: var(--experiences-separators-height);
+}
+
+
+.experiences-companies {
+    font-size: 20px;
+    font-family: "Poppins";
+    font-weight: bold;
+    text-align: left;
+    margin: 0;
+    transition: all 0.3s;
+}
+.experiences-companies.light {
+    color: #000;
+}
+.experiences-companies.dark {
+    color: #fff;
+}
+
+.experiences-descriptions {
+    font-size: 14px;
+    font-family: "Poppins";
+    text-align: justify;
+    margin: 0;
+    margin-top: 10px;
+    transition: all 0.3s;
+}
+.experiences-descriptions.light {
+    color: #666;
+}
+.experiences-descriptions.dark {
+    color: #aaa;
+}
+
 /* Aba de projetos */
 .portfolio-projects {
     width: 100%;
@@ -2238,6 +2411,27 @@ button:hover {
 
     .knowledges-code-divs {
         width: 95%;
+    }
+
+    .experiences-main {
+        flex-direction: column;
+    }
+
+    #experiences-right {
+        width: 100%;
+    }
+
+    #experiences-left, #experiences-center {
+        display: none;
+    }
+
+    .experiences-titles[class~="mobile"] {
+        display: block;
+        text-align: left;
+    }
+
+    .experiences-companies {
+        font-size: 18px;
     }
 }
 
