@@ -1,0 +1,103 @@
+.theme-selector-div#desktop {
+    width: 20%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.theme-selector-div#mobile {
+    width: 50px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+    .theme-selector-div#desktop {
+        display: none;
+    }
+}
+
+#theme-selector-flex {
+    position: relative;
+    width: 50px;
+    height: 50px;
+}
+
+#theme-button {
+    background: none;
+    border: unset;
+    width: 50px;
+    height: 50px;
+}
+
+#theme-icon {
+    width: 100%;
+    height: 100%;
+}
+
+#theme-menu {
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.4);
+    box-sizing: border-box;
+    position: absolute;
+    top: 100%;
+    width: 190px;
+    padding: calc(10px / 2);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    gap: calc(10px / 2);
+    transition: all 0.3s ease;
+}
+#theme-menu[class~="closed"] {
+    display: none;
+}
+#theme-menu[class~="light"] {
+    background-color: var(--theme-light-color);
+}
+#theme-menu[class~="dark"] {
+    background-color: var(--theme-dark-color);
+}
+#theme-menu[class~="red"] {
+    background-color: var(--theme-red-color);
+}
+#theme-menu[class~="blue"] {
+    background-color: var(--theme-blue-color);
+}
+@media screen and (max-width: 768px) {
+    #theme-menu {
+        right: 0%;
+    }
+}
+
+.theme-options {
+    background-color: rgb(70, 70, 85);
+    width: 40px;
+    height: 40px;
+    border-style: solid;
+    border-width: 2px;
+    outline: rgb(70, 70, 85) 2px solid;
+}
+.theme-options[class~="light"] {
+    border-color: var(--theme-light-color);
+}
+.theme-options[class~="dark"] {
+    border-color: var(--theme-dark-color);
+}
+.theme-options[class~="red"] {
+    border-color: var(--theme-red-color);
+}
+.theme-options[class~="blue"] {
+    border-color: var(--theme-blue-color);
+}
+.theme-options:active, .theme-options:focus {
+    outline: rgb(70, 70, 85) 2px solid;
+}
+
+.theme-options-icons {
+    width: 100%;
+    height: 100%;
+}

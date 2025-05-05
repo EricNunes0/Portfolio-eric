@@ -1,0 +1,112 @@
+{
+    "html": {
+        "name": "HTML",
+        "image": "images/codes/img_html.png",
+        "icon": "svgs/code/html.svg"
+    },
+    "css": {
+        "name": "CSS",
+        "image": "images/codes/img_css.png",
+        "icon": "svgs/code/css.svg"
+    },
+    "js": {
+        "name": "JavaScript",
+        "image": "images/codes/img_js.png",
+        "icon": "svgs/code/js.svg"
+    },
+    "react": {
+        "name": "React",
+        "image": "images/codes/img_react.png",
+        "icon": "svgs/code/react.svg"
+    },
+    "bootstrap": {
+        "name": "Bootstrap",
+        "image": "images/codes/img_bootstrap.png",
+        "icon": "svgs/code/bootstrap.svg"
+    },
+    "jquery": {
+        "name": "jQuery",
+        "image": "images/codes/img_jquery.png",
+        "icon": "svgs/code/jquery.svg"
+    },
+    "sass": {
+        "name": "Sass",
+        "image": "images/codes/img_sass.png",
+        "icon": "svgs/code/sass.svg"
+    },
+    "css-in-js": {
+        "name": "CSS-in-JS",
+        "image": "images/codes/img_CssInJs.png",
+        "icon": "svgs/code/cssinjs.svg"
+    },
+    "tailwind": {
+        "name": "Tailwind",
+        "image": "images/codes/img_tailwind.png",
+        "icon": "svgs/code/tailwind.svg"
+    },
+    "nodejs": {
+        "name": "Node.js",
+        "image": "images/codes/img_nodejs.png",
+        "icon": "svgs/code/nodejs.svg"
+    },
+    "ejs": {
+        "name": "EJS",
+        "image": "images/codes/img_ejs.png",
+        "icon": "svgs/code/ejs.svg"
+    },
+    "php": {
+        "name": "PHP",
+        "image": "images/codes/img_php.png",
+        "icon": "svgs/code/php.svg"
+    },
+    "python": {
+        "name": "Python",
+        "image": "images/codes/img_python.png",
+        "icon": "svgs/code/python.svg"
+    },
+    "sqlite": {
+        "name": "SQLite",
+        "image": "images/codes/img_sqlite.png",
+        "icon": "svgs/code/sqlite.svg"
+    },
+    "mysql": {
+        "name": "MySQL",
+        "image": "images/codes/img_mysql.png",
+        "icon": "svgs/code/mysql.svg"
+    },
+    "postgresql": {
+        "name": "PostgreSQL",
+        "image": "images/codes/img_postgresql.png",
+        "icon": "svgs/code/postgresql.svg"
+    },
+    "vscode": {
+        "name": "VS Code",
+        "image": "images/codes/img_vscode.png",
+        "icon": "svgs/code/vscode.svg"
+    },
+    "git": {
+        "name": "Git",
+        "image": "images/codes/img_git.png",
+        "icon": "svgs/code/git.svg"
+    },
+    "github": {
+        "name": "Github",
+        "image": "images/codes/img_github.png",
+        "icon": "svgs/code/github.svg"
+    },
+    "figma": {
+        "name": "Figma",
+        "image": "images/codes/img_figma.png",
+        "icon": "svgs/code/figma.svg"
+    },
+    "tkinter": {
+        "name": "Tkinter",
+        "image": "images/codes/img_python.png",
+        "icon": "svgs/code/tkinter.svg"
+    },
+    "turtle-graphics": {
+        "name": "Turtle Graphics",
+        "image": "images/codes/img_python.png",
+        "icon": "svgs/code/turtle.svg"
+    }
+}

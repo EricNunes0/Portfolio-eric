@@ -1,0 +1,46 @@
+#scroll-up-container {
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+#scroll-up-button {
+    pointer-events: all;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 2rem;
+    bottom: 2rem;
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 5rem;
+    height: 5rem;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    opacity: 1;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 1rem;
+    transition: all 0.3s;
+}
+#scroll-up-button:hover {
+    transform: scale(1.05);
+}
+#scroll-up-button[class~="hidden"] {
+    opacity: 0;
+}
+
+#arrow-scroll-up-svg {
+    pointer-events: none;
+    width: 30px;
+    height: 30px;
+    filter: invert(0);
+    animation: ArrowScrollUpSVG 1s ease-in-out infinite;
+}
+
+@keyframes ArrowScrollUpSVG {
+    50% {
+        transform: translateY(-3px);
+    }
+}

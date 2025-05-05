@@ -1,0 +1,401 @@
+#modal-container {
+    pointer-events: none;
+    position: fixed;
+    z-index: 3;
+    width: 100vw;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10vh 0;
+    opacity: 1;
+    transition: all 0.3s;
+}
+#modal-container[class~="hide"] {
+    transform: scale(0);
+    opacity: 0;
+}
+
+#modal-area {
+    pointer-events: all;
+    width: 80%;
+    height: 100%;
+    display: flex;
+    max-width: 1000px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 5px;
+    transition: all 0.3s;
+}
+#modal-area[class~="light"] {
+    background-color: #f0f0f0;
+}
+#modal-area[class~="dark"] {
+    background-color: #101010;
+}
+#modal-area[class~="red"] {
+    background-color: #201010;
+}
+#modal-area[class~="blue"] {
+    background-color: #101020;
+}
+
+#modal-close-area {
+    position: relative;
+    width: 100%;
+}
+
+#modal-close-button {
+    background-color: #e0e0e0;
+    border: 1px solid #d0d0d0;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    margin: unset;
+    padding: unset;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+#modal-close-button[class~="dark"] {
+    background-color: #202020;
+    border: 1px solid #303030;
+}
+#modal-close-button[class~="red"] {
+    background-color: #402020;
+    border: 1px solid #503030;
+}
+#modal-close-button[class~="blue"] {
+    background-color: #202040;
+    border: 1px solid #303050;
+}
+#modal-close-button:hover {
+    transform: scale(1.1);
+}
+
+#modal-close-button-image {
+    width: 20px;
+    height: 20px;
+    transition: all 0.3s ease;
+}
+#modal-close-button-image[class~="light"] {
+    filter: invert(1);
+}
+
+#modal-header {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+#modal-icon {
+    width: 30px;
+    height: 30px;
+}
+
+#modal-main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    overflow: auto;
+}
+
+#modal-image {
+    height: 50%;
+    border-radius: 10px;
+    outline: 2px solid rgba(0, 0, 0, 0.5);
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 10px;
+}
+
+#modal-texts-div {
+    min-width: 150px;
+    width: 80%;
+    border-radius: 10px;
+}
+
+#modal-description-title {
+    font-family: "Poppins";
+    font-size: 14pt;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+#modal-description-title[class~="light"] {
+    color: #404040;
+}
+#modal-description-title[class~="dark"] {
+    color: #e0e0e0;
+}
+
+#modal-description {
+    width: 90%;
+    font-size: 10pt;
+    transition: all 0.3s;
+}
+#modal-description[class~="light"] {
+    color: #404040;
+}
+#modal-description[class~="dark"] {
+    color: #b0b0b0;
+}
+
+/* Linguagens */
+#modal-langs-div {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/* Linguagens */
+.modal-langs-divs {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Div dos ícones das linguagens */
+.modal-langs-icons-divs {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s;
+}
+.modal-langs-icons-divs[class~="running"]::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 6px;
+    height: 50px;
+    top: 90%;
+    left: calc(50% - calc(6px / 2));
+    background-image: linear-gradient(180deg, #f0f0f0a0, transparent);
+    border-radius: 50%;
+    box-shadow: rgba(255, 255, 255, 0.3) 0px 0px 3px;
+}
+
+/* Ícones das linguagens */
+.modal-langs {
+    pointer-events: all;
+    position: relative;
+    top: 0px;
+    width: 30px;
+    height: 30px;
+    transition: all 0.3s;
+}
+.modal-langs[class~="light"] {
+    filter: brightness(0) hue-rotate(0deg);
+}
+.modal-langs[class~="dark"] {
+    filter: brightness(10) hue-rotate(0deg);
+}
+.modal-langs[class~="red"] {
+    filter: brightness(1) hue-rotate(123deg) saturate(1.2);
+}
+.modal-langs[class~="blue"] {
+    filter: brightness(1) hue-rotate(0deg);
+}
+
+/* Divs dos nomes das linguagens */
+.modal-langs-names-divs {
+    pointer-events: none;
+    position: absolute;
+    top: 40px;
+    background-color: rgba(0, 0, 0, 0.75);
+    border-radius: 10px;
+    padding: 5px;
+    margin-top: 5px;
+    opacity: 1;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 3px;
+    transition: all 0.3s;
+}
+.modal-langs-names-divs[class~="hide"] {
+    transform: translateY(-20px) scale(0);
+    opacity: 0;
+}
+
+/* Nomes das linguagens */
+.modal-lang-names {
+    white-space: nowrap;
+    font-family: "Poppins";
+    font-family: 10pt;
+    transition: all 0.3s;
+}
+.modal-lang-names[class~="light"] {
+    color: #fff;
+}
+.modal-lang-names[class~="dark"] {
+    color: #fff;
+}
+
+@keyframes ModalLangFly {
+    40% {
+        transform: translate(0px, -100vh);
+    }
+    41%, 90% {
+        transform: translate(0px, -100vh) rotate(180deg);
+    }
+    90% {
+        transform: translate(0px, 50px) rotate(180deg);
+    }
+    95% {
+        transform: translate(0px, 50px) rotate(0deg);
+    }
+}
+
+#modal-footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+}
+
+#modal-main-link-div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.modal-links {
+    border-radius: 5px;
+    display: block;
+    width: 150px;
+    font-size: 12pt;
+    font-weight: 700;
+    padding: 5px;
+    text-align: center;
+    text-decoration: none;
+    text-wrap: nowrap;
+    transition: all 0.3s;
+}
+.modal-links:hover {
+    transform: scale(1.03);
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 5px;
+}
+.modal-links[class~="light"] {
+    color: #000;
+    border: 2px solid #000;
+}
+.modal-links[class~="light"]:hover {
+    background-color: #000;
+    color: #fff;
+}
+.modal-links[class~="dark"] {
+    color: #fff;
+    border: 2px solid #fff;
+}
+.modal-links[class~="dark"]:hover {
+    background-color: #fff;
+    color: #000;
+}
+.modal-links[class~="red"] {
+    color: #f02020;
+    border: 2px solid #f02020;
+}
+.modal-links[class~="red"]:hover {
+    background-color: #f02020;
+    color: #fff;
+}
+.modal-links[class~="blue"] {
+    color: #2020f0;
+    border: 2px solid #2020f0;
+}
+.modal-links[class~="blue"]:hover {
+    background-color: #2020f0;
+    color: #fff;
+}
+
+.modal-links[class~="hide"] {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    #modal-header {
+        height: 15%;
+    }
+
+    #modal-main {
+        flex-direction: column;
+        height: 70%;
+    }
+
+    #modal-image {
+        height: 50%;
+    }
+
+    #modal-texts-div {
+        width: 90%;
+        height: 50%;
+    }
+
+    .modal-links {
+        font-size: 8pt;
+        padding: 3px;
+    }
+
+    #modal-footer {
+        height: 15%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #modal-container {
+        height: 100vh;
+        margin: unset;
+    }
+
+    #modal-area {
+        width: 100%;
+        height: 100%;
+    }
+
+    #modal-title {
+        text-align: center;
+        font-size: 20px;
+    }
+
+    #modal-image-div {
+        width: 100%;
+    }
+
+    #modal-image {
+        max-width: 90%;
+        height: unset;
+    }
+
+    #modal-description {
+        font-size: 12px;
+        width: 95%;
+        text-align: justify;
+        margin: auto;
+    }
+
+    #modal-footer {
+        height: 150px;
+        padding: unset;
+    }
+    
+    .modal-links {
+        font-size: 12px;
+    }
+}

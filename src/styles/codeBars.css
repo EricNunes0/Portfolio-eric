@@ -1,0 +1,525 @@
+:root {
+    --board-color-light: #fff;
+    --board-color-dark: #282a36;
+    --board-width: 480px;
+    --board-height: 310px;
+    --board-header-height: 30px;
+    --board-header-border-color: #aaa;
+    --board-file-width: 80px;
+    --board-circles-width: 12px;
+    --board-circles-height: 12px;
+    --board-numbers-line-width: 25px;
+    --board-line-height: 25px;
+    --board-tab-width: 25px;
+}
+
+/* Boards de programação */
+.code-boards {
+    width: var(--board-width);
+    height: var(--board-height);
+    border-radius: 3px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 2rem;
+    transition: all 0.3s;
+    animation: CodeBoardsHover 3s ease-in-out infinite;
+}
+.code-boards[class~="light"] {
+    background-color: var(--board-color-light);
+}
+.code-boards[class~="dark"],
+.code-boards[class~="red"],
+.code-boards[class~="blue"] {
+    background-color: var(--board-color-dark);
+}
+
+/* Animação das boards de programação */
+@keyframes CodeBoardsHover {
+    50% {
+        transform: translateY(-3px);
+    }
+}
+
+/* Alinhar círculos e nome de arquivo */
+.board-header-flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+/* Alinhar divs dos círculos */
+.board-header-circle-divs {
+    width: 80px;
+    height: var(--board-header-height);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    border-right: 1px solid var(--board-header-border-color);
+    border-bottom: 1px solid var(--board-header-border-color);
+    border-bottom-right-radius: 3px;
+}
+
+/* Círculos das boards */
+.board-circles {
+    display: block;
+    width: var(--board-circles-width);
+    height: var(--board-circles-height);
+    border-radius: 50%;
+}
+.board-circles[class~="red"] {
+    background-color: #f04040;
+}
+.board-circles[class~="yellow"] {
+    background-color: #f0f040;
+}
+.board-circles[class~="green"] {
+    background-color: #40f040;
+}
+
+/* Div da div dos nomes dos arquivos */
+.board-header-filename-divs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: var(--board-header-height);
+}
+
+/* Divs de cada nome dos arquivos */
+.board-filename-buttons {
+    width: var(--board-file-width);
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: unset;
+    border-bottom: 1px solid var(--board-header-border-color);
+    transition: all 0.3s;
+    filter: brightness(0.9);
+}
+.board-filename-buttons[class~="light"] {
+    background-color: var(--board-color-light);
+}
+.board-filename-buttons[class~="dark"],
+.board-filename-buttons[class~="red"],
+.board-filename-buttons[class~="blue"] {
+    background-color: var(--board-color-dark);
+}
+.board-filename-buttons[class~="selected"] {
+    border-bottom: unset;
+    filter: unset;
+}
+
+/* Nome dos arquivos */
+.board-filenames {
+    font-size: 12px;
+    font-family: "Poppins";
+    transition: all 0.3s;
+}
+.board-filenames[class~="light"] {
+    color: #222;
+}
+.board-filenames[class~="dark"],
+.board-filenames[class~="red"],
+.board-filenames[class~="blue"] {
+    color: #eee;
+}
+
+/* Div vazia */
+.board-empty-divs {
+    display: block;
+    width: calc(var(--board-width) - calc(var(--board-file-width) * 4));
+    height: var(--board-header-height);
+    border-left: 1px solid var(--board-header-border-color);
+    border-bottom: 1px solid var(--board-header-border-color);
+    border-bottom-left-radius: 3px;
+}
+
+/*
+*
+* Principal
+*
+*/
+/* Corpo dos boards */
+.code-board-bodies {
+    width: 100%;
+    height: calc(var(--board-height) - var(--board-header-height));
+}
+
+/* Alinhar números e código */
+.board-body-flex {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+/* Barra com as linhas de números dos boards */
+.board-number-lines {
+    width: var(--board-numbers-line-width);
+    height: 100%;
+    transition: all 0.3s;
+}
+.board-number-lines[class~="light"] {
+    background-color: #f0f0f0;
+}
+.board-number-lines[class~="dark"] {
+    background-color: #282a36;
+}
+
+/* Div de cada número */
+.board-number-divs {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Números das linhas de código */
+.board-numbers {
+    color: #888;
+    font-size: 12pt;
+    font-family: "Poppins";
+    line-height: var(--board-line-height);
+    text-align: center;
+    margin: unset;
+}
+
+/*
+* Código
+*/
+
+/* Div da área de código */
+.board-code-div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+/* Os Códigos */
+.board-codes {
+    display: none;
+    width: 100%;
+    color: #000;
+    font-size: 12pt;
+    font-family: "Poppins";
+    line-height: var(--board-line-height);
+    margin-left: 5px;;
+}
+.board-codes[class~="show"] {
+    display: block;
+}
+@media screen and (max-width: 768px) {
+    .board-codes {
+        font-size: 8pt;
+    }
+}
+
+/* Principais spans dos Códigos */
+/*.board-code-main-spans {
+    background-color: #f0f040;
+}
+
+/* Span dos Códigos */
+.board-code-spans {
+    transition: all 0.3s;
+}
+.board-code-spans[class~="dark"] {
+    color: #fff;
+}
+
+/*
+Claro: Azul escuro
+Escuro: Rosa
+*/
+.board-code-span {
+    transition: all 0.3s;
+}
+.board-code-span[class~="italic"] {
+    font-style: italic;
+}
+
+/* Laranja - Preto */
+.board-code-span[class~="orange-black"] {
+    color: #f79f2e;
+}
+.board-code-span[class~="orange-black"][class~="dark"],
+.board-code-span[class~="orange-black"][class~="red"],
+.board-code-span[class~="orange-black"][class~="blue"] {
+    color: #000;
+}
+
+/* Laranja - Branco */
+.board-code-span[class~="orange-white"] {
+    color: #f79f2e;
+}
+.board-code-span[class~="orange-white"][class~="dark"],
+.board-code-span[class~="orange-white"][class~="red"],
+.board-code-span[class~="orange-white"][class~="blue"] {
+    color: #fff;
+}
+
+/* Ciano - Verde */
+.board-code-span[class~="cyan-green"] {
+    color: #73cfe6;
+}
+.board-code-span[class~="cyan-green"][class~="dark"],
+.board-code-span[class~="cyan-green"][class~="red"],
+.board-code-span[class~="cyan-green"][class~="blue"] {
+    color: #64f041;
+}
+
+/* Ciano - Ciano */
+.board-code-span[class~="cyan"] {
+    color: #73cfe6;
+}
+.board-code-span[class~="cyan"][class~="dark"],
+.board-code-span[class~="cyan"][class~="red"],
+.board-code-span[class~="cyan"][class~="blue"] {
+    color: #73cfe6;
+}
+
+/* Ciano - Azul */
+.board-code-span[class~="cyan-blue"] {
+    color: #73cfe6;
+}
+.board-code-span[class~="cyan-blue"][class~="dark"],
+.board-code-span[class~="cyan-blue"][class~="red"],
+.board-code-span[class~="cyan-blue"][class~="blue"] {
+    color: #3d71c4;
+}
+
+/* Ciano - Rosa */
+.board-code-span[class~="cyan-pink"] {
+    color: #73cfe6;
+}
+.board-code-span[class~="cyan-pink"][class~="dark"],
+.board-code-span[class~="cyan-pink"][class~="red"],
+.board-code-span[class~="cyan-pink"][class~="blue"] {
+    color: #f764c6;
+}
+
+/* Ciano - Roxo */
+.board-code-span[class~="cyan-purple"] {
+    color: #73cfe6;
+}
+.board-code-span[class~="cyan-purple"][class~="dark"],
+.board-code-span[class~="cyan-purple"][class~="red"],
+.board-code-span[class~="cyan-purple"][class~="blue"] {
+    color: #b583d4;
+}
+
+/* Ciano - Branco */
+.board-code-span[class~="cyan-white"] {
+    color: #73cfe6;
+}
+.board-code-span[class~="cyan-white"][class~="dark"],
+.board-code-span[class~="cyan-white"][class~="red"],
+.board-code-span[class~="cyan-white"][class~="blue"] {
+    color: #fff;
+}
+
+/* Marrom - Amarelo */
+.board-code-span[class~="brown-yellow"] {
+    color: #ab6443;
+}
+.board-code-span[class~="brown-yellow"][class~="dark"],
+.board-code-span[class~="brown-yellow"][class~="red"],
+.board-code-span[class~="brown-yellow"][class~="blue"] {
+    color: #f7f564;
+}
+
+/* Marrom - Verde */
+.board-code-span[class~="brown-green"] {
+    color: #ab6443;
+}
+.board-code-span[class~="brown-green"][class~="dark"],
+.board-code-span[class~="brown-green"][class~="red"],
+.board-code-span[class~="brown-green"][class~="blue"] {
+    color: #64f041;
+}
+
+/* Marrom - Rosa */
+.board-code-span[class~="brown-pink"] {
+    color: #ab6443;
+}
+.board-code-span[class~="brown-pink"][class~="dark"],
+.board-code-span[class~="brown-pink"][class~="red"],
+.board-code-span[class~="brown-pink"][class~="blue"] {
+    color: #f764c6;
+}
+
+/* CSS */
+.board-code-span[class~="yellow0"] {
+    color: #ffbc11;
+}
+.board-code-span[class~="yellow0"][class~="dark"],
+.board-code-span[class~="yellow0"][class~="red"],
+.board-code-span[class~="yellow0"][class~="blue"] {
+    color: #fff;
+}
+
+.board-code-span[class~="yellow1"] {
+    color: #bda568;
+}
+.board-code-span[class~="yellow1"][class~="dark"],
+.board-code-span[class~="yellow1"][class~="red"],
+.board-code-span[class~="yellow1"][class~="blue"] {
+    color: #f764c6;
+}
+
+.board-code-span[class~="yellow2"] {
+    color: #bda568;
+}
+.board-code-span[class~="yellow2"][class~="dark"],
+.board-code-span[class~="yellow2"][class~="red"],
+.board-code-span[class~="yellow2"][class~="blue"] {
+    color: #64f041;
+}
+
+
+/* Preto - Branco */
+.board-code-span[class~="black-white"] {
+    color: #000;
+}
+.board-code-span[class~="black-white"][class~="dark"],
+.board-code-span[class~="black-white"][class~="red"],
+.board-code-span[class~="black-white"][class~="blue"] {
+    color: #fff;
+}
+
+/* Preto - Laranja */
+.board-code-span[class~="black-orange"] {
+    color: #000;
+}
+.board-code-span[class~="black-orange"][class~="dark"],
+.board-code-span[class~="black-orange"][class~="red"],
+.board-code-span[class~="black-orange"][class~="blue"] {
+    color: #f79f2e;
+}
+
+/* Preto - Rosa */
+.board-code-span[class~="black-pink"] {
+    color: #000;
+}
+.board-code-span[class~="black-pink"][class~="dark"],
+.board-code-span[class~="black-pink"][class~="red"],
+.board-code-span[class~="black-pink"][class~="blue"] {
+    color: #f764c6;
+}
+
+/* Preto - Verde */
+.board-code-span[class~="black-green"] {
+    color: #000;
+}
+.board-code-span[class~="black-green"][class~="dark"],
+.board-code-span[class~="black-green"][class~="red"],
+.board-code-span[class~="black-green"][class~="blue"] {
+    color: #64f041;
+}
+
+/* Preto - Roxo */
+.board-code-span[class~="black-purple"] {
+    color: #000;
+}
+.board-code-span[class~="black-purple"][class~="dark"],
+.board-code-span[class~="black-purple"][class~="red"],
+.board-code-span[class~="black-purple"][class~="blue"] {
+    color: #b583d4;
+}
+
+
+.board-code-span[class~="yellow-green"] {
+    color: #f7f564;
+}
+.board-code-span[class~="yellow-green"][class~="dark"],
+.board-code-span[class~="yellow-green"][class~="red"],
+.board-code-span[class~="yellow-green"][class~="blue"] {
+    color: #64f041;
+}
+
+/* Verde - Laranja */
+.board-code-span[class~="green-orange"] {
+    color: #64f041;
+}
+.board-code-span[class~="green-orange"][class~="dark"],
+.board-code-span[class~="green-orange"][class~="red"],
+.board-code-span[class~="green-orange"][class~="blue"] {
+    color: #f79f2e;
+}
+
+/* Verde - Ciano */
+.board-code-span[class~="green-cyan"] {
+    color: #64f041;
+}
+.board-code-span[class~="green-cyan"][class~="dark"],
+.board-code-span[class~="green-cyan"][class~="red"],
+.board-code-span[class~="green-cyan"][class~="blue"] {
+    color: #73cfe6;
+}
+
+/* Verde - Roxo */
+.board-code-span[class~="green-purple"] {
+    color: #64f041;
+}
+.board-code-span[class~="green-purple"][class~="dark"],
+.board-code-span[class~="green-purple"][class~="red"],
+.board-code-span[class~="green-purple"][class~="blue"] {
+    color: #b583d4;
+}
+
+/* Azul - Rosa */
+.board-code-span[class~="blue-pink"] {
+    color: #3d71c4;
+}
+.board-code-span[class~="blue-pink"][class~="dark"],
+.board-code-span[class~="blue-pink"][class~="red"],
+.board-code-span[class~="blue-pink"][class~="blue"] {
+    color: #f764c6;
+}
+
+/* Azul - Roxo */
+.board-code-span[class~="blue-purple"] {
+    color: #3d71c4;
+}
+.board-code-span[class~="blue-purple"][class~="dark"],
+.board-code-span[class~="blue-purple"][class~="red"],
+.board-code-span[class~="blue-purple"][class~="blue"] {
+    color: #b583d4;
+}
+
+/* Roxo - Rosa */
+.board-code-span[class~="purple-pink"] {
+    color: #b583d4;
+}
+.board-code-span[class~="purple-pink"][class~="dark"],
+.board-code-span[class~="purple-pink"][class~="red"],
+.board-code-span[class~="purple-pink"][class~="blue"] {
+    color: #f764c6;
+}
+
+@media screen and (max-width: 480px) {
+    :root {    
+        --board-file-width: 42%;
+    }
+
+    .code-boards {
+        width: 95%;
+    }
+
+    .board-code-spans {
+        line-height: 21px;
+        font-size: 13px;
+    }
+}
+
+.code-row {
+    align-items: flex-start;
+    display: flex;
+    justify-content: flex-start;
+}

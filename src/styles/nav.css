@@ -1,0 +1,217 @@
+/* Div da barra de navegação */
+.nav-div {
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+}
+
+/* Barra de navegação do portfolio */
+.nav-desktop {
+    width: 100%;
+    height: var(--nav-height);
+    flex-direction: row;
+    transition: all 0.3s;
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.4);
+}
+.nav-desktop[class~="light"] {
+    background-color: var(--theme-light-color);
+}
+.nav-desktop[class~="dark"] {
+    background-color: var(--theme-dark-color);
+}
+.nav-desktop[class~="red"] {
+    background-color: var(--theme-red-color);
+}
+.nav-desktop[class~="blue"] {
+    background-color: var(--theme-blue-color);
+}
+
+/* Alinhar itens na barra de navegação */
+.nav-flex {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* Div das abas da barra de navegação */
+.nav-buttons-section {
+    height: 100%;
+}
+
+/* Abas da barra de navegação */
+.nav-buttons-div {
+    height: 100%;
+}
+
+/* Lista da barra de navegação */
+.nav-buttons-list {
+    height: 100%;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 0;
+    margin: 0;
+}
+
+/* Botões da barra de navegação */
+.nav-buttons {
+    background: none;
+    border: none;
+    color: #000;
+    text-decoration: none;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Poppins";
+    font-size: 14pt;
+}
+.nav-buttons[class~="dark"],
+.nav-buttons[class~="red"],
+.nav-buttons[class~="blue"] {
+    color: #fff;
+}
+.nav-buttons:hover {
+    background: none;
+}
+
+/* Textos dos botões da barra de navegação */
+.nav-buttons-li {
+    border-radius: 50px;
+    font-size: 14px;
+    padding: 8px;
+    transition: all 0.3s;
+}
+.nav-buttons:hover > .nav-buttons-li {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Mobile */
+.nav-mobile {
+    position: relative;
+    width: 100%;
+}
+
+.nav-header {
+    width: 100%;
+    height: var(--nav-height);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.nav-header[class~="light"] {
+    background-color: var(--theme-light-color);
+}
+.nav-header[class~="dark"] {
+    background-color: var(--theme-dark-color);
+}
+.nav-header[class~="red"] {
+    background-color: var(--theme-red-color);
+}
+.nav-header[class~="blue"] {
+    background-color: var(--theme-blue-color);
+}
+
+.nav-header-mobile-button {
+    background-color: transparent;
+    width: 75px;
+    height: 100%;
+    border-width: 0px;
+    transition: all 0.3s ease;
+}
+
+.nav-header-mobile-button-image {
+    width: 30px;
+    height: 30px;
+    transition: all 0.3s;
+}
+.nav-header-mobile-button-image[class~="light"] {
+    filter: brightness(0) hue-rotate(0deg);
+}
+.nav-header-mobile-button-image[class~="dark"],
+.nav-header-mobile-button-image[class~="red"],
+.nav-header-mobile-button-image[class~="blue"] {
+    filter: brightness(10) hue-rotate(0deg);
+}
+.nav-mobile-menu {
+    position: absolute;
+    z-index: -1;
+    top: calc(50px);
+    left: calc(50% - calc(300px / 2));
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.4);
+    margin: auto;
+}
+.nav-mobile-menu.closed {
+    top: -360px;
+}
+.nav-mobile-menu[class~="light"] {
+    background-color: var(--theme-light-color);
+}
+.nav-mobile-menu[class~="dark"] {
+    background-color: var(--theme-dark-color);
+}
+.nav-mobile-menu[class~="red"] {
+    background-color: var(--theme-red-color);
+}
+.nav-mobile-menu[class~="blue"] {
+    background-color: var(--theme-blue-color);
+}
+
+.nav-menu-list {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: auto;
+}
+
+.nav-menu-items {
+    width: 100%;
+    height: 60px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    font-size: 16pt;
+    font-family: "Poppins";
+    font-weight: 400;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+.nav-menu-items:last-child {
+    border-bottom: none;
+}
+.nav-menu-items[class~="light"] {
+    color: #000;
+}
+.nav-menu-items[class~="dark"] {
+    color: #fff;
+}
+
+@media screen and (min-width: 769px) {
+    .nav-header-mobile {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .nav-desktop, .contacts {
+        display: none;
+    }
+}

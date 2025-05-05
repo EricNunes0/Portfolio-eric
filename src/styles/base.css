@@ -1,0 +1,2164 @@
+:root {
+    --theme-light-color: #f0f0f0;
+    --theme-dark-color: #050505;
+    --theme-red-color: #f02020;
+    --theme-blue-color: #2020f0;
+    --nav-height: 50px;
+    --font-color-categorie-0: #3060ff;
+    --project-links-border-radius: 5px;
+    --reveal-text-duration: 0.3s;
+    --reveal-text-timing: ease-out;
+    --separator-color: #909090;
+    --image-asteroide-width: 20px;
+    --image-asteroide-height: 20px;
+    --image-asteroide-margin: 10px;
+    --github-button-color: rgba(12, 44, 60, 1);
+    --linkedin-button-color: rgba(15, 120, 170, 1);
+    --moon-width: 100px;
+    --moon-height: 100px;
+    --knowledges-icon-divs-width: 60px; /* Largura das divs dos ícones de conhecimentos */
+    --knowledges-icon-divs-height: 60px; /* Altura das divs dos ícones de conhecimentos */
+    --knowledges-icon-divs-after-height: 80px; /* Altura do after das divs dos ícones de conhecimentos */
+    --front-start-gradient: #007cf0; /* Cor 1: front-end */
+    --front-end-gradient: #00dfd8; /* Cor 2: front-end */
+    --back-start-gradient: #7928ca; /* Cor 1: back-end */
+    --back-end-gradient: #ff0080; /* Cor 2: back-end */
+    --db-start-gradient: #ff4d4d; /* Cor 1: data-base */
+    --db-end-gradient: #f9cb28; /* Cor 2: data-base */
+    --tools-start-gradient: #19b60b; /* Cor 1: data-base */
+    --tools-end-gradient: #c1f928; /* Cor 2: data-base */
+    --experiences-separators-height: 200px; /* Altura para cada experiência */
+}
+
+html {
+    overflow-x: hidden;
+}
+
+h1, h2, h3, a, p {
+    color: #fff;
+    margin: 0;
+    font-family: "Poppins";
+    text-decoration: none;
+}
+
+img {
+    pointer-events: none;
+    -webkit-user-drag: none;
+    user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+}
+
+button:hover {
+    cursor: pointer;
+    filter: brightness(0.9);
+}
+
+.display-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Página de portfolio*/
+.base {
+    margin: 0;
+    padding: 0;
+}
+
+/* Principal do portfólio */
+#portfolio-main {
+    filter: blur(0px);
+    transition: all 0.3s;
+}
+#portfolio-main[class~="blur"] {
+    filter: blur(2px);
+    pointer-events: none;
+}
+
+/* Header do portfólio */
+.portfolio-header {
+    position: relative;
+    height: 100vh;
+    transition: all 0.3s;
+}
+.portfolio-header[class~="light"] {
+    background-color: rgb(220, 220, 220);
+    background-image: linear-gradient(180deg, transparent, #f0f0f0);
+}
+.portfolio-header[class~="dark"] {
+    background-color: rgb(0, 0, 0);
+}
+.portfolio-header[class~="red"] {
+    background-color: rgb(20, 20, 20);
+    background-image: radial-gradient(ellipse at top, rgba(250, 0, 0, 0.3) 0%, rgba(20, 0, 0, 1) 90%);
+}
+.portfolio-header[class~="blue"] {
+    background-color: rgb(20, 20, 20);
+    background-image: radial-gradient(ellipse at top, rgba(0, 20, 150, 0.3) 0%, rgba(0, 0, 20, 1) 90%);
+}
+
+
+/* Cenário do header portfólio */
+#portfolio-scenary {
+    position: absolute;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+/* Terra do cenário */
+#scenary-earth {
+    position: absolute;
+    bottom: 75%;
+    width: 70vw;
+    transform: rotate(180deg);
+    border: 3px solid rgba(32, 84, 255, 0.8);
+    border-radius: 50%;
+    filter: brightness(1.2) saturate(1.2) drop-shadow(0px 0px 2rem #2090ff);
+    animation: ScenaryEarth 60s linear infinite;
+    transition: all 0.3s;
+}
+
+@media screen and (max-width: 780px) {
+    #scenary-earth {
+        bottom: 90%;
+    }
+}
+
+@keyframes ScenaryEarth {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Botão da lua do cenário */
+#scenary-moon-button {
+    position: absolute;
+    top: 75vh;
+    left: 15%;
+    width: var(--moon-width);
+    height: var(--moon-height);
+    animation: ScenaryMoon 40s linear infinite;
+    background-color: transparent;
+    border: unset;
+    border-radius: 50%;
+    filter: brightness(0.9) drop-shadow(0px 0px 1rem #a0a0a0);
+}
+
+/* Lua do cenário */
+#scenary-moon {
+    width: var(--moon-width);
+    height: var(--moon-height);
+    animation: ScenaryMoon 40s linear infinite;
+    filter: brightness(0.9) drop-shadow(0px 0px 1rem #a0a0a0);
+}
+
+@keyframes ScenaryMoon {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Satélite do cenário */
+#scenary-satelite {
+    position: absolute;
+    top: 25%;
+    left: 70%;
+    width: 20px;
+    height: 20px;
+    animation: ScenarySatelite 1.5s ease-in-out infinite;
+}
+
+@keyframes ScenarySatelite {
+    0%, 100% {
+        transform: rotate(180deg);
+    }
+    50% {
+        transform: rotate(180deg) translateY(-5px);
+    }
+}
+
+@keyframes HeaderAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+/* Introdução do portfolio */
+.portfolio-intro {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 2rem;
+}
+
+@media screen and (max-width: 800px) {
+    .portfolio-intro {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column-reverse;
+        align-self: center;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+    }
+}
+
+/* Sessão do título do portfolio */
+#header-title-section {
+    display: block;
+    min-height: 40px;
+}
+
+/* Área de contatos da barra de navegação */
+.contacts {
+    width: 20%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+
+@media screen and (max-width: 768px) {
+    .contacts {
+        display: none;
+    }
+}
+
+.contacts-areas {
+    transition: all 0.3s;
+}
+.contacts-areas:hover {
+    transform: translateY(-2px);
+}
+
+.contacts-links {
+    display: block;
+    height: fit-content;
+}
+
+.contacts-images {
+    width: 24px;
+    height: 24px;
+    transition: all 0.3s;
+}
+.contacts-images[class~="light"] {
+    filter: invert(1);
+}
+
+/* Sessão dos botões do portfolio */
+.intro-buttons-section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin: 8px 0;
+}
+
+/* Links dos botões */
+.button-links {
+    text-decoration: none;
+}
+
+/* Botões do portfolio */
+.intro-buttons {
+    background-color: transparent;
+    width: 8rem;
+    height: 2.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 12pt;
+    font-weight: 600;
+    border: 0px solid;
+    border-radius: 7.5px;
+    transition: all 0.3s;
+}
+.intro-buttons:hover {
+    transform: scale(1.1);
+}
+.intro-buttons[class~="light"] {
+    background-color: #000;
+    color: #fff;
+}
+.intro-buttons[class~="dark"] {
+    background-color: #fff;
+    color: #000;
+}
+.intro-buttons[class~="red"] {
+    background-color: #f02020;
+    color: #fff;
+}
+.intro-buttons[class~="blue"] {
+    background-color: #2020f0;
+    color: #fff;
+}
+
+/* Imagens dentro dos botões */
+.button-images {
+    width: 30px;
+    transition: all 0.3s;
+}
+.button-images#linkedin[class~="light"],
+.button-images#linkedin[class~="red"],
+.button-images#linkedin[class~="blue"] {
+    filter: grayscale(1) brightness(5);
+}
+.button-images#linkedin[class~="dark"] {
+    filter: grayscale(1) brightness(0);
+}
+.button-images#github[class~="light"],
+.button-images#github[class~="red"],
+.button-images#github[class~="blue"] {
+    filter: grayscale(1) brightness(8);
+}
+.button-images#github[class~="dark"] {
+    filter: grayscale(1) brightness(0);
+}
+
+/* Div da imagem do portfólio */
+.intro-image-div {
+    width: 49%;
+    max-width: 49%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+/* Link da imagem do portfólio */
+#intro-image-link {
+    position: relative;
+    border-radius: 50%;
+}
+
+/* Asteroide */
+.intro-image-asteroides {
+    pointer-events: none;
+    position: absolute;
+    top: calc(0% - var(--image-asteroide-height) - var(--image-asteroide-margin));
+    left: calc(50% - calc(var(--image-asteroide-width) / 2));
+    display: block;
+    width: calc(var(--image-asteroide-width));
+    height: calc(100% + calc(var(--image-asteroide-height) * 2) + calc(var(--image-asteroide-margin) * 2));
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation: Asteroide 20s linear infinite;
+    transition: all 0.3s ease;
+}
+.intro-image-asteroides[class~="light"] {
+    filter: brightness(0) hue-rotate(0deg);
+}
+.intro-image-asteroides[class~="dark"] {
+    filter: brightness(10) hue-rotate(0deg);
+}
+.intro-image-asteroides[class~="red"] {
+    filter: brightness(1) hue-rotate(123deg) saturate(1.2);
+}
+.intro-image-asteroides[class~="blue"] {
+    filter: brightness(1) hue-rotate(0deg);
+}
+.intro-image-asteroides::after {
+    pointer-events: all;
+    content: "";
+    display: block;
+    position: absolute;
+    width: var(--image-asteroide-width);
+    height: var(--image-asteroide-height);
+}
+.intro-image-asteroides::after:hover {
+    transform: scale(1.1);
+}
+@keyframes Asteroide {
+    0% {
+        rotate: 0deg;
+    }
+    100% {
+        rotate: 360deg;
+    }
+}
+
+/* Imagem do portfólio */
+.intro-image {
+    pointer-events: all;
+    border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 15px;
+    animation-name: portfolioImage;
+    animation-duration: 2s;
+    animation-timing-function: cubic-bezier(0, 0, 1, 1);
+    animation-iteration-count: infinite;
+    transition: all 0.3s;
+}
+.intro-image:hover {
+    transform: scale(1.05);
+}
+.intro-image[class~="light"] {
+    outline: 2px solid rgba(0, 0, 0);
+}
+.intro-image[class~="dark"] {
+    outline: 2px solid rgba(255, 255, 255);
+}
+.intro-image[class~="red"] {
+    outline: 2px solid rgba(255, 40, 40);
+}
+.intro-image[class~="blue"] {
+    outline: 2px solid rgba(40, 40, 255);
+}
+
+@keyframes portfolioImage {
+    0% {
+        border: 2px solid rgba(200, 200, 255);
+    }
+    50% {
+        border: 2px solid rgba(150, 150, 255);
+    }
+    100% {
+        border: 2px solid rgba(200, 200, 255);
+    }
+}
+
+@media screen and (min-width: 800px) {
+    /* Imagem do portfólio */
+    .intro-image {
+        width: 350px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    /* Imagem do portfólio */
+    .intro-image {
+        width: 250px;
+    }
+}
+
+/* Div da seta do header */
+.arrow-div {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Seta do header */
+.arrow-image {
+    width: 70px;
+    height: 45px;
+    transform: rotate(180deg);
+    animation-name: arrowAnimation;
+    animation-duration: 1.5s;
+    animation-timing-function: cubic-bezier(0, 0, 1, 1);
+    animation-iteration-count: infinite;
+    transition: all 0.3s;
+}
+.arrow-image[class~="light"] {
+    filter: invert(0.8) drop-shadow(0 0 8px rgba(0, 0, 0, 0.3));
+}
+.arrow-image[class~="dark"] {
+    filter: invert(0.2) drop-shadow(0 0 8px rgba(0, 0, 0, 0.3));
+}
+
+@keyframes arrowAnimation {
+    0% {
+        transform: rotate(180deg) translateY(20px);
+    }
+    30% {
+        transform: rotate(180deg) translateY(-10px);
+    }
+    100% {
+        transform: rotate(180deg) translateY(20px);
+    }
+}
+
+.title-div {
+    margin-top: 50px;
+    margin-bottom: 10px;
+}
+
+/* Títulos */
+.title1 {
+    font-size: 40pt;
+    font-weight: 700;
+    text-shadow: rgba(0, 0, 0, 0.5) 0px 0px 4px;
+    transition: all 0.3s;
+}
+
+.title2 {
+    font-size: 32pt;
+    font-weight: 700;
+    text-shadow: rgba(0, 0, 0, 0.5) 0px 0px 4px;
+    transition: all 0.3s;
+}
+
+.title3 {
+    font-size: 24pt;
+    font-weight: 700;
+    text-shadow: rgba(0, 0, 0, 0.5) 0px 0px 4px;
+    transition: all 0.3s;
+}
+
+.title4 {
+    font-size: 18pt;
+    font-weight: 700;
+    text-shadow: rgba(0, 0, 0, 0.5) 0px 0px 4px;
+    transition: all 0.3s;
+}
+
+.title5 {
+    font-size: 14pt;
+    font-weight: 400;
+    text-shadow: rgba(0, 0, 0, 0.5) 0px 0px 4px;
+    transition: all 0.3s;
+}
+
+.title6 {
+    font-size: 10pt;
+    font-weight: 400;
+    text-shadow: rgba(0, 0, 0, 0.5) 0px 0px 4px;
+    transition: all 0.3s;
+}
+
+.title1[class~="light"],
+.title2[class~="light"],
+.title3[class~="light"],
+.title4[class~="light"],
+.title5[class~="light"],
+.title6[class~="light"] {
+    color: #202020;
+}
+.title1[class~="dark"],
+.title2[class~="dark"],
+.title3[class~="dark"],
+.title4[class~="dark"],
+.title5[class~="dark"],
+.title6[class~="dark"] {
+    color: #fff;
+}
+.title1[class~="red"],
+.title2[class~="red"],
+.title3[class~="red"],
+.title4[class~="red"],
+.title5[class~="red"],
+.title6[class~="red"] {
+    color: #f04040;
+}
+.title1[class~="blue"],
+.title2[class~="blue"],
+.title3[class~="blue"],
+.title4[class~="blue"],
+.title5[class~="blue"],
+.title6[class~="blue"] {
+    color: #4040f0;
+}
+
+@media screen and (max-width: 768px) {
+    .title1 {
+        font-size: 28pt;
+    }
+
+    .title5 {
+        font-size: 10pt;
+    }
+
+    .title6 {
+        font-size: 8pt;
+    }
+}
+
+/* Containers */
+.container1 {
+    width: 100%;
+    transition: all 0.3s;
+}
+.container1[class~="light"] {
+    background-color: #f0f0f0;
+}
+.container1[class~="dark"] {
+    background-color: #000;
+}
+.container1[class~="red"] {
+    background-color: #100000;
+}
+.container1[class~="blue"] {
+    background-color: #000010;
+}
+
+/* Bloco da aba sobre mim */
+.aboutme-container {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    transition: all 0.3s;
+    background-size: 100% 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Div sobre mim */
+.portfolio-aboutme-div {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+@keyframes RevealTextLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+}
+@keyframes RevealTextRight {
+    0% {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+}
+@keyframes RevealTextTop {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+}
+@keyframes RevealTextBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+}
+
+/* Main principal da aba sobre mim */
+#aboutme-main {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+@media screen and (max-width: 768px) {
+    #aboutme-main {
+        flex-direction: column;
+    }
+}
+
+/* Div do separador */
+#separator-div {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+/* Divs com todos os separadores */
+#separators-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Círculos do separador */
+.separator-circles {
+    position: relative;
+    display: block;
+    width: 10px;
+    height: 10px;
+    border: 1px solid var(--separator-color);
+    border-radius: 50%;
+}
+
+/* Linhas do separador */
+.separator-lines {
+    position: relative;
+    display: block;
+    width: 1px;
+    height: 150px;
+    background-image: linear-gradient(0deg, var(--separator-color), transparent);
+}
+.separator-lines[class~="dotted"] {
+    position: relative;
+    display: block;
+    width: 0.5px;
+    height: 150px;
+    border: 1px dashed var(--separator-color);
+}
+
+/* Linha do separador ligado com o currículo */
+#separator-to-curriculum {
+    transition: all 0.3s ease;
+}
+#separator-to-curriculum[class~="light"] {
+    background-image: linear-gradient(0deg, #000, var(--separator-color));
+}
+#separator-to-curriculum[class~="dark"] {
+    background-image: linear-gradient(0deg, #fff, var(--separator-color));
+}
+#separator-to-curriculum[class~="red"] {
+    background-image: linear-gradient(0deg, #f02020, var(--separator-color));
+}
+#separator-to-curriculum[class~="blue"] {
+    background-image: linear-gradient(0deg, #2020f0, var(--separator-color));
+}
+
+/* Div da descrição do sobre mim */
+.aboutme-description-div {
+    width: 49%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 14pt;
+    gap: 1rem;
+}
+
+@media screen and (max-width: 800px) {
+    /* Div da descrição do sobre mim */
+    .aboutme-description-div {
+        width: 80%;
+        font-size: 15pt;
+        line-height: 1.5rem;
+        padding-left: unset;
+    }
+}
+
+/* Divs das descrições sobre mim */
+.aboutme-divs {
+    margin-left: 10%;
+}
+
+/* Cabeçalho das divs de descrições sobre mim */
+.aboutme-header-divs {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+/* Divs dos ícones das descrições sobre mim */
+.aboutme-icon-divs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    border-radius: 10px;
+    transition: all 0.3s;
+}
+.aboutme-icon-divs[class~="light"] {
+    background-color: #e0e0e0;
+    border: 1px solid #b0b0b0;
+}
+.aboutme-icon-divs[class~="dark"] {
+    background-color: #404040;
+    border: 1px solid #202020;
+}
+.aboutme-icon-divs[class~="red"] {
+    background-color: #d04040;
+    border: 1px solid #a02020;
+}
+.aboutme-icon-divs[class~="blue"] {
+    background-color: #4040f0;
+    border: 1px solid #202040;
+}
+
+/* Ícones das descrições sobre mim */
+.aboutme-icons {
+    width: 25px;
+    height: 25px;
+    transition: all 0.3s;
+}
+.aboutme-icons[class~="dark"],
+.aboutme-icons[class~="red"],
+.aboutme-icons[class~="blue"] {
+    filter: invert(1);
+}
+
+/* Títulos das descrições sobre mim */
+.aboutme-titles {
+    color: #000;
+    font-size: 20px;
+    font-family: "Poppins";
+    text-align: center;
+    margin: 0;
+    transition: all 0.3s;
+}
+.aboutme-titles[class~="dark"],
+.aboutme-titles[class~="blue"] {
+    color: #fff;
+}
+
+/* Divs dos textos das descrições sobre mim */
+.aboutme-text-divs {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+/* Textos das descrições sobre mim */
+.aboutme-texts {
+    width: 80%;
+    font-size: 15px;
+    font-family: "Poppins";
+    text-align: justify;
+    margin: 0;
+    transition: all 0.3s;
+}
+.aboutme-texts.light {
+    color: #666;
+}
+.aboutme-texts.dark {
+    color: #aaa;
+}
+
+/* Div das skills da aba sobre mim */
+.portfolio-aboutme-skills-div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin: 25px 0;
+}
+
+/* Divs das skills */
+.skills-divs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 60px;
+    margin: 5px;
+    filter: grayscale(0.5);
+    transition: all 0.3s;
+}
+
+.skills-divs:hover {
+    cursor: pointer;
+    transform: translateY(-2px);
+    filter: grayscale(0) saturate(1.5);
+}
+
+.skills-divs div {
+    opacity: 0;
+    height: 20px;
+    transition: all 0.3s;
+}
+
+.skills-divs:hover div {
+    display: block;
+    opacity: 1;
+    background-color: rgb(40, 40, 40);
+    padding: 0 5px;
+    border-radius: 5px;
+    transform: translateY(-5px);
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 3px 2px;
+}
+
+.skills-divs:hover img {
+    transform: scaleY(10px);
+}
+
+/* Nomes das skills */
+.skills-names {
+    display: flex;
+    justify-content: center;
+    color: #fff;
+    font-size: 12pt;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 600;
+}
+
+/* Imagens das skills da aba sobre mim */
+.skills-images {
+    width: 100%;
+    animation-name: skillsAnimation;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+@keyframes skillsAnimation {
+    0% {
+        transform: rotate(5deg);
+    }
+    50% {
+        transform: rotate(-5deg);
+    }
+    100% {
+        transform: rotate(5deg);
+    }
+}
+
+/* Div do botão de currículo */
+#curriculo-div {
+    position: absolute;
+    top: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+    #separator-div {
+        display: none;
+    }
+
+    .aboutme-header-divs {
+        justify-content: center;
+    }
+
+    .aboutme-text-divs {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .aboutme-texts {
+        width: 100%;
+    }
+
+    #curriculo-div {
+        position: unset;
+    }
+}
+
+/* Link do currículo */
+.curriculo-link {
+    width: 160px;
+    height: 40px;
+    border-radius: 15px;
+}
+
+/* Botão do currículo */
+.curriculo-button {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    font-family: "Poppins";
+    font-size: 12pt;
+    font-weight: bold;
+    text-shadow: rgba(0, 0, 0, 0.2) 0px 0px 5px;
+    border-radius: 25px;
+    transition: all 0.3s;
+}
+.curriculo-button[class~="light"] {
+    color: #000;
+    border: 2px solid #000;
+}
+.curriculo-button[class~="dark"] {
+    color: #fff;
+    border: 2px solid #fff;
+}
+.curriculo-button[class~="red"] {
+    color: #f02020;
+    border: 2px solid #f02020;
+}
+.curriculo-button[class~="blue"] {
+    color: #2020f0;
+    border: 2px solid #2020f0;
+}
+.curriculo-button:hover {
+    color: #fff;
+}
+.curriculo-button[class~="light"]:hover {
+    background-color: #000;
+    box-shadow: #00000050 0px 0px 15px;
+}
+.curriculo-button[class~="dark"]:hover {
+    background-color: #fff;
+    box-shadow: #ffffff50 0px 0px 15px;
+    color: #000;
+}
+.curriculo-button[class~="red"]:hover {
+    background-color: #f02020;
+    box-shadow: #f0202050 0px 0px 15px;
+    color: #fff;
+}
+.curriculo-button[class~="blue"]:hover {
+    background-color: #2020f0;
+    box-shadow: #2020f050 0px 0px 15px;
+    color: #fff;
+}
+
+/* Conhecimentos */
+#portfolio-knowledges {
+    width: 100%;
+    height: 100%;
+    transition: all 0.3s;
+}
+
+@media screen and (max-width: 480px) {
+    #portfolio-knowledges {
+        width: 100%;
+        margin: unset;
+    }
+}
+
+/* Area dos conhecimentos */
+#knowledges-area {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/* Principal div dos conhecimentos */
+#knowledges-main-div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    margin: 20px 0;
+    overflow-x: hidden;
+    position: relative;
+    white-space: nowrap;
+    width: 90%;
+}
+
+#move-header {
+    position: absolute;
+    z-index: 1;
+    width: 120px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 16px;
+    gap: 8px;
+}
+
+.move-index {
+    width: 24px;
+    height: 24px;
+    background-color: white;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 50%;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.move-index[class~="light"] {
+    background-color: #f0f0f0;
+    border-color: #808080;
+}
+.move-index[class~="dark"] {
+    background-color: #202020;
+    border-color: #606060;
+}
+.move-index[class~="red"] {
+    background-color: #f02020;
+    border-color: transparent;
+}
+.move-index[class~="blue"] {
+    background-color: #2020f0;
+    border-color: transparent;
+}
+.move-index.active {
+    background-color: black;
+    background-size: 48px 48px;
+    rotate: -45deg;
+    animation: moveIndex 1s linear infinite reverse;
+}
+.move-index.active:nth-child(1) {
+    background-image: linear-gradient(90deg, var(--front-start-gradient) 0%, var(--front-end-gradient) 50%, var(--front-start-gradient) 100%);
+}
+.move-index.active:nth-child(2) {
+    background-image: linear-gradient(90deg, var(--back-start-gradient) 0%, var(--back-end-gradient) 50%, var(--back-start-gradient) 100%);
+}
+.move-index.active:nth-child(3) {
+    background-image: linear-gradient(90deg, var(--db-start-gradient) 0%, var(--db-end-gradient) 50%, var(--db-start-gradient) 100%);
+}
+.move-index.active:nth-child(4) {
+    background-image: linear-gradient(90deg, var(--tools-start-gradient) 0%, var(--tools-end-gradient) 50%, var(--tools-start-gradient) 100%);
+}
+@keyframes moveIndex {
+    0% {
+        background-position: -24px 0px;
+    }
+    50% {
+        background-position: 0px 0px;
+    }
+    100% {
+        background-position: 24px 0px;
+    }
+}
+
+.move-buttons {
+    width: 100px;
+    height: 100%;
+    background-color: unset;
+    background-repeat: no-repeat;
+    border: unset;
+    position: absolute;
+    transition: all 0.3s ease;
+    z-index: 1;
+}
+.move-buttons#left {
+    background-image: linear-gradient(-90deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 50%, rgba(0, 0, 0, 0.3) 100%);
+    background-position: -50px;
+    left: 0%;
+}
+.move-buttons#left:hover {
+    background-position: 0px;
+}
+.move-buttons#right {
+    background-image: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 50%, rgba(0, 0, 0, 0.3) 100%);
+    background-position: 50px;
+    right: 0%;
+}
+.move-buttons#right:hover {
+    background-position: 0px;
+}
+
+.move-buttons-icons {
+    width: 50px;
+    height: 50px;
+    transition: all 0.3s ease;
+}
+.move-buttons[class~="dark"] > .move-buttons-icons,
+.move-buttons[class~="red"] > .move-buttons-icons,
+.move-buttons[class~="blue"] > .move-buttons-icons {
+    filter: invert(1);
+}
+.move-buttons#right > .move-buttons-icons {
+    rotate: 180deg;
+}
+
+#knowledges-main-div > main {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+#knowledges-main-div > main > section {
+    min-width: 100%;
+}
+
+/* Divs dos conhecimentos */
+.knowledges-divs {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px 0;
+}
+
+/* Divs à esquerda dos conhecimentos (textos) */
+.knowledges-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+@media screen and (max-width: 480px) {
+    .knowledges-left {
+        width: 100%;
+    }
+}
+
+/* Textos de cada área de conhecimento */
+.knowledges-articles {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Áreas das divs dos ícones dos conhecimentos */
+.knowledges-icon-areas {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Divs dos ícones dos conhecimentos */
+.knowledges-icon-divs {
+    position: relative;
+    width: var(--knowledges-icon-divs-width);
+    height: var(--knowledges-icon-divs-height);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin: auto;
+    margin-top: var(--knowledges-icon-divs-after-height);
+    opacity: 1;
+    transition: all 0.3s;
+}
+.knowledges-icon-divs:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+.knowledges-icon-divs::after {
+    content: "";
+    position: absolute;
+    top: calc(0% - var(--knowledges-icon-divs-after-height));
+    left: calc(50% - 0.75px);
+    display: block;
+    width: 1.5px;
+    height: var(--knowledges-icon-divs-after-height);
+}
+.knowledges-icon-divs[class~="light"] {
+    background-color: #7090ff;
+}
+
+/* Front-end */
+.knowledges-icon-divs#knowledges-div-front[class~="light"] {
+    background-image: linear-gradient(90deg, var(--front-start-gradient), var(--front-end-gradient));
+}
+.knowledges-icon-divs#knowledges-div-front[class~="light"]::after {
+    background-image: linear-gradient(0deg, var(--front-start-gradient), transparent);
+}
+.knowledges-icon-divs#knowledges-div-front[class~="dark"] {
+    background-image: linear-gradient(90deg, var(--front-end-gradient), var(--front-start-gradient));
+}
+.knowledges-icon-divs#knowledges-div-front[class~="dark"]::after {
+    background-image: linear-gradient(0deg, var(--front-end-gradient), transparent);
+}
+.knowledges-icon-divs#knowledges-div-front[class~="red"] {
+    background-image: linear-gradient(90deg, var(--front-end-gradient), var(--front-start-gradient));
+}
+.knowledges-icon-divs#knowledges-div-front[class~="red"]::after {
+    background-image: linear-gradient(0deg, var(--front-end-gradient), transparent);
+}
+.knowledges-icon-divs#knowledges-div-front[class~="blue"] {
+    background-image: linear-gradient(90deg, var(--front-end-gradient), var(--front-start-gradient));
+}
+.knowledges-icon-divs#knowledges-div-front[class~="blue"]::after {
+    background-image: linear-gradient(0deg, var(--front-end-gradient), transparent);
+}
+
+/* Back-end */
+.knowledges-icon-divs#knowledges-div-back[class~="light"] {
+    background-image: linear-gradient(90deg, var(--back-start-gradient), var(--back-end-gradient));
+}
+.knowledges-icon-divs#knowledges-div-back[class~="light"]::after {
+    background-image: linear-gradient(0deg, var(--back-start-gradient), transparent);
+}
+.knowledges-icon-divs#knowledges-div-back[class~="dark"] {
+    background-image: linear-gradient(90deg, var(--back-end-gradient), var(--back-start-gradient));
+}
+.knowledges-icon-divs#knowledges-div-back[class~="dark"]::after {
+    background-image: linear-gradient(0deg, var(--back-end-gradient), transparent);
+}
+.knowledges-icon-divs#knowledges-div-back[class~="red"] {
+    background-image: linear-gradient(90deg, var(--back-end-gradient), var(--back-start-gradient));
+}
+.knowledges-icon-divs#knowledges-div-back[class~="red"]::after {
+    background-image: linear-gradient(0deg, var(--back-end-gradient), transparent);
+}
+.knowledges-icon-divs#knowledges-div-back[class~="blue"] {
+    background-image: linear-gradient(90deg, var(--back-end-gradient), var(--back-start-gradient));
+}
+.knowledges-icon-divs#knowledges-div-back[class~="blue"]::after {
+    background-image: linear-gradient(0deg, var(--back-end-gradient), transparent);
+}
+
+/* Database */
+.knowledges-icon-divs#knowledges-div-db[class~="light"] {
+    background-image: linear-gradient(90deg, var(--db-start-gradient), var(--db-end-gradient));
+}
+.knowledges-icon-divs#knowledges-div-db[class~="light"]::after {
+    background-image: linear-gradient(0deg, var(--db-start-gradient), transparent);
+}
+.knowledges-icon-divs#knowledges-div-db[class~="dark"] {
+    background-image: linear-gradient(90deg, var(--db-end-gradient), var(--db-start-gradient));
+}
+.knowledges-icon-divs#knowledges-div-db[class~="dark"]::after {
+    background-image: linear-gradient(0deg, var(--db-end-gradient), transparent);
+}
+.knowledges-icon-divs#knowledges-div-db[class~="red"] {
+    background-image: linear-gradient(90deg, var(--db-end-gradient), var(--db-start-gradient));
+}
+.knowledges-icon-divs#knowledges-div-db[class~="red"]::after {
+    background-image: linear-gradient(0deg, var(--db-end-gradient), transparent);
+}
+.knowledges-icon-divs#knowledges-div-db[class~="blue"] {
+    background-image: linear-gradient(90deg, var(--db-end-gradient), var(--db-start-gradient));
+}
+.knowledges-icon-divs#knowledges-div-db[class~="blue"]::after {
+    background-image: linear-gradient(0deg, var(--db-end-gradient), transparent);
+}
+
+/* Tools */
+.knowledges-icon-divs#knowledges-div-tools[class~="light"] {
+    background-image: linear-gradient(90deg, var(--tools-start-gradient), var(--tools-end-gradient));
+}
+.knowledges-icon-divs#knowledges-div-tools[class~="light"]::after {
+    background-image: linear-gradient(0deg, var(--tools-start-gradient), transparent);
+}
+.knowledges-icon-divs#knowledges-div-tools[class~="dark"] {
+    background-image: linear-gradient(90deg, var(--tools-end-gradient), var(--tools-start-gradient));
+}
+.knowledges-icon-divs#knowledges-div-tools[class~="dark"]::after {
+    background-image: linear-gradient(0deg, var(--tools-end-gradient), transparent);
+}
+.knowledges-icon-divs#knowledges-div-tools[class~="red"] {
+    background-image: linear-gradient(90deg, var(--tools-end-gradient), var(--tools-start-gradient));
+}
+.knowledges-icon-divs#knowledges-div-tools[class~="red"]::after {
+    background-image: linear-gradient(0deg, var(--tools-end-gradient), transparent);
+}
+.knowledges-icon-divs#knowledges-div-tools[class~="blue"] {
+    background-image: linear-gradient(90deg, var(--tools-end-gradient), var(--tools-start-gradient));
+}
+.knowledges-icon-divs#knowledges-div-tools[class~="blue"]::after {
+    background-image: linear-gradient(0deg, var(--tools-end-gradient), transparent);
+}
+
+.knowledges-icon-divs[class~="dark"] {
+    background-color: #4050a0;
+}
+.knowledges-icon-divs[class~="click"] {
+    box-shadow: #7090ff 0px 0px 3px;
+}
+@keyframes KnowledgesIcons {
+    0% {
+        opacity: 0;
+        /*transform: scale(0);*/
+        transform: translateY(calc(var(--knowledges-icon-divs-after-height) * -1));
+    }
+}
+/* Ícones dos conhecimentos */
+.knowledges-icons {
+    width: 60%;
+    height: 60%;
+    transition: all 0.3s;
+}
+.knowledges-icons[class~="light"] {
+    filter: invert(1);
+}
+.knowledges-icons[class~="dark"] {
+    filter: invert(0);
+}
+
+/* Divs das descrições dos conhecimentos */
+.knowledges-description-divs {
+    margin: 5px 0;
+}
+
+/* Divs das descrições dos conhecimentos */
+.knowledges-code-divs {
+    width: 40%;
+    margin: 5px 0;
+}
+
+/* Descrições dos conhecimentos */
+.knowledges-code-titles {
+    text-align: center;
+    font-family: "Poppins";
+    font-size: 12pt;
+    transition: all 0.3s;
+}
+.knowledges-code-titles[class~="light"] {
+    color: #000;
+}
+.knowledges-code-titles[class~="dark"] {
+    color: #fff;
+}
+
+/* Divs das linguagens dos conhecimentos */
+.knowledges-code-languages-divs {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Divs das linguagens dos conhecimentos */
+.knowledges-language-divs {
+    cursor: pointer;
+    position: relative;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    margin: 10px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s;
+}
+.knowledges-language-divs[class~="light"] {
+    background-color: #c0c0c0;
+}
+.knowledges-language-divs[class~="dark"] {
+    background-color: #202020;
+}
+.knowledges-language-divs[class~="red"] {
+    background-color: #402020;
+}
+.knowledges-language-divs[class~="blue"] {
+    background-color: #202040;
+}
+.knowledges-language-divs:hover {
+    transform: scale(1.1);
+}
+.knowledges-language-divs[class~="light"]:hover {
+    box-shadow: #00000080 0px 0px 1rem;
+}
+.knowledges-language-divs[class~="dark"]:hover {
+    box-shadow: #ffffff80 0px 0px 1rem;
+}
+.knowledges-language-divs[class~="red"]:hover {
+    box-shadow: #f0202080 0px 0px 1rem;
+}
+.knowledges-language-divs[class~="blue"]:hover {
+    box-shadow: #2020f080 0px 0px 1rem;
+}
+.knowledges-language-divs::after {
+    content: "";
+    width: 100%;
+    height: 0.3rem;
+    position: absolute;
+    display: block;
+    bottom: -0.1rem;
+    left: 0;
+    background-image: linear-gradient(90deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0));
+    background-size: 200% 200%;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    animation: LanguageDivs 3s linear infinite;
+}
+.knowledges-language-divs[class~="light"]::after {
+    background-color: #000;
+}
+.knowledges-language-divs[class~="dark"]::after {
+    background-color: #fff;
+}
+.knowledges-language-divs[class~="red"]::after {
+    background-color: #f02020;
+}
+.knowledges-language-divs[class~="blue"]::after {
+    background-color: #2020f0;
+}
+@keyframes LanguageDivs {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 400% 400%;
+    }
+}
+
+.knowledges-languages-icons {
+    min-width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+.knowledges-languages-icons[class~="light"] {
+    filter: brightness(0) hue-rotate(0deg);
+}
+.knowledges-languages-icons[class~="dark"] {
+    filter: brightness(10) hue-rotate(0deg);
+}
+.knowledges-languages-icons[class~="red"] {
+    filter: brightness(1) hue-rotate(123deg) saturate(1.2);
+}
+.knowledges-languages-icons[class~="blue"] {
+    filter: brightness(1) hue-rotate(0deg);
+}
+
+/* Nomes das linguagens dos conhecimentos */
+.knowledges-languages-names {
+    font-size: 10pt;
+    font-weight: 700;
+    margin: 0;
+    transition: all 0.3s;
+}
+.knowledges-languages-names[class~="light"] {
+    color: #000;
+}
+.knowledges-languages-names[class~="dark"] {
+    color: #fff;
+}
+.knowledges-languages-names[class~="red"] {
+    color: #fff;
+    color: #f02020;
+}
+.knowledges-languages-names[class~="blue"] {
+    color: #2020f0;
+}
+
+@media screen and (max-width: 768px) {
+    .knowledges-language-divs {
+        width: 50px;
+        height: 50px;
+    }
+
+    .knowledges-languages-icons {
+        min-width: 24px;
+        height: 24px;
+    }
+
+    .knowledges-languages-names {
+        font-size: 6pt;
+    }
+}
+
+/* Aba de experiências */
+.portfolio-experiences {
+    position: relative;
+    padding: 8px;
+    transition: 0.3s all;
+}
+.portfolio-experiences.light {
+    background-color: var(--theme-light-color);
+}
+.portfolio-experiences.dark {
+    background-color: var(--theme-dark-color);
+}
+
+#portfolio-experiences-background {
+    pointer-events: none;
+    position: absolute;
+    z-index: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 200px;
+    opacity: 0;
+    transition: all 0.3s;
+}
+
+#experiences-main {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin: auto;
+}
+
+/* Experiências (lado esquerdo) */
+#experiences-left {
+    width: 35%;
+}
+
+.experiences-left-separators {
+    height: var(--experiences-separators-height);
+}
+
+#experiences-center {
+    width: 5%;
+    min-width: 80px;
+}
+
+.experiences-progress {
+    position: relative;
+    width: 1px;
+    height: calc(var(--experiences-separators-height) - 50px);
+    margin: auto;
+    transition: all 0.3s ease;
+}
+.experiences-progress[class~="light"] {
+    background-color: #b0b0b0;
+}
+.experiences-progress[class~="dark"] {
+    background-color: #fff;
+}
+
+/* Ícones das logos das empresas */
+.experiences-icon-divs {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    padding: 5px;
+    border-radius: 10px;
+    transition: all 0.3s;
+}
+.experiences-icon-divs[class~="light"] {
+    background-color: #f0f0f0;
+    border: 1px solid #b0b0b0;
+}
+.experiences-icon-divs[class~="dark"] {
+    background-color: #404060;
+    border: 1px solid #202040;
+}
+
+.experiences-icons {
+    width: 25px;
+    height: 25px;
+    transition: all 0.3s;
+}
+
+#experiences-right {
+    width: 60%;
+}
+
+.experiences-right-separators {
+    height: var(--experiences-separators-height);
+}
+
+
+.experiences-companies {
+    font-size: 20px;
+    font-family: "Poppins";
+    font-weight: bold;
+    text-align: left;
+    margin: 0;
+    transition: all 0.3s;
+}
+.experiences-companies.light {
+    color: #000;
+}
+.experiences-companies.dark {
+    color: #fff;
+}
+
+.experiences-descriptions {
+    font-size: 14px;
+    font-family: "Poppins";
+    text-align: justify;
+    margin: 0;
+    margin-top: 10px;
+    transition: all 0.3s;
+}
+.experiences-descriptions.light {
+    color: #666;
+}
+.experiences-descriptions.dark {
+    color: #aaa;
+}
+
+/* Aba de projetos */
+.portfolio-projects {
+    width: 100%;
+    transition: all 0.3s;
+}
+.portfolio-projects.light {
+    background-color: #f0f0f0;
+}
+.portfolio-projects.dark {
+    background-color: var(--theme-dark-color);
+}
+#portfolio-projects-header {
+    /*background-size: 50px 50px;
+    background-repeat: no-repeat;
+    background-position: 100%;*/
+    background-size: 100% 100%;
+    transition: 0.3s all;
+}
+
+@media screen and (max-width: 768px) {
+    #portfolio-projects-header {
+        padding-top: 20px;
+    }
+}
+
+/* Cenário dos projetos do portfolio */
+#portfolio-projects-background {
+    pointer-events: none;
+    position: absolute;
+    z-index: 0;
+    width: 100%;
+    height: 200px;
+    opacity: 0;
+    transition: all 0.3s;
+}
+
+/* Principal da aba de projetos */
+.portfolio-projects-main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Título dos projetos do portfolio */
+.portfolio-projects-title {
+    text-align: center;
+    font-family: "Poppins";
+    font-size: 30pt;
+    font-weight: bold;
+    text-shadow: rgba(0, 0, 0, 0.5) 0px 0px 4px;
+    margin: 50px 0 10px 0;
+    transition: all 0.3s;
+}
+.portfolio-projects-title.light {
+    color: #404080;
+}
+.portfolio-projects-title.dark {
+    color: #a0b0ff;
+}
+
+/* Descrição dos projetos do portfolio */
+.projects-main-descriptions {
+    width: 80%;
+    text-align: center;
+    font-family: "Poppins";
+    font-size: 12pt;
+    font-weight: 100;
+    margin: 5px 10% 20px 10%;
+    transition: all 0.3s;
+}
+.projects-main-descriptions.light {
+    color: #808080;
+}
+.projects-main-descriptions.dark {
+    color: #a0a0a0;
+}
+
+/* Div da principal aba de projetos */
+.portfolio-projects-div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* Div com todas as divs de imagens de projetos */
+#projects-main-div {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 20px;
+}
+
+/* Div dos projetos */
+.project-divs {
+    width: 24rem;
+    height: 12rem;
+    max-width: 100%;
+    outline: 2px solid rgba(0, 0, 0, 0.5);
+    border-radius: var(--project-links-border-radius);
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 5px;
+    transition: all 0.3s;
+}
+.project-divs:hover {
+    transform: scale(1.05);
+}
+@media screen and (max-width: 768px) {
+    .project-divs {
+        width: 10rem;
+        height: 6rem;
+    }
+}
+
+/* Links dos projetos */
+.project-links {
+    width: 100%;
+    height: 100%;
+    border-radius: var(--project-links-border-radius);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-size: 105% 100%;
+    background-position: center;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    animation-duration: 20s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+@keyframes ProjectColors {
+    0% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+/* Cores dos projetos */
+.project-colors {
+    position: absolute;
+    display: none;
+}
+
+/* Spans dos projetos */
+.project-spans {
+    width: 100%;
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #f0f0f0;
+    border-top-left-radius: var(--project-links-border-radius);
+    border-top-right-radius: var(--project-links-border-radius);
+    text-align: center;
+    font-family: "Poppins";
+    font-size: 16px;
+    gap: 5px;
+}
+.project-spans[class~="dark"] {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.project-spans-titles[class~="light"] {
+    color: #fff;
+}
+.project-spans-titles[class~="dark"] {
+    color: #000;
+}
+
+/* Imagens dos spans */
+.project-spans-images {
+    width: 20px;
+    border-radius: 3px;
+}
+
+/* Div das linguagens de programação usadas */
+.project-langs-div {
+    width: 100%;
+    height: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-bottom-left-radius: calc(var(--project-links-border-radius) - 1px);
+    border-bottom-right-radius: calc(var(--project-links-border-radius) - 1px);
+    transition: all 0.3s ease;
+}
+.project-langs-div[class~="dark"] {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+@media screen and (max-width: 480px) {
+    .project-spans, .project-langs-div {
+        height: 1.5rem;
+    }
+    
+    .project-spans-titles {
+        margin-top: 4px;
+    }
+
+    .project-spans-images {
+        width: 12px;
+    }
+}
+
+/* Imagens das linguagens de programação */
+.lang-images {
+    width: 20px;
+    transition: all 0.3s ease;
+}
+.lang-images[class~="light"] {
+    filter: brightness(10) hue-rotate(0deg);
+}
+.lang-images[class~="dark"] {
+    filter: brightness(0) hue-rotate(0deg);
+}
+.lang-images[class~="red"] {
+    filter: brightness(1) hue-rotate(123deg) saturate(1.2);
+}
+.lang-images[class~="blue"] {
+    filter: brightness(1) hue-rotate(0deg);
+}
+@media screen and (max-width: 480px) {
+    .lang-images {
+        width: 12px;
+    }
+}
+
+/* Botões principais dos projetos */
+.project-main-buttons {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    border: none;
+    border-radius: var(--project-links-border-radius);
+    transition: all 0.3s;
+}
+
+/* Botões dos projetos */
+.project-buttons {
+    width: 100%;
+    height: 5rem;
+    background-color: transparent;
+    border: 0px solid #000;
+    padding: 0;
+}
+
+/* Imagens dos projetos */
+.projects-images {
+    width: 100%;
+    height: 100%;
+    border-radius: 3px;
+}
+
+/* Header/cabeçalho dos projetos */
+.project-header {
+    position: absolute;
+    height: 2rem;
+    background-color: rgba(200, 0, 200, 1);
+}
+
+/* Footer do portfólio */
+#footer-container {
+    padding: 5% 0;
+    transition: all 0.3s;
+}
+#footer-container[class~="light"] {
+    background-color: #e0e0e0;
+}
+#footer-container[class~="dark"] {
+    background-color: #101010;
+}
+#footer-container[class~="red"] {
+    background-color: #201010;
+}
+#footer-container[class~="blue"] {
+    background-color: #101020;
+}
+
+/* Div dos contatos */
+.footer-contatos-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Div dos contatos */
+#contatos-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+/* Itens da lista de contatos */
+.contatos-items {
+    width: 150px;
+}
+
+.contato-subtitles {
+    font-family: "Poppins";
+    font-size: 12px;
+    transition: all 0.3s;
+    margin-bottom: 0;
+}
+.contato-subtitles.light {
+    color: #000;
+}
+.contato-subtitles.dark {
+    color: #a0a0a0;
+}
+
+@media screen and (max-width: 800px) {
+    #contatos-list {
+        width: 90%;
+    }
+
+    .contatos-items {
+        width: 40%;
+    }
+}
+
+/* Links dos contatos */
+.contatos-links {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s;
+}
+
+.contatos-links:hover {
+    transform: scale(1.1);
+}
+
+/* Divs das imagens dos contatos */
+.contato-images-divs {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    transition: all 0.3s;
+}
+.contato-images-divs[class~="light"] {
+    background-color: #c0c0c0;
+}
+.contato-images-divs[class~="dark"] {
+    background-color: #202020;
+}
+.contato-images-divs[class~="red"] {
+    background-color: #402020;
+}
+.contato-images-divs[class~="blue"] {
+    background-color: #202040;
+}
+
+/* Imagens dos contatos */
+.contato-images {
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    transition: all 0.3s;
+}
+.contato-images[class~="light"] {
+    filter: brightness(0) hue-rotate(0deg);
+}
+.contato-images[class~="dark"] {
+    filter: brightness(10) hue-rotate(0deg);
+}
+.contato-images[class~="red"] {
+    filter: brightness(1) hue-rotate(123deg) saturate(1.2);
+}
+.contato-images[class~="blue"] {
+    filter: brightness(1) hue-rotate(0deg);
+}
+
+/* Divs dos textos de contato */
+.contato-texts-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contatos-titles {
+    font-family: "Poppins";
+    font-size: 16px;
+    margin: 0;
+    transition: all 0.3s;
+}
+.contatos-titles[class~="light"] {
+    color: #000;
+}
+.contatos-titles[class~="dark"] {
+    color: #f0f0f0;
+}
+
+@media screen and (min-width: 769px) {
+    .portfolio-abas {
+        display: block;
+    }
+
+    .nav-mobile {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .portfolio-nav {
+        height: 80px;
+    }
+
+    .arrow-div {
+        display: none;
+    }
+
+    .portfolio-abas {
+        display: none;
+    }
+
+    .aboutme-divs {
+        margin-left: unset;
+    }
+
+    .knowledges-divs {
+        flex-direction: column;
+    }
+
+    .knowledges-code-divs {
+        width: 95%;
+    }
+
+    .experiences-main {
+        flex-direction: column;
+    }
+
+    #experiences-right {
+        width: 100%;
+    }
+
+    #experiences-left, #experiences-center {
+        display: none;
+    }
+
+    .experiences-companies {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .intro-image-div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+    }
+
+    .header-descriptions {
+        font-size: 5vw;
+    }
+
+    .aboutme-container {
+        width: 100%;
+    }
+
+    .intro-image {
+        width: 50vw;
+    }
+
+    .knowledges-divs {
+        flex-direction: column;
+    }
+}

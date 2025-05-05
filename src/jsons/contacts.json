@@ -1,0 +1,28 @@
+{
+    "contacts": [
+        {
+            "name": "LinkedIn",
+            "url": "https://www.linkedin.com/in/eric-nunes-ramalho-58a146208/",
+            "image": "svgs/contacts/linkedin.svg",
+            "username": "@EricNunes0"
+        },
+        {
+            "name": "Github",
+            "url": "https://github.com/EricNunes0",
+            "image": "svgs/contacts/github.svg",
+            "username": "@EricNunes0"
+        },
+        {
+            "name": "Whatsapp",
+            "url": "https://web.whatsapp.com/",
+            "image": "svgs/contacts/whatsapp.svg",
+            "username": "(21) 98299-0522"
+        },
+        {
+            "name": "E-mail",
+            "url": "mailto:eric26052004@gmail.com",
+            "image": "svgs/contacts/email.svg",
+            "username": "eric26052004@gmail.com"
+        }
+    ]
+}

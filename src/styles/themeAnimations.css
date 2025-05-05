@@ -1,0 +1,105 @@
+:root {
+    --sun-triangles-duration: 0.3s;
+    --sun-triangles-timing: linear;
+    --sun-triangles-iteration: 1;
+    --moon-duration: 0.3s;
+    --moon-timing: linear;
+    --moon-iteration: 1;
+}
+
+#sun-circle {
+    background-color: blue;
+}
+
+.sun-triangles {
+    display: block;
+    position: absolute;
+    opacity: 1;
+}/*
+.sun-triangles#sun-triangle-1 {
+    animation: SunTrianglesIn1 var(--sun-triangles-duration) var(--sun-triangles-timing) var(--sun-triangles-iteration);
+}
+.sun-triangles#sun-triangle-2 {
+    animation: SunTrianglesIn2 var(--sun-triangles-duration) var(--sun-triangles-timing) var(--sun-triangles-iteration);
+}
+.sun-triangles#sun-triangle-3 {
+    animation: SunTrianglesIn3 var(--sun-triangles-duration) var(--sun-triangles-timing) var(--sun-triangles-iteration);
+}
+.sun-triangles#sun-triangle-4 {
+    animation: SunTrianglesIn4 var(--sun-triangles-duration) var(--sun-triangles-timing) var(--sun-triangles-iteration);
+}
+.sun-triangles#sun-triangle-5 {
+    animation: SunTrianglesIn5 var(--sun-triangles-duration) var(--sun-triangles-timing) var(--sun-triangles-iteration);
+}
+.sun-triangles#sun-triangle-6 {
+    animation: SunTrianglesIn6 var(--sun-triangles-duration) var(--sun-triangles-timing) var(--sun-triangles-iteration);
+}
+.sun-triangles#sun-triangle-7 {
+    animation: SunTrianglesIn7 var(--sun-triangles-duration) var(--sun-triangles-timing) var(--sun-triangles-iteration);
+}
+.sun-triangles#sun-triangle-8 {
+    animation: SunTrianglesIn8 var(--sun-triangles-duration) var(--sun-triangles-timing) var(--sun-triangles-iteration);
+}*/
+
+@keyframes SunTrianglesIn1 {
+    0% {
+        opacity: 0;
+        transform: translate(-0px, -200px);
+    }
+}
+@keyframes SunTrianglesIn2 {
+    0% {
+        opacity: 0;
+        transform: translate(-200px, -150px) rotate(-45deg);
+    }
+}
+@keyframes SunTrianglesIn3 {
+    0% {
+        opacity: 0;
+        transform: translate(-300px, 150px) rotate(-90deg);
+    }
+}
+@keyframes SunTrianglesIn4 {
+    0% {
+        opacity: 0;
+        transform: translate(-200px, 450px) rotate(-135deg);
+    }
+}
+@keyframes SunTrianglesIn5 {
+    0% {
+        opacity: 0;
+        transform: translate(100px, 500px) rotate(-180deg);
+    }
+}
+@keyframes SunTrianglesIn6 {
+    0% {
+        opacity: 0;
+        transform: translate(400px, 450px) rotate(135deg);
+    }
+}
+@keyframes SunTrianglesIn7 {
+    0% {
+        opacity: 0;
+        transform: translate(500px, 150px) rotate(90deg);
+    }
+}
+@keyframes SunTrianglesIn8 {
+    0% {
+        opacity: 0;
+        transform: translate(400px, -150px) rotate(45deg);
+    }
+}
+
+/*#moon {
+    animation: MoonIcon var(--moon-duration) var(--moon-timing) var(--moon-iteration);
+}*/
+
+@keyframes MoonIcon {
+    0% {
+        transform: translate(-200px, 350px) rotate(90deg);
+    }
+}
+
+#moon-svg-path {
+    filter: drop-shadow(0px 0px 10px black);
+}
