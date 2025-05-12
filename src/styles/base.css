@@ -282,63 +282,6 @@ button:hover {
     text-decoration: none;
 }
 
-/* Botões do portfolio */
-.intro-buttons {
-    background-color: transparent;
-    width: 8rem;
-    height: 2.5rem;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    font-size: 12pt;
-    font-weight: 600;
-    border: 0px solid;
-    border-radius: 7.5px;
-    transition: all 0.3s;
-}
-.intro-buttons:hover {
-    transform: scale(1.1);
-}
-.intro-buttons[class~="light"] {
-    background-color: #000;
-    color: #fff;
-}
-.intro-buttons[class~="dark"] {
-    background-color: #fff;
-    color: #000;
-}
-.intro-buttons[class~="red"] {
-    background-color: #f02020;
-    color: #fff;
-}
-.intro-buttons[class~="blue"] {
-    background-color: #2020f0;
-    color: #fff;
-}
-
-/* Imagens dentro dos botões */
-.button-images {
-    width: 30px;
-    transition: all 0.3s;
-}
-.button-images#linkedin[class~="light"],
-.button-images#linkedin[class~="red"],
-.button-images#linkedin[class~="blue"] {
-    filter: grayscale(1) brightness(5);
-}
-.button-images#linkedin[class~="dark"] {
-    filter: grayscale(1) brightness(0);
-}
-.button-images#github[class~="light"],
-.button-images#github[class~="red"],
-.button-images#github[class~="blue"] {
-    filter: grayscale(1) brightness(8);
-}
-.button-images#github[class~="dark"] {
-    filter: grayscale(1) brightness(0);
-}
-
 /* Div da imagem do portfólio */
 .intro-image-div {
     width: 49%;

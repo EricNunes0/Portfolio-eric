@@ -25,6 +25,7 @@ import "../../styles/mouseAnimation.css";
 import "../../styles/nav.css";
 import "../../styles/scrollBar.css";
 import "../../styles/scrollUp.css";
+import "../../styles/sparkleButton.css";
 import "../../styles/themeAnimations.css";
 import "../../styles/themeSelector.css";
 import "../../styles/typing.css"
@@ -33,7 +34,6 @@ import "./BoardCodes";
 import "../../scripts/closeModal";
 import "./Asteroides";
 import "./ModalLangs";
-import "../../scripts/modalLangsHover";
 import "../../scripts/openModal";
 import "../../scripts/EditModal";
 import "../../scripts/projectLinks";
@@ -42,6 +42,7 @@ import "../../scripts/moonAnimation";
 import "../../scripts/scrollScreenTo";
 import "../../scripts/sunTrianglesAnimation";
 import "../../scripts/windowScroll";
+import SparkleButton from "./SparkleButton";
 
 export default function Home() {
     const { tema } = useContext(ThemeContext);
@@ -94,7 +95,7 @@ export default function Home() {
                 <div className = {`nav-div`}>
                     <nav className = {`nav-desktop flex-center ${tema}`}>
                         <div className = "nav-flex">
-                            <ThemeSelector id={`desktop`} theme={tema}></ThemeSelector>
+                            <ThemeSelector id={`desktop`} theme={tema} mobile={false}></ThemeSelector>
                             <section className = "nav-buttons-section">
                                 <div className = "nav-buttons-div">
                                     <ul className = "nav-buttons-list">
@@ -127,7 +128,7 @@ export default function Home() {
                             <button className = "nav-header-mobile-button closed" id = "nav-button" onClick = {() => navMobileMenu()}>
                                 <img className = {`nav-header-mobile-button-image closed ${tema}`} id = "nav-button-image" src = "svgs/menu.svg"/>
                             </button>
-                            <ThemeSelector id={`mobile`} theme={tema}></ThemeSelector>
+                            <ThemeSelector id={`mobile`} theme={tema} mobile={true}></ThemeSelector>
                         </header>
                         <div className = {`nav-mobile-menu closed ${tema}`} id = "nav-mobile-menu">
                             <ul className = "nav-menu-list">
@@ -166,16 +167,10 @@ export default function Home() {
                                 </section>
                                 <section className = "intro-buttons-section">
                                     <a className = "button-links" href = "https://www.linkedin.com/in/eric-nunes-ramalho-58a146208/" target = "_blank">
-                                        <button className = {`intro-buttons ${tema}`} id = "button-linkedin" type = "button">
-                                            <img className = {`button-images ${tema}`} id = "linkedin" src = "images/img_LinkedInIcon.png"/>
-                                            LinkedIn
-                                        </button>
+                                        <SparkleButton theme={tema} text={`Linkedin`} icon={`svgs/contacts/linkedin.svg`}></SparkleButton>
                                     </a>
                                     <a className = "button-links" href = "https://github.com/EricNunes0" target = "_blank">
-                                        <button className = {`intro-buttons ${tema}`} id = "button-github" type = "button">
-                                            <img className = {`button-images ${tema}`} id = "github" src = "images/img_GithubIcon.png"/>
-                                            Github
-                                        </button>
+                                        <SparkleButton theme={tema} text={`Github`} icon={`svgs/contacts/github.svg`}></SparkleButton>
                                     </a>
                                 </section>
                             </div>
@@ -188,13 +183,13 @@ export default function Home() {
                         <div className = {`aboutme-container ${tema}`} id = "aboutme-container">
                             <div className = "portfolio-aboutme-div">
                                 <div className="title-div">
-                                    <h1 className = {`title1 text-align-center ${tema}`} id = "about-me">Sobre mim</h1>
-                                    <h5 className = {`title5 text-align-center ${tema}`} id = "aboutme-description">Conheça um pouco sobre mim</h5>
+                                    <h1 className = {`title1 text-align-center move move-left ${tema}`} id = "about-me">Sobre mim</h1>
+                                    <h5 className = {`title5 text-align-center move move-left ${tema}`} id = "aboutme-description">Conheça um pouco sobre mim</h5>
                                 </div>
                                 <div id = "aboutme-main">
                                     <div className = "intro-image-div">
                                         <a id = "intro-image-link" href = "https://www.linkedin.com/in/eric-nunes-ramalho-58a146208/" target="_blank">
-                                            <img className = {`intro-image ${tema}`} src = "images/img_eric.jpg"/>
+                                            <img className = {`intro-image move move-left ${tema}`} src = "images/img_eric.jpg"/>
                                             <Asteroides theme={tema}></Asteroides>
                                         </a>
                                     </div>
@@ -215,7 +210,7 @@ export default function Home() {
                                         </div>
                                     </div>
                                     <div className = "aboutme-description-div">
-                                        <div className = "aboutme-divs">
+                                        <div className = {`aboutme-divs move move-right`}>
                                             <div className = "aboutme-header-divs">
                                                 <div className = {`aboutme-icon-divs ${tema}`}>
                                                     <img className = {`aboutme-icons ${tema}`} src = "svgs/user.svg"></img>
@@ -226,7 +221,7 @@ export default function Home() {
                                                 <p className = {`aboutme-texts ${tema}`} id="aboutme-who">Olá, meu nome é Eric Nunes Ramalho. Sou um jovem de {new Date().getFullYear() - new Date("2004-05-26").getFullYear()} anos, natural do Rio de Janeiro, Brasil, estudante do curso de Análise e Desenvolvimento de Sistemas na Universidade Estácio de Sá.</p>
                                             </div>
                                         </div>
-                                        <div className = "aboutme-divs">
+                                        <div className = {`aboutme-divs move move-right`}>
                                             <div className = "aboutme-header-divs">
                                                 <div className = {`aboutme-icon-divs ${tema}`}>
                                                     <img className = {`aboutme-icons ${tema}`} src = "svgs/code.svg"></img>
@@ -237,7 +232,7 @@ export default function Home() {
                                                 <p className = {`aboutme-texts ${tema}`}>Sou uma pessoa simples que ama aprender coisas novas, em especial sobre a área de desenvolvimento web e aplicações, a qual tenho um forte desejo de seguir carreira.</p>
                                             </div>
                                         </div>
-                                        <div className = "aboutme-divs">
+                                        <div className = {`aboutme-divs move move-right`}>
                                             <div className = "aboutme-header-divs">
                                                 <div className = {`aboutme-icon-divs ${tema}`}>
                                                     <img className = {`aboutme-icons ${tema}`} src = "svgs/briefcase.svg"></img>
@@ -256,8 +251,8 @@ export default function Home() {
                     <section ref={knowledgesRef} className = {`container1 ${tema}`} id = "portfolio-knowledges">
                         <div id = "knowledges-area">
                             <div className="title-div">
-                                <h1 className = {`title1 text-align-center ${tema}`} id = "knowledges-header-title">Conhecimentos</h1>
-                                <h5 className = {`title5 text-align-center ${tema}`} id = "knowledges-header-description">Confira todas as área e tecnologias que possuo conhecimento</h5>
+                                <h1 className = {`title1 text-align-center move move-top ${tema}`} id = "knowledges-header-title">Conhecimentos</h1>
+                                <h5 className = {`title5 text-align-center move move-top ${tema}`} id = "knowledges-header-description">Confira todas as área e tecnologias que possuo conhecimento</h5>
                             </div>
                             <div id = "knowledges-main-div" style={{backgroundColor: "rgba(0, 0, 0, 0.05)", borderRadius: "10px"}}>
                                 <div id="move-header">
@@ -276,7 +271,7 @@ export default function Home() {
                                     <section>
                                         <div className = "knowledges-articles">
                                             <div className = "knowledges-icon-areas">
-                                                <div className = {`knowledges-icon-divs ${tema}`} id = "knowledges-div-front">
+                                                <div className = {`knowledges-icon-divs move move-top ${tema}`} id = "knowledges-div-front">
                                                     <img className = {`knowledges-icons ${tema}`} src = "images/img_client.png"></img>
                                                 </div>
                                             </div>
@@ -376,7 +371,7 @@ export default function Home() {
                                     <section>
                                         <div className = "knowledges-articles">
                                             <div className = "knowledges-icon-areas">
-                                                <div className = {`knowledges-icon-divs ${tema}`} id = "knowledges-div-back">
+                                                <div className = {`knowledges-icon-divs move move-top ${tema}`} id = "knowledges-div-back">
                                                     <img className = {`knowledges-icons ${tema}`} src = "images/img_server.png"></img>
                                                 </div>
                                             </div>
@@ -476,7 +471,7 @@ export default function Home() {
                                     <section>
                                         <div className = "knowledges-articles">
                                             <div className = "knowledges-icon-areas">
-                                                <div className = {`knowledges-icon-divs ${tema}`} id = "knowledges-div-db">
+                                                <div className = {`knowledges-icon-divs move move-top ${tema}`} id = "knowledges-div-db">
                                                     <img className = {`knowledges-icons ${tema}`} src = "images/img_db.png"></img>
                                                 </div>
                                             </div>
@@ -494,7 +489,7 @@ export default function Home() {
                                     </section>
                                     <section>
                                         <div className = "knowledges-articles">
-                                            <div className = {`knowledges-icon-divs ${tema}`} id = "knowledges-div-tools">
+                                            <div className = {`knowledges-icon-divs move move-top ${tema}`} id = "knowledges-div-tools">
                                                 <img className = {`knowledges-icons ${tema}`} src = "images/img_tools.png"></img>
                                             </div>
                                             <h3 className = {`title3 text-align-center ${tema}`}>Ferramentas</h3>
@@ -514,8 +509,10 @@ export default function Home() {
                         </div>
                     </section>
                     <section ref={experiencesRef} className = {`container1 ${tema}`} id = "portfolio-experiences-header">
-                        <h1 className = {`title1 text-align-center ${tema}`} id = "projects-title">Experiência</h1>
-                        <h5 className = {`title5 text-align-center ${tema}`} id = "projects-main-description">Veja toda a minha experiência profissional</h5>
+                        <br></br>
+                        <h1 className = {`title1 text-align-center move move-top  ${tema}`} id = "projects-title">Experiência</h1>
+                        <h5 className = {`title5 text-align-center move move-top  ${tema}`} id = "projects-main-description">Veja toda a minha experiência profissional</h5>
+                        <br></br>
                         <Experiences theme={tema}></Experiences>
                         <div id = "portfolio-experiences-background">
                             <div id="portfolio-experiences-background-light" style={{position: "absolute", bottom: 0, left: "2.5%", height: "2px", width: "95%", backgroundImage: "linear-gradient(180deg, rgba(255, 255, 255, 0.5), rgba(187, 187, 187, 0.5))", borderRadius: "10px"}}></div>
@@ -526,8 +523,9 @@ export default function Home() {
                         <div className = "portfolio-projects-main">
                             <div className = "portfolio-projects-div">
                                 <div className = "portfolio-projects-title-div">
-                                    <h1 className = {`title1 text-align-center ${tema}`} id = "projects-title">Projetos</h1>
-                                    <h5 className = {`title5 text-align-center ${tema}`} id = "projects-main-description">Veja todos os meus projetos e quais linguagens usei neles:</h5>
+                                    <br></br>
+                                    <h1 className = {`title1 text-align-center move move-top ${tema}`} id = "projects-title">Projetos</h1>
+                                    <h5 className = {`title5 text-align-center move move-top ${tema}`} id = "projects-main-description">Veja todos os meus projetos e quais linguagens usei neles:</h5>
                                 </div>
                                 <div id = "projects-main-div">
                                     <Projects theme={tema} setProject={setModalProject}></Projects>

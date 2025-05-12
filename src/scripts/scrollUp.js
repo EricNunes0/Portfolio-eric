@@ -1,6 +1,4 @@
-window.onscroll = function() {scrollEvent()};
-
-function scrollEvent() {
+export function scrollEvent() {
     let scrollUpButton = document.querySelector("#scroll-up-button");
     const maxScrollHeight = 400;
     if(document.body.scrollTop > maxScrollHeight || document.documentElement.scrollTop > maxScrollHeight) {

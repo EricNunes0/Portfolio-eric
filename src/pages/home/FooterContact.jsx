@@ -1,6 +1,6 @@
 export default function FooterContact({theme, contact}) {
     return (
-        <div className="contatos-items">
+        <div className="contatos-items move move-top">
             <a class = "contatos-links" href = {contact.url} alt = {contact.name} target = "_blank">
                 <div class = {`contato-images-divs ${theme}`}>
                     <img class = {`contato-images ${theme}`} src = {contact.image}/>

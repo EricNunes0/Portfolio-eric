@@ -1,5 +1,3 @@
-import ModalLangs from "../pages/home/ModalLangs";
-import modalLangsHover from "./modalLangsHover";
 import openModal from "./openModal";
 
 export default function EditModal({project, setProject}) {

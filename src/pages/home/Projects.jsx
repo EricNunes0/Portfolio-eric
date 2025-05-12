@@ -44,7 +44,7 @@ export default function Projects({theme, setProject}) {
         `;
 
         projectsDivs.push(
-            <div className = "project-divs">
+            <div className = "project-divs move move-top">
                 <button type = "button" className = "project-main-buttons" id = {`project-button-${project.id}`} onClick = {() => {EditModal({project: project, setProject: setProject})}}>
                     <ProjectLink className = "project-links" id = {`project-link-${project.id}`}>
                         <input type = "color" className = "project-colors" value = {project.color}/>
