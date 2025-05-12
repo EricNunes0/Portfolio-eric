@@ -15,7 +15,7 @@
     height: 10px;
     background-size: 100% 100%;
     opacity: 0;
-    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.8));
+    filter: invert(1) drop-shadow(0 0 5px rgba(255, 255, 255, 0.8));
     animation-name: BackgroundTriangles;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
@@ -29,11 +29,6 @@
 }
 .background-triangles[class~="light"] {
     filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.8));
-}
-.background-triangles[class~="dark"],
-.background-triangles[class~="red"],
-.background-triangles[class~="blue"] {
-    filter: invert(1);
 }
 @keyframes BackgroundTriangles {
     0% {

@@ -38,8 +38,20 @@
 #modal-area[class~="red"] {
     background-color: #201010;
 }
+#modal-area[class~="orange"] {
+    background-color: #201510;
+}
+#modal-area[class~="yellow"] {
+    background-color: #202010;
+}
+#modal-area[class~="green"] {
+    background-color: #102010;
+}
 #modal-area[class~="blue"] {
     background-color: #101020;
+}
+#modal-area[class~="purple"] {
+    background-color: #201020;
 }
 
 #modal-close-area {
@@ -48,8 +60,8 @@
 }
 
 #modal-close-button {
-    background-color: #e0e0e0;
-    border: 1px solid #d0d0d0;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0);
     position: absolute;
     top: 20px;
     right: 20px;
@@ -60,17 +72,13 @@
     border-radius: 5px;
     transition: all 0.3s;
 }
+#modal-close-button[class~="light"] {
+    background-color: #e0e0e0;
+    border: 1px solid #d0d0d0;
+}
 #modal-close-button[class~="dark"] {
     background-color: #202020;
     border: 1px solid #303030;
-}
-#modal-close-button[class~="red"] {
-    background-color: #402020;
-    border: 1px solid #503030;
-}
-#modal-close-button[class~="blue"] {
-    background-color: #202040;
-    border: 1px solid #303050;
 }
 #modal-close-button:hover {
     transform: scale(1.1);
@@ -126,6 +134,7 @@
 }
 
 #modal-description-title {
+    color: #e0e0e0;
     font-family: "Poppins";
     font-size: 14pt;
     font-weight: bold;
@@ -134,20 +143,15 @@
 #modal-description-title[class~="light"] {
     color: #404040;
 }
-#modal-description-title[class~="dark"] {
-    color: #e0e0e0;
-}
 
 #modal-description {
+    color: #b0b0b0;
     width: 90%;
     font-size: 10pt;
     transition: all 0.3s;
 }
 #modal-description[class~="light"] {
     color: #404040;
-}
-#modal-description[class~="dark"] {
-    color: #b0b0b0;
 }
 
 /* Linguagens */
@@ -197,19 +201,8 @@
     top: 0px;
     width: 30px;
     height: 30px;
+    filter: var(--base-filter);
     transition: all 0.3s;
-}
-.modal-langs[class~="light"] {
-    filter: brightness(0) hue-rotate(0deg);
-}
-.modal-langs[class~="dark"] {
-    filter: brightness(10) hue-rotate(0deg);
-}
-.modal-langs[class~="red"] {
-    filter: brightness(1) hue-rotate(123deg) saturate(1.2);
-}
-.modal-langs[class~="blue"] {
-    filter: brightness(1) hue-rotate(0deg);
 }
 
 /* Divs dos nomes das linguagens */
@@ -232,16 +225,11 @@
 
 /* Nomes das linguagens */
 .modal-lang-names {
+    color: #fff;
     white-space: nowrap;
     font-family: "Poppins";
     font-family: 10pt;
     transition: all 0.3s;
-}
-.modal-lang-names[class~="light"] {
-    color: #fff;
-}
-.modal-lang-names[class~="dark"] {
-    color: #fff;
 }
 
 @keyframes ModalLangFly {
@@ -277,10 +265,12 @@
 }
 
 .modal-links {
+    border: 2px solid var(--base-color);
     border-radius: 5px;
+    color: var(--base-color);
     display: block;
     width: 150px;
-    font-size: 12pt;
+    font-size: 14px;
     font-weight: 700;
     padding: 5px;
     text-align: center;
@@ -289,8 +279,10 @@
     transition: all 0.3s;
 }
 .modal-links:hover {
-    transform: scale(1.03);
+    background-color: var(--base-color);
     box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 5px;
+    color: #fff;
+    transform: scale(1.03);
 }
 .modal-links[class~="light"] {
     color: #000;
@@ -307,22 +299,6 @@
 .modal-links[class~="dark"]:hover {
     background-color: #fff;
     color: #000;
-}
-.modal-links[class~="red"] {
-    color: #f02020;
-    border: 2px solid #f02020;
-}
-.modal-links[class~="red"]:hover {
-    background-color: #f02020;
-    color: #fff;
-}
-.modal-links[class~="blue"] {
-    color: #2020f0;
-    border: 2px solid #2020f0;
-}
-.modal-links[class~="blue"]:hover {
-    background-color: #2020f0;
-    color: #fff;
 }
 
 .modal-links[class~="hide"] {

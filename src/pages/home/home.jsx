@@ -464,7 +464,7 @@ export default function Home() {
                                                 <div className = "knowledges-code-title-divs">
                                                     <h1 className = {`knowledges-code-titles ${tema}`}>Tecnologias:</h1>
                                                 </div>
-                                                <KnowledgesLanguages theme={tema} languages={["nodejs", "ejs", "php", "python"]}></KnowledgesLanguages>
+                                                <KnowledgesLanguages theme={tema} languages={["nodejs", "ejs", "php", "python", "postman"]}></KnowledgesLanguages>
                                             </div>
                                         </div>
                                     </section>

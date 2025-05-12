@@ -2,7 +2,7 @@ import React, { createContext, useState, useEffect } from "react";
 
 export const ThemeContext = createContext();
 
-const temasDisponiveis = ["light", "dark", "red", "blue"];
+const temasDisponiveis = ["light", "dark", "red", "orange", "yellow", "green", "blue", "purple"];
 
 export const ThemeProvider = ({children}) => {
     const [tema, setTema] = useState("light");

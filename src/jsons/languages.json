@@ -94,6 +94,11 @@
         "image": "images/codes/img_github.png",
         "icon": "svgs/code/github.svg"
     },
+    "postman": {
+        "name": "Postman",
+        "image": "images/codes/img_postman.png",
+        "icon": "svgs/code/postman.svg"
+    },
     "figma": {
         "name": "Figma",
         "image": "images/codes/img_figma.png",

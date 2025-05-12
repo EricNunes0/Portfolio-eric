@@ -28,27 +28,22 @@
     font-size: 60px;
     font-weight: bold;
     text-align: center;
+    background-color: var(--base-color);
+    background-image: linear-gradient(135deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 50%, rgba(0, 0, 0, 0) 100%);;
     background-size: 400%;
     background-clip: text;
     margin: 0;
     min-height: 75px;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    animation: introName 8s cubic-bezier(0, 0, 1, 1) 0.1s infinite;
+    animation: introName 4s cubic-bezier(0, 0, 1, 1) 0.1s infinite;
     transition: all 0.3s;
-
 }
 .typing-text-2[class~="light"] {
-    background-image: linear-gradient(135deg, rgba(20, 20, 20, 1) 0%, rgb(80, 80, 80, 1) 50%, rgba(20, 20, 20, 1) 100%);
+    background-color: #000;
 }
 .typing-text-2[class~="dark"] {
-    background-image: linear-gradient(135deg, rgba(255, 255, 255, 1) 0%, rgb(120, 120, 120, 1) 50%, rgba(255, 255, 255, 1) 100%);
-}
-.typing-text-2[class~="red"] {
-    background-image: linear-gradient(135deg, rgba(255, 20, 20, 1) 0%, rgb(200, 40, 40, 1) 50%, rgba(255, 20, 20, 1) 100%);
-}
-.typing-text-2[class~="blue"] {
-    background-image: linear-gradient(135deg, rgba(20, 20, 255, 1) 0%, rgb(40, 40, 160, 1) 50%, rgba(20, 20, 255, 1) 100%);
+    background-color: #fff;
 }
 
 @keyframes introName {

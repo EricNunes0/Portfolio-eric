@@ -1,13 +1,11 @@
 :root {
     --sparkle-button-light: #101010;
     --sparkle-button-dark: #e0e0e0;
-    --sparkle-button-red: #f02020;
-    --sparkle-button-blue: #2020f0;
 }
 
 .sparkle-button {
     align-items: center;
-    background-color: transparent;
+    background-color: var(--base-color);
     border-color: transparent;
     border-radius: 50px;
     border-style: solid;
@@ -29,15 +27,10 @@
 .sparkle-button[class~="dark"] {
     background-color: var(--sparkle-button-dark);
 }
-.sparkle-button[class~="red"] {
-    background-color: var(--sparkle-button-red);
-}
-.sparkle-button[class~="blue"] {
-    background-color: var(--sparkle-button-blue);
-}
 .sparkle-button:hover {
     background-position: -5px;
     background-size: 100% 45px;
+    box-shadow: 0px 0px 50px var(--base-color);
     transform: scale(1.1);
 }
 .sparkle-button[class~="light"]:hover {
@@ -47,14 +40,6 @@
 .sparkle-button[class~="dark"]:hover {
     background-image: radial-gradient(ellipse at bottom, rgba(200, 200, 200, 0.6), #fff);
     box-shadow: 0px 0px 50px var(--sparkle-button-dark);
-}
-.sparkle-button[class~="red"]:hover {
-    background-image: radial-gradient(ellipse at bottom, rgba(255, 255, 255, 0.6), transparent);
-    box-shadow: 0px 0px 50px var(--sparkle-button-red);
-}
-.sparkle-button[class~="blue"]:hover {
-    background-image: radial-gradient(ellipse at bottom, rgba(255, 255, 255, 0.6), transparent);
-    box-shadow: 0px 0px 50px var(--sparkle-button-blue);
 }
 
 .sparkle-button::after {
@@ -94,13 +79,9 @@
 .sparkle-button-icon {
     width: 20px;
     height: 20px;
+    filter: brightness(10) hue-rotate(0deg);
     opacity: 0.7;
     transition: all 0.3s ease;
-}
-.sparkle-button-icon[class~="light"],
-.sparkle-button-icon[class~="red"],
-.sparkle-button-icon[class~="blue"] {
-    filter: brightness(10) hue-rotate(0deg);
 }
 .sparkle-button-icon[class~="dark"] {
     filter: brightness(0) hue-rotate(0deg);
@@ -111,13 +92,9 @@
 
 .sparkle-button-text {
     font-size: 16px;
+    color: #fff;
     opacity: 0.7;
     transition: all 0.3s ease;
-}
-.sparkle-button-text[class~="light"],
-.sparkle-button-text[class~="red"],
-.sparkle-button-text[class~="blue"] {
-    color: #fff;
 }
 .sparkle-button-text[class~="dark"] {
     color: #000;

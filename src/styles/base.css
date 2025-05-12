@@ -1,16 +1,31 @@
 :root {
+    --base-color: var(--theme-light-color);
     --theme-light-color: #f0f0f0;
     --theme-dark-color: #050505;
     --theme-red-color: #f02020;
+    --theme-orange-color: #f06020;
+    --theme-yellow-color: #f0f020;
+    --theme-green-color: #20f020;
     --theme-blue-color: #2020f0;
+    --theme-purple-color: #a020f0;
+    /* Filtros de ícones */
+    --base-filter: var(--theme-light-filter);
+    --theme-light-filter: brightness(0) hue-rotate(0deg);
+    --theme-dark-filter: brightness(10) hue-rotate(0deg);
+    --theme-red-filter: brightness(1) hue-rotate(123deg) saturate(1.2);
+    --theme-orange-filter: brightness(1.3) hue-rotate(150deg) saturate(1.2);
+    --theme-yellow-filter: brightness(2) hue-rotate(215deg) saturate(14);
+    --theme-green-filter: brightness(1) hue-rotate(220deg) saturate(5);
+    --theme-blue-filter: brightness(1) hue-rotate(0deg);
+    --theme-purple-filter: brightness(1) hue-rotate(50deg);
+
     --nav-height: 50px;
-    --font-color-categorie-0: #3060ff;
     --project-links-border-radius: 5px;
     --reveal-text-duration: 0.3s;
     --reveal-text-timing: ease-out;
     --separator-color: #909090;
-    --image-asteroide-width: 20px;
-    --image-asteroide-height: 20px;
+    --image-asteroide-width: 14px;
+    --image-asteroide-height: 14px;
     --image-asteroide-margin: 10px;
     --github-button-color: rgba(12, 44, 60, 1);
     --linkedin-button-color: rgba(15, 120, 170, 1);
@@ -90,13 +105,14 @@ button:hover {
 .portfolio-header[class~="dark"] {
     background-color: rgb(0, 0, 0);
 }
-.portfolio-header[class~="red"] {
+.portfolio-header[class~="red"],
+.portfolio-header[class~="orange"],
+.portfolio-header[class~="yellow"],
+.portfolio-header[class~="green"],
+.portfolio-header[class~="blue"],
+.portfolio-header[class~="purple"] {
     background-color: rgb(20, 20, 20);
-    background-image: radial-gradient(ellipse at top, rgba(250, 0, 0, 0.3) 0%, rgba(20, 0, 0, 1) 90%);
-}
-.portfolio-header[class~="blue"] {
-    background-color: rgb(20, 20, 20);
-    background-image: radial-gradient(ellipse at top, rgba(0, 20, 150, 0.3) 0%, rgba(0, 0, 20, 1) 90%);
+    background-image: radial-gradient(ellipse at top, var(--base-color) -100%, rgba(0, 0, 0, 1) 90%);
 }
 
 
@@ -308,20 +324,9 @@ button:hover {
     height: calc(100% + calc(var(--image-asteroide-height) * 2) + calc(var(--image-asteroide-margin) * 2));
     background-size: contain;
     background-repeat: no-repeat;
+    filter: var(--base-filter);
     animation: Asteroide 20s linear infinite;
     transition: all 0.3s ease;
-}
-.intro-image-asteroides[class~="light"] {
-    filter: brightness(0) hue-rotate(0deg);
-}
-.intro-image-asteroides[class~="dark"] {
-    filter: brightness(10) hue-rotate(0deg);
-}
-.intro-image-asteroides[class~="red"] {
-    filter: brightness(1) hue-rotate(123deg) saturate(1.2);
-}
-.intro-image-asteroides[class~="blue"] {
-    filter: brightness(1) hue-rotate(0deg);
 }
 .intro-image-asteroides::after {
     pointer-events: all;
@@ -348,6 +353,7 @@ button:hover {
     pointer-events: all;
     border-radius: 50%;
     box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 15px;
+    outline: 2px solid var(--base-color);
     animation-name: portfolioImage;
     animation-duration: 2s;
     animation-timing-function: cubic-bezier(0, 0, 1, 1);
@@ -356,18 +362,6 @@ button:hover {
 }
 .intro-image:hover {
     transform: scale(1.05);
-}
-.intro-image[class~="light"] {
-    outline: 2px solid rgba(0, 0, 0);
-}
-.intro-image[class~="dark"] {
-    outline: 2px solid rgba(255, 255, 255);
-}
-.intro-image[class~="red"] {
-    outline: 2px solid rgba(255, 40, 40);
-}
-.intro-image[class~="blue"] {
-    outline: 2px solid rgba(40, 40, 255);
 }
 
 @keyframes portfolioImage {
@@ -410,6 +404,7 @@ button:hover {
 .arrow-image {
     width: 70px;
     height: 45px;
+    filter: invert(0.2) drop-shadow(0 0 8px rgba(0, 0, 0, 0.3));
     transform: rotate(180deg);
     animation-name: arrowAnimation;
     animation-duration: 1.5s;
@@ -419,9 +414,6 @@ button:hover {
 }
 .arrow-image[class~="light"] {
     filter: invert(0.8) drop-shadow(0 0 8px rgba(0, 0, 0, 0.3));
-}
-.arrow-image[class~="dark"] {
-    filter: invert(0.2) drop-shadow(0 0 8px rgba(0, 0, 0, 0.3));
 }
 
 @keyframes arrowAnimation {
@@ -500,21 +492,13 @@ button:hover {
 .title6[class~="dark"] {
     color: #fff;
 }
-.title1[class~="red"],
-.title2[class~="red"],
-.title3[class~="red"],
-.title4[class~="red"],
-.title5[class~="red"],
-.title6[class~="red"] {
-    color: #f04040;
-}
-.title1[class~="blue"],
-.title2[class~="blue"],
-.title3[class~="blue"],
-.title4[class~="blue"],
-.title5[class~="blue"],
-.title6[class~="blue"] {
-    color: #4040f0;
+[class^="title"].red,
+[class^="title"].orange,
+[class^="title"].yellow,
+[class^="title"].green,
+[class^="title"].blue,
+[class^="title"].purple {
+    color: var(--base-color);
 }
 
 @media screen and (max-width: 768px) {
@@ -545,8 +529,20 @@ button:hover {
 .container1[class~="red"] {
     background-color: #100000;
 }
+.container1[class~="orange"] {
+    background-color: #100500;
+}
+.container1[class~="yellow"] {
+    background-color: #101000;
+}
+.container1[class~="green"] {
+    background-color: #001000;
+}
 .container1[class~="blue"] {
     background-color: #000010;
+}
+.container1[class~="purple"] {
+    background-color: #050010;
 }
 
 /* Bloco da aba sobre mim */
@@ -654,6 +650,7 @@ button:hover {
 
 /* Linha do separador ligado com o currículo */
 #separator-to-curriculum {
+    background-image: linear-gradient(0deg, var(--base-color), var(--separator-color));
     transition: all 0.3s ease;
 }
 #separator-to-curriculum[class~="light"] {
@@ -661,12 +658,6 @@ button:hover {
 }
 #separator-to-curriculum[class~="dark"] {
     background-image: linear-gradient(0deg, #fff, var(--separator-color));
-}
-#separator-to-curriculum[class~="red"] {
-    background-image: linear-gradient(0deg, #f02020, var(--separator-color));
-}
-#separator-to-curriculum[class~="blue"] {
-    background-image: linear-gradient(0deg, #2020f0, var(--separator-color));
 }
 
 /* Div da descrição do sobre mim */
@@ -713,48 +704,26 @@ button:hover {
     padding: 5px;
     border-radius: 10px;
     transition: all 0.3s;
+    background-color: var(--base-color);
 }
 .aboutme-icon-divs[class~="light"] {
-    background-color: #e0e0e0;
+    background-color: #f0f0f0;
     border: 1px solid #b0b0b0;
 }
 .aboutme-icon-divs[class~="dark"] {
     background-color: #404040;
     border: 1px solid #202020;
 }
-.aboutme-icon-divs[class~="red"] {
-    background-color: #d04040;
-    border: 1px solid #a02020;
-}
-.aboutme-icon-divs[class~="blue"] {
-    background-color: #4040f0;
-    border: 1px solid #202040;
-}
 
 /* Ícones das descrições sobre mim */
 .aboutme-icons {
     width: 25px;
     height: 25px;
-    transition: all 0.3s;
-}
-.aboutme-icons[class~="dark"],
-.aboutme-icons[class~="red"],
-.aboutme-icons[class~="blue"] {
     filter: invert(1);
-}
-
-/* Títulos das descrições sobre mim */
-.aboutme-titles {
-    color: #000;
-    font-size: 20px;
-    font-family: "Poppins";
-    text-align: center;
-    margin: 0;
     transition: all 0.3s;
 }
-.aboutme-titles[class~="dark"],
-.aboutme-titles[class~="blue"] {
-    color: #fff;
+.aboutme-icons[class~="light"] {
+    filter: invert(0);
 }
 
 /* Divs dos textos das descrições sobre mim */
@@ -906,6 +875,8 @@ button:hover {
     width: 100%;
     height: 100%;
     background-color: transparent;
+    border: 2px solid var(--base-color);
+    color: var(--base-color);
     font-family: "Poppins";
     font-size: 12pt;
     font-weight: bold;
@@ -921,15 +892,9 @@ button:hover {
     color: #fff;
     border: 2px solid #fff;
 }
-.curriculo-button[class~="red"] {
-    color: #f02020;
-    border: 2px solid #f02020;
-}
-.curriculo-button[class~="blue"] {
-    color: #2020f0;
-    border: 2px solid #2020f0;
-}
 .curriculo-button:hover {
+    background-color: var(--base-color);
+    box-shadow: var(--base-color) 0px 0px 15px;
     color: #fff;
 }
 .curriculo-button[class~="light"]:hover {
@@ -940,16 +905,6 @@ button:hover {
     background-color: #fff;
     box-shadow: #ffffff50 0px 0px 15px;
     color: #000;
-}
-.curriculo-button[class~="red"]:hover {
-    background-color: #f02020;
-    box-shadow: #f0202050 0px 0px 15px;
-    color: #fff;
-}
-.curriculo-button[class~="blue"]:hover {
-    background-color: #2020f0;
-    box-shadow: #2020f050 0px 0px 15px;
-    color: #fff;
 }
 
 /* Conhecimentos */
@@ -1004,7 +959,8 @@ button:hover {
 .move-index {
     width: 24px;
     height: 24px;
-    background-color: white;
+    background-color: var(--base-color);
+    border-color: transparent;
     border-style: solid;
     border-width: 1px;
     border-radius: 50%;
@@ -1019,14 +975,6 @@ button:hover {
 .move-index[class~="dark"] {
     background-color: #202020;
     border-color: #606060;
-}
-.move-index[class~="red"] {
-    background-color: #f02020;
-    border-color: transparent;
-}
-.move-index[class~="blue"] {
-    background-color: #2020f0;
-    border-color: transparent;
 }
 .move-index.active {
     background-color: black;
@@ -1088,12 +1036,11 @@ button:hover {
 .move-buttons-icons {
     width: 50px;
     height: 50px;
+    filter: invert(1);
     transition: all 0.3s ease;
 }
-.move-buttons[class~="dark"] > .move-buttons-icons,
-.move-buttons[class~="red"] > .move-buttons-icons,
-.move-buttons[class~="blue"] > .move-buttons-icons {
-    filter: invert(1);
+.move-buttons[class~="light"] > .move-buttons-icons {
+    filter: invert(0);
 }
 .move-buttons#right > .move-buttons-icons {
     rotate: 180deg;
@@ -1197,16 +1144,20 @@ button:hover {
 .knowledges-icon-divs#knowledges-div-front[class~="dark"]::after {
     background-image: linear-gradient(0deg, var(--front-end-gradient), transparent);
 }
-.knowledges-icon-divs#knowledges-div-front[class~="red"] {
+.knowledges-icon-divs#knowledges-div-front[class~="red"],
+.knowledges-icon-divs#knowledges-div-front[class~="orange"],
+.knowledges-icon-divs#knowledges-div-front[class~="yellow"],
+.knowledges-icon-divs#knowledges-div-front[class~="green"],
+.knowledges-icon-divs#knowledges-div-front[class~="blue"],
+.knowledges-icon-divs#knowledges-div-front[class~="purple"] {
     background-image: linear-gradient(90deg, var(--front-end-gradient), var(--front-start-gradient));
 }
-.knowledges-icon-divs#knowledges-div-front[class~="red"]::after {
-    background-image: linear-gradient(0deg, var(--front-end-gradient), transparent);
-}
-.knowledges-icon-divs#knowledges-div-front[class~="blue"] {
-    background-image: linear-gradient(90deg, var(--front-end-gradient), var(--front-start-gradient));
-}
-.knowledges-icon-divs#knowledges-div-front[class~="blue"]::after {
+.knowledges-icon-divs#knowledges-div-front[class~="red"]::after,
+.knowledges-icon-divs#knowledges-div-front[class~="orange"]::after,
+.knowledges-icon-divs#knowledges-div-front[class~="yellow"]::after,
+.knowledges-icon-divs#knowledges-div-front[class~="green"]::after,
+.knowledges-icon-divs#knowledges-div-front[class~="blue"]::after,
+.knowledges-icon-divs#knowledges-div-front[class~="purple"]::after {
     background-image: linear-gradient(0deg, var(--front-end-gradient), transparent);
 }
 
@@ -1223,16 +1174,20 @@ button:hover {
 .knowledges-icon-divs#knowledges-div-back[class~="dark"]::after {
     background-image: linear-gradient(0deg, var(--back-end-gradient), transparent);
 }
-.knowledges-icon-divs#knowledges-div-back[class~="red"] {
+.knowledges-icon-divs#knowledges-div-back[class~="red"],
+.knowledges-icon-divs#knowledges-div-back[class~="orange"],
+.knowledges-icon-divs#knowledges-div-back[class~="yellow"],
+.knowledges-icon-divs#knowledges-div-back[class~="green"],
+.knowledges-icon-divs#knowledges-div-back[class~="blue"],
+.knowledges-icon-divs#knowledges-div-back[class~="purple"] {
     background-image: linear-gradient(90deg, var(--back-end-gradient), var(--back-start-gradient));
 }
-.knowledges-icon-divs#knowledges-div-back[class~="red"]::after {
-    background-image: linear-gradient(0deg, var(--back-end-gradient), transparent);
-}
-.knowledges-icon-divs#knowledges-div-back[class~="blue"] {
-    background-image: linear-gradient(90deg, var(--back-end-gradient), var(--back-start-gradient));
-}
-.knowledges-icon-divs#knowledges-div-back[class~="blue"]::after {
+.knowledges-icon-divs#knowledges-div-back[class~="red"]::after,
+.knowledges-icon-divs#knowledges-div-back[class~="orange"]::after,
+.knowledges-icon-divs#knowledges-div-back[class~="yellow"]::after,
+.knowledges-icon-divs#knowledges-div-back[class~="green"]::after,
+.knowledges-icon-divs#knowledges-div-back[class~="blue"]::after,
+.knowledges-icon-divs#knowledges-div-back[class~="purple"]::after {
     background-image: linear-gradient(0deg, var(--back-end-gradient), transparent);
 }
 
@@ -1249,16 +1204,20 @@ button:hover {
 .knowledges-icon-divs#knowledges-div-db[class~="dark"]::after {
     background-image: linear-gradient(0deg, var(--db-end-gradient), transparent);
 }
-.knowledges-icon-divs#knowledges-div-db[class~="red"] {
+.knowledges-icon-divs#knowledges-div-db[class~="red"],
+.knowledges-icon-divs#knowledges-div-db[class~="orange"],
+.knowledges-icon-divs#knowledges-div-db[class~="yellow"],
+.knowledges-icon-divs#knowledges-div-db[class~="green"],
+.knowledges-icon-divs#knowledges-div-db[class~="blue"],
+.knowledges-icon-divs#knowledges-div-db[class~="purple"] {
     background-image: linear-gradient(90deg, var(--db-end-gradient), var(--db-start-gradient));
 }
-.knowledges-icon-divs#knowledges-div-db[class~="red"]::after {
-    background-image: linear-gradient(0deg, var(--db-end-gradient), transparent);
-}
-.knowledges-icon-divs#knowledges-div-db[class~="blue"] {
-    background-image: linear-gradient(90deg, var(--db-end-gradient), var(--db-start-gradient));
-}
-.knowledges-icon-divs#knowledges-div-db[class~="blue"]::after {
+.knowledges-icon-divs#knowledges-div-db[class~="red"]::after,
+.knowledges-icon-divs#knowledges-div-db[class~="orange"]::after,
+.knowledges-icon-divs#knowledges-div-db[class~="yellow"]::after,
+.knowledges-icon-divs#knowledges-div-db[class~="green"]::after,
+.knowledges-icon-divs#knowledges-div-db[class~="blue"]::after,
+.knowledges-icon-divs#knowledges-div-db[class~="purple"]::after {
     background-image: linear-gradient(0deg, var(--db-end-gradient), transparent);
 }
 
@@ -1275,16 +1234,20 @@ button:hover {
 .knowledges-icon-divs#knowledges-div-tools[class~="dark"]::after {
     background-image: linear-gradient(0deg, var(--tools-end-gradient), transparent);
 }
-.knowledges-icon-divs#knowledges-div-tools[class~="red"] {
+.knowledges-icon-divs#knowledges-div-tools[class~="red"],
+.knowledges-icon-divs#knowledges-div-tools[class~="orange"],
+.knowledges-icon-divs#knowledges-div-tools[class~="yellow"],
+.knowledges-icon-divs#knowledges-div-tools[class~="green"],
+.knowledges-icon-divs#knowledges-div-tools[class~="blue"],
+.knowledges-icon-divs#knowledges-div-tools[class~="purple"] {
     background-image: linear-gradient(90deg, var(--tools-end-gradient), var(--tools-start-gradient));
 }
-.knowledges-icon-divs#knowledges-div-tools[class~="red"]::after {
-    background-image: linear-gradient(0deg, var(--tools-end-gradient), transparent);
-}
-.knowledges-icon-divs#knowledges-div-tools[class~="blue"] {
-    background-image: linear-gradient(90deg, var(--tools-end-gradient), var(--tools-start-gradient));
-}
-.knowledges-icon-divs#knowledges-div-tools[class~="blue"]::after {
+.knowledges-icon-divs#knowledges-div-tools[class~="red"]::after,
+.knowledges-icon-divs#knowledges-div-tools[class~="orange"]::after,
+.knowledges-icon-divs#knowledges-div-tools[class~="yellow"]::after,
+.knowledges-icon-divs#knowledges-div-tools[class~="green"]::after,
+.knowledges-icon-divs#knowledges-div-tools[class~="blue"]::after,
+.knowledges-icon-divs#knowledges-div-tools[class~="purple"]::after {
     background-image: linear-gradient(0deg, var(--tools-end-gradient), transparent);
 }
 
@@ -1350,6 +1313,7 @@ button:hover {
 
 /* Divs das linguagens dos conhecimentos */
 .knowledges-language-divs {
+    background-color: var(--base-color);
     cursor: pointer;
     position: relative;
     width: 80px;
@@ -1372,13 +1336,8 @@ button:hover {
 .knowledges-language-divs[class~="dark"] {
     background-color: #202020;
 }
-.knowledges-language-divs[class~="red"] {
-    background-color: #402020;
-}
-.knowledges-language-divs[class~="blue"] {
-    background-color: #202040;
-}
 .knowledges-language-divs:hover {
+    box-shadow: var(--base-color) 0px 0px 1rem;
     transform: scale(1.1);
 }
 .knowledges-language-divs[class~="light"]:hover {
@@ -1386,12 +1345,6 @@ button:hover {
 }
 .knowledges-language-divs[class~="dark"]:hover {
     box-shadow: #ffffff80 0px 0px 1rem;
-}
-.knowledges-language-divs[class~="red"]:hover {
-    box-shadow: #f0202080 0px 0px 1rem;
-}
-.knowledges-language-divs[class~="blue"]:hover {
-    box-shadow: #2020f080 0px 0px 1rem;
 }
 .knowledges-language-divs::after {
     content: "";
@@ -1401,23 +1354,19 @@ button:hover {
     display: block;
     bottom: -0.1rem;
     left: 0;
+    background-color: var(--base-color);
     background-image: linear-gradient(90deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0));
     background-size: 200% 200%;
     border-bottom-left-radius: 25px;
     border-bottom-right-radius: 25px;
     animation: LanguageDivs 3s linear infinite;
+    transition: all 0.3s ease;
 }
 .knowledges-language-divs[class~="light"]::after {
     background-color: #000;
 }
 .knowledges-language-divs[class~="dark"]::after {
     background-color: #fff;
-}
-.knowledges-language-divs[class~="red"]::after {
-    background-color: #f02020;
-}
-.knowledges-language-divs[class~="blue"]::after {
-    background-color: #2020f0;
 }
 @keyframes LanguageDivs {
     0% {
@@ -1432,40 +1381,23 @@ button:hover {
     min-width: 40px;
     height: 40px;
     border-radius: 5px;
+    filter: brightness(0);
     transition: all 0.3s ease;
 }
-.knowledges-languages-icons[class~="light"] {
-    filter: brightness(0) hue-rotate(0deg);
-}
 .knowledges-languages-icons[class~="dark"] {
-    filter: brightness(10) hue-rotate(0deg);
-}
-.knowledges-languages-icons[class~="red"] {
-    filter: brightness(1) hue-rotate(123deg) saturate(1.2);
-}
-.knowledges-languages-icons[class~="blue"] {
-    filter: brightness(1) hue-rotate(0deg);
+    filter: brightness(10);
 }
 
 /* Nomes das linguagens dos conhecimentos */
 .knowledges-languages-names {
+    color: #000;
     font-size: 10pt;
     font-weight: 700;
     margin: 0;
     transition: all 0.3s;
 }
-.knowledges-languages-names[class~="light"] {
-    color: #000;
-}
 .knowledges-languages-names[class~="dark"] {
     color: #fff;
-}
-.knowledges-languages-names[class~="red"] {
-    color: #fff;
-    color: #f02020;
-}
-.knowledges-languages-names[class~="blue"] {
-    color: #2020f0;
 }
 
 @media screen and (max-width: 768px) {
@@ -1547,6 +1479,8 @@ button:hover {
 
 /* Ícones das logos das empresas */
 .experiences-icon-divs {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
     width: 50px;
     height: 50px;
     display: flex;
@@ -1560,10 +1494,6 @@ button:hover {
 .experiences-icon-divs[class~="light"] {
     background-color: #f0f0f0;
     border: 1px solid #b0b0b0;
-}
-.experiences-icon-divs[class~="dark"] {
-    background-color: #404060;
-    border: 1px solid #202040;
 }
 
 .experiences-icons {
@@ -1831,20 +1761,15 @@ button:hover {
 
 /* Imagens das linguagens de programação */
 .lang-images {
+    filter: var(--base-filter);
     width: 20px;
     transition: all 0.3s ease;
 }
 .lang-images[class~="light"] {
-    filter: brightness(10) hue-rotate(0deg);
+    filter: var(--theme-dark-filter);
 }
 .lang-images[class~="dark"] {
-    filter: brightness(0) hue-rotate(0deg);
-}
-.lang-images[class~="red"] {
-    filter: brightness(1) hue-rotate(123deg) saturate(1.2);
-}
-.lang-images[class~="blue"] {
-    filter: brightness(1) hue-rotate(0deg);
+    filter: var(--theme-light-filter);
 }
 @media screen and (max-width: 480px) {
     .lang-images {
@@ -1900,8 +1825,20 @@ button:hover {
 #footer-container[class~="red"] {
     background-color: #201010;
 }
+#footer-container[class~="orange"] {
+    background-color: #201510;
+}
+#footer-container[class~="yellow"] {
+    background-color: #202010;
+}
+#footer-container[class~="green"] {
+    background-color: #102010;
+}
 #footer-container[class~="blue"] {
     background-color: #101020;
+}
+#footer-container[class~="purple"] {
+    background-color: #201020;
 }
 
 /* Div dos contatos */
@@ -1969,6 +1906,7 @@ button:hover {
 
 /* Divs das imagens dos contatos */
 .contato-images-divs {
+    background-color: rgba(255, 255, 255, 0.1);
     width: 50px;
     height: 50px;
     border-radius: 10px;
@@ -1980,31 +1918,14 @@ button:hover {
 .contato-images-divs[class~="dark"] {
     background-color: #202020;
 }
-.contato-images-divs[class~="red"] {
-    background-color: #402020;
-}
-.contato-images-divs[class~="blue"] {
-    background-color: #202040;
-}
 
 /* Imagens dos contatos */
 .contato-images {
+    filter: var(--base-filter);
     width: 50px;
     height: 50px;
     padding: 10px;
     transition: all 0.3s;
-}
-.contato-images[class~="light"] {
-    filter: brightness(0) hue-rotate(0deg);
-}
-.contato-images[class~="dark"] {
-    filter: brightness(10) hue-rotate(0deg);
-}
-.contato-images[class~="red"] {
-    filter: brightness(1) hue-rotate(123deg) saturate(1.2);
-}
-.contato-images[class~="blue"] {
-    filter: brightness(1) hue-rotate(0deg);
 }
 
 /* Divs dos textos de contato */

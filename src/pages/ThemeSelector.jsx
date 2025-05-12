@@ -18,7 +18,13 @@ const ThemeSelector = ({id, theme, mobile}) => {
 					onMouseEnter={() => {if(mobile==false) {setOpen(true)}}}
 					onMouseLeave={() => {if(mobile==false) {setOpen(false)}}}>
 					{temasDisponiveis.map((tema) => (
-						<button className={`theme-options ${theme}`} onClick={() => {setTema(tema)}}>
+						<button className={`theme-options ${theme}`}
+							onClick={() => {
+								setTema(tema);
+								document.documentElement.style.setProperty(`--base-color`, `var(--theme-${tema}-color)`);
+								document.documentElement.style.setProperty(`--base-filter`, `var(--theme-${tema}-filter)`);
+							}}
+						>
 							<img className="theme-options-icons" src={`svgs/planets/${tema}.svg`}></img>
 						</button>
 					))}
