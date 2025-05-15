@@ -11,7 +11,7 @@ const ThemeSelector = ({id, theme, mobile}) => {
 				<button className="flex-center" id="theme-button"
 					onMouseEnter={() => {if(mobile==false) {setOpen(true)}}}
 					onMouseLeave={() => {if(mobile==false) {setOpen(false)}}}
-					onClick={() => {if(mobile==true) {setOpen(!open)}}}>
+					onClick={() => {if(mobile==true) {setOpen(!open);}}}>
 					<div id="theme-icon" style={{backgroundImage: `url(svgs/planets/${tema}.svg)`}}></div>
 				</button>
 				<div className={`${open ? "open" : "closed"} ${mobile ? "mobile" : "desktop"} ${tema} theme-menu`}
@@ -20,9 +20,14 @@ const ThemeSelector = ({id, theme, mobile}) => {
 					{temasDisponiveis.map((tema) => (
 						<button className={`theme-options ${theme}`}
 							onClick={() => {
+								const themeButton = document.querySelector("#theme-button");
 								setTema(tema);
 								document.documentElement.style.setProperty(`--base-color`, `var(--theme-${tema}-color)`);
 								document.documentElement.style.setProperty(`--base-filter`, `var(--theme-${tema}-filter)`);
+								themeButton.style.transform = "scale(0) rotate(360deg)";
+								setTimeout(function() {
+									themeButton.style.transform = "scale(1) rotate(0deg)";
+								}, 500);
 							}}
 						>
 							<img className="theme-options-icons" src={`svgs/planets/${tema}.svg`}></img>

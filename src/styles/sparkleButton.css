@@ -83,7 +83,8 @@
     opacity: 0.7;
     transition: all 0.3s ease;
 }
-.sparkle-button-icon[class~="dark"] {
+.sparkle-button-icon[class~="dark"],
+.sparkle-button-icon[class~="yellow"] {
     filter: brightness(0) hue-rotate(0deg);
 }
 .sparkle-button:hover > .sparkle-button-icon {
@@ -96,7 +97,8 @@
     opacity: 0.7;
     transition: all 0.3s ease;
 }
-.sparkle-button-text[class~="dark"] {
+.sparkle-button-text[class~="dark"],
+.sparkle-button-text[class~="yellow"] {
     color: #000;
 }
 .sparkle-button:hover > .sparkle-button-text {

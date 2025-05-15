@@ -5,12 +5,16 @@ export const ThemeContext = createContext();
 const temasDisponiveis = ["light", "dark", "red", "orange", "yellow", "green", "blue", "purple"];
 
 export const ThemeProvider = ({children}) => {
-    const [tema, setTema] = useState("light");
+    const [tema, setTema] = useState(() => {
+        return localStorage.getItem('theme') || 'light';
+    });
 
     useEffect(() => {
         const temaSalvo = localStorage.getItem("theme");
         if (temaSalvo && temasDisponiveis.includes(temaSalvo)) {
-        setTema(temaSalvo);
+            document.documentElement.style.setProperty(`--base-color`, `var(--theme-${temaSalvo}-color)`);
+            document.documentElement.style.setProperty(`--base-filter`, `var(--theme-${temaSalvo}-filter)`);
+            setTema(temaSalvo);
         }
     }, []);
 

@@ -43,6 +43,7 @@ import "../../scripts/scrollScreenTo";
 import "../../scripts/sunTrianglesAnimation";
 import "../../scripts/windowScroll";
 import SparkleButton from "./SparkleButton";
+import Aneis from "./Aneis";
 
 export default function Home() {
     const { tema } = useContext(ThemeContext);
@@ -190,6 +191,7 @@ export default function Home() {
                                     <div className = "intro-image-div">
                                         <a id = "intro-image-link" href = "https://www.linkedin.com/in/eric-nunes-ramalho-58a146208/" target="_blank">
                                             <img className = {`intro-image move move-left ${tema}`} src = "images/img_eric.jpg"/>
+                                            <Aneis theme={tema}></Aneis>
                                             <Asteroides theme={tema}></Asteroides>
                                         </a>
                                     </div>

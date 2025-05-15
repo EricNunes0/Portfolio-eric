@@ -24,8 +24,8 @@
     --reveal-text-duration: 0.3s;
     --reveal-text-timing: ease-out;
     --separator-color: #909090;
-    --image-asteroide-width: 14px;
-    --image-asteroide-height: 14px;
+    --image-asteroide-width: 20px;
+    --image-asteroide-height: 20px;
     --image-asteroide-margin: 10px;
     --github-button-color: rgba(12, 44, 60, 1);
     --linkedin-button-color: rgba(15, 120, 170, 1);
@@ -278,7 +278,8 @@ button:hover {
     height: 24px;
     transition: all 0.3s;
 }
-.contacts-images[class~="light"] {
+.contacts-images[class~="light"],
+.contacts-images[class~="yellow"] {
     filter: invert(1);
 }
 
@@ -313,19 +314,20 @@ button:hover {
     border-radius: 50%;
 }
 
-/* Asteroide */
+/* Asteroides */
 .intro-image-asteroides {
-    pointer-events: none;
-    position: absolute;
-    top: calc(0% - var(--image-asteroide-height) - var(--image-asteroide-margin));
-    left: calc(50% - calc(var(--image-asteroide-width) / 2));
-    display: block;
-    width: calc(var(--image-asteroide-width));
-    height: calc(100% + calc(var(--image-asteroide-height) * 2) + calc(var(--image-asteroide-margin) * 2));
     background-size: contain;
     background-repeat: no-repeat;
+    pointer-events: none;
+    position: absolute;
+    z-index: -1;
+    top: calc(50% - var(--image-asteroide-height) - var(--image-asteroide-margin));
+    left: calc(50% - calc(var(--image-asteroide-width) / 2));
+    display: block;
+    width: var(--image-asteroide-width);
+    height: var(--image-asteroide-height);
     filter: var(--base-filter);
-    animation: Asteroide 20s linear infinite;
+    animation: Asteroide 20s ease infinite;
     transition: all 0.3s ease;
 }
 .intro-image-asteroides::after {
@@ -340,11 +342,52 @@ button:hover {
     transform: scale(1.1);
 }
 @keyframes Asteroide {
-    0% {
-        rotate: 0deg;
+    0%, 100% {
+        transform: scale(0.5);
+        z-index: -1;
     }
-    100% {
-        rotate: 360deg;
+    25% {
+        transform: scale(0.5);
+        z-index: -1;
+    }
+    40% {
+        top: 25%;
+        left: 100%;
+        z-index: 0;
+    }
+    43% {
+        top: 39%;
+    }
+    45% {
+        top: 45%;
+    }
+    47% {
+        top: 52%;
+    }
+    51% {
+        top: 65%;
+    }
+    53% {
+        top: 68%;
+    }
+    55% {
+        top: 74%;
+    }
+    60% {
+        transform: scale(1.5);
+        z-index: 0;
+    }
+    80% {
+        top: 78%;
+        left: -10%;
+        z-index: 0;
+        opacity: 1;
+    }
+    85% {
+        opacity: 0;
+    }
+    90% {
+        z-index: -1;
     }
 }
 
@@ -362,6 +405,75 @@ button:hover {
 }
 .intro-image:hover {
     transform: scale(1.05);
+}
+
+/* Anéis do planeta */
+.aneis {
+    height: 2px;
+    position: absolute;
+    z-index: 1;
+    top: 28%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    border-color: rgba(200, 200, 200, 0.1);
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 50%;
+}
+
+.aneis:nth-child(1) {
+    width: calc(110% + calc(0 * 2%));
+    height: calc(60px + calc(0 * 7px));
+    left: calc(50% + calc(0 * 1%));
+    rotate: -25deg;
+}
+.aneis:nth-child(2) {
+    width: calc(110% + calc(1 * 2%));
+    height: calc(60px + calc(1 * 7px));
+    left: calc(50% + calc(1 * 0.5%));
+    rotate: -25deg;
+}
+.aneis:nth-child(3) {
+    width: calc(110% + calc(2 * 2%));
+    height: calc(60px + calc(2 * 7px));
+    left: calc(50% + calc(2 * 0.5%));
+    rotate: -25deg;
+}
+.aneis:nth-child(4) {
+    width: calc(110% + calc(3 * 2%));
+    height: calc(60px + calc(3 * 7px));
+    left: calc(50% + calc(3 * 0.5%));
+    rotate: -25deg;
+}
+.aneis:nth-child(5) {
+    width: calc(110% + calc(4 * 2%));
+    height: calc(60px + calc(4 * 7px));
+    left: calc(50% + calc(4 * 0.5%));
+    rotate: -25deg;
+}
+.aneis:nth-child(6) {
+    width: calc(110% + calc(5 * 2%));
+    height: calc(60px + calc(5 * 7px));
+    left: calc(50% + calc(5 * 0.5%));
+    rotate: -25deg;
+}
+.aneis:nth-child(7) {
+    width: calc(110% + calc(6 * 2%));
+    height: calc(60px + calc(6 * 7px));
+    left: calc(50% + calc(6 * 0.5%));
+    rotate: -25deg;
+}
+.aneis:nth-child(8) {
+    width: calc(110% + calc(7 * 2%));
+    height: calc(60px + calc(7 * 7px));
+    left: calc(50% + calc(7 * 0.5%));
+    rotate: -25deg;
+}
+.aneis:nth-child(9) {
+    width: calc(110% + calc(8 * 2%));
+    height: calc(60px + calc(8 * 7px));
+    left: calc(50% + calc(8 * 0.5%));
+    rotate: -25deg;
 }
 
 @keyframes portfolioImage {
@@ -722,7 +834,8 @@ button:hover {
     filter: invert(1);
     transition: all 0.3s;
 }
-.aboutme-icons[class~="light"] {
+.aboutme-icons[class~="light"],
+.aboutme-icons[class~="yellow"] {
     filter: invert(0);
 }
 
@@ -905,6 +1018,9 @@ button:hover {
     background-color: #fff;
     box-shadow: #ffffff50 0px 0px 15px;
     color: #000;
+}
+.curriculo-button[class~="yellow"]:hover {
+    color: #000
 }
 
 /* Conhecimentos */

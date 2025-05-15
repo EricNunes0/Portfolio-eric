@@ -5,22 +5,18 @@
 }
 
 .typing-text-1 {
+    color: rgb(255, 255, 255);
     font-family: "Poppins";
     font-size: 32px;
     font-weight: bold;
     text-align: center;
     margin: 0px;
+    text-shadow: rgb(0, 0, 0) 1px 1px;
     transition: 0.3s;
 }
 .typing-text-1[class~="light"] {
     color: rgb(0, 0, 0);
     text-shadow: rgb(255, 255, 255) 1px 1px;
-}
-.typing-text-1[class~="dark"],
-.typing-text-1[class~="red"],
-.typing-text-1[class~="blue"] {
-    color: rgb(255, 255, 255);
-    text-shadow: rgb(0, 0, 0) 1px 1px;
 }
 
 .typing-text-2 {

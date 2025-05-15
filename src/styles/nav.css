@@ -70,10 +70,15 @@
 
 /* Textos dos botões da barra de navegação */
 .nav-buttons-li {
+    color: #fff;
     border-radius: 50px;
     font-size: 14px;
     padding: 8px;
     transition: all 0.3s;
+}
+.nav-buttons-li[class~="light"],
+.nav-buttons-li[class~="yellow"] {
+    color: #000;
 }
 .nav-buttons:hover > .nav-buttons-li {
     background-color: rgba(0, 0, 0, 0.1);
