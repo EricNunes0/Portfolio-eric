@@ -1,15 +1,5 @@
 export default function Aneis({theme}) {
     return (
-        <div className="aneis-div">
-            <div className="aneis"></div>
-            <div className="aneis"></div>
-            <div className="aneis"></div>
-            <div className="aneis"></div>
-            <div className="aneis"></div>
-            <div className="aneis"></div>
-            <div className="aneis"></div>
-            <div className="aneis"></div>
-            <div className="aneis"></div>
-        </div>
+        <img src="svgs/rings.svg" className={`rings move move-left ${theme}`}></img>
     )
 };

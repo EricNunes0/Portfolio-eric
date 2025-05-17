@@ -1,5 +1,6 @@
 import React, { useContext, useState } from "react";
 import { ThemeContext } from "./ThemeContext";
+import changePageIcon from "../scripts/changePageIcon";
 
 const ThemeSelector = ({id, theme, mobile}) => {
 	const { tema, setTema, temasDisponiveis } = useContext(ThemeContext);
@@ -22,6 +23,7 @@ const ThemeSelector = ({id, theme, mobile}) => {
 							onClick={() => {
 								const themeButton = document.querySelector("#theme-button");
 								setTema(tema);
+								changePageIcon({url: `svgs/planets/${tema}.svg`});
 								document.documentElement.style.setProperty(`--base-color`, `var(--theme-${tema}-color)`);
 								document.documentElement.style.setProperty(`--base-filter`, `var(--theme-${tema}-filter)`);
 								themeButton.style.transform = "scale(0) rotate(360deg)";

@@ -152,16 +152,18 @@ export default function Home() {
                             <img id = "scenary-earth" src = "images/img_planet.png" alt = "Earth"></img>
                             <img id = "scenary-satelite" src = "images/img_satelite.png" alt = "Satelite"></img>
                             <div className = "arrow-div">
-                                <img className = {`arrow-image ${tema}`} src = "images/img_arrow.png"/>
+                                <button type="button" className="arrow-button" onClick={() => {scrollScreenTo(aboutmeRef)}}>
+                                    <img className = {`arrow-image ${tema}`} src = "images/img_arrow.png"/>
+                                </button>
                             </div>
                         </div>
                         <div className = "portfolio-intro">
                             <div className = "portfolio-intro-flex">
                                 <section id = "header-title-section">
-                                    <TypingAnimation className={`typing-text-1 ${tema}`} type={1} text={"Olá, meu nome é"} delay={0} interval={0.05}></TypingAnimation>
+                                    <TypingAnimation className={`typing-text-1 ${tema}`} type={1} text={"Meu nome é"} delay={0} interval={0.05}></TypingAnimation>
                                 </section>
                                 <section id = "name-section">
-                                    <TypingAnimation className={`typing-text-2 ${tema}`} type={2} text={"Eric Nunes"} delay={1} interval={0.15}></TypingAnimation>
+                                    <TypingAnimation className={`typing-text-2 ${tema}`} type={2} text={"ERIC NUNES"} delay={1} interval={0.15}></TypingAnimation>
                                 </section>
                                 <section id = "header-code-section">
                                     <TypingAnimation className={`typing-text-3 ${tema}`} type={3} text={"Desenvolvedor Web"} delay={3} interval={0.06}></TypingAnimation>

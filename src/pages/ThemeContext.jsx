@@ -1,4 +1,5 @@
 import React, { createContext, useState, useEffect } from "react";
+import changePageIcon from "../scripts/changePageIcon";
 
 export const ThemeContext = createContext();
 
@@ -15,6 +16,7 @@ export const ThemeProvider = ({children}) => {
             document.documentElement.style.setProperty(`--base-color`, `var(--theme-${temaSalvo}-color)`);
             document.documentElement.style.setProperty(`--base-filter`, `var(--theme-${temaSalvo}-filter)`);
             setTema(temaSalvo);
+            changePageIcon({url: `svgs/planets/${temaSalvo}.svg`});
         }
     }, []);
 
