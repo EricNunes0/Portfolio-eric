@@ -1710,7 +1710,6 @@ button:hover {
     width: 24rem;
     height: 12rem;
     max-width: 100%;
-    outline: 2px solid rgba(0, 0, 0, 0.5);
     border-radius: var(--project-links-border-radius);
     box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 5px;
     transition: all 0.3s;
